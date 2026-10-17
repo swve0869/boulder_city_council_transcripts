@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+
+# Watcher state and logs
+seen_videos.json
+*.log
+
+# Never commit YouTube cookies
+cookies*.txt
+
+# Combined outputs (regenerate with combine_transcripts.py)
+boulder_council_transcripts_*.txt
+testing_txt/
