@@ -5,8 +5,8 @@ transcript as plain text without timestamps. A new paragraph starts at each ">>"
 (the caption marker for a change of speaker).
 
 Usage:
-    python build_site.py                      # transcripts/ -> site/
-    python build_site.py --dir transcripts --out site
+    python build_site.py                      # transcripts/ -> docs/
+    python build_site.py --dir transcripts --out docs
 """
 
 import argparse
@@ -109,7 +109,7 @@ def index_page(meetings):
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--dir", default="transcripts", help="folder of saved transcripts (default: transcripts)")
-    p.add_argument("--out", default="site", help="output folder (default: site)")
+    p.add_argument("--out", default="docs", help="output folder (default: docs)")
     args = p.parse_args()
 
     meetings = load_meetings(Path(args.dir))

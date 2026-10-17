@@ -137,7 +137,7 @@ python watch_council_videos.py --fetch --cookies-from-browser chrome
 python build_site.py [--dir DIR] [--out DIR]
 ```
 
-Writes a static site to `site/` (default): `index.html` links every meeting, grouped by year and newest first, and each meeting gets its own page with the transcript as plain text. Timestamps are removed, and a new paragraph starts at each `>>` (the captions' speaker-change marker). Upload the `site/` folder to any static host.
+Writes a static site to `docs/` (default): `index.html` links every meeting, grouped by year and newest first, and each meeting gets its own page with the transcript as plain text. Timestamps are removed, and a new paragraph starts at each `>>` (the captions' speaker-change marker). GitHub Pages serves it from `main` / `/docs`; any static host works.
 
 ## Troubleshooting
 
