@@ -320,6 +320,15 @@ python -m unittest discover -s tests -t .
 
 The tests need no network or API key. They cover reply parsing, normalization, validation, the structured-output schema limits, tag vocabulary consistency, the manifest, search text, the feed, and date parsing.
 
+Browser tests drive the real pages in headless Chromium, with no npm packages. They cover filters, search, previews, the timeline, video seeking, transcript excerpts, every chart and its table view, phone width, dark mode, and JavaScript or Content-Security-Policy errors:
+
+```
+tests/browser/run.sh                                           # docs/ served locally
+tests/browser/run.sh https://<user>.github.io/<repo>           # the live site
+```
+
+They need Node 20+ and Chromium (set `CHROME=` to point at one). CI runs the unit tests on every push; run the browser tests before deploying site changes.
+
 ## Full transcripts from the host (optional; the Pi uses Tailscale Funnel, above)
 
 ```
