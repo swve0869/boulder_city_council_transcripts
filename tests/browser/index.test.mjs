@@ -50,6 +50,12 @@ check("year filter applies with the type filter", await c.ev(`[...document.query
 await c.ev(`document.querySelector("#active button").click()`); await sleep(200);
 check("Clear filters resets everything", await c.ev(`document.querySelectorAll("#list ul.meetings > li").length`) === total);
 
+// Visitors who ask not to be tracked send no ping.
+await c.send("Page.addScriptToEvaluateOnNewDocument", { source: `Object.defineProperty(navigator, "globalPrivacyControl", { get: () => true })` });
+const before = c.requests.filter((r) => r.url.endsWith("/hit")).length;
+await c.go("index.html");
+check("no page-view ping with Global Privacy Control on", c.requests.filter((r) => r.url.endsWith("/hit")).length === before);
+
 await c.size(390, 1200); await c.go("index.html");
 check("no horizontal scroll at phone width", !(await c.overflow()));
 finish(c);

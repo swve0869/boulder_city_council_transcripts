@@ -102,7 +102,7 @@ It is safe to re-run (e.g. after `git pull`). It:
 - sets a **repo-local git identity** (`Council Pi <you@users.noreply.github.com>`) so publishing can commit
 - installs and starts **`council-transcripts.service`**: `serve_transcripts.py` on `127.0.0.1:8765`, which allows requests only from your `https://<you>.github.io` site and restarts on failure
 - installs and starts **`council-watch.timer`**: runs `scripts/cron_watch.sh` every 20 minutes and catches up after the Pi was off, so no crontab is needed
-- installs log rotation for `watch_council_videos.log`
+- installs log rotation for `watch_council_videos.log`, and caps the system journal at 500 MB / 3 months (`deploy/journald.conf`) to spare the SD card
 - warns if the Pi can't push to GitHub or has no `transcripts/` folder
 
 ### 6. Expose the transcript server with Tailscale Funnel
@@ -169,6 +169,7 @@ Stop any cron job, `watch_council_videos.py`, or `serve_transcripts.py` on other
 
 ```
 scripts/status.sh                                            # one-screen health check (exits 1 if something needs attention)
+python3 serve_transcripts.py --report --visits /var/lib/council-transcripts/visits.json --days 30   # page views
 systemctl status council-transcripts council-watch.timer     # both should be active
 systemctl list-timers council-watch.timer                    # next/last watcher run
 journalctl -u council-watch -n 50 -o cat                     # what the last runs did
@@ -309,6 +310,8 @@ The watcher also writes `docs/summaries/status.json`, the meetings it has found 
 - "Discussed together": tags that share topics with a chosen tag.
 - "What changed between years": each tag's share of time in one year versus another.
 - Every chart has a hover tooltip and a table view. The page can be filtered by year and tag group.
+
+**Page views.** Each page sends one ping (`POST <transcriptHost>/hit` with a page key such as `meeting:boulder/2026-10-22_<id>`) to the transcript server on the Pi. The server keeps only a count per page per day in `/var/lib/council-transcripts/visits.json`: no cookies, IP addresses, browser details or third-party analytics, and nothing is sent when the browser has Do Not Track or Global Privacy Control on. Pings aren't written to the server's request log. Read the counts with `scripts/status.sh` or `serve_transcripts.py --report`. Turn counting off with `countVisits: false` in `docs/config.js`.
 
 All pages have a system/light/dark theme switch, an About page (`about.html`) explaining the method and its limits, a Content Security Policy, and content-hashed asset URLs stamped by `build_site.py`.
 

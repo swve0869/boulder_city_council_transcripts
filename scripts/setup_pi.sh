@@ -3,7 +3,7 @@
 #   - installs system packages, creates .venv and installs requirements
 #   - installs and starts the transcript server (council-transcripts.service)
 #   - installs and starts the 20-minute watcher timer (council-watch.timer)
-#   - installs log rotation for the watcher's log
+#   - installs log rotation for the watcher's log and caps the system journal at 500 MB
 #
 # Run from the repo as your normal user (it uses sudo where needed); safe to re-run.
 #
@@ -104,8 +104,14 @@ if [ "$DRY_RUN" = 1 ]; then
 fi
 run sudo install -m 644 "$RENDERED"/council-*.service "$RENDERED"/council-*.timer /etc/systemd/system/
 run sudo install -m 644 "$RENDERED/logrotate.conf" /etc/logrotate.d/council-transcripts
+# Cap the system journal (see deploy/journald.conf) and trim it to the new limit now.
+run sudo install -d /etc/systemd/journald.conf.d
+run sudo install -m 644 deploy/journald.conf /etc/systemd/journald.conf.d/50-council.conf
+run sudo systemctl restart systemd-journald
+run sudo journalctl --vacuum-size=500M --quiet
 run sudo systemctl daemon-reload
 run sudo systemctl enable --now council-transcripts.service
+run sudo systemctl restart council-transcripts.service   # pick up a changed unit or server code
 if [ "$TIMER" = 1 ]; then
   run sudo systemctl enable --now council-watch.timer
 else

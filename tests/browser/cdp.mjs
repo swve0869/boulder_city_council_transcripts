@@ -12,18 +12,26 @@ export async function connect() {
   const targets = await (await fetch(`http://127.0.0.1:${PORT}/json`)).json();
   const sock = new WebSocket(targets.find((t) => t.type === "page").webSocketDebuggerUrl);
   let id = 0;
-  const pending = {}, errors = [];
+  const pending = {}, errors = [], requests = [];
   sock.onmessage = (m) => {
     const d = JSON.parse(m.data);
     if (d.method === "Runtime.exceptionThrown") errors.push(d.params.exceptionDetails.exception?.description || d.params.exceptionDetails.text);
-    if (d.method === "Runtime.consoleAPICalled" && d.params.type === "error") errors.push(d.params.args.map((a) => a.value || a.description).join(" "));
+    if (d.method === "Runtime.consoleAPICalled" && d.params.type === "error" && !/\/hit\b/.test(JSON.stringify(d.params.args))) errors.push(d.params.args.map((a) => a.value || a.description).join(" "));
+    // Page-view pings are answered here (204) and recorded, so tests never reach the real counter.
+    if (d.method === "Fetch.requestPaused") {
+      const r = d.params.request;
+      requests.push({ url: r.url, method: r.method, body: r.postData });
+      sock.send(JSON.stringify({ id: ++id, method: "Fetch.fulfillRequest", params: { requestId: d.params.requestId, responseCode: 204 } }));
+    }
     if (pending[d.id]) { pending[d.id](d.result); delete pending[d.id]; }
   };
   await new Promise((r) => (sock.onopen = r));
   const send = (method, params = {}) => new Promise((r) => { pending[++id] = r; sock.send(JSON.stringify({ id, method, params })); });
   await send("Runtime.enable");
+  await send("Page.enable"); // needed for Page.addScriptToEvaluateOnNewDocument
   await send("Network.enable");
   await send("Network.setCacheDisabled", { cacheDisabled: true }); // always test the files as served now
+  await send("Fetch.enable", { patterns: [{ urlPattern: "*/hit" }] }); // tests must never inflate real page-view counts
   // Evaluate an expression in the page; page-side exceptions count as test errors.
   const ev = async (expr) => {
     const r = await send("Runtime.evaluate", { expression: expr, awaitPromise: true, returnByValue: true });
@@ -38,7 +46,7 @@ export async function connect() {
   const type = (sel, v) => ev(`(() => { const e = document.querySelector(${JSON.stringify(sel)}); e.value = ${JSON.stringify(v)}; e.dispatchEvent(new Event("input")); e.dispatchEvent(new Event("change")); })()`);
   const click = (sel, n = 0) => ev(`document.querySelectorAll(${JSON.stringify(sel)})[${n}].click()`);
   const overflow = () => ev(`document.documentElement.scrollWidth > innerWidth`);
-  return { send, ev, go, size, shot, type, click, overflow, errors };
+  return { send, ev, go, size, shot, type, click, overflow, errors, requests };
 }
 
 // Collects named checks; finish() prints a summary and sets the exit code.

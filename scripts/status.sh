@@ -66,6 +66,15 @@ else
 fi
 grep -q '^ANTHROPIC_API_KEY=.\+' .env 2>/dev/null && row "API key" "set in .env" || flag "API key" "ANTHROPIC_API_KEY missing from .env"
 
+echo; echo "== Page views (no IPs or cookies stored)"
+VISITS=/var/lib/council-transcripts/visits.json
+if [ -f "$VISITS" ]; then
+  python3 serve_transcripts.py --report --visits "$VISITS" --days 7 | sed 's/^/  /' | head -16
+else
+  row "visits.json" "no page views recorded yet"
+fi
+row "journal size" "$(journalctl --disk-usage 2>/dev/null | grep -oE '[0-9.]+[KMGT]' | head -1) (capped at 500M)"
+
 echo; echo "== Disk"
 df -h . | awk 'NR==2 { printf "  %s used of %s (%s), %s free\n", $3, $2, $5, $4 }'
 use="$(df . | awk 'NR==2 { gsub("%","",$5); print $5 }')"; [ "${use:-0}" -lt 90 ] || flag "disk" "over 90% full"

@@ -4,4 +4,7 @@ window.COUNCIL_CONFIG = {
   // dynamic-DNS name), e.g. "https://council.example.ddns.net". Leave "" to hide the
   // full-transcript panel; summaries and video timestamps work either way.
   transcriptHost: "https://raspberrypi.tail743376.ts.net",
+  // Count page views on the transcript host (POST <transcriptHost>/hit): a daily count per
+  // page, no cookies or IP addresses. Set to false to turn counting off.
+  countVisits: true,
 };
