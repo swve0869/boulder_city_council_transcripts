@@ -37,7 +37,9 @@
         "Tags": [
           "budget",
           "taxes-fees",
-          "public-comment"
+          "public-comment",
+          "wildfire",
+          "affordable-housing"
         ]
       }
     },
@@ -72,7 +74,9 @@
           "fire-ems",
           "water",
           "transportation",
-          "elections"
+          "elections",
+          "wildfire",
+          "open-space"
         ]
       }
     },
@@ -120,7 +124,8 @@
         "Tags": [
           "budget",
           "council-governance",
-          "public-comment"
+          "public-comment",
+          "wildfire"
         ]
       }
     },
@@ -200,7 +205,8 @@
         ],
         "Tags": [
           "budget",
-          "council-governance"
+          "council-governance",
+          "wildfire"
         ]
       }
     },

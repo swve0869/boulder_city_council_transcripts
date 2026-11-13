@@ -23,7 +23,8 @@
           "public-comment",
           "council-governance",
           "flock",
-          "surveillance"
+          "surveillance",
+          "homelessness"
         ]
       }
     },
@@ -146,7 +147,8 @@
         "Tags": [
           "boards-appointments",
           "council-governance",
-          "intergovernmental"
+          "intergovernmental",
+          "homelessness"
         ]
       }
     },

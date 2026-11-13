@@ -112,7 +112,8 @@
           "budget",
           "taxes-fees",
           "elections",
-          "parks-recreation"
+          "parks-recreation",
+          "wildfire"
         ]
       }
     },
@@ -144,7 +145,8 @@
           "budget",
           "wildfire",
           "housing",
-          "taxes-fees"
+          "taxes-fees",
+          "affordable-housing"
         ]
       }
     }

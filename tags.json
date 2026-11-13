@@ -1,5 +1,5 @@
 {
-  "_comment": "Controlled tag vocabulary for meeting summaries. ids are what the model may output (enforced by the structured-output schema); descriptions are shown to the model; groups map to the site's 8 categorical colors in this order. Adding a tag: append it here, then re-summarize. Removing or renaming one: re-summarize affected meetings.",
+  "_comment": "Controlled tag vocabulary for meeting summaries. ids are what the model may output (enforced by the structured-output schema); descriptions are shown to the model; groups map to the site's 8 categorical colors in this order. Adding a tag: append it here, then re-summarize. Removing or renaming one: re-summarize affected meetings. Optional keywords: if a topic's title or summary contains one (whole words, case-insensitive) the tag is added even when the model left it off.",
   "groups": [
     {"id": "safety", "label": "Public safety"},
     {"id": "land", "label": "Housing & land use"},
@@ -12,49 +12,42 @@
   ],
   "tags": [
     {"id": "police", "label": "Police", "group": "safety", "description": "Police department, policing practices, staffing, police oversight and accountability"},
-    {"id": "flock", "label": "Flock cameras", "group": "safety", "description": "Flock Safety license-plate-reader cameras and contracts for automated license plate readers"},
-    {"id": "surveillance", "label": "Surveillance & privacy", "group": "safety", "description": "Surveillance technology, cameras, drones, data collection and resident privacy (use with flock when it is about Flock)"},
+    {"id": "flock", "label": "Flock cameras", "group": "safety", "description": "Flock Safety license-plate-reader cameras and contracts for automated license plate readers", "keywords": ["flock", "license plate reader", "license-plate reader", "license plate readers", "ALPR"]},
+    {"id": "surveillance", "label": "Surveillance & privacy", "group": "safety", "description": "Surveillance technology, cameras, drones, data collection and resident privacy (use with flock when it is about Flock)", "keywords": ["surveillance"]},
     {"id": "fire-ems", "label": "Fire & EMS", "group": "safety", "description": "Fire department, fire stations, ambulance and emergency medical services"},
-    {"id": "wildfire", "label": "Wildfire", "group": "safety", "description": "Wildfire risk, mitigation, home hardening, evacuation planning for fires"},
+    {"id": "wildfire", "label": "Wildfire", "group": "safety", "description": "Wildfire risk, mitigation, home hardening, evacuation planning for fires", "keywords": ["wildfire", "wildfires", "home hardening"]},
     {"id": "emergency-management", "label": "Emergency management", "group": "safety", "description": "Disaster preparedness, emergency alerts, flood or extreme-weather response"},
     {"id": "crime", "label": "Crime & justice", "group": "safety", "description": "Crime trends, municipal court, prosecution, theft, restorative justice"},
-
     {"id": "housing", "label": "Housing", "group": "land", "description": "Housing supply, rentals, tenants and landlords, occupancy limits, evictions"},
-    {"id": "affordable-housing", "label": "Affordable housing", "group": "land", "description": "Subsidized or income-restricted housing, inclusionary housing, housing funds"},
+    {"id": "affordable-housing", "label": "Affordable housing", "group": "land", "description": "Subsidized or income-restricted housing, inclusionary housing, housing funds", "keywords": ["affordable housing", "inclusionary housing"]},
     {"id": "zoning", "label": "Zoning", "group": "land", "description": "Zoning and land-use code changes, rezonings, density, height and use rules"},
     {"id": "development", "label": "Development projects", "group": "land", "description": "Specific development or redevelopment projects, site review, annexations, subdivisions"},
-    {"id": "historic-preservation", "label": "Historic preservation", "group": "land", "description": "Landmarks, historic districts, demolition reviews"},
-    {"id": "homelessness", "label": "Homelessness", "group": "land", "description": "Unhoused residents, shelters, encampments, camping bans, outreach services"},
-
+    {"id": "historic-preservation", "label": "Historic preservation", "group": "land", "description": "Landmarks, historic districts, demolition reviews", "keywords": ["landmark designation", "historic district", "landmarks board"]},
+    {"id": "homelessness", "label": "Homelessness", "group": "land", "description": "Unhoused residents, shelters, encampments, camping bans, outreach services", "keywords": ["homeless", "homelessness", "unhoused", "encampment", "encampments"]},
     {"id": "transportation", "label": "Transportation", "group": "transport", "description": "Transportation planning, roads, traffic, street safety, Vision Zero"},
-    {"id": "bikes-pedestrians", "label": "Bikes & pedestrians", "group": "transport", "description": "Bike lanes, bike theft, sidewalks, crosswalks, scooters, micromobility"},
-    {"id": "transit", "label": "Transit", "group": "transport", "description": "Buses, regional transit agencies (e.g. RTD), rail, transit passes"},
+    {"id": "bikes-pedestrians", "label": "Bikes & pedestrians", "group": "transport", "description": "Bike lanes, bike theft, sidewalks, crosswalks, scooters, micromobility", "keywords": ["bike lane", "bike lanes", "bike theft", "e-bike", "e-bikes", "crosswalk", "crosswalks"]},
+    {"id": "transit", "label": "Transit", "group": "transport", "description": "Buses, regional transit agencies (e.g. RTD), rail, transit passes", "keywords": ["RTD", "bus rapid transit"]},
     {"id": "parking", "label": "Parking", "group": "transport", "description": "Parking rules, garages, permits, meters, curb management"},
-
     {"id": "climate", "label": "Climate & sustainability", "group": "environment", "description": "Climate action, emissions, sustainability goals, building electrification"},
     {"id": "energy", "label": "Energy & utilities", "group": "environment", "description": "Electricity, gas, energy utilities and franchise agreements, solar"},
     {"id": "water", "label": "Water & flooding", "group": "environment", "description": "Water supply and rates, stormwater, floodplains, drought"},
-    {"id": "open-space", "label": "Open space", "group": "environment", "description": "Open space lands, trails, conservation, wildlife"},
+    {"id": "open-space", "label": "Open space", "group": "environment", "description": "Open space lands, trails, conservation, wildlife", "keywords": ["open space"]},
     {"id": "parks-recreation", "label": "Parks & recreation", "group": "environment", "description": "City parks, recreation centers, pools, playgrounds, sports facilities"},
-
     {"id": "public-health", "label": "Public health", "group": "community", "description": "Health programs, mental health, substance use, overdose prevention, air quality"},
     {"id": "equity", "label": "Equity & civil rights", "group": "community", "description": "Racial equity, discrimination, human rights, immigration, accessibility, LGBTQ issues"},
     {"id": "human-services", "label": "Human services", "group": "community", "description": "Social services, food assistance, childcare, seniors, youth programs"},
     {"id": "arts-culture", "label": "Arts, culture & libraries", "group": "community", "description": "Libraries, arts funding, events, festivals, museums, cultural programs"},
-    {"id": "university", "label": "University & students", "group": "community", "description": "University relations (e.g. CU Boulder), students, campus-area neighborhoods"},
+    {"id": "university", "label": "University & students", "group": "community", "description": "University relations (e.g. CU Boulder), students, campus-area neighborhoods", "keywords": ["CU Boulder", "University of Colorado"]},
     {"id": "technology", "label": "Technology & broadband", "group": "community", "description": "Broadband, city IT, AI use, digital services, cybersecurity"},
-
     {"id": "budget", "label": "Budget", "group": "money", "description": "City budget, appropriations, spending priorities, audits, financial reports"},
     {"id": "taxes-fees", "label": "Taxes & fees", "group": "money", "description": "Sales, property or excise taxes, tax extensions, fees and rates"},
     {"id": "economic-development", "label": "Economic development", "group": "money", "description": "Business support, downtown vitality, tourism, retail, economic vitality programs"},
-    {"id": "labor", "label": "Labor & wages", "group": "money", "description": "Minimum wage, city employees, unions, collective bargaining, worker protections"},
-
-    {"id": "elections", "label": "Elections & ballot measures", "group": "governance", "description": "Ballot measures and their wording, elections, campaign finance, redistricting"},
+    {"id": "labor", "label": "Labor & wages", "group": "money", "description": "Minimum wage, city employees, unions, collective bargaining, worker protections", "keywords": ["minimum wage", "collective bargaining"]},
+    {"id": "elections", "label": "Elections & ballot measures", "group": "governance", "description": "Ballot measures and their wording, elections, campaign finance, redistricting", "keywords": ["ballot measure", "ballot measures"]},
     {"id": "council-governance", "label": "Council governance", "group": "governance", "description": "Council rules, charter changes, council priorities and retreats, city manager oversight"},
     {"id": "boards-appointments", "label": "Boards & appointments", "group": "governance", "description": "Appointments to boards and commissions, board reports, vacancies"},
     {"id": "legal", "label": "Legal & litigation", "group": "governance", "description": "Lawsuits, settlements, city attorney advice, legal compliance"},
     {"id": "intergovernmental", "label": "Regional & state relations", "group": "governance", "description": "County, state and federal relations, legislative agendas, regional partnerships"},
-
     {"id": "public-comment", "label": "Public comment", "group": "participation", "description": "Open comment periods and public hearings where residents speak to council"}
   ]
 }

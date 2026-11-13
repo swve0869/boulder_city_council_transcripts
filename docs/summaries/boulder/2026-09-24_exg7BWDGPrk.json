@@ -50,7 +50,9 @@
           "police",
           "surveillance",
           "housing",
-          "transportation"
+          "transportation",
+          "flock",
+          "bikes-pedestrians"
         ]
       }
     },

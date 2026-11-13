@@ -44,6 +44,24 @@ class Normalize(unittest.TestCase):
         self.assertEqual(out["Topics"][0]["Topic1"]["Tags"], ["police"])
         self.assertEqual(len(warnings), 2)
 
+    def test_keyword_rules_add_missing_tags_once(self):
+        import re
+        keywords = {"flock": re.compile(r"\b(?:flock|license plate reader)\b", re.IGNORECASE)}
+        summary = {"Title": "m", "Tags": [], "Topics": [
+            {"Topic1": topic(Summary="Staff paused the Flock contract.", Tags=["police"])},
+            {"Topic2": topic(Summary="A flocking behavior study of geese.", Tags=[])},
+            {"Topic3": topic(Title="License plate reader policy", Tags=["flock"])}]}
+        out, notes = s.normalize_summary(summary, ["police", "flock"], keywords)
+        tags = [list(e.values())[0]["Tags"] for e in out["Topics"]]
+        self.assertEqual(tags, [["police", "flock"], [], ["flock"]])   # whole words only; no duplicates
+        self.assertEqual(len(notes), 1)
+        self.assertEqual(s.normalize_summary(out, ["police", "flock"], keywords)[1], [])  # idempotent
+
+    def test_configured_keywords_compile(self):
+        patterns = s.tag_keywords(s.load_config())
+        self.assertIn("flock", patterns)
+        self.assertTrue(patterns["flock"].search("the ALPR pilot"))
+
     def test_leaves_malformed_input_alone(self):
         for bad in ("text", {"Title": "x"}, {"Title": "x", "Topics": ["not an object"]}):
             out, warnings = s.normalize_summary(bad)

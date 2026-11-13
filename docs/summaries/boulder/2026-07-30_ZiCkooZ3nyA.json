@@ -18,7 +18,10 @@
           373.6
         ],
         "Tags": [
-          "council-governance"
+          "council-governance",
+          "wildfire",
+          "open-space",
+          "elections"
         ]
       }
     },
@@ -106,7 +109,9 @@
         "Tags": [
           "elections",
           "council-governance",
-          "legal"
+          "legal",
+          "wildfire",
+          "open-space"
         ]
       }
     }

@@ -20,7 +20,9 @@
         "Tags": [
           "public-comment",
           "homelessness",
-          "equity"
+          "equity",
+          "affordable-housing",
+          "open-space"
         ]
       }
     },
@@ -69,7 +71,8 @@
           "elections",
           "parks-recreation",
           "development",
-          "taxes-fees"
+          "taxes-fees",
+          "open-space"
         ]
       }
     },
@@ -151,7 +154,8 @@
           "economic-development",
           "elections",
           "budget",
-          "council-governance"
+          "council-governance",
+          "open-space"
         ]
       }
     },

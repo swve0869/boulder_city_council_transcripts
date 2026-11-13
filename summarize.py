@@ -116,6 +116,12 @@ def tag_ids(config):
     return [t["id"] for t in load_tags(config)["tags"]]
 
 
+def tag_keywords(config):
+    """{tag id: compiled whole-word regex} for tags that list keywords in tags.json."""
+    return {t["id"]: re.compile(r"\b(?:" + "|".join(re.escape(k) for k in t["keywords"]) + r")\b", re.IGNORECASE)
+            for t in load_tags(config)["tags"] if t.get("keywords")}
+
+
 def build_prompt(config, model):
     fmt_file = ROOT / config.get("summarize", {}).get("format_file", "summary_prompt_JSON_format.json")
     fmt = json.dumps(json.loads(fmt_file.read_text(encoding="utf-8")))
@@ -287,8 +293,12 @@ def parse_reply(text):
             raise SummaryError(f"reply is not valid JSON: {e}") from None
 
 
-def normalize_summary(summary, known_tags=None):
+def normalize_summary(summary, known_tags=None, keywords=None):
     """Tidy a parsed reply before validation; returns (summary, warnings).
+
+    keywords ({tag: regex}, from tags.json) adds a tag to any topic whose title or summary
+    mentions it but that the model left untagged: precise terms like "Flock" shouldn't
+    depend on the model remembering the tag.
 
     - Topics become one object per list item, numbered Topic1, Topic2, ... in reply order
       (the model may use either shape, or skip numbers).
@@ -320,6 +330,12 @@ def normalize_summary(summary, known_tags=None):
     for i, topic in enumerate(topics, 1):
         if isinstance(topic, dict) and "Tags" in topic:
             topic["Tags"] = clean(topic["Tags"], f"Topic{i}")
+        if isinstance(topic, dict) and isinstance(topic.get("Tags"), list) and keywords:
+            text = f"{topic.get('Title', '')} {topic.get('Summary', '')}"
+            for tag, pattern in keywords.items():
+                if tag not in topic["Tags"] and pattern.search(text):
+                    topic["Tags"].append(tag)
+                    warnings.append(f"Topic{i}: added tag {tag!r} (keyword match)")
     summary["Topics"] = [{f"Topic{i}": topic} for i, topic in enumerate(topics, 1)]
     if "Tags" in summary:
         summary["Tags"] = clean(summary["Tags"], "Tags")
@@ -422,7 +438,7 @@ def summarize_with_model(model, config, transcript, starts, log):
     rules = config.get("summarize", {}).get("validation", {})
     system, prompt = build_prompt(config, model)
     transcript_text = render_transcript(transcript, model["transcript_format"])
-    known = tag_ids(config)
+    known, keywords = tag_ids(config), tag_keywords(config)
     structured = model["structured_output"] and model["provider_config"]["type"] == "anthropic"
     schema = build_schema(config) if structured else None
     limit = model["max_input_chars"]
@@ -434,7 +450,7 @@ def summarize_with_model(model, config, transcript, starts, log):
     for attempt in range(1, model["max_attempts"] + 1):
         try:
             summary, notes = normalize_summary(
-                parse_reply(request_summary(model, system, prompt, transcript_text, schema)), known)
+                parse_reply(request_summary(model, system, prompt, transcript_text, schema)), known, keywords)
             errors, warnings = validate_summary(
                 summary, starts, rules.get("max_summary_sentences", 5), rules.get("exact_timestamps_required", False),
                 known)
@@ -501,6 +517,8 @@ def main():
     p.add_argument("--config", default=str(CONFIG_FILE), help="config file (default: summarizer.toml)")
     p.add_argument("--list-models", action="store_true", help="show configured models and exit")
     p.add_argument("--jobs", type=int, default=1, help="summarize N transcripts in parallel (default: 1)")
+    p.add_argument("--apply-keywords", action="store_true",
+                   help="re-apply tags.json keyword rules to existing summaries (no API calls) and exit")
     p.add_argument("--check", metavar="SUMMARY", nargs="+", help="only validate existing summary files and exit")
     args = p.parse_args()
 
@@ -518,6 +536,24 @@ def main():
             key = "key set" if env == "-" or os.environ.get(env) else f"{env} not set"
             mark = f"[{active.index(name) + 1}]" if name in active else "   "
             print(f"{mark} {name:12} {m['provider']:10} {m['model']:22} prompt={m['prompt']:9} {key}")
+        return 0
+
+    if args.apply_keywords:
+        known, keywords, changed = tag_ids(config), tag_keywords(config), 0
+        for f in sorted(output_dir(config).glob("*/*.json")):
+            summary = json.loads(f.read_text(encoding="utf-8"))
+            if "Tags" not in summary or not isinstance(summary.get("Topics"), list):
+                continue  # index files and summaries made before tagging
+            summary, notes = normalize_summary(summary, known, keywords)
+            added = [n for n in notes if "keyword match" in n]
+            if added:
+                changed += 1
+                f.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+                print(f"{f.parent.name}/{f.stem}: " + "; ".join(added), file=sys.stderr)
+        print(f"{changed} summar{'y' if changed == 1 else 'ies'} updated", file=sys.stderr)
+        if changed:
+            from build_site import build_manifest
+            build_manifest(output_dir(config))
         return 0
 
     if args.check:
