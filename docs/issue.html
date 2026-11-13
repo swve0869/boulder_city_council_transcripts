@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Issue tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="issue">
+<main>
+<nav class="top"><a href="index.html">Meetings</a><a href="trends.html">Trends</a><a href="issue.html" aria-current="page">Issues</a></nav>
+<p class="meta"><label>Issue <select id="tag"></select></label>
+  <span id="city-picker" hidden> · <label>City <select id="city"></select></label></span></p>
+<h1 id="title">Loading…</h1>
+<p id="desc" class="note"></p>
+<p id="status" class="status"></p>
+<div id="tiles" class="tiles"></div>
+
+<section>
+  <div class="chart-head"><h2>Discussion over time</h2>
+    <div class="controls"><button class="link" type="button" id="toggle-table">Show table</button></div></div>
+  <p class="tag-note" id="chart-note"></p>
+  <div class="chart" id="months"></div>
+</section>
+
+<section id="related-section" hidden>
+  <div class="chart-head"><h2>Often discussed with</h2></div>
+  <div class="tags" id="related"></div>
+</section>
+
+<section>
+  <div class="chart-head"><h2>Every discussion</h2>
+    <div class="controls"><label>Order <select id="order">
+      <option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="longest">Longest first</option>
+    </select></label></div></div>
+  <div id="discussions"></div>
+</section>
+</main>
+<div id="tooltip" class="tooltip" role="tooltip"></div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+<script src="issue.js"></script>
+</body>
+</html>

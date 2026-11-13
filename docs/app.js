@@ -576,8 +576,8 @@
       const section = el("section", { class: "topic", id: `topic-${container.children.length + 1}` }, el("h3", {}, t.title));
       if (t.tags.length) {
         section.append(el("div", { class: "tags" }, ...t.tags.map((g) => tagChip(tags, g, {
-          href: `index.html?city=${encodeURIComponent(city)}&tags=${encodeURIComponent(g)}`,
-          title: `All meetings tagged ${tags.label(g)}`,
+          href: `issue.html?city=${encodeURIComponent(city)}&tag=${encodeURIComponent(g)}`,
+          title: `Every council discussion tagged ${tags.label(g)}`,
         }))));
       }
       section.append(el("p", {}, t.summary));
@@ -603,8 +603,8 @@
         if (selected) {
           const n = sections.filter((s) => s.tags.includes(selected)).length;
           note.append(`${n} topic${n === 1 ? "" : "s"} tagged ${tags.label(selected)}. `,
-            el("a", { href: `index.html?city=${encodeURIComponent(city)}&tags=${encodeURIComponent(selected)}` },
-              `See all meetings tagged ${tags.label(selected)} →`));
+            el("a", { href: `issue.html?city=${encodeURIComponent(city)}&tag=${encodeURIComponent(selected)}` },
+              `Follow ${tags.label(selected)} across meetings →`));
         } else {
           note.append("Select a tag to highlight its topics.");
         }
@@ -631,7 +631,7 @@
     if (m) seek(Number(m[1]), false);
   }
 
-  window.Council = { $, el, getJSON, loadManifest, parseDate, fmtDuration, status, tagIndex, tagChip };
+  window.Council = { $, el, getJSON, loadManifest, parseDate, fmtTime, fmtDuration, status, tagIndex, tagChip };
 
   const page = document.body.dataset.page;
   if (page === "index") renderIndex();

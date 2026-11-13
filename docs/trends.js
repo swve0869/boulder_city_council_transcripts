@@ -49,7 +49,7 @@
     const cities = manifest.cities || [];
     const state = { city: cities[0] && cities[0].slug, metric: "hours", period: "all", group: "", order: "value", rows: "12", pair: null };
     const tablesOpen = new Set();
-    const goTo = (id) => `index.html?city=${encodeURIComponent(state.city)}&tags=${encodeURIComponent(id)}&sort=relevance`;
+    const goTo = (id) => `issue.html?city=${encodeURIComponent(state.city)}&tag=${encodeURIComponent(id)}`;
 
     if (cities.length > 1) {
       const sel = $("city");
@@ -132,7 +132,7 @@
         const track = el("div", { class: `track g-${tags.group(id)}`, role: "listitem",
           "aria-label": `${tags.label(id)}: ${metric.fmt(val(id))}` },
           el("div", { class: "bar", style: `width:${(100 * val(id)) / max}%` }), el("span", { class: "val" }, metric.fmt(val(id))));
-        hover(track, () => [tags.label(id), `${fmtDuration(t.hours)} · ${t.meetings} meetings · ${t.topics} topics`, "Select to see these meetings"]);
+        hover(track, () => [tags.label(id), `${fmtDuration(t.hours)} · ${t.meetings} meetings · ${t.topics} topics`, "Select to follow this issue"]);
         track.addEventListener("click", () => { location.href = goTo(id); });
         track.addEventListener("keydown", (e) => { if (e.key === "Enter") location.href = goTo(id); });
         grid.append(label, track);

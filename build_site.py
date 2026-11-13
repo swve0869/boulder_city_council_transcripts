@@ -130,7 +130,7 @@ def build_manifest(summaries_dir=SUMMARIES_DIR):
     manifest = {
         "cities": [{"slug": s, "name": names.get(s, s.replace("-", " ").title())} for s in cities],
         "tag_groups": vocabulary["groups"],
-        "tags": [{k: t[k] for k in ("id", "label", "group")} for t in vocabulary["tags"]],
+        "tags": [{k: t[k] for k in ("id", "label", "group", "description")} for t in vocabulary["tags"]],
         "meetings": meetings,
     }
     summaries_dir.mkdir(parents=True, exist_ok=True)

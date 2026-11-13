@@ -143,3 +143,15 @@ button.link { background: none; border: 0; color: var(--link); cursor: pointer; 
 .topic.playing { border-left-color: var(--link); }
 .snippet { color: var(--muted); font-size: 14px; }
 mark { background: var(--hl); color: inherit; padding: 0 .1em; border-radius: 2px; }
+
+/* Issue page */
+.cols { display: flex; align-items: stretch; gap: 2px; height: 11rem; padding: .5rem 0 2px; overflow-x: auto; overflow-y: hidden; }
+.colgap { flex: none; width: 1.4rem; display: flex; align-items: center; justify-content: center; color: var(--muted); border-left: 1px dashed var(--rule); border-right: 1px dashed var(--rule); margin: 0 3px; }
+.col { flex: 1 1 1.6rem; min-width: 1.6rem; max-width: 2.4rem; display: flex; flex-direction: column; justify-content: flex-end; cursor: default; }
+.colbar { background: var(--g); border-radius: 4px 4px 0 0; min-height: 0; }
+.col:hover .colbar, .col:focus-visible .colbar { filter: brightness(1.1); outline: 2px solid var(--fg); outline-offset: 1px; }
+.collabel { flex: none; border-top: 1px solid var(--rule); color: var(--muted); font-size: 11px; line-height: 1.2; text-align: center; padding-top: 2px; white-space: nowrap; }
+.discussion { padding: .9rem 0; border-bottom: 1px solid var(--rule); }
+.discussion h3 { margin: .1rem 0 .3rem; }
+.discussion p { margin: 0 0 .5rem; }
+.discussion .stamps { align-items: center; }
