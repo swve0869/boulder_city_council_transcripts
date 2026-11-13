@@ -61,6 +61,9 @@
     $("period").append(el("option", { value: "all" }, "All meetings"), ...years.map((y) => el("option", { value: y }, y)));
     for (const g of tags.groups) $("group").append(el("option", { value: g.id }, g.label));
     $("legend").append(...tags.groups.map((g) => el("span", { class: `g-${g.id}` }, g.label)));
+    $("legend-mix").append(...tags.groups.map((g) => el("span", { class: `g-${g.id}` }, g.label)));
+    state.mix = "share";
+    $("mix-mode").addEventListener("change", () => { state.mix = $("mix-mode").value; update(); });
 
     const bind = (id, key) => $(id).addEventListener("change", () => { state[key] = $(id).value; update(); });
     bind("metric", "metric"); bind("period", "period"); bind("group", "group");
@@ -194,6 +197,50 @@
       box.replaceChildren(grid, scale);
     }
 
+    // Stacked bar per month: time by tag group (segments keep the fixed group order and colors).
+    function drawMix(list) {
+      const dated = list.filter((m) => m.date);
+      const months = [...new Set(dated.map((m) => m.date.slice(0, 7)))].sort();
+      const box = $("mix");
+      if (!months.length) { box.replaceChildren(el("p", { class: "status" }, "No dated, tagged meetings in this selection.")); return; }
+      const data = new Map(months.map((mo) => [mo, new Map(tags.groups.map((g) => [g.id, 0]))]));
+      for (const m of dated) {
+        const row = data.get(m.date.slice(0, 7));
+        for (const [id, secs] of Object.entries(m.tag_seconds || {})) {
+          const g = tags.group(id);
+          if (row.has(g)) row.set(g, row.get(g) + secs);
+        }
+      }
+      const label = (mo) => parseDate(`${mo}-01`).toLocaleDateString("en-US", { month: "short", year: "numeric" });
+      const total = (mo) => [...data.get(mo).values()].reduce((a, b) => a + b, 0);
+      if (tablesOpen.has("mix")) {
+        box.replaceChildren(table(["Month", ...tags.groups.map((g) => g.label), "Total"], months.map((mo) => [label(mo),
+          ...tags.groups.map((g) => { const v = data.get(mo).get(g.id); return v ? (state.mix === "share" ? `${Math.round((100 * v) / total(mo))}%` : fmtDuration(v)) : "–"; }),
+          fmtDuration(total(mo))])));
+        return;
+      }
+      const max = Math.max(...months.map(total)) || 1;
+      const grid = el("div", { class: "bars stack" });
+      let lastYear = null;
+      for (const mo of months) {
+        const d = parseDate(`${mo}-01`), t = total(mo);
+        const name = d.toLocaleDateString("en-US", { month: "short" }) + (d.getFullYear() !== lastYear ? ` ${d.getFullYear()}` : "");
+        lastYear = d.getFullYear();
+        const track = el("div", { class: "track", role: "img", "aria-label": `${label(mo)}: ${fmtDuration(t)} of tagged discussion` });
+        const scale = state.mix === "share" ? (t || 1) : max;
+        for (const g of tags.groups) {
+          const v = data.get(mo).get(g.id);
+          if (!v) continue;
+          const seg = el("div", { class: `bar seg g-${g.id}`, style: `width:${(100 * v) / scale}%` });
+          hover(seg, () => [`${g.label} · ${label(mo)}`, `${fmtDuration(v)} (${Math.round((100 * v) / (t || 1))}% of the month)`]);
+          track.append(seg);
+        }
+        if (state.mix === "hours") track.append(el("span", { class: "val" }, fmtDuration(t)));
+        grid.append(el("div", { class: "label plain" }, name), track);
+      }
+      box.replaceChildren(grid);
+    }
+
     function drawPairs(list, tot) {
       const sel = $("pair-tag");
       const ids = [...tot.keys()].sort((a, b) => tot.get(b).topics - tot.get(a).topics);
@@ -238,6 +285,7 @@
       status(list.length ? "" : "No meetings in this selection.");
       drawTiles(list);
       drawRank(tot);
+      drawMix(list);
       drawHeat(list, tot);
       drawPairs(list, tot);
     }

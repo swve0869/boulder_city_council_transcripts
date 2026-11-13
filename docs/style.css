@@ -160,3 +160,11 @@ footer.site { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--r
 .excerpt { max-height: 24rem; overflow-y: auto; border: 1px solid var(--rule); border-radius: 6px; padding: .6rem .75rem; margin-top: .5rem; font-size: 15px; }
 .excerpt p { margin: 0 0 .7rem; }
 .excerpt .stamp { margin-right: .2rem; }
+/* Stacked bars: 2px surface gap between segments; only the last segment keeps the rounded end */
+.bars.stack .track { cursor: default; gap: 2px; }
+.bars.stack .bar.seg { border-radius: 0; height: 14px; min-width: 2px; }
+.bars.stack .bar.seg:last-of-type { border-radius: 0 4px 4px 0; }
+.bars.stack .bar.seg:hover, .bars.stack .bar.seg:focus-visible { outline: 2px solid var(--fg); outline-offset: 1px; filter: brightness(1.1); }
+.bars.stack .track:hover .bar { filter: none; outline: 0; }
+.bars.stack .track:hover .bar.seg:hover { filter: brightness(1.1); outline: 2px solid var(--fg); }
+.bars .label.plain { cursor: default; color: var(--muted); }

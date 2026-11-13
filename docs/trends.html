@@ -45,6 +45,16 @@ last timestamp, split across a topic's tags with the first (most specific) tag w
 </section>
 
 <section>
+  <div class="chart-head"><h2>Where the time goes each month</h2>
+    <div class="controls"><label>Show <select id="mix-mode">
+      <option value="share">Share of time</option><option value="hours">Hours</option>
+    </select></label><button class="link" type="button" data-table="mix">Show table</button></div></div>
+  <p class="tag-note">Estimated discussion time by tag group, for each month that had a meeting.</p>
+  <div class="legend" id="legend-mix"></div>
+  <div class="chart" id="mix"></div>
+</section>
+
+<section>
   <div class="chart-head"><h2>When issues come up</h2>
     <div class="controls"><label>Rows <select id="heat-rows"><option value="12">Top 12 tags</option><option value="20">Top 20</option><option value="all">All tags</option></select></label>
     <button class="link" type="button" data-table="heat">Show table</button></div></div>
