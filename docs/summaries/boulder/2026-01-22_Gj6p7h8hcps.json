@@ -1,0 +1,65 @@
+{
+  "Title": "January 22, 2026 - City of Boulder City Council Special Meeting",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Declaration Commemorating International Holocaust Remembrance Day",
+        "Summary": "Mayor Pro Tem Winer presented a declaration recognizing January 27, 2026 as International Holocaust Remembrance Day. The declaration honors the victims and survivors of the Holocaust and the groups persecuted under Nazi Germany. It also condemns antisemitism, hatred, and bigotry in all forms and pledges solidarity with the Jewish community.",
+        "related_timestamps": [
+          "399.759",
+          "542.48"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Consent Agenda (Items 3A-3G)",
+        "Summary": "Council considered consent agenda items 3A through 3G. Council members commented on item 3G, a letter to Xcel Energy setting out the city's expectations after the city declined an offer in 2025. Staff were thanked for their work on the letter's draft. The consent agenda passed unanimously.",
+        "related_timestamps": [
+          "547.12",
+          "686.959"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Ordinance 8731: Amending Purchasing Procedures (Second Reading)",
+        "Summary": "Council held the second reading and adopted Ordinance 8731, which updates Chapter 2-8 of the Boulder Revised Code on city purchasing procedures. Staff, led by Deputy Finance Director Joel Wagner and new Purchasing Manager Michael Vanstall, said the rules had not been updated since 1997. Key changes include raising the informal bid threshold from $50,000 to $100,000, allowing alternative construction delivery methods, clarifying piggyback contracting and electronic bid openings, and adding environmental and business opportunity provisions. The ordinance was adopted unanimously.",
+        "related_timestamps": [
+          "692.48",
+          "1633.12"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Community Change Requests for the Boulder Valley Comprehensive Plan Update",
+        "Summary": "Staff presented 34 community change requests received for the Boulder Valley Comprehensive Plan update and recommended which should advance for further analysis. Council approved the list unanimously, removing request 10 (south side of Sue Drive) after neighbors raised concerns about density, traffic, and lack of outreach. Council also added requests 26 and 27, covering wildfire mitigation and agricultural water and irrigation, which the planning board and county planning commission had supported. This action is an initial screening only, and final decisions will occur during plan adoption in summer 2026.",
+        "related_timestamps": [
+          "1639.36",
+          "6606.4"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Metro District Policy Framework for Commercial Development",
+        "Summary": "Staff presented a recommended policy framework to regulate commercial-driven metropolitan districts, limiting residential use to about 10% of floor area. The framework proposes a debt mill levy cap near 50 mills, a combined cap for operations and maintenance, and rules for fees, revenue bonds, and privately placed debt. It also sets requirements for service plan amendments, periodic audits, and enforcement. Council asked questions about tax burden comparisons, affordable housing exclusions, dissolution, and coordination with other districts, then affirmed moving forward toward an April ordinance so that proposals could reach the November 2026 ballot cycle.",
+        "related_timestamps": [
+          "6624.56",
+          "10290.56"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Regional Homelessness Working Group Appointment",
+        "Summary": "Council discussed filling a vacancy on the Boulder County Elected Officials Regional Working Group on Homelessness after Councilmember Lauren Folkart's departure. Several members volunteered for the primary seat, and Councilmember Tina volunteered as the alternate. Council asked the volunteers to resolve the primary seat offline and bring the appointment back at a future meeting. The meeting then adjourned at 8:48 p.m.",
+        "related_timestamps": [
+          "10316.319",
+          "10413.68"
+        ]
+      }
+    }
+  ]
+}

@@ -16,11 +16,355 @@
   },
   {
    "city": "boulder",
+   "id": "2026-10-01_jWQE5CiFw_w",
+   "date": "2026-10-01",
+   "video_id": "jWQE5CiFw_w",
+   "title": "October 1, 2026 City of Boulder City Council Meeting (Regular Meeting)",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-09-24_exg7BWDGPrk",
+   "date": "2026-09-24",
+   "video_id": "exg7BWDGPrk",
+   "title": "September 24, 2026 City of Boulder City Council Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-09-17_SS0nUFcZFq0",
+   "date": "2026-09-17",
+   "video_id": "SS0nUFcZFq0",
+   "title": "September 17, 2026 - Regular Meeting of the Boulder City Council",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-09-10_SPWrnMJOE4g",
+   "date": "2026-09-10",
+   "video_id": "SPWrnMJOE4g",
+   "title": "September 10, 2026 City of Boulder City Council Study Session - 2027 Recommended Budget",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-09-03_wKTZP4C5Csw",
+   "date": "2026-09-03",
+   "video_id": "wKTZP4C5Csw",
+   "title": "September 3, 2026 City of Boulder City Council Special Meeting and Regular Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-08-27_sbTlma81WrE",
+   "date": "2026-08-27",
+   "video_id": "sbTlma81WrE",
+   "title": "August 27, 2026 City of Boulder City Council Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-08-20_xF8TNuQ2Dzs",
+   "date": "2026-08-20",
+   "video_id": "xF8TNuQ2Dzs",
+   "title": "August 20, 2026 City of Boulder City Council Regular Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-08-13_4XMc8kZXepo",
+   "date": "2026-08-13",
+   "video_id": "4XMc8kZXepo",
+   "title": "August 13, 2026 City of Boulder City Council Special Meeting and Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-08-06_DEDC8XNYEvY",
+   "date": "2026-08-06",
+   "video_id": "DEDC8XNYEvY",
+   "title": "August 6, 2026 City of Boulder City Council Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-07-30_ZiCkooZ3nyA",
+   "date": "2026-07-30",
+   "video_id": "ZiCkooZ3nyA",
+   "title": "July 30, 2026 - City of Boulder City Council Special Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-07-23_j0-Ydc11a9k",
+   "date": "2026-07-23",
+   "video_id": "j0-Ydc11a9k",
+   "title": "July 23, 2026 City of Boulder City Council Special Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-06-25_PQ2JvYUEnbw",
+   "date": "2026-06-25",
+   "video_id": "PQ2JvYUEnbw",
+   "title": "June 25, 2026 City of Boulder City Council Special Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-06-18_njsXxBO3Q5g",
+   "date": "2026-06-18",
+   "video_id": "njsXxBO3Q5g",
+   "title": "June 18, 2026 - Regular Meeting of the Boulder City Council",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-06-11_LsQ5kg88gCg",
+   "date": "2026-06-11",
+   "video_id": "LsQ5kg88gCg",
+   "title": "June 11, 2026 - City of Boulder City Council Study Session (Legislative Update)",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-06-04_-4mbo5GyW4U",
+   "date": "2026-06-04",
+   "video_id": "-4mbo5GyW4U",
+   "title": "June 4, 2026 - City of Boulder City Council Special Meeting (Joint Public Hearing with Planning Board)",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-05-28_3TtUXBJ4NgI",
+   "date": "2026-05-28",
+   "video_id": "3TtUXBJ4NgI",
+   "title": "May 28, 2026 - City of Boulder City Council Special Meeting and Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-05-21_pTbZxj3Wynk",
+   "date": "2026-05-21",
+   "video_id": "pTbZxj3Wynk",
+   "title": "May 21, 2026 City of Boulder City Council Meeting - Regular Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-05-14_f-B83oVqazg",
+   "date": "2026-05-14",
+   "video_id": "f-B83oVqazg",
+   "title": "May 14, 2026 City of Boulder City Council Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-05-07_qwOFpFdIrnQ",
+   "date": "2026-05-07",
+   "video_id": "qwOFpFdIrnQ",
+   "title": "May 7, 2026 - Regular Meeting of the Boulder City Council",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-04-23_S0SLkh842Qg",
+   "date": "2026-04-23",
+   "video_id": "S0SLkh842Qg",
+   "title": "April 23, 2026 City of Boulder City Council Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-04-16_Qcf2Ei5-8NE",
+   "date": "2026-04-16",
+   "video_id": "Qcf2Ei5-8NE",
+   "title": "April 16, 2026 Regular City Council Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-04-09_wtp0dHiXFZc",
+   "date": "2026-04-09",
+   "video_id": "wtp0dHiXFZc",
+   "title": "April 9, 2026 City of Boulder City Council Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-04-02_kElsDSyw89M",
+   "date": "2026-04-02",
+   "video_id": "kElsDSyw89M",
+   "title": "April 2, 2026 Regular City Council Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-03-26_9VXfhMOXO5M",
+   "date": "2026-03-26",
+   "video_id": "9VXfhMOXO5M",
+   "title": "March 26, 2026 City of Boulder City Council Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-03-12_eTpzgaRsIqY",
+   "date": "2026-03-12",
+   "video_id": "eTpzgaRsIqY",
+   "title": "March 12, 2026 City of Boulder City Council Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-03-05_9t6jNPMiEQY",
+   "date": "2026-03-05",
+   "video_id": "9t6jNPMiEQY",
+   "title": "March 5, 2026 City of Boulder City Council Meeting - Regular Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-02-19_SpXkKd1bQng",
+   "date": "2026-02-19",
+   "video_id": "SpXkKd1bQng",
+   "title": "February 19, 2026 Regular City Council Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-02-05_74bQo5Ol39s",
+   "date": "2026-02-05",
+   "video_id": "74bQo5Ol39s",
+   "title": "February 5, 2026 - Regular City Council Meeting (Thursday)",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-01-22_Gj6p7h8hcps",
+   "date": "2026-01-22",
+   "video_id": "Gj6p7h8hcps",
+   "title": "January 22, 2026 - City of Boulder City Council Special Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "2026-01-08_eiedz62ck40",
+   "date": "2026-01-08",
+   "video_id": "eiedz62ck40",
+   "title": "January 8, 2026 City of Boulder City Council Special Meeting",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
    "id": "undated_zA5JVdBVOQk",
    "date": null,
    "video_id": "zA5JVdBVOQk",
    "title": "August 17, 2023 / Regular City Council Meeting",
    "model": "Claude Sonnet 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_twY2b6ioVSQ",
+   "date": null,
+   "video_id": "twY2b6ioVSQ",
+   "title": "Boulder City Council Meeting - 9-28-23 (Study Session: Municipal Court Update, Police Department Update, Homelessness Programs Update)",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_s4uJtkgegsE",
+   "date": null,
+   "video_id": "s4uJtkgegsE",
+   "title": "Boulder City Council Meeting - Thursday, October 5, 2023 (Regular Meeting)",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_ldO17Yp3jiM",
+   "date": null,
+   "video_id": "ldO17Yp3jiM",
+   "title": "Boulder City Council Regular Meeting - August 3, 2023",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_i22yw8m92Ek",
+   "date": null,
+   "video_id": "i22yw8m92Ek",
+   "title": "October 12, 2023 - Boulder City Council Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_hOn-ecXbgHw",
+   "date": null,
+   "video_id": "hOn-ecXbgHw",
+   "title": "Thursday September 14, 2023 - Boulder City Council Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_YrPGGa7v3vE",
+   "date": null,
+   "video_id": "YrPGGa7v3vE",
+   "title": "Boulder City Council Study Session - 8/24/2023",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_YWNAVc24Huk",
+   "date": null,
+   "video_id": "YWNAVc24Huk",
+   "title": "Boulder City Council Meeting - September 21, 2023",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_OvkYrrlrfw4",
+   "date": null,
+   "video_id": "OvkYrrlrfw4",
+   "title": "Boulder City Council Meeting - September 7, 2023",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_LXeTm-84ZtQ",
+   "date": null,
+   "video_id": "LXeTm-84ZtQ",
+   "title": "August 10, 2023 - Boulder City Council Special Meeting and Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_K3Nkg5ubIUU",
+   "date": null,
+   "video_id": "K3Nkg5ubIUU",
+   "title": "Boulder City Council Special Meeting - July 13, 2023",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_FLEm6gGcS-M",
+   "date": null,
+   "video_id": "FLEm6gGcS-M",
+   "title": "Boulder City Council Regular Meeting - July 20, 2023",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_BjtqgUm0b5g",
+   "date": null,
+   "video_id": "BjtqgUm0b5g",
+   "title": "Boulder City Council Study Session - July 27, 2023",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
+   "id": "undated_01aYfhQ1J-s",
+   "date": null,
+   "video_id": "01aYfhQ1J-s",
+   "title": "Boulder City Council Special Meeting and Study Session - June 22, 2023",
+   "model": "Claude Haiku 5.5"
   }
  ]
 }

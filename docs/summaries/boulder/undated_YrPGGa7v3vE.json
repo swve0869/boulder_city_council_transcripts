@@ -1,0 +1,35 @@
+{
+  "Title": "Boulder City Council Study Session - 8/24/2023",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Community Broadband",
+        "Summary": "Staff presented research on broadband access, noting over 99% of households have wired broadband access but only 36% have fiber options, and about 250 homes lack wired service. Three potential paths were outlined: a municipal internet utility (estimated at $218 million with a roughly $14 million annual subsidy), a public-private partnership, or a backbone lease and right-of-way agreement with a private provider. Council raised questions about take rates, pricing, lateral costs, shallow trenching impacts, and preserving future options, and staff was asked to return with additional analysis. No decision was made; the session was for direction on information needs only.",
+        "related_timestamps": [
+          "413.34",
+          "1088.46"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Airport Community Conversation Update",
+        "Summary": "Staff presented results of the community engagement process on the future of the Boulder Municipal Airport, including open houses, questionnaires, a community working group, and bilingual meetings at San Lazaro and Vista Village. Four draft long-term scenarios were presented, ranging from enhanced maintenance of the existing airport to decommissioning it for mixed-use neighborhoods, along with near-term action items on noise, environment, economics, and safety. Staff reported that the FAA indicated grant assurances and perpetual obligations for land purchases would constrain airport closure, and Council discussed the need for further legal and feasibility information. Council did not select a scenario and asked staff for more information before returning in early 2024.",
+        "related_timestamps": [
+          "6680.0",
+          "9220.0"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Minimum Wage Regional Approach Update",
+        "Summary": "Staff updated Council on the regional minimum wage working group, which includes Longmont, Louisville, Lafayette, and Erie, aiming for a coordinated approach with a longer timeline, while Boulder County recently chose to pursue a 15 percent increase effective January 1, 2024. Staff explained that accelerating Boulder's timeline would require pausing collaborative work, limiting engagement, and lacking the economic analysis originally planned. Council debated the trade-offs between a faster increase responding to community need and preserving regional cooperation. The majority of Council indicated support for staying the course with the regional approach and a January 2025 implementation, though some members favored a faster timeline.",
+        "related_timestamps": [
+          "15683.0",
+          "18080.0"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "Title": "May 14, 2026 City of Boulder City Council Study Session",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Financial Forecast and Economic Outlook",
+        "Summary": "CU Business Research Division presented the economic outlook, citing modest GDP growth, stalled employment, elevated inflation driven by energy prices, and flattening Boulder sales tax revenue. City CFO Christa Morrison and Principal Budget Analyst Scott Carpenter explained that sales and use tax and property tax forecasts are being lowered, closing a $7.5 million 2026 shortfall through reductions and realignments, and that a $6.5 million general fund shortfall for 2027 requires 4% reductions across departments. Council asked clarifying questions on recession risk, Colorado job losses, property tax ratios, and the water supply risks, which staff said were not modeled. The medium-case forecast was used for budget planning.",
+        "related_timestamps": [
+          "280.0",
+          "12504.08"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "2026 Potential Ballot Measures",
+        "Summary": "Staff presented potential tax ballot measures, recommending that council poll on the parks and public improvement mill levy expansion and a debt authorization of up to $200 million for unfunded priority facility needs, along with a charter change to section 97 to base the debt limit on actual value. Staff recommended against pursuing general fund debt authorization and the public realm sales tax consolidation this year, and council generally agreed with pulling the general fund debt item as well. Council discussed the residential vacancy excise tax, with several members favoring further legal research on a tiered structure, while others raised concerns about the tax burden on commercial and small businesses. Council was also asked about polling a $400 million option, with mixed views on the scale of the increase.",
+        "related_timestamps": [
+          "8763.52",
+          "9995.359"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Charter Amendments and Community Petitions",
+        "Summary": "The charter committee recommended two charter changes: amending section 130 on boards and commissions, which failed in 2024, and amending section 176 to explicitly include wildfire mitigation as an open space purpose. Council generally supported removing the removal provisions from the boards and commissions amendment but did not move it forward this year, citing a crowded ballot. Council directed staff to continue work on the wildfire mitigation language, with some members suggesting flood mitigation be included as well. Staff also provided an overview of one community-sponsored petition on commercial and residential vacancy tax and noted that state and regional ballot measures would be covered in a June legislative update.",
+        "related_timestamps": [
+          "10995.359",
+          "12480.56"
+        ]
+      }
+    }
+  ]
+}

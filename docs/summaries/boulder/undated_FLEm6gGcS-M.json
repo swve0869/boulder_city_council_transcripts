@@ -1,0 +1,65 @@
+{
+  "Title": "Boulder City Council Regular Meeting - July 20, 2023",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Call to Order, Agenda Amendment, and Roll Call",
+        "Summary": "Mayor Brockett called the meeting to order and the roll was taken with a quorum present. Council unanimously approved a motion to amend the agenda to add item 7A on public safety around Boulder Creek. Council then moved to open comment.",
+        "related_timestamps": [
+          "177.2",
+          "249.239"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Public Participation Guidelines and Open Comment",
+        "Summary": "Staff reviewed community guidelines for civil conduct and public testimony before open comment began. Residents spoke on several issues, including opposition to weakening smoke-free air laws and allowing smoking or cannabis use in public places. Other speakers supported a minimum wage increase in 2024, raised concerns about lead fuel and flight paths at Boulder Airport, and addressed homelessness, public safety, and open space governance. Staff responded briefly to some comments and noted upcoming study sessions and follow-up meetings.",
+        "related_timestamps": [
+          "253.739",
+          "2396.339"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Consent Agenda",
+        "Summary": "Council unanimously approved consent agenda items 3A through 3H. The consent items included passing three alternative versions of a ballot measure to extend the 0.15 percent sales tax, which would otherwise expire at the end of next year, with a public hearing scheduled for August 3. Council also approved a change allowing land use approvals to remain valid for three years instead of one.",
+        "related_timestamps": [
+          "2976.18",
+          "3198.9"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Call-Ups",
+        "Summary": "The city manager introduced the call-up items, including the vacation of utility easement portions at 2140 and 2060 Kohler Drive. No council members requested to call up the item, so it proceeded without discussion.",
+        "related_timestamps": [
+          "3206.52",
+          "3241.319"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Marijuana Hospitality Establishments (Item 6A)",
+        "Summary": "Staff requested direction on whether to opt in to state law allowing marijuana hospitality establishments, based on two years of recommendations from the Cannabis Licensing and Advisory Board. Staff noted most public comments came from industry members and public health professionals, and recommended broader community engagement, which could require a consultant and affect several departments. Council members debated whether to add the item to the current work plan, citing staff capacity constraints and the likelihood that future councils would set priorities. The majority indicated against adding the item to the current work plan, leaving the decision to future councils.",
+        "related_timestamps": [
+          "3247.2",
+          "7484.54"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Boulder Creek Public Safety (Item 6B)",
+        "Summary": "Following two drowning deaths in Boulder Creek this summer, staff presented on emergency response and creek safety measures. Staff explained that Swiftwater rescues take several minutes and that the county sheriff sets creek closure thresholds, currently around 700 cubic feet per second. Proposed measures include throw line stations by April 2024, permanent signage, expanded swim lessons with Boulder Valley School District, and reviewing personal flotation device requirements. Council members raised concerns about the flow threshold, life jacket requirements, and swim lesson access, and staff agreed to continue working with the sheriff.",
+        "related_timestamps": [
+          "7493.099",
+          "9303.0"
+        ]
+      }
+    }
+  ]
+}

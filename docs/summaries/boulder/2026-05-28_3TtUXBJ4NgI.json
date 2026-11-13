@@ -1,0 +1,55 @@
+{
+  "Title": "May 28, 2026 - City of Boulder City Council Special Meeting and Study Session",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Consent Agenda: Confirmation of Council Member Benjamin's CML Executive Board Nomination",
+        "Summary": "Council amended the agenda to add item 2A, a motion confirming Council's endorsement of Council Member Matt Benjamin's nomination to the Colorado Municipal League Executive Board. Benjamin explained that Boulder holds two CML appointments and that the board oversees the organization's policy positions on state legislation. Council approved the consent agenda 8-0, with Benjamin recusing himself from the vote.",
+        "related_timestamps": [
+          "315.56",
+          "631.04"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Public Hearing: Ordinance 8749 Authorizing Property Acquisition for Arapahoe Avenue Safety Project",
+        "Summary": "Staff presented Ordinance 8749, which authorizes acquiring property interests for the Arapahoe Avenue safety improvement project through negotiation, purchase, or eminent domain. The project uses a federal grant and city funds for a $12 million total budget, with 14 properties needing an average of about 700 square feet each. Staff said eminent domain is not expected to be needed, but the authority is needed to avoid schedule delays before the 2030 federal spending deadline. One member of the public spoke in opposition, and Council unanimously approved the ordinance.",
+        "related_timestamps": [
+          "631.04",
+          "2093.08"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Matters from Council: Continued Use of Airport Land",
+        "Summary": "Council discussed whether to consider a motion affirming the continued airport use under city code on the consent agenda or at a public hearing. Several members said the community has strong interest on both sides and favored a public hearing, and the Mayor confirmed that five members supported that approach. Council also directed staff to return with two options, one that permits long-term encumbrance of the land and one that preserves local future control, along with legal research. Members raised questions about the timing, budget impacts, and expiring grant funds.",
+        "related_timestamps": [
+          "2108.72",
+          "4364.56"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Study Session: Downtown Development Authority Plan of Development and Financial Structure",
+        "Summary": "Staff presented a draft plan of development for a proposed Downtown Development Authority (DDA) that would support reinvestment in downtown and University Hill over a 30-year period. The proposed financing includes a 3.67 mill levy to replace existing GID levies, which would generate about $1.8 million annually, along with tax increment financing (TIF) and integration of GID parking assets. Staff noted the DDA would be formed only if voters approve ballot measures, with a potential November 2026 ballot referral. The presentation also covered governance, council oversight, and a timeline for an intergovernmental agreement.",
+        "related_timestamps": [
+          "4380.32",
+          "6213.56"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Study Session: Council Questions and Feedback on the DDA",
+        "Summary": "Council members asked about voter eligibility, the revenue impacts on the general fund and other taxing entities, and how the parking assets would be transferred and governed. Several members raised concerns about measuring economic outcomes, protecting University Hill interests, and ensuring accountability for diverted revenue. Members also requested more financial analysis and scenario planning before final decisions. Council indicated general support for staff drafting ballot measures for the November 2026 election, with the understanding that more information would follow.",
+        "related_timestamps": [
+          "6220.84",
+          "9502.36"
+        ]
+      }
+    }
+  ]
+}

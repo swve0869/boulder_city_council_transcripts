@@ -1,0 +1,111 @@
+{
+  "Title": "June 11, 2026 - City of Boulder City Council Study Session (Legislative Update)",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "2026 State Legislative Session Overview",
+        "Summary": "Heather Staer, Intergovernmental Affairs Officer, reviewed the 2026 state legislative session, which ran from January 14 to May 13 and considered about 626 bills. Of these, 450 passed and were sent to the governor, and the city took positions on 58 bills. The governor had until June 12 to sign or veto remaining bills, and the city's new bill tracker was highlighted as a resource.",
+        "related_timestamps": [
+          "418.08",
+          "523.36"
+        ]
+      },
+      "Topic2": {
+        "Title": "State Budget and Medicaid",
+        "Summary": "The Joint Budget Committee was tasked with cutting about $1 billion from the state budget, leaving little room for new programs. Medicaid costs are a major driver of the deficit, prompting SB 187 to create a commission to recommend Medicaid policy changes by December. SB 135 would refer a ballot question to raise the Taber cap for K-12 education funding.",
+        "related_timestamps": [
+          "523.36",
+          "622.56"
+        ]
+      },
+      "Topic3": {
+        "Title": "Federal Response and Immigration Policy",
+        "Summary": "A major focus of the majority party was responding to federal actions, particularly on immigration, where Democrats struggled to unite behind a single approach. Of five immigration bills, two were killed in committee and one was vetoed, while HB 1276 passed to address civil liability for sharing immigration status information and authorize detention center inspections. Other federal-response bills addressed mail-in voting challenges and keeping coal plants open.",
+        "related_timestamps": [
+          "622.56",
+          "709.36"
+        ]
+      },
+      "Topic4": {
+        "Title": "Election Year Politics and HB 1430",
+        "Summary": "2026 is an election year with the entire House and nearly half the Senate up for reelection, creating tension between moderate and far-left Democrats. HB 1430 was passed as a counter to Initiative 175, the Restore Our Roads initiative, by reducing taxes and exempting fees affected by the initiative. Local governments view HB 1430 unfavorably, and negotiations with Initiative 175 proponents reportedly failed.",
+        "related_timestamps": [
+          "709.36",
+          "831.2"
+        ]
+      },
+      "Topic5": {
+        "Title": "City Priority Legislation",
+        "Summary": "The city supported HB 1202, which passed and allows multi-jurisdictional homelessness authorities and requires a state homelessness strategy. SB 189, the automated decision-making (AI) bill, passed and was signed, clarifying city responsibilities and enabling implementation of city AI policies. SB 148, the city's utility on-bill repayment program, failed in the Appropriations Committee despite broad support and will be revisited in the interim.",
+        "related_timestamps": [
+          "831.2",
+          "1017.92"
+        ]
+      },
+      "Topic6": {
+        "Title": "Direct and Indirect Budget Impacts on the City",
+        "Summary": "The most direct impact is the elimination of the local share of the retail marijuana sales tax, which will reduce the city's general fund by about $150,000. An amendment to preserve the local share for future years failed, though the city can raise local marijuana taxes to cover the gap. Multimodal transportation funds were hit hard, with a $10.5 million general fund transfer eliminated and $1.7 million transferred to the state, though the MMO transfer will return in three years. Indirect impacts include reduced affordable housing finance funding and reduced peace officers mental health grants.",
+        "related_timestamps": [
+          "1017.92",
+          "1244.0"
+        ]
+      },
+      "Topic7": {
+        "Title": "Data Centers, Housing, and Land Use Bills",
+        "Summary": "Two competing data center bills, HB 1030 (incentives without energy requirements) and SB 102 (strict large-load requirements), both failed, and the city opposed HB 1030 and supported SB 102. Several housing bills passed, including SB 40 expanding the affordable homeownership program, HB 1065 creating transit and housing investment zones, and HB 1224 strengthening mobile home park protections. The city opposed HB 1114 and HB 1308 on lot size and lot splitting, and both died in the Senate Local Government Committee.",
+        "related_timestamps": [
+          "1244.0",
+          "1465.84"
+        ]
+      },
+      "Topic8": {
+        "Title": "Clean Energy and Firearm Safety Bills",
+        "Summary": "The city supported several clean energy bills, including plug-in solar, which passed, and HB 1226 addressing federal actions on coal units. The city also helped defeat SB 208, which would have removed wind energy from Colorado clean energy standards. Three major bills weakening firearm safety were defeated, and the city supported HB 1144, which adds guardrails around 3D-printed firearms.",
+        "related_timestamps": [
+          "1465.84",
+          "1534.96"
+        ]
+      },
+      "Topic9": {
+        "Title": "RTD Modernization (HB 1150)",
+        "Summary": "The legislature passed HB 1150 to restructure the RTD board, reducing it from 15 to nine members, with five elected and four governor-appointed, and redrawing districts. The city sought to increase elected members from five to seven, add equity language to the governor's nomination process, and lower the candidate signature threshold. Only the signature threshold was amended, returning it to 250, while the other requests were not secured.",
+        "related_timestamps": [
+          "1534.96",
+          "1659.039"
+        ]
+      },
+      "Topic10": {
+        "Title": "Looking Ahead: 2027 Session and Post-Session Outlook",
+        "Summary": "The November 2026 election will determine the composition of the General Assembly, and Democrats are expected to retain control, though the balance between moderate and far-left Democrats may shift. Leadership changes include a new House speaker, a new House majority leader, and a new governor, which may alter priorities. The budget remains a challenge, and a special session may be needed if it is out of balance.",
+        "related_timestamps": [
+          "1659.039",
+          "1750.88"
+        ]
+      },
+      "Topic11": {
+        "Title": "November 2026 Ballot Measures",
+        "Summary": "Six measures are officially on the November ballot, including Initiatives 85, 95, 108, 109, and 110, and the referred Senate Bill 135 Taber cap measure. Initiative 175 is in signature verification and is expected to qualify, and Initiatives 177 and 195 are in circulation, with about 26 measures approved for circulation. Initiative 175 would dedicate transportation taxes to roads and bridges, diverting significant general fund revenue, while Initiative 195 would create a graduated income tax. The Secretary of State will confirm the final ballot by September 2.",
+        "related_timestamps": [
+          "1750.88",
+          "2157.92"
+        ]
+      },
+      "Topic12": {
+        "Title": "Council Questions and Feedback on Legislative Update",
+        "Summary": "Council asked about aggregate revenue impacts if the Taber cap increase fails, and staff noted a budget forecast is needed before estimating them. Council asked whether the city would consult local experts on Initiative 85 and how the city compares to other communities on marijuana tax losses, with staff noting grants are a key indirect impact. Council discussed data center policy, wildfire and utility reliability efforts, and a potential climate superfund, and asked that staff begin August-September outreach on 2027 legislative priorities.",
+        "related_timestamps": [
+          "2157.92",
+          "3483.44"
+        ]
+      },
+      "Topic13": {
+        "Title": "Council Discussion on Ballot Measure Positions",
+        "Summary": "Staff asked council whether to pursue positions on the ballot measures through a future resolution, and council generally agreed to gather more information before taking positions. Council members raised concerns about several measures, including Initiatives 85, 95, 108, 109, 110, and 175, noting potential harms to vulnerable communities, sentencing effectiveness, and state funding. Council requested staff summaries that identify who is sponsoring each measure, who benefits or loses, and the intended and unintended consequences. The consensus was to return with additional analysis before taking formal action.",
+        "related_timestamps": [
+          "3491.04",
+          "4521.28"
+        ]
+      }
+    }
+  ]
+}

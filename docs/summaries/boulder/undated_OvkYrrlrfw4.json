@@ -1,0 +1,72 @@
+{
+  "Title": "Boulder City Council Meeting - September 7, 2023",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Opening Announcements, Agenda Amendment, and Declarations",
+        "Summary": "Council opened with announcements about the What's Up Boulder event and the Better Public Meetings Project. The agenda was amended to remove item 6B, moving the Boulder Public Library District IGA update to the September 14 study session. Declarations were read recognizing the 10th anniversary of the 2013 flood, National Voter Registration Day, and National Suicide Prevention Month.",
+        "related_timestamps": [
+          "1295.039",
+          "1418.799",
+          "1571.88"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Public Participation (Open Comment)",
+        "Summary": "Community members spoke on the proposed closure of Boulder Municipal Airport, police reform and officer conduct, minimum wage and business pricing, Hill commercial area liquor regulations, bear-related trash issues, South Boulder neighborhood concerns, and homelessness and camping policies. Staff committed to following up on several concerns raised.",
+        "related_timestamps": [
+          "2031.96",
+          "2185.8",
+          "2974.04"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Consent Agenda and Resolution 1339",
+        "Summary": "Council approved the consent agenda items 3A through 3I unanimously. Item 3I, Resolution 1339, supports LGBTQ+ people obtaining goods and services without discrimination in light of the 303 Creative v. Elenis Supreme Court decision. Planning staff noted that the 3H Pearl-area or related planning item would return for second reading with incorporated board recommendations.",
+        "related_timestamps": [
+          "3230.319",
+          "3585.559",
+          "3644.52"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Call-Up Check-In: 1345 28th Street Site Review",
+        "Summary": "Council reviewed a call-up request for a site and use review to redevelop 1345 28th Street with three four-story buildings containing 303 student housing units. No council member chose to call up the item, so it proceeded without further review.",
+        "related_timestamps": [
+          "3647.24",
+          "3698.319"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Public Hearing: Reimagining Policing Plan",
+        "Summary": "Chief Maris Harold, Deputy Chief Redfern, and national consultant Robin Engel presented the Reimagining Policing Plan, a problem-oriented, holistic approach to public safety developed over roughly two years of community engagement. Staff reviewed staffing needs under the ICMA rule of 60, training, officer wellness, and performance metrics, noting budget constraints and that funding would be addressed through future budget cycles. Dozens of residents testified, largely in support, while some raised concerns about crime, Pearl Street conditions, and the pace of reform. Council asked clarifying questions, then unanimously accepted the plan and disbanded the reimagining policing process subcommittee.",
+        "related_timestamps": [
+          "4398.08",
+          "5677.6",
+          "9963.399",
+          "13946.0"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Matters from City Manager: Inclusionary Housing Program Update",
+        "Summary": "Staff presented proposed updates to the inclusionary housing program, including moving cash-in-lieu to a per-square-foot structure, reducing the on-site for-sale requirement from 25% to 15% with middle-income pricing, and exploring a nexus study for a residential linkage fee on demolitions and large additions. A consultant feasibility analysis supported these options, with planning board supportive of the code cleanups. Council generally supported the cash-in-lieu and code cleanup changes, but a straw poll showed limited support for the 15% on-site middle-income approach, and staff will return with ordinance language for second reading on November 2.",
+        "related_timestamps": [
+          "14121.0",
+          "14225.0",
+          "18592.0",
+          "18749.16"
+        ]
+      }
+    }
+  ]
+}

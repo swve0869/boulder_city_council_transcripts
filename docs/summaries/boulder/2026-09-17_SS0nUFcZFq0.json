@@ -1,0 +1,95 @@
+{
+  "Title": "September 17, 2026 - Regular Meeting of the Boulder City Council",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Call to Order and Roll Call",
+        "Summary": "Mayor Brockett called the regular meeting to order and Alicia conducted the roll call. All council members were present, establishing a quorum. The meeting then moved into open comment.",
+        "related_timestamps": [
+          "253.2",
+          "288.08"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Public Participation and Open Comment",
+        "Summary": "Alicia reviewed the public participation guidelines, including decorum rules, sign-up requirements, and time limits. Twenty in-person speakers addressed council on topics including the Panka Place vacation, Boulder Valley School District school closures, the Band Shell seating landmark decision, CU South open space closure, Palestine and divestment, wildfire risk and housing density on University Hill, and the Fraser Mountain View Church proposal. Speakers were limited to two minutes each.",
+        "related_timestamps": [
+          "290.639",
+          "2414.72"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Staff Responses and Council Questions on Public Comment",
+        "Summary": "The city manager's office responded to comments on Boulder Valley School District closures, noting the district holds the final decision while the city coordinates with it on future school site land uses. Staff explained that full closure of CU South is required because construction staging and egress prevent phased or partial public access, and committed to posting more detailed information online. Council members asked about the status of a Grant Place density request, evacuation impacts from school-related traffic changes, and how residential density near the wildland urban interface is being evaluated. Council also gave closing remarks on stealth dorms and the school closure issue before recessing.",
+        "related_timestamps": [
+          "2417.76",
+          "3215.92"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Declarations",
+        "Summary": "Council honored the South Boulder Little League 11U All-Star team as 2026 Colorado State Champions, with coaches and players recognized. Council also proclaimed Welcoming Week (September 10-19, 2026), with John Lopez of Intercomio accepting the declaration. Finally, Council recognized September 21, 2026 as the United Nations International Day of Peace.",
+        "related_timestamps": [
+          "3863.2",
+          "4551.92"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Consent Agenda",
+        "Summary": "Council discussed consent agenda items 4D (FAA grant acceptance) and 4F (county commissioner seat reorganization measure), with several members stating opposition to both. Council approved the consent agenda items 4A through 4G on a unanimous vote, with noted dissents on items D and F. Item G, approving the vacation of Panka Place, was included in the approved consent items.",
+        "related_timestamps": [
+          "4551.92",
+          "4904.239"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Call-Up Items: Band Shell Seating and 969 10th Street Non-Conforming Use",
+        "Summary": "Council voted to call up item 5A, a landmark alteration certificate for changes within the Glenn Huntington Band Shell landmark boundaries, to revisit the Landmarks Board decision. Council also voted 7-1 to call up item 5B, a non-conforming use review for an expansion of an existing duplex at 969 10th Street, to give it further scrutiny after planning board discussion. Both items were pulled from consent for further council review.",
+        "related_timestamps": [
+          "4908.0",
+          "5112.72"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Public Hearing: Bird Stova House Individual Landmark Designation (Ordinance 8765)",
+        "Summary": "Staff presented the proposed designation of 1004 Lincoln Place as an individual landmark, to be known as the Bird Stova House, noting its exceptional Craftsman and Tudor Revival character and its association with the Stova family and early Boulder development. The owner, Valerie Stova, spoke in support of the designation, which the Landmarks Board unanimously recommended. Council unanimously adopted Ordinance 8765 after the public hearing closed.",
+        "related_timestamps": [
+          "5143.52",
+          "6004.48"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Public Hearing: Hileman Bedell Stefanic Property Landmark Designation (Ordinance 8766)",
+        "Summary": "Staff presented the proposed individual landmark designation for 844 and 850 12th Street, the Hileman Bedell Stefanic Property, highlighting the Southwest Mediterranean-style house designed by architect David Hull Holmes and its accessory house. The property's first owner, Elizabeth Hileman, was a Red Cross volunteer, and later owners the Bedell sisters were educators. The owners, Joseph and Caroline Stefanic, spoke in support, and council unanimously adopted Ordinance 8766.",
+        "related_timestamps": [
+          "6026.08",
+          "6815.199"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "Public Hearing: Repeal of Marijuana Cultivation Energy Offset Requirements (Ordinance 8770)",
+        "Summary": "Carolyn Elam presented an ordinance to repeal energy offset requirements for marijuana cultivation, noting cultivation has declined from roughly 44 licensed businesses to nine and now represents a much smaller share of community emissions. Staff explained that enforcement consumed significant resources, including about $75,000 in impact fees written off after businesses dissolved. The Cannabis Licensing Advisory Board and Environmental Advisory Board supported the change, and one public speaker opposed it. Council unanimously adopted Ordinance 8770.",
+        "related_timestamps": [
+          "6834.96",
+          "7642.239"
+        ]
+      }
+    }
+  ]
+}

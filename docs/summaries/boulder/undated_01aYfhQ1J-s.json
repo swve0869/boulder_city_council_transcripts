@@ -1,0 +1,75 @@
+{
+  "Title": "Boulder City Council Special Meeting and Study Session - June 22, 2023",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Agenda Amendment and Judge Linda Cook Honoring",
+        "Summary": "Council unanimously amended the agenda to add items 1A, 2B, and 2C. The council honored Judge Linda Cook for her 22 years of service, highlighting her innovations in restorative justice, the community court, and homeless navigation. Judge Cook thanked the council and her colleagues for their support.",
+        "related_timestamps": [
+          "234.019",
+          "849.959"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Consent Agenda and Police Oversight Panel Moratorium",
+        "Summary": "Council approved the consent agenda, including appointments of Matt Benjamin and Rachel Friend to the Better Public Meetings project. Item 2B, a moratorium on the police oversight panel, was approved over objections from Council Members Wallach and Yates. Council members debated whether the moratorium was warranted and whether it set a problematic precedent for other boards.",
+        "related_timestamps": [
+          "849.959",
+          "1388.7"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Public Hearing: Rezoning of 5405 Spine Road",
+        "Summary": "Council held a public hearing and adopted Ordinance 8577 unanimously, rezoning approximately 1.01 acres at 5405 Spine Road from Industrial General to Business Community. Staff found the rezoning consistent with the Boulder Valley Comprehensive Plan and the Gunbarrel Community Center Plan. One resident opposed the change, citing concerns about losing industrial space and local retail.",
+        "related_timestamps": [
+          "3301.02",
+          "3619.98"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Municipal Court Quarterly Update",
+        "Summary": "Judge Cook gave her final Municipal Court quarterly update alongside Lead Navigator Nia Nguyen. The presentation covered the navigator's role across outreach, engagement, housing, and retention phases, along with case metrics and outcome comparisons. Council members thanked Judge Cook for her years of leadership.",
+        "related_timestamps": [
+          "4016.0",
+          "5484.0"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Boulder County Clerk Election Review and Ranked Choice Voting",
+        "Summary": "Boulder County Clerk Molly Fitzpatrick and City Clerk Elisha Johnson presented on the upcoming 2023 coordinated election, the 2024 election cycle, and preparations for ranked choice voting. Council asked about ballot design, adjudication, reporting of RCV results, and voter education. Staff noted that voter surveys and a mock ballot are planned.",
+        "related_timestamps": [
+          "5497.679",
+          "6444.6"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Potential Ballot Measures and Citizen Petitions",
+        "Summary": "Staff reported that two citizen initiative petitions, the Safe Zones for Kids petition and the arts and culture sales tax extension, were certified sufficient. A polling firm will test the 0.15 percent sales and use tax extension ahead of the November election. Staff also presented follow-up information on potential uses of a future behavioral health tax.",
+        "related_timestamps": [
+          "6444.6",
+          "8100.0"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "2024 Boulder Energy Conservation Code Update",
+        "Summary": "Staff introduced the 2024 energy code update, which targets net-zero carbon by 2035 and includes changes to residential and commercial performance targets, electrification, solar offsets, EV charging, and embodied carbon. Council provided feedback on zoning alignment, cost impacts on affordable housing, and the use of cross-laminated timber. A straw poll showed a majority of council supports moving toward all-electric requirements for new construction.",
+        "related_timestamps": [
+          "8817.62",
+          "13600.0"
+        ]
+      }
+    }
+  ]
+}

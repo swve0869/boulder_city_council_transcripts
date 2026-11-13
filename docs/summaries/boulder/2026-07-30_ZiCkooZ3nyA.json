@@ -1,0 +1,31 @@
+{
+  "Title": "July 30, 2026 - City of Boulder City Council Special Meeting",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Agenda Amendment and Consent Agenda",
+        "Summary": "Council called the meeting to order and confirmed a quorum. Council unanimously approved a motion to add Item 4A, direction on the wildfire resilience on open space ballot measure, to the agenda. The consent agenda, Items 2A and 2B, was then approved unanimously by roll call.",
+        "related_timestamps": [
+          "306.639",
+          "440.88"
+        ]
+      },
+      "Topic2": {
+        "Title": "Public Hearing on Ordinance 8754 Setting a Local Tip Offset for Food and Beverage Workers",
+        "Summary": "Staff presented options for a local tip offset for 2027, including retaining the current $3.20 offset, moderate and higher increases, and a proposal to freeze the tipped base wage through 2028. Council asked questions about how restaurant savings were calculated. Numerous speakers, including workers, labor organizers, students, and a restaurant industry representative, testified, with most opposing any change to the tipped wage schedule. Council members expressed a desire to keep the scheduled minimum wage increases and to form a task force with restaurant owners, workers, and experts to address the industry's challenges. No motion was made on the ordinance, so the existing minimum wage schedule will proceed.",
+        "related_timestamps": [
+          "448.479",
+          "6544.0"
+        ]
+      },
+      "Topic3": {
+        "Title": "Direction on Wildfire Resilience on Open Space Ballot Measure",
+        "Summary": "Deputy City Manager Chris Mchuk sought council direction on whether to pursue a charter amendment ballot measure, a code change, or neither for wildfire resilience on open space. The Open Space Board of Trustees had recommended a charter amendment, while staff recommended a code change. Council members indicated support for pursuing an ordinance rather than a ballot measure because of the timing constraints. Council also agreed to hold an executive session to receive confidential legal advice before deciding whether to move forward with an ordinance.",
+        "related_timestamps": [
+          "6838.88",
+          "7679.199"
+        ]
+      }
+    }
+  ]
+}

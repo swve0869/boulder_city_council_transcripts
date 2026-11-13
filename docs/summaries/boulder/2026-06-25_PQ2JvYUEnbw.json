@@ -1,0 +1,37 @@
+{
+  "Title": "June 25, 2026 City of Boulder City Council Special Meeting",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Consent Agenda Approval",
+        "Summary": "Council considered consent agenda items 2A through 2H and took a roll call vote. Spear voted yes on items A through G and no on H, and Wallach abstained. The consent agenda was approved with the noted nays and abstentions.",
+        "related_timestamps": [
+          "369.92",
+          "484.6"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Boulder Valley Comprehensive Plan Major Update Deliberations",
+        "Summary": "Council deliberated on the major update to the Boulder Valley Comprehensive Plan, including conditions of approval and recommended amendments from Planning Board, the County Planning Commission, and the Board of County Commissioners. Staff walked through each proposed change, and council straw-polled which to keep, adopt, or modify. Council ultimately approved the plan and the four motions with the agreed modifications unanimously.",
+        "related_timestamps": [
+          "486.96",
+          "2052.72",
+          "9921.0",
+          "10225.0"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Long-Term Financial Strategy and 2026 Ballot Measure Polling",
+        "Summary": "Staff and pollster Adam Probolsky presented polling results on potential 2026 ballot measures, including bonds for recreation and public safety facilities, a parks fund expansion, and a vacancy excise tax. Council gave non-binding direction to proceed with a tax increase measure focused on city facilities, selecting the $400 million bond, and to move forward with a vacancy excise tax measure. Consultant Micah Intermill and budget analyst Stacy Polleycove then reported on the Fund Our Future community engagement results.",
+        "related_timestamps": [
+          "11008.4",
+          "16168.56"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "Title": "May 7, 2026 - Regular Meeting of the Boulder City Council",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Call to Order, Roll Call, and Agenda Amendment",
+        "Summary": "Mayor Brockett called the meeting to order and the council confirmed a quorum through roll call. The council unanimously voted to remove item 4E from the consent agenda, so the June 11 session will remain a study session. The council then moved on to open public comment.",
+        "related_timestamps": [
+          "321.28",
+          "406.6"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Public Open Comment",
+        "Summary": "Residents spoke on a range of topics, including opposition to cutting the tipped minimum wage, support for a residential vacancy tax, and calls to refuse FAA grants that would commit the city to maintaining the airport. Other speakers raised a lot split and permitting difficulties, bike registration, South Boulder Rec Center pool closure concerns, and youth and climate issues. Several speakers also addressed Israel, Gaza, and related criminal sentencing, and some expressed concern about a speaker's conduct outside the building. Each speaker was limited to a set time under the council's public participation guidelines.",
+        "related_timestamps": [
+          "406.6",
+          "3350.92"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Staff and Council Responses to Public Comment",
+        "Summary": "Staff said tipped wage discussions would come later in the year and that no proposal would actually reduce the tipped minimum wage, though changes to the tip credit are under consideration. Staff committed to following up on a lot split question, a permitting concern, and the airport's future financial needs. Council members thanked staff, responded to a speaker's comments about a criminal sentencing, and encouraged continued public input on the tip credit before a July public hearing.",
+        "related_timestamps": [
+          "2894.52",
+          "3350.92"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Recess",
+        "Summary": "The council took a 10-minute recess after open comment and reconvened for the business portion of the meeting at 8:00 p.m. No substantive action was taken during this period.",
+        "related_timestamps": [
+          "3350.92",
+          "3968.96"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Declaration: National Day of Awareness for Missing and Murdered Indigenous Persons",
+        "Summary": "Council Member Adams presented a declaration recognizing May 5 or 6, 2026 as the National Day of Awareness for Missing and Murdered Indigenous Persons, which the mayor signed. Indigenous community speakers emphasized the need for real action beyond proclamations, including accountability, reparations, representation, and safety concerns about surveillance systems like Flock. Staff noted that the declaration includes a call for Boulder Police to receive culturally specific training.",
+        "related_timestamps": [
+          "3968.96",
+          "4976.2"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Consent Agenda",
+        "Summary": "The council discussed the consent agenda, including the beverage licensing rules of procedure amendment, which was praised as a common-sense efficiency change. A motion was made and seconded, and the consent agenda (items 4A through 4D and 4F through 4L) was approved unanimously. Item 4E had been removed earlier in the meeting.",
+        "related_timestamps": [
+          "4976.2",
+          "5109.28"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Call-Up Check-Ins",
+        "Summary": "The council reviewed several land use items, including landmark alteration certificates for 409 Mountain View Road and the Chestnut and Arapahoe Houses at 2106 Arapahoe Avenue, a height modification at 1039 Mapleton Avenue, and an outside city utility permit at 1420 Cherryvale Road. Staff explained that a concept plan for permanently affordable senior housing at Arapahoe Avenue would not be affected by a call-up. No council members called up any items.",
+        "related_timestamps": [
+          "5109.28",
+          "5607.56"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Public Hearing: Landmark Designation of 745 University Avenue (Ordinance 8741)",
+        "Summary": "Staff presented the second reading of Ordinance 8741 to designate 745 University Avenue as an individual landmark, to be named the Polls and Registration House. The 1907 Edwardian vernacular house served as a municipal polling place and registration site, including for the 1917 charter elections. Public speakers supported the designation, and the council unanimously adopted the ordinance.",
+        "related_timestamps": [
+          "5609.8",
+          "6760.04"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "Public Hearing: Omnibus Land Use Code Amendment (Ordinance 8745)",
+        "Summary": "Staff presented the second reading of Ordinance 8745, an omnibus package of corrections, clarifications, and substantive changes to the land use code. Key changes include removing the office floor area limit, allowing height modifications up to 55 feet for certain community, cultural, and educational uses in three-story buildings, and clarifying parking and driveway rules. Council added an amendment removing outdoor patio size limits for breweries, wineries, and distilleries, and passed the ordinance 5-1 after public comment and discussion.",
+        "related_timestamps": [
+          "6780.16",
+          "10058.32"
+        ]
+      }
+    }
+  ]
+}

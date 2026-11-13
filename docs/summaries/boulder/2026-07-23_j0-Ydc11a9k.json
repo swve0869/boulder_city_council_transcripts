@@ -1,0 +1,59 @@
+{
+  "Title": "July 23, 2026 City of Boulder City Council Special Meeting",
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Agenda Amendment and Consent Agenda",
+        "Summary": "Council voted unanimously to amend the agenda by removing the BVCP adoption item from tonight's meeting, adding items 2E (appointment of special counsel to investigate code of conduct complaints) and 2F (holding the July 30 special meeting in person). The consent agenda, items 2A through 2F, was then approved unanimously. Council members asked questions about the ballot measure language and the special counsel appointment, which the city attorney explained as necessitated by a conflict in her office.",
+        "related_timestamps": [
+          "284.639",
+          "449.12",
+          "662.8"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Boulder Valley Comprehensive Plan (BVCP) Adoption Continuation",
+        "Summary": "Item 3A, the first public hearing on the BVCP adoption, was opened and then continued by motion to August 6, 2026. Staff noted that the item would be renoticed as needed. The continuation motion passed unanimously.",
+        "related_timestamps": [
+          "662.8",
+          "848.399"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Continued Operation of the Boulder Municipal Airport (Public Hearing)",
+        "Summary": "Staff presented financial scenarios comparing airport operations with and without FAA grants, noting projected deficits and the risk of deferred maintenance if FAA funding is declined. Council asked questions about litigation over perpetual FAA obligations, alternative funding sources, landing fees, and the consequences of not pursuing a September FAA grant application. Approximately 70 speakers testified in favor of and against the airport, with supporters citing emergency response, education, and economic value and opponents citing noise, lead pollution, land use, and the risk of perpetual FAA obligations.",
+        "related_timestamps": [
+          "873.12",
+          "2585.359",
+          "4345.6",
+          "11999.76"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Council Deliberation and Vote on Airport Operations",
+        "Summary": "Council members debated fiscal responsibility, perpetual FAA obligations, noise and environmental concerns, and the value of the airport to the community. A motion to continue operations with a one-year waiting period on perpetuity-based FAA obligations failed 6 to 3. A subsequent motion to approve continued operation was amended to require council approval of the first FAA grant carrying perpetuity obligations, and the amended motion passed 8 to 1.",
+        "related_timestamps": [
+          "14534.64",
+          "14705.359",
+          "15960.64"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Council Member Resignation",
+        "Summary": "Council Member Wallik announced his immediate resignation from the Boulder City Council in protest of the airport decision, citing concerns about surrendering airport land in perpetuity and insufficient community input. Staff expressed regret at the resignation.",
+        "related_timestamps": [
+          "16123.12",
+          "16161.12"
+        ]
+      }
+    }
+  ]
+}
