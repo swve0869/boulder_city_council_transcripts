@@ -1,5 +1,6 @@
-// Renders the index and meeting pages from the summary JSON files in summaries/.
+// Renders the index and meeting pages from summaries/index.json and the summary JSON files.
 // Summaries come from an LLM, so every string is inserted with textContent, never innerHTML.
+// Shared helpers are exported as window.Council for trends.js.
 (function () {
   "use strict";
 
@@ -12,10 +13,11 @@
   function el(tag, attrs, ...children) {
     const node = document.createElement(tag);
     for (const [k, v] of Object.entries(attrs || {})) {
+      if (v === undefined || v === null || v === false) continue;
       if (k === "class") node.className = v;
-      else node.setAttribute(k, v);
+      else node.setAttribute(k, v === true ? "" : v);
     }
-    for (const c of children) node.append(c);
+    for (const c of children) if (c !== null && c !== undefined) node.append(c);
     return node;
   }
 
@@ -24,6 +26,8 @@
     if (!res.ok) throw new Error(`${url}: HTTP ${res.status}`);
     return res.json();
   }
+
+  const loadManifest = () => getJSON("summaries/index.json", { cache: "no-cache" });
 
   function parseDate(s) {
     return s ? new Date(`${s}T00:00:00`) : null;
@@ -36,13 +40,40 @@
     return h ? `${h}:${mm}:${ss}` : `${mm}:${ss}`;
   }
 
+  function fmtDuration(seconds) {
+    const m = Math.round(seconds / 60);
+    return m < 60 ? `${m} min` : `${(m / 60).toFixed(m < 600 ? 1 : 0)} h`;
+  }
+
   function status(msg) {
     const s = $("status");
     s.textContent = msg || "";
     s.hidden = !msg;
   }
 
-  // ---- Summary format (see summary_prompt_JSON_format.json) ------------------------------
+  // ---- Tags ---------------------------------------------------------------------------
+
+  // Index of the tag vocabulary carried in the manifest: id -> {id, label, group}.
+  function tagIndex(manifest) {
+    const byId = new Map((manifest.tags || []).map((t) => [t.id, t]));
+    return {
+      byId,
+      groups: manifest.tag_groups || [],
+      label: (id) => (byId.get(id) || { label: id }).label,
+      group: (id) => (byId.get(id) || {}).group || "",
+    };
+  }
+
+  // A tag chip. As a button it toggles (aria-pressed); with href it's a link.
+  function tagChip(tags, id, { pressed, count, href, onClick, title } = {}) {
+    const attrs = { class: `tag g-${tags.group(id)}`, title };
+    let chip;
+    if (href) chip = el("a", { ...attrs, href }, tags.label(id));
+    else chip = el("button", { ...attrs, type: "button", "aria-pressed": pressed ? "true" : "false" }, tags.label(id));
+    if (count !== undefined) chip.append(el("span", { class: "n" }, String(count)));
+    if (onClick) chip.addEventListener("click", (e) => onClick(id, e));
+    return chip;
+  }
 
   // Topics is a list of objects keyed "Topic1", "Topic2", ...; accept one key per object or many.
   function topicsOf(summary) {
@@ -59,6 +90,7 @@
           title: String(t.Title || key),
           summary: String(t.Summary || ""),
           stamps: [...new Set(stamps)].sort((a, b) => a - b),
+          tags: (Array.isArray(t.Tags) ? t.Tags : []).filter((g) => typeof g === "string"),
         });
       }
     }
@@ -67,58 +99,198 @@
 
   // ---- Index page ---------------------------------------------------------------------
 
+  // How strongly a meeting matches the selected tags, for the "Most time on selected tags" sort.
+  // tag_seconds is the estimated video time spent on topics carrying each tag.
+  function relevanceScore(meeting, selected) {
+    let score = 0;
+    for (const tag of selected) score += (meeting.tag_seconds || {})[tag] || 0;
+    return score;
+  }
+
+  function meetingTags(m) {
+    return Object.keys(m.tag_seconds || {}); // every tag on any topic, most discussed first
+  }
+
+  function readState() {
+    const p = new URLSearchParams(location.search);
+    return {
+      city: p.get("city"),
+      tags: (p.get("tags") || "").split(",").filter(Boolean),
+      match: p.get("match") === "all" ? "all" : "any",
+      sort: p.get("sort") || "newest",
+      q: p.get("q") || "",
+    };
+  }
+
+  function writeState(state) {
+    const p = new URLSearchParams();
+    if (state.city) p.set("city", state.city);
+    if (state.tags.length) p.set("tags", state.tags.join(","));
+    if (state.match === "all") p.set("match", "all");
+    if (state.sort !== "newest") p.set("sort", state.sort);
+    if (state.q) p.set("q", state.q);
+    const qs = p.toString();
+    history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
+  }
+
   async function renderIndex() {
     let manifest;
     try {
-      manifest = await getJSON("summaries/index.json", { cache: "no-cache" });
+      manifest = await loadManifest();
     } catch (e) {
       status(`Could not load the meeting list (${e.message}).`);
       return;
     }
     const cities = manifest.cities || [];
-    const meetings = manifest.meetings || [];
-    if (!meetings.length) {
+    const all = manifest.meetings || [];
+    if (!all.length) {
       status("No meeting summaries yet.");
       return;
     }
     status("");
+    const tags = tagIndex(manifest);
+    const state = readState();
+    try { state.city = state.city || localStorage.getItem("city"); } catch (_) { /* storage unavailable */ }
+    if (!cities.some((c) => c.slug === state.city)) state.city = cities[0] && cities[0].slug;
+    state.tags = state.tags.filter((t) => tags.byId.has(t));
 
     const select = $("city");
-    let chosen = new URLSearchParams(location.search).get("city");
-    try { chosen = chosen || localStorage.getItem("city"); } catch (_) { /* storage unavailable */ }
-    if (!cities.some((c) => c.slug === chosen)) chosen = cities[0] && cities[0].slug;
-
     if (cities.length > 1) {
       for (const c of cities) select.append(el("option", { value: c.slug }, c.name));
-      select.value = chosen;
+      select.value = state.city;
       $("city-picker").hidden = false;
       select.addEventListener("change", () => {
+        state.city = select.value;
         try { localStorage.setItem("city", select.value); } catch (_) { /* ignore */ }
-        draw(select.value);
+        update();
+      });
+    }
+    if (state.tags.length) $("tag-panel").open = true; // arriving from a tag link: show what's selected
+    $("q").value = state.q;
+    $("sort").value = state.sort;
+    $("match").value = state.match;
+    $("q").addEventListener("input", () => { state.q = $("q").value.trim(); update(); });
+    $("sort").addEventListener("change", () => { state.sort = $("sort").value; update(); });
+    $("match").addEventListener("change", () => { state.match = $("match").value; update(); });
+
+    function toggleTag(id) {
+      const i = state.tags.indexOf(id);
+      if (i >= 0) state.tags.splice(i, 1); else state.tags.push(id);
+      update();
+    }
+
+    function filtered() {
+      const q = state.q.toLowerCase();
+      return all.filter((m) => {
+        if (m.city !== state.city) return false;
+        if (state.tags.length) {
+          const have = new Set(meetingTags(m));
+          const hit = state.match === "all" ? state.tags.every((t) => have.has(t)) : state.tags.some((t) => have.has(t));
+          if (!hit) return false;
+        }
+        if (q) {
+          const text = [m.title, ...(m.topics || []).map((t) => t.title)].join(" ").toLowerCase();
+          if (!text.includes(q)) return false;
+        }
+        return true;
       });
     }
 
-    function draw(city) {
-      const list = $("list");
-      list.replaceChildren();
-      const groups = new Map();
-      for (const m of meetings.filter((m) => m.city === city)) {
-        const year = m.date ? m.date.slice(0, 4) : "Undated";
-        if (!groups.has(year)) groups.set(year, []);
-        groups.get(year).push(m);
+    function sorted(list) {
+      const byDate = (a, b) => (b.date || "").localeCompare(a.date || "") || b.id.localeCompare(a.id);
+      const out = [...list];
+      if (state.sort === "oldest") out.sort((a, b) => -byDate(a, b));
+      else if (state.sort === "relevance" && state.tags.length)
+        out.sort((a, b) => relevanceScore(b, state.tags) - relevanceScore(a, state.tags) || byDate(a, b));
+      else if (state.sort === "topics") out.sort((a, b) => (b.topics || []).length - (a.topics || []).length || byDate(a, b));
+      else out.sort(byDate);
+      return out;
+    }
+
+    function drawTagPanel(cityMeetings) {
+      const counts = new Map();
+      for (const m of cityMeetings) for (const t of meetingTags(m)) counts.set(t, (counts.get(t) || 0) + 1);
+      const box = $("tag-groups");
+      box.replaceChildren();
+      for (const g of tags.groups) {
+        const ids = [...tags.byId.values()].filter((t) => t.group === g.id && counts.get(t.id)).map((t) => t.id)
+          .sort((a, b) => counts.get(b) - counts.get(a));
+        if (!ids.length) continue;
+        box.append(el("div", { class: "tag-group" }, el("h4", {}, g.label),
+          el("div", { class: "tags" }, ...ids.map((id) => tagChip(tags, id, {
+            pressed: state.tags.includes(id), count: counts.get(id), onClick: toggleTag,
+            title: `${counts.get(id)} meeting${counts.get(id) === 1 ? "" : "s"}`,
+          })))));
       }
-      for (const [year, items] of groups) {
-        const ul = el("ul", { class: "meetings" });
-        for (const m of items) {
-          const d = parseDate(m.date);
-          const label = d ? d.toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "Undated";
-          const href = `meeting.html?city=${encodeURIComponent(m.city)}&id=${encodeURIComponent(m.id)}`;
-          ul.append(el("li", {}, el("span", { class: "date" }, label), el("a", { href }, m.title || m.id)));
+      if (!box.children.length) box.append(el("p", { class: "tag-note" }, "No tagged meetings yet."));
+      const top = [...counts.keys()].sort((a, b) => counts.get(b) - counts.get(a)).slice(0, 4).map(tags.label);
+      $("tag-summary").textContent = state.tags.length
+        ? `Filter by tag (${state.tags.length} selected)`
+        : `Filter by tag: ${counts.size} tags such as ${top.join(", ")}…`;
+    }
+
+    function drawActive(shown, total) {
+      const p = $("active");
+      const bits = [];
+      if (state.tags.length) bits.push(`tagged ${state.tags.map(tags.label).join(state.match === "all" ? " and " : " or ")}`);
+      if (state.q) bits.push(`matching “${state.q}”`);
+      p.hidden = !bits.length;
+      if (!bits.length) return;
+      const clear = el("button", { type: "button", class: "link" }, "Clear filters");
+      clear.addEventListener("click", () => { state.tags = []; state.q = ""; $("q").value = ""; update(); });
+      p.replaceChildren(`Showing ${shown} of ${total} meetings ${bits.join(", ")}.`, clear);
+    }
+
+    function meetingItem(m) {
+      const d = parseDate(m.date);
+      const label = d ? d.toLocaleDateString("en-US", { month: "short", day: "numeric", ...(state.sort === "relevance" || state.sort === "topics" ? { year: "numeric" } : {}) }) : "Undated";
+      const href = `meeting.html?city=${encodeURIComponent(m.city)}&id=${encodeURIComponent(m.id)}`;
+      const li = el("li", {}, el("span", { class: "date" }, label), el("a", { href }, m.title || m.id));
+      const top = meetingTags(m).slice(0, 6);
+      if (top.length) {
+        li.append(el("div", { class: "tags" }, ...top.map((id) => tagChip(tags, id, {
+          pressed: state.tags.includes(id), onClick: toggleTag,
+          title: `about ${fmtDuration(m.tag_seconds[id])} of discussion · select to filter`,
+        }))));
+      }
+      if (state.tags.length) {
+        // Jump links to the topics that carry the selected tags.
+        const hits = (m.topics || []).filter((t) => t.start !== null && t.tags.some((g) => state.tags.includes(g)));
+        if (hits.length) {
+          li.append(el("ul", { class: "segments", "aria-label": "Matching segments" }, ...hits.map((t) =>
+            el("li", {}, el("a", { class: "stamp", href: `${href}#t=${Math.floor(t.start)}` }, fmtTime(t.start)),
+              el("span", {}, t.title)))));
         }
-        list.append(el("h2", {}, year), ul);
+      }
+      return li;
+    }
+
+    function update() {
+      $("sort").value = state.sort;
+      writeState(state);
+      const cityMeetings = all.filter((m) => m.city === state.city);
+      drawTagPanel(cityMeetings);
+      const list = sorted(filtered());
+      drawActive(list.length, cityMeetings.length);
+      const box = $("list");
+      box.replaceChildren();
+      if (!list.length) {
+        box.append(el("p", { class: "status" }, "No meetings match these filters."));
+        return;
+      }
+      if (state.sort === "newest" || state.sort === "oldest") {
+        const groups = new Map();
+        for (const m of list) {
+          const year = m.date ? m.date.slice(0, 4) : "Undated";
+          if (!groups.has(year)) groups.set(year, []);
+          groups.get(year).push(m);
+        }
+        for (const [year, items] of groups) box.append(el("h2", {}, year), el("ul", { class: "meetings" }, ...items.map(meetingItem)));
+      } else {
+        box.append(el("ul", { class: "meetings" }, ...list.map(meetingItem)));
       }
     }
-    draw(chosen);
+    update();
   }
 
   // ---- Meeting page: YouTube player -----------------------------------------------------
@@ -177,7 +349,7 @@
     } else {
       video.pending = t;
     }
-    history.replaceState(null, "", `#t=${Math.floor(t)}`);
+    history.replaceState(null, "", `${location.search}#t=${Math.floor(t)}`);
     highlightTranscript(t);
   }
 
@@ -222,7 +394,7 @@
     box.replaceChildren(frag);
     box.hidden = false;
     button.hidden = true;
-    const m = /^#t=(\d+)/.exec(location.hash);
+    const m = /#t=(\d+)/.exec(location.hash);
     if (m) highlightTranscript(Number(m[1]));
   }
 
@@ -260,13 +432,14 @@
     try {
       [summary, manifest] = await Promise.all([
         getJSON(`summaries/${city}/${id}.json`),
-        getJSON("summaries/index.json", { cache: "no-cache" }).catch(() => ({})),
+        loadManifest().catch(() => ({})),
       ]);
     } catch (e) {
       $("title").textContent = "Meeting not found";
       status(`Could not load this summary (${e.message}).`);
       return;
     }
+    const tags = tagIndex(manifest);
 
     const title = String(summary.Title || id);
     $("title").textContent = title;
@@ -285,10 +458,45 @@
     const topics = topicsOf(summary);
     const container = $("topics");
     if (!topics.length) status("This summary has no topics.");
-    for (const t of topics) {
-      const section = el("section", { class: "topic" }, el("h3", {}, t.title), el("p", {}, t.summary));
+    const sections = topics.map((t) => {
+      const section = el("section", { class: "topic" }, el("h3", {}, t.title));
+      if (t.tags.length) {
+        section.append(el("div", { class: "tags" }, ...t.tags.map((g) => tagChip(tags, g, {
+          href: `index.html?city=${encodeURIComponent(city)}&tags=${encodeURIComponent(g)}`,
+          title: `All meetings tagged ${tags.label(g)}`,
+        }))));
+      }
+      section.append(el("p", {}, t.summary));
       if (t.stamps.length) section.append(el("div", { class: "stamps" }, ...t.stamps.map(stampLink)));
       container.append(section);
+      return { section, tags: t.tags };
+    });
+
+    // Meeting-level tags, most discussed first; selecting one dims topics without it.
+    const order = entry && entry.tag_seconds ? Object.keys(entry.tag_seconds)
+      : [...new Set(topics.flatMap((t) => t.tags))];
+    if (order.length) {
+      let selected = null;
+      const list = $("meeting-tag-list"), note = $("tag-note");
+      const draw = () => {
+        list.replaceChildren(...order.map((g) => tagChip(tags, g, {
+          pressed: selected === g,
+          title: entry && entry.tag_seconds ? `about ${fmtDuration(entry.tag_seconds[g])} of discussion` : undefined,
+          onClick: (id) => { selected = selected === id ? null : id; draw(); },
+        })));
+        for (const s of sections) s.section.classList.toggle("dim", !!selected && !s.tags.includes(selected));
+        note.replaceChildren();
+        if (selected) {
+          const n = sections.filter((s) => s.tags.includes(selected)).length;
+          note.append(`${n} topic${n === 1 ? "" : "s"} tagged ${tags.label(selected)}. `,
+            el("a", { href: `index.html?city=${encodeURIComponent(city)}&tags=${encodeURIComponent(selected)}` },
+              `See all meetings tagged ${tags.label(selected)} →`));
+        } else {
+          note.append("Select a tag to highlight its topics.");
+        }
+      };
+      draw();
+      $("meeting-tags").hidden = false;
     }
 
     if (CONFIG.transcriptHost) {
@@ -296,9 +504,11 @@
       $("load-transcript").addEventListener("click", () => loadTranscript(city, id));
     }
 
-    const m = /^#t=(\d+)/.exec(location.hash);
+    const m = /#t=(\d+)/.exec(location.hash);
     if (m) seek(Number(m[1]), false);
   }
+
+  window.Council = { $, el, getJSON, loadManifest, parseDate, fmtDuration, status, tagIndex, tagChip };
 
   const page = document.body.dataset.page;
   if (page === "index") renderIndex();

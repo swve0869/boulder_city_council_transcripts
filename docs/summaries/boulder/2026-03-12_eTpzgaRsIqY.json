@@ -1,33 +1,57 @@
 {
-  "Title": "March 12, 2026 City of Boulder City Council Study Session",
+  "Title": "March 12, 2026 City Council Study Session",
+  "Tags": [
+    "budget",
+    "economic-development",
+    "taxes-fees",
+    "elections",
+    "affordable-housing",
+    "council-governance"
+  ],
   "Topics": [
     {
       "Topic1": {
         "Title": "Boulder Strong Day of Remembrance Declaration",
-        "Summary": "Councilmember Mark Wallach presented a declaration designating March 22 as the Boulder Day of Remembrance in perpetuity to honor the ten people killed in the March 22, 2021 King Soopers mass shooting. The declaration was signed by Mayor Aaron Brockett. Wallach announced a Day of Remembrance ceremony at the Boulder Museum on Sunday, March 22, from 3:30 to 4:30 p.m., open to all.",
+        "Summary": "Councilmember Wallach presented a declaration designating March 22 as the Boulder Day of Remembrance to honor the 10 people killed in the March 22, 2021 King Soopers mass shooting. The council read the victims' names and announced a remembrance ceremony at the Boulder Museum on March 22 from 3:30 to 4:30 p.m. The declaration was signed by Mayor Aaron Brockett.",
         "related_timestamps": [
-          "52.87",
-          "226.62"
+          52.87,
+          226.62
+        ],
+        "Tags": [
+          "council-governance",
+          "public-health"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Downtown Development Authority (DDA) Formation Analysis and Initial Recommendations",
-        "Summary": "Staff presented the analysis for a proposed Downtown Development Authority that would use tax increment financing to fund reinvestment in downtown and University Hill, potentially replacing the parking-focused GIDs. Under a 1% growth scenario, projected TIF revenue starts at about $300,000 in year one and grows to roughly $3 million by year 10, with parking assets and a mill levy substantially increasing borrowing capacity. Council generally supported continued refinement of the funding structure and a standalone DDA with a 1-2 year staff-supported transition, while raising questions about revenue sharing, the base year, voter eligibility, liability, staff capacity, and climate considerations. Staff plans to return in June to determine whether to refer formation and funding measures to the November ballot.",
+        "Title": "Downtown Development Authority Formation and Initial Recommendations",
+        "Summary": "Staff presented the proposed Downtown Development Authority, a tax increment financing tool to fund long-term reinvestment in downtown and the Hill, with a study area still under refinement and no final boundaries. Staff recommended exploring a standalone DDA with a 1-2 year transition, a funding model combining a mill levy, property and sales tax increment, and possibly parking assets, with fiscal safeguards. Council asked about voting thresholds, the base year, parking and GID asset transfers, staff costs, liability, and oversight, and generally supported continued refinement toward a November ballot decision.",
         "related_timestamps": [
-          "255.21",
-          "4153.79"
+          255.21,
+          2757.3,
+          3862.32
+        ],
+        "Tags": [
+          "development",
+          "economic-development",
+          "taxes-fees"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Preliminary Discussion on 2026 Ballot Measures",
-        "Summary": "Finance staff previewed potential 2026 tax ballot measures under the long-term financial strategy, noting that 68% of city revenues are dedicated and sales tax is the largest source at 35%. Options ranged from transformational changes (sales tax on services and a sales-to-property tax swap), to mid-range measures (general purpose and public realm mill levies and a residential vacancy excise tax), to structural changes (general fund debt authorization, a mill levy cap increase, and consolidating dedicated sales taxes). Following straw polls, Council chose not to pursue transformational options for 2026 and advanced the public realm mill levy, residential vacancy excise tax, general fund debt authorization, and consolidated dedicated sales tax options. Staff will return in April with a city facilities funding discussion and in May with a narrowed list and polling direction.",
+        "Title": "2026 Ballot Measures and Long-Term Financial Strategy",
+        "Summary": "Finance staff presented the long-term financial strategy, noting that 68% of city revenues are dedicated and that property tax growth has slowed sharply. Staff previewed transformational, mid-range, and structural tax ballot options, including a sales tax on services, a sales-to-property tax swap, a general purpose mill levy, a public realm mill levy, a residential vacancy excise tax, a general fund debt authorization, a mill levy cap increase, and consolidation of dedicated sales taxes. Through straw polls, council narrowed the options to the public realm mill levy, residential vacancy excise tax, general fund debt authorization, and consolidation of dedicated sales taxes, with staff returning in April and May.",
         "related_timestamps": [
-          "4170.609",
-          "10218.24"
+          4170.609,
+          5524.6,
+          10134.38
+        ],
+        "Tags": [
+          "elections",
+          "budget",
+          "taxes-fees"
         ]
       }
     }

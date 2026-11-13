@@ -1,60 +1,101 @@
 {
-  "Title": "March 5, 2026 City of Boulder City Council Meeting - Regular Meeting",
+  "Title": "March 5, 2026 - Boulder City Council Regular Meeting",
+  "Tags": [
+    "council-governance",
+    "public-comment",
+    "flock",
+    "surveillance",
+    "parks-recreation",
+    "affordable-housing",
+    "boards-appointments"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Open Comment: Flock Camera Contract and South Boulder Rec Center",
-        "Summary": "Numerous residents spoke against renewing the Flock surveillance camera contract, citing privacy concerns, data sharing with ICE, and Flock's record of broken promises. Many other speakers urged the council to preserve the South Boulder Rec Center, especially its pool and gymnasium, citing its importance for seniors, swim teams, youth, and walkability. Council members acknowledged the comments, and city staff said conversations about Flock and a facilities funding study session on April 9 are ongoing.",
+        "Title": "Open Comment: Flock Safety Cameras",
+        "Summary": "Multiple residents urged council to cancel or not renew the Flock Safety license-plate-reader contract, citing immigration enforcement concerns, data-sharing risks, security vulnerabilities, and Flock's alleged misconduct. Speakers asked for public votes and data-retention policies, and some pointed to Denver, Longmont, and state legislation as examples. Council members said they were uncomfortable with the vulnerabilities and that staff is developing both near-term contract decisions and a broader policy. Staff noted that policy on surveillance and data sharing falls within council's purview.",
         "related_timestamps": [
-          "260.0",
-          "829.12",
-          "2714.96",
-          "2957.0"
+          566.0,
+          1870.0
+        ],
+        "Tags": [
+          "flock",
+          "surveillance",
+          "public-comment"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Consent Agenda and Area 3 Planning Reserve Resolution",
-        "Summary": "The council approved the consent agenda unanimously, with item 3E pulled for separate discussion. Council revised the Area 3 Planning Reserve resolution to broaden the housing types it contemplates, rather than focusing exclusively on middle-income ownership, and directed staff to bring back updated language. The council then passed the consent agenda minus item 3E.",
+        "Title": "Open Comment: South Boulder Recreation Center",
+        "Summary": "Many speakers, including seniors, swimmers, parents, and a 10-year-old student, urged council to keep the South Boulder Rec Center open with its pool, gym, and basketball court. Speakers cited crowded pools, the loss of other city pools, walkability, and the 15-minute neighborhood goal. Staff said a study session on facilities funding is scheduled for April 9 that will cover rec centers.",
         "related_timestamps": [
-          "3930.0",
-          "4048.4",
-          "4226.88",
-          "4359.92"
+          535.0,
+          2100.0,
+          2950.0
+        ],
+        "Tags": [
+          "parks-recreation",
+          "budget",
+          "public-comment"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Callup Check-In: Frontier Avenue Redevelopment Concept Plan",
-        "Summary": "The council reviewed a concept plan for redeveloping 3550 and 3850 Frontier Avenue with an events venue, hotel, about 500 apartments, and commercial space. Council members agreed that staff and the Planning Board had adequately reviewed the proposal and declined to call it up. Staff noted that a rezoning or tailored zone district would be needed and that council would weigh in during site review.",
+        "Title": "Consent Agenda and Item 3E Area Three Guidance",
+        "Summary": "Council pulled item 3E, the Area Three planning reserve resolution, for separate discussion. Council members agreed to revise the language so Area Three housing is not limited to middle-income ownership and can include other housing types such as senior or service-supported housing. Council gave a unanimous straw poll direction to staff, and the remaining consent agenda items were approved unanimously.",
         "related_timestamps": [
-          "4399.84",
-          "4772.0"
+          3940.0,
+          4240.0
+        ],
+        "Tags": [
+          "zoning",
+          "affordable-housing",
+          "council-governance"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Public Hearing: 2026 Board and Commission Appointments",
-        "Summary": "Two speakers addressed the appointments during the public hearing, and the hearing was closed after one personal attack was ruled out of order. Council nominated and voted on candidates for vacant seats on numerous boards and commissions, including Arts Commission, Board of Zoning Adjustment, Boulder Urban Renewal Authority, Planning Board, and Housing Advisory Board. The council unanimously approved the 2026 appointments, with the Boulder Urban Renewal Authority appointments made effective immediately.",
+        "Title": "Call-Up Check-In: 3550 and 3850 Frontier Avenue Redevelopment",
+        "Summary": "Council reviewed a concept plan for a mixed-use redevelopment with a 2,500-capacity events venue, a hotel, about 500 apartments, and commercial space, requiring rezoning and height modifications. Council members said they did not need to call up the project and were open to legislative action if needed to allow it. Staff noted that a tailored zone district may be needed and that council would review specific issues such as inclusionary housing at site review.",
         "related_timestamps": [
-          "4764.96",
-          "5187.12",
-          "8586.72"
+          4400.0,
+          4770.0
+        ],
+        "Tags": [
+          "development",
+          "zoning"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Review of Affordable Housing in Boulder",
-        "Summary": "Staff presented an overview of Boulder's affordable housing efforts, including the widening gap between area median income and home prices and projected rental and ownership shortfalls identified in the Dr. Cog study. The presentation highlighted local funding, inclusionary housing outperforming its 25% requirement, partnerships with nonprofits, and programs such as down payment assistance, scattered site acquisition, and Boulder Mod. Council members asked questions about cash-in-lieu payments, progress toward the 15% goal by 2035, underused down payment funds, and housing needs for seniors and low-income residents.",
+        "Title": "2026 Board and Commission Appointments",
+        "Summary": "Council held a public hearing on 2026 board and commission appointments, with two speakers offering general comments. The city clerk explained the nomination and voting process, and council nominated and voted on candidates for each open seat, including the Boulder Urban Renewal Authority. Council unanimously approved the 2026 appointments, with the Urban Renewal Authority appointments taking effect immediately.",
         "related_timestamps": [
-          "8586.72",
-          "8704.88",
-          "9981.04",
-          "13078.96"
+          4765.0,
+          8560.0
+        ],
+        "Tags": [
+          "boards-appointments",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Affordable Housing Review",
+        "Summary": "Staff presented an overview of Boulder's affordable housing program, including the gap between incomes and home prices, the rental and ownership market, supply and demand programs, and partnerships with Boulder Housing Partners. Staff said the city has produced affordable units at about 37 percent of new development, outperforming its 25 percent inclusionary requirement, and that most local funding comes from local sources. Council asked about middle-income ownership, cash-in-lieu payments, the 15 percent housing goal, unused down-payment funds, and land banking, and staff said next steps include zoning reforms, expanded down-payment assistance, and continued innovation.",
+        "related_timestamps": [
+          8600.0,
+          12960.0
+        ],
+        "Tags": [
+          "affordable-housing",
+          "housing",
+          "budget"
         ]
       }
     }

@@ -1,63 +1,161 @@
 {
   "Title": "April 2, 2026 Regular City Council Meeting",
+  "Tags": [
+    "council-governance",
+    "public-comment",
+    "taxes-fees",
+    "labor",
+    "parks-recreation",
+    "housing"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Public Participation: South Boulder Rec Center and Tipped Wage Concerns",
-        "Summary": "Nineteen speakers addressed council during open comment, with many urging council to preserve the South Boulder Rec Center and its pool, citing health, youth, and accessibility benefits. Several speakers opposed freezing or reducing the tipped wage credit, arguing it would harm workers already living paycheck to paycheck. Other speakers raised concerns about open space tax changes, bear conflict policy, and Palestine-related issues. Council members thanked the speakers, particularly the young people, and encouraged public participation in the Fund Our Future process.",
+        "Title": "Open Comment on South Boulder Rec Center and Pool",
+        "Summary": "Many residents, youth, and athletes spoke in favor of preserving the South Boulder Recreation Center and its pool, citing walkability, health, and community value. Speakers criticized the data and options staff presented and urged the city to fund a rebuild or retain core amenities. Several speakers said the center serves as a safe after-school and senior gathering place.",
         "related_timestamps": [
-          "304.479",
-          "3935.839"
+          304.479,
+          463.52,
+          1366.64,
+          1601.279,
+          1819.2,
+          2094.72
+        ],
+        "Tags": [
+          "parks-recreation",
+          "budget",
+          "equity"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Arts Week Declaration",
-        "Summary": "Council Member Benjamin presented a declaration recognizing April 3 through April 12, 2026 as Boulder Arts Week. The declaration highlighted Boulder's creative economy, including its ranking for artist concentration and substantial arts-related economic activity. Dr. Nicholas Felder, this year's Bright Futures Award recipient, accepted the declaration and spoke about the role of art in community identity.",
+        "Title": "Open Comment on Tipped Wage Credit",
+        "Summary": "Several speakers, including tipped workers, a labor organizer, and a health clinic specialist, urged council to oppose any increase to the tip credit, arguing it would cut take-home pay and worsen affordability. Restaurant owners and the Barha representative were not heard in this segment, though one speaker noted small business struggles. Speakers emphasized inflation, wage theft, and inconsistent tips.",
         "related_timestamps": [
-          "3935.839",
-          "4236.0"
+          963.0,
+          1063.52,
+          1227.84,
+          2197.28,
+          2682.8
+        ],
+        "Tags": [
+          "labor",
+          "taxes-fees",
+          "economic-development"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Consent Agenda",
-        "Summary": "Council approved consent agenda items 4A through 4Q unanimously, with Council Member Adams voting no on item 4H regarding Area 3 service area expansion. Item 4F, a 10-year water lease agreement with the Town of Erie, was discussed and staff explained that the minimal lease amount does not jeopardize Boulder's water supply. Staff also noted the battery storage sales tax timing would be immediate.",
+        "Title": "Open Comment on Other Issues (Airport, Bears, Open Space, Israel and Flock)",
+        "Summary": "Speakers addressed unleaded aviation fuel at the airport, bear conflict and electric fencing ordinance updates, and the proposed open space tax ballot measure. One speaker criticized Flock Safety surveillance contracts and called for divestment. Staff responded that the fencing ordinance proposal is under consideration for future council action.",
         "related_timestamps": [
-          "4236.0",
-          "4627.28"
+          804.56,
+          1097.52,
+          2547.92,
+          1027.0,
+          2834.0
+        ],
+        "Tags": [
+          "transportation",
+          "surveillance",
+          "open-space",
+          "wildfire",
+          "elections"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Call-Up Check-Ins",
-        "Summary": "Council reviewed call-up items including a Boulder Jewish Commons synagogue site review, a Left Hand Water District request, a student housing development at 1128 28th Street and 2895 East College Avenue, and a landmark alteration certificate on Concord Avenue. A motion to call up the student housing project for Design Advisory Board referral was withdrawn after staff confirmed DAB had already reviewed it unanimously. No other items were called up.",
+        "Title": "Arts Week Declaration",
+        "Summary": "Council presented a proclamation declaring April 3 to 12, 2026 as Boulder Arts Week and recognized Dr. Nicholas Felder as the Bright Futures Award recipient. Felder accepted on behalf of the arts community and spoke to the Boulder Arts Blueprint. Staff noted Boulder's creative sector strength and economic impact.",
         "related_timestamps": [
-          "4640.48",
-          "4917.679"
+          3935.839,
+          4119.52,
+          4227.12
+        ],
+        "Tags": [
+          "arts-culture"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Public Hearing: Festival Lodging Rental Ordinance (Ordinance 8743)",
-        "Summary": "Council held a public hearing and adopted Ordinance 8743 to allow tenants and owners of long-term rentals to apply for festival lodging rental licenses for Sundance Film Festival housing. The ordinance creates a new one-year, $75 license tier, requires owner consent for tenant participation, and does not regulate revenue splits between landlords and tenants. Speakers from Barha supported an additional option allowing vacant-unit-only participation, which council did not adopt, while others supported the ordinance as written. The ordinance passed 8 to 0.",
+        "Title": "Consent Agenda",
+        "Summary": "Council approved consent agenda items 4A through 4Q, including a 10-year water lease with the Town of Erie and a water supply framework resolution for area 3. Council member Adams voted no on the area 3 service expansion item. Council discussed the Erie lease, which staff said would not jeopardize local water supply during drought watch.",
         "related_timestamps": [
-          "4917.679",
-          "6200.719"
+          4237.36,
+          4313.92,
+          4440.96,
+          4627.28
+        ],
+        "Tags": [
+          "water",
+          "intergovernmental",
+          "council-governance"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Matters from the City Manager: Exploring Authority to Modify the Tip Offset",
-        "Summary": "Staff presented the new local authority to modify the tipped wage credit, which Colorado allows jurisdictions with a higher minimum wage to adjust, and outlined four options ranging from status quo to maximizing the tip offset. Restaurant sales and employment data were discussed, with corrections noted for sales tax trends and job figures. Council straw polls kept the status quo, Options 2A, 2B, and Council Member Benjamin's proposed freeze with sunset on the table, while removing the maximized tip offset. Council also directed staff to work with CAC on scheduling a delayed public hearing to allow more data and student participation.",
+        "Title": "Call-Up Items and Site Review at College Avenue",
+        "Summary": "Council reviewed call-up items including a Boulder Jewish Commons synagogue amendment, a water tap request in area 3, and a student housing site review at 1128 29th Street and 2895 East College Avenue. A motion to refer the College Avenue project to the Design Advisory Board was withdrawn after staff said the board had already reviewed and approved the design. Landmark alteration for an accessory building in Mapleton Hill was also listed.",
         "related_timestamps": [
-          "6200.719",
-          "9004.0"
+          4672.0,
+          4725.52,
+          4781.679,
+          4885.44
+        ],
+        "Tags": [
+          "development",
+          "zoning",
+          "historic-preservation"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Short-Term Festival Lodging Rental Ordinance (Second Reading)",
+        "Summary": "Council held a public hearing and adopted Ordinance 8743, expanding festival lodging rental licenses to tenants with owner consent and to vacant units in properties with long-term rental licenses. Staff said applications open the next day and licenses issue May 4 for Sundance. Council discussed revenue splits, renter protections, and a possible vacant-only option that was not adopted, and the vote was 8 to 0.",
+        "related_timestamps": [
+          4917.679,
+          5040.0,
+          5561.0,
+          5968.0,
+          6400.0,
+          7000.0,
+          7050.0,
+          7530.0
+        ],
+        "Tags": [
+          "housing",
+          "economic-development",
+          "arts-culture"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Tip Offset Options and Timeline",
+        "Summary": "Staff presented the tip credit authority options after council's retreat priority and reviewed economic, labor, and equity considerations, including restaurant sales tax and employment trends. Options included status quo, moderate increases, a higher offset, and maximized offset, with council narrowing to status quo, Option 2A, Option 2B, and a Benjamin proposal to pause the tipped wage through 2029. Council directed staff to return with more data and considered a later public hearing aligned with student availability, with CAC to help schedule.",
+        "related_timestamps": [
+          7615.0,
+          7760.0,
+          8300.0,
+          8551.0,
+          8829.0,
+          9310.0,
+          10375.0,
+          11000.0,
+          12575.0,
+          13115.0
+        ],
+        "Tags": [
+          "labor",
+          "budget",
+          "economic-development",
+          "council-governance"
         ]
       }
     }

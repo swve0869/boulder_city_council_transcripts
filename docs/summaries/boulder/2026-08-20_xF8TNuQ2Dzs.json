@@ -1,113 +1,172 @@
 {
-  "Title": "August 20, 2026 City of Boulder City Council Regular Meeting",
+  "Title": "August 20, 2026 Regular City Council Meeting (Boulder)",
+  "Tags": [
+    "council-governance",
+    "public-comment",
+    "development",
+    "budget",
+    "flock",
+    "parking",
+    "elections"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Agenda Amendment",
-        "Summary": "Council unanimously voted to remove item 3D, which covered annexation petitions for 1275 Cherryville and 5995 Murley Lane. It also added item 3J, which supports the Boulder County Early Childhood Care and Education mill levy increase (Resolution 1388) and sets the city's positions on select 2026 state ballot measures (Resolution 1389).",
+        "Title": "Agenda amendment and opening open comment",
+        "Summary": "Council moved to remove item 3D (annexation petition for Cherryville and Murley Lane properties) and add item 3J, a resolution supporting the Boulder County early childhood care and education mill levy and a resolution stating the city's positions on 2026 state ballot measures. The motion passed 8-0. Council then opened open comment and the clerk reviewed participation rules.",
         "related_timestamps": [
-          "336.16",
-          "386.56"
+          338.32,
+          389.919
+        ],
+        "Tags": [
+          "council-governance",
+          "elections"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Open Comment",
-        "Summary": "Six speakers, each limited to two minutes, addressed council on topics including opposition to Initiative 302 on hunting, calls for divestment related to Gaza and Lebanon, and concerns about wildfire evacuation risk from high-density student housing under Ordinance 8666. Other speakers raised concerns about campaign spending, taxes, and the debt limit. Staff said a wildfire home-hardening and mitigation presentation will come to council on August 27. Staff also said the automatic license plate reader contract is paused for further engagement, while the current camera service continues on a month-to-month basis.",
+        "Title": "Open comment: hunting amendment, Gaza, Flat Irons wildfire housing, and taxes",
+        "Summary": "Residents spoke on several subjects. Melinda Marquis opposed Initiative 302, the hunting constitutional amendment on the November ballot. Speakers urged divestment from companies linked to Gaza and Israel and a ceasefire resolution. Walt Morgan asked for a pause on high-density student housing permits in the wildland urban interface because of evacuation risk. Rob Smoke raised divestment and AIPAC, and Lynn Seagull objected to tax increases. Staff said a wildfire home-hardening presentation is planned for August 27.",
         "related_timestamps": [
-          "389.919",
-          "1614.32"
+          578.72,
+          706.32,
+          973.68,
+          1107.44,
+          1241.679,
+          1372.799
+        ],
+        "Tags": [
+          "public-comment",
+          "wildfire",
+          "housing",
+          "elections",
+          "intergovernmental"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Consent Agenda Approval",
-        "Summary": "Council unanimously approved consent agenda items 3A through 3C and 3E through 3J, with item 3D having been removed earlier in the meeting. The consent agenda included ordinance 8758, which authorizes bond issuance for capital projects. Council members discussed the item before the vote.",
+        "Title": "Flock license-plate-reader contract pause",
+        "Summary": "Council members asked about the status of the automated license plate reader (Flock) process. Staff said a pause has been put on the request for proposals, but month-to-month camera use with the current provider continues. Staff said a community engagement plan and additional guardrails for civil liberties and privacy would be shared before any contract is finalized.",
         "related_timestamps": [
-          "2122.24",
-          "2795.44"
+          1510.96,
+          1570.64,
+          1612.4
+        ],
+        "Tags": [
+          "flock",
+          "surveillance",
+          "technology"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Bond Measure and Budget Transparency Discussion",
-        "Summary": "Council members discussed the proposed bond ordinance 8758, with concerns about the lack of detail on capital projects, community trust, and the need for greater budget transparency. Staff responded that they are working on financial analysis, are considering a community advisory panel for capital projects, and that the city has hired an auditor. Council members also discussed whether other tax measures on the ballot could affect the graduated income tax, and a question about Alpine Balsam funding was answered by staff, who confirmed that no affordable housing funds are used for the Western City Campus.",
+        "Title": "Consent agenda and bond ballot measure discussion",
+        "Summary": "Council discussed consent agenda items, including ordinance 8758 on a proposed bond measure of more than $400 million. Speakers raised concerns about transparency, community trust, and the budget. Staff said a community advisory panel for capital projects is being considered, and that the city has hired an auditor. Council discussed the Alpine Balsam housing funding and confirmed affordable housing fund money is not going to the Western City campus. The consent agenda passed unanimously.",
         "related_timestamps": [
-          "2140.96",
-          "2748.56"
+          2140.96,
+          2355.52,
+          2745.04,
+          2756.88
+        ],
+        "Tags": [
+          "budget",
+          "taxes-fees",
+          "affordable-housing",
+          "elections",
+          "council-governance"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Call-Up Check-In and Public Hearing Setup",
-        "Summary": "Council reviewed the call-up check-in for item 4A, a landmark alteration certificate to relocate an accessory building at 1733 Canyon Boulevard, and no member called the item up. Council then voted unanimously to suspend procedural rules to allow three public hearings during the meeting.",
+        "Title": "Call-up check-in and suspension of rules for public hearings",
+        "Summary": "The council did not call up item 4A, a landmark alteration certificate to relocate an accessory building at 1733 Canyon Boulevard. Council voted unanimously to suspend procedural rules to allow three public hearings during the meeting.",
         "related_timestamps": [
-          "2799.119",
-          "2854.72"
+          2824.24,
+          2834.0
+        ],
+        "Tags": [
+          "council-governance",
+          "historic-preservation"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Public Hearing: North 30th Street Property Acquisition (Ordinance 8771)",
-        "Summary": "Transportation and Mobility staff presented the request to acquire property interests for the North 30th Street Improvements Project, which will add bike lanes, intersection upgrades, pedestrian facilities, and bus improvements between Walnut and the Diagonal Highway. The project is funded by a $7.46 million federal grant and $1.87 million in city funds, and most needed easements are small slivers of land. Acquisition could occur by negotiation or, if necessary, eminent domain to protect federal grant spending deadlines. No members of the public spoke, and council unanimously adopted Ordinance 8771.",
+        "Title": "Public hearing: North 30th Street property acquisition (Ordinance 8771)",
+        "Summary": "Transportation staff requested authority to acquire permanent and temporary easements on about 50 properties for the North 30th Street safety improvements project, through negotiation or eminent domain if needed. The project costs about $9.3 million, with a $7.46 million federal grant and $1.87 million in city funds. Council voted unanimously to adopt Ordinance 8771. No public speakers appeared.",
         "related_timestamps": [
-          "2856.48",
-          "3537.2"
+          2856.48,
+          3434.799,
+          4006.24
+        ],
+        "Tags": [
+          "transportation",
+          "bikes-pedestrians",
+          "development"
         ]
       }
     },
     {
       "Topic7": {
-        "Title": "Public Hearing: South 30th Street Property Acquisition (Ordinance 8772)",
-        "Summary": "Staff presented the request to acquire property interests for the South 30th Street Multimodal Improvements Project, which extends safety and multimodal upgrades from 30th and Colorado south toward Aurora and Baseline Road. The $3.67 million project is funded by a $3 million federal grant with a local match of about $670,000, and most of the needed land rights are temporary or small slivers. Construction is planned for 2028, one year after North 30th Street to avoid overlapping construction. No members of the public spoke, and council unanimously adopted Ordinance 8772.",
+        "Title": "Public hearing: South 30th Street property acquisition (Ordinance 8772)",
+        "Summary": "Staff requested the same type of property authority for the South 30th Street multimodal improvements project, which connects to Baseline Road and is mostly small temporary easements. The project is about $3.67 million, with a $3 million federal grant and about $670,000 local match. Staff said landscaping on private property would be coordinated with owners and meet zeroscape standards. Council voted unanimously to adopt Ordinance 8772.",
         "related_timestamps": [
-          "3542.319",
-          "4006.24"
+          3570.0,
+          3903.76,
+          4010.96
+        ],
+        "Tags": [
+          "transportation",
+          "bikes-pedestrians",
+          "development"
         ]
       }
     },
     {
       "Topic8": {
-        "Title": "Downtown Commercial District Board: Staff Presentation on 2121 Broadway Sale",
-        "Summary": "Council recessed as the City Council and convened as the Downtown Commercial District board, formerly the Central Area General Improvement District. Assistant City Manager Mark Wolf presented a proposed $5.8 million sale of the surface parking lot at 2121 Broadway to MALR Boulder LLC for a 110-room boutique hotel. The sale includes six 30-year community benefit covenants covering affordable commercial space, public space and events, arts and culture, labor and environmental standards, historic parking access for First Congregational Church, and coordination with visitor events. A parking study found that the 59 displaced spaces can be absorbed by nearby garages and that roughly 180 spaces would remain available.",
+        "Title": "Public hearing: Sale of KGID-owned parking lot at 2121 Broadway to MALR Boulder LLC",
+        "Summary": "The Downtown Commercial District board considered a purchase agreement to sell the Spruce and Broadway surface lot (59 spaces) to MALR Boulder LLC for a boutique hotel of about 110 rooms, with a proposed price of $5.8 million. The agreement includes 30-year community benefit covenants covering affordable commercial space, public space, arts, local hiring, and energy performance. Staff said a parking study found the lost spaces could be absorbed by nearby garages and that the hotel must still complete full development review. Many residents, churches, and businesses opposed the sale over parking access, while others supported the hotel's economic and vibrancy benefits. The board approved the agreement 7 to 1.",
         "related_timestamps": [
-          "4083.039",
-          "5206.239"
+          4084.64,
+          4251.0,
+          4773.6,
+          5168.159,
+          5206.239,
+          6708.08,
+          8666.0,
+          8691.6
+        ],
+        "Tags": [
+          "development",
+          "parking",
+          "economic-development",
+          "budget",
+          "affordable-housing",
+          "climate",
+          "historic-preservation",
+          "boards-appointments"
         ]
       }
     },
     {
       "Topic9": {
-        "Title": "Public Comment on the Spruce Street Lot Sale",
-        "Summary": "Nineteen speakers addressed the proposed sale, with two-minute limits and four minutes for some pooled speakers. Many opponents, including members of First Congregational Church, Trinity Lutheran Church, Mindful Works, and local residents, said the lot is essential for accessible parking for elderly, disabled, and congregational users. Opponents also raised concerns about downtown congestion, the parking study's assumptions, water and energy demand, and the lack of public process. Supporters, including the developer, local business owners, and residents, said the hotel would add vibrancy, tax revenue, visitor spending, and housing relief for renters.",
+        "Title": "Council discussion and water and energy concerns on the hotel",
+        "Summary": "Council members expressed support for the hotel project, while noting the importance of engaging the church and other parking users. Councilmember Taisha raised water supply concerns, noting the 2025 severe-scenario projections were not included, and asked for higher energy and equity standards. Councilmember Rob noted projected revenue from the hotel over 30 years. The motion passed 7 to 1, with one vote against.",
         "related_timestamps": [
-          "5207.92",
-          "7437.36"
-        ]
-      }
-    },
-    {
-      "Topic10": {
-        "Title": "Council Discussion and Vote on the 2121 Broadway Sale",
-        "Summary": "Council members acknowledged the strong public opposition and the importance of protecting parking access for churches, businesses, and disabled users. Several members stated that the sale is a first step, that the hotel would still need to go through concept and site review and public input, and that the city will work with stakeholders on parking solutions. Members also cited the potential long-term revenue, the value of the proposed community benefits, and the need to use surface lots more productively. The board then approved the purchase agreement with MALR Boulder LLC by a 7-1 vote, with Council Member Adams voting no.",
-        "related_timestamps": [
-          "7452.639",
-          "8723.439"
-        ]
-      }
-    },
-    {
-      "Topic11": {
-        "Title": "Adjournment",
-        "Summary": "After the Downtown Commercial District board adjourned, the Boulder City Council reconvened. With no further agenda items, the mayor closed the August 20, 2026 regular meeting at approximately 8:21 p.m.",
-        "related_timestamps": [
-          "8741.28",
-          "8756.88"
+          8379.359,
+          8427.439,
+          8666.0
+        ],
+        "Tags": [
+          "water",
+          "climate",
+          "energy",
+          "economic-development",
+          "parking"
         ]
       }
     }

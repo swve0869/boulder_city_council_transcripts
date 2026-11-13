@@ -1,21 +1,47 @@
 {
-  "Title": "April 23, 2026 City of Boulder City Council Study Session",
+  "Title": "April 23, 2026 Boulder City Council Study Session",
+  "Tags": [
+    "development",
+    "transportation",
+    "water",
+    "energy",
+    "council-governance",
+    "budget"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Future of Boulder Municipal Airport and Land Use Options",
-        "Summary": "Staff presented updates on the airport's finances, the closed FAA litigation, and community input from the 2023 airport community conversation. Staff asked council whether to support Scenario 1, indefinite operation of the airport, or Scenario 2, maintaining the closure opportunity by forgoing federal grants until 2040. Council members raised concerns about perpetual grant assurances, operating costs, noise, lead fuel, and the lack of public hearing for such a consequential decision. In a straw poll, five members favored Scenario 1 and four favored Scenario 2, and staff was directed to bring back formal action to document the direction.",
+        "Title": "Boulder Municipal Airport Future: Indefinite Operation vs. Closure Opportunity",
+        "Summary": "Staff presented an update on the airport's future, including the dismissed FAA lawsuit, the community conversation results, and financial projections showing scenario two would require about $600,000 per year in local subsidy. Council discussed grant assurances in perpetuity, noise and leaded fuel limits, and redevelopment potential of the land. Council members debated the financial and legal implications and a straw poll favored scenario one, continuing airport operations indefinitely. Staff was directed to bring back a formal action to memorialize the direction.",
         "related_timestamps": [
-          "295.28",
-          "7634.56"
+          295.28,
+          1001.0,
+          2110.0,
+          4300.0,
+          6040.0
+        ],
+        "Tags": [
+          "council-governance",
+          "budget",
+          "development"
         ]
-      },
+      }
+    },
+    {
       "Topic2": {
-        "Title": "Power Resilience and Reliability Update",
-        "Summary": "Staff reported that Excel Energy's public safety power shutoffs and aging infrastructure have led to more frequent and longer outages affecting Boulder residents. Staff outlined the city's advocacy at the Public Utilities Commission, the legislature, and in Excel's rate case, along with the development of risk zones and outcome metrics. The proposed plan includes a phased community engagement process this summer and fall, a community and council forum, and an Excel study session in August. Council generally supported the proposed approach, and members asked for stronger accountability, attention to relocation and vulnerable populations, cost information before budget season, and more precise engagement with different community segments.",
+        "Title": "Power Resilience and Public Safety Power Shutoffs",
+        "Summary": "Staff presented on increasing public safety power shutoffs and outages driven by wildfire mitigation and aging infrastructure. The presentation covered Excel Energy's hardening work, reliability metrics, and risk zones, along with a phased community engagement plan including a summer workshop and a fall community council forum. Council expressed support for the approach and asked about accountability, timelines, relocation considerations, and cross-departmental trade-offs. Council confirmed alignment with the proposed approach.",
         "related_timestamps": [
-          "7665.04",
-          "11912.399"
+          6578.0,
+          7998.0,
+          8660.0,
+          9100.0,
+          11500.0
+        ],
+        "Tags": [
+          "energy",
+          "wildfire",
+          "emergency-management"
         ]
       }
     }

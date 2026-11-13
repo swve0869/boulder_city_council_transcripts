@@ -1,66 +1,223 @@
 {
   "Title": "September 10, 2026 City of Boulder City Council Study Session - 2027 Recommended Budget",
+  "Tags": [
+    "budget",
+    "wildfire",
+    "affordable-housing",
+    "parks-recreation",
+    "council-governance",
+    "public-comment"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Opening Remarks and City Manager Introduction of 2027 Recommended Budget",
-        "Summary": "Council Member Adams opened the study session and outlined the meeting format, with staff presentation followed by questions and council discussion. City Manager Nuria Rivera-Vandermark introduced the 2027 recommended budget, describing it as shaped by hard trade-offs, department input, and evolving outcomes-based budgeting practices. She highlighted new tools including the Budget at a Glance page and a service inventory categorizing services into five tiers. She noted that community priorities such as wildfire, climate risk, policing, housing, and wellness informed the proposal. CFO Christa Morrison then framed the budget as the third consecutive year of reductions driven by slowing revenues and rising costs.",
+        "Title": "Opening remarks and 2027 budget overview by City Manager and CFO",
+        "Summary": "City Manager Nuria Rivera-Vandermark introduced the 2027 recommended budget, noting hard trade-offs and reductions after several years of constrained revenue. CFO Christa Morrison presented the total of $552.6 million across all funds, a $135.4 million capital budget, and a 2.3% operating increase, the second slowest since the pandemic. She described sales tax dependence, inflation pressures, and personnel costs making up 41% of operating spending.",
         "related_timestamps": [
-          "302.8",
-          "572.24"
+          302.8,
+          572.24,
+          954.16
+        ],
+        "Tags": [
+          "budget",
+          "council-governance"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "2027 Recommended Budget Overview and Revenue Forecast",
-        "Summary": "Budget Officer Charlotte Husky presented a total budget of $552.6 million, including a $412.2 million (later cited as $417.2 million) operating budget with roughly 2.3% growth and a $135.4 million capital budget. The city faced a projected $6.3 million general fund gap, addressed through ongoing reductions, realignments, and limited enhancements. Sales and use tax, which comprises about 35% of city revenues, is projected to grow 3.3%, while property tax is expected to rise 6%. New revenues include a $3 million transportation maintenance fee, a recreational marijuana tax increase from 3.5% to 5.5%, and utility fee increases. Revenue remains highly restricted, with a large share of funds dedicated to specific uses.",
+        "Title": "Budget officer presentation on revenues, assumptions and community engagement",
+        "Summary": "Budget Officer Charlotte Husky outlined budget assumptions including a $6.3 million general fund gap and reductions made in response. Revenue changes include a transportation maintenance fee, a recreational marijuana sales tax increase from 3.5% to 5.5%, and utility fee increases. The Fund Our Future community conversations with over 500 residents informed priorities such as wildfire, facilities maintenance, public safety, and affordable housing.",
         "related_timestamps": [
-          "954.16",
-          "1192.32",
-          "1402.0"
+          954.16,
+          1064.0,
+          1192.32,
+          1507.52
+        ],
+        "Tags": [
+          "budget",
+          "taxes-fees",
+          "public-comment"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Fund Our Future Community Engagement",
-        "Summary": "Staff reported that the Fund Our Future community conversations engaged over 500 residents through in-person and online trade-off exercises across 25 services grouped into 12 categories. Community priorities included ongoing maintenance of city facilities, public safety, wildfire resilience, and affordable housing. Engagement results were used as a key pillar in budget decision-making. Staff emphasized that residents had to choose between service areas, reflecting the difficulty of balancing demand against constrained resources.",
+        "Title": "Operating budget changes by goal area",
+        "Summary": "Scott Carpenter, principal budget analyst, highlighted operating changes across the sustainability, equity, and resilience goals. Items included a $4.3 million increase for city facilities maintenance, $11 million in wildfire spending, three new police lieutenant positions, and affordable housing funding for the Alpine Balsam site. Trade-offs included reduced funding for Spruce Pool, elimination of child watch at East Boulder Community Center, and a reduction in the photo enforcement program.",
         "related_timestamps": [
-          "1507.52",
-          "1632.64"
+          1885.919,
+          2034.399,
+          2152.96
+        ],
+        "Tags": [
+          "budget",
+          "parks-recreation",
+          "affordable-housing",
+          "wildfire"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Operating Budget Changes by Sustainability, Equity, and Resilience Goal Area",
-        "Summary": "Principal Budget Analyst Scott Carpenter reviewed major operating changes, including a $4.3 million increase for facilities maintenance and wildfire-related investments of about $11 million citywide. Public safety changes included three new police lieutenant positions and firefighter equipment replacement, while affordable housing investments included $5.3 million for the Alpine Balsam site and funding for other projects. Reductions included Spruce Pool operating support (funded with one-time dollars through 2027), elimination of child watch at East Boulder Community Center, and a shoulder-season reduction at Scott Carpenter Pool. A new Office of Customer Experience and a statistically valid community survey budgeted at $150,000 were also included.",
+        "Title": "Six-year capital improvement program and long-term financial strategy",
+        "Summary": "Budget staff presented the 2027 to 2032 capital improvement program totaling $827.7 million, including utility pipeline repairs, bus priority signal improvements, wildfire prevention projects on open space, and replacement of fire stations 2 and 4. The long-term financial strategy, a comprehensive plan expected in December, and the 2026 November recreation and safety bond were also covered. The community, culture, resilience and safety tax was extended permanently by voters in 2025.",
         "related_timestamps": [
-          "1885.919",
-          "2391.28"
+          2391.28,
+          2704.0,
+          2908.96
+        ],
+        "Tags": [
+          "budget",
+          "fire-ems",
+          "water",
+          "transportation",
+          "elections"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Capital Improvement Program 2027-2032 and Long-Term Financial Strategy",
-        "Summary": "Budget Officer Husky presented a $135.4 million 2027 capital budget and $827.7 million six-year CIP across seven departments, with roughly 75% supporting utilities and transportation. Major projects include the $13.5 million Barker gravity pipeline repair, Colorado 119 bus priority signal improvements, wildfire prevention projects on open space, and replacement of Fire Stations 2 and 4 totaling $31.7 million. The CIP also includes $27.9 million in facilities maintenance funded by the Community, Culture, Resilience and Safety tax. Staff described the long-term financial strategy, with a comprehensive financial plan expected in winter or December 2026, and noted a November 2026 recreation and safety bond on the ballot.",
+        "Title": "Council questions on Alpine Balsam cost history and capital project transparency",
+        "Summary": "Council Member Rob Winer raised concerns about how the Alpine Balsam project's costs and obligations have been communicated and asked how the city can be more transparent on large projects. Deputy City Manager Chris Massey said the project has stayed within council-approved budgets and that a project page and story map covering the 11-year history were published. Staff committed to considering how to tag cross-departmental projects more visibly.",
         "related_timestamps": [
-          "2391.28",
-          "2908.96"
+          3180.8,
+          3532.0,
+          3916.8
+        ],
+        "Tags": [
+          "budget",
+          "affordable-housing",
+          "council-governance"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Council Questions, Process, and Budget Amendment Timeline",
-        "Summary": "Council members asked about the Alpine Balsam project's costs, facility reserve funding under the 2 percent CRV policy, fixed-term positions, property tax assessment changes, and the mechanism for substantive changes. Staff clarified that proposed amendments must be submitted by September 28, 2026, must include an identified offset, and will be considered at the October 1 first reading, with final adoption on October 15. Staff also explained that the city has an internal auditor and that the Spruce Pool, pool fees, and day services center funding will need ongoing solutions. Council members raised questions on wildfire funding, snow and ice removal, photo enforcement elimination, grant pursuit, and the lack of a statistically valid survey. Some council members proposed reallocations, including a roughly $2 million to $4 million shift toward wildfire mitigation.",
+        "Title": "Facilities reserves, 2% CRV set-aside and building maintenance bond",
+        "Summary": "Council Member Kaplan asked whether reserves are set aside for future building replacement. Staff explained the 2% capital renewal value set-aside policy and the $4.3 million added for critical facility maintenance enabled by the 3% CCRS tax. Staff said that if the November bond fails, the city would face difficult trade-offs in keeping 15 priority buildings operating.",
         "related_timestamps": [
-          "3158.16",
-          "5159.12",
-          "8016.159",
-          "10645.39"
+          4157.52,
+          5340.0,
+          6376.32
+        ],
+        "Tags": [
+          "budget",
+          "elections",
+          "parks-recreation"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Fund our future priorities, uniform service tiers, and trade-off framework",
+        "Summary": "Council members asked how the new service tier framework (critical, mandated, strategic priority, community enrichment) would guide future budgets and why top community priorities were not more clearly itemized. Staff described the tiering exercise and said it will be tied to work planning. Council Member Benjamin said community priorities such as wildfire, infrastructure, and public safety were spread across the budget and difficult to find.",
+        "related_timestamps": [
+          4800.32,
+          5000.0,
+          5155.36
+        ],
+        "Tags": [
+          "budget",
+          "council-governance",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Pools, silver sneakers discounts, and dedicated revenue restrictions",
+        "Summary": "Mayor Pro Tem Tara Winer asked whether Spruce Pool could be funded through the sugar-sweetened beverage tax or whether senior discounts could be income-based. Staff explained that voter-approved uses of those dedicated funds limit reallocation, and that Parks and Recreation is working on how best to serve older adults through a means-tested approach. The high share of restricted revenue citywide was also noted.",
+        "related_timestamps": [
+          5529.12,
+          5712.4,
+          7046.0
+        ],
+        "Tags": [
+          "parks-recreation",
+          "budget",
+          "human-services"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "Internal and external auditor functions",
+        "Summary": "Council Member Winer asked how community members can request an external performance audit and how a project could be audited. Deputy City Attorney Roberto Ramirez referred to a confidential memo on the process. Staff explained the internal auditor works from an annual risk-based plan, that an audit request webpage was recently launched, and that a follow-up discussion on auditing could be scheduled.",
+        "related_timestamps": [
+          5725.0,
+          5800.0,
+          6080.96
+        ],
+        "Tags": [
+          "budget",
+          "council-governance",
+          "legal"
+        ]
+      }
+    },
+    {
+      "Topic10": {
+        "Title": "Wildfire funding, nature-based solutions and grants",
+        "Summary": "Council Members Matt and Rob Winer proposed directing about $2 million in climate initiatives funds and additional OSMP funds toward wildfire mitigation, citing community concern about wildfire risk. Mayor Brockett and other members said they would not support that large a cut in climate funding without more analysis. Staff described nature-based wildfire work, circular economy efforts, and roughly $2.1 million in wildfire grants received.",
+        "related_timestamps": [
+          7079.52,
+          8145.04,
+          9186.16
+        ],
+        "Tags": [
+          "wildfire",
+          "climate",
+          "budget",
+          "open-space"
+        ]
+      }
+    },
+    {
+      "Topic11": {
+        "Title": "Snow and ice removal and photo enforcement program",
+        "Summary": "Council Member Winer asked whether snow and ice removal would expand to west Boulder streets where seniors are at risk of being stuck. The director of transportation said funds allow for added equipment but not new streets this year, with a packet to come. Winer also asked why the photo enforcement van program was reduced; staff said cost outpaced revenue and officers would prioritize neighborhood complaints.",
+        "related_timestamps": [
+          8643.92,
+          8950.0,
+          9000.96
+        ],
+        "Tags": [
+          "transportation",
+          "police",
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic12": {
+        "Title": "Council budget amendment process and next steps",
+        "Summary": "The deputy city attorney and budget officer explained that council members may propose substantive changes through the hotline by September 28, with an identified offset required for any balanced amendment. The first reading is October 1 and adoption October 15. Council members discussed the timing of any wildfire or other ongoing funding decisions, and the difference between the annual budget and mid-year appropriations.",
+        "related_timestamps": [
+          3105.36,
+          7756.32,
+          10640.88
+        ],
+        "Tags": [
+          "budget",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic13": {
+        "Title": "Council closing comments and substantive requests",
+        "Summary": "Council members closed by reiterating concerns on Spruce Pool and the day services center, which are funded with one-time dollars, and asked how to sustain them. Council Member Adams raised concerns about evacuation, recovery and relocation funding, energy rate increases, the water supply under drought scenarios, and reduced outreach funding for community connectors. Mayor Brockett closed the meeting at 8:56 p.m. and reminded members of the September 28 hotline deadline.",
+        "related_timestamps": [
+          9998.479,
+          10652.56,
+          10928.64
+        ],
+        "Tags": [
+          "water",
+          "energy",
+          "homelessness",
+          "council-governance"
         ]
       }
     }

@@ -22,6 +22,61 @@ from council_transcripts import load_cities, slugify
 ROOT = Path(__file__).parent
 SUMMARIES_DIR = ROOT / "docs" / "summaries"
 STEM = re.compile(r"^(\d{4}-\d{2}-\d{2}|undated)_(.+)$")
+TAGS_FILE = ROOT / "tags.json"
+MIN_TOPIC_SECONDS = 60  # a topic with a single timestamp still counts as some discussion
+
+
+def topics_of(summary):
+    """[(title, tags, timestamps)] in order; accepts one topic per list item or several."""
+    out = []
+    for entry in summary.get("Topics") or []:
+        if not isinstance(entry, dict):
+            continue
+        for key in sorted(entry, key=lambda k: int(re.sub(r"\D", "", k) or 0)):
+            t = entry[key]
+            if not isinstance(t, dict):
+                continue
+            stamps = []
+            for x in t.get("related_timestamps") or []:
+                try:
+                    stamps.append(float(x))
+                except (TypeError, ValueError):
+                    pass
+            out.append((str(t.get("Title", key)), [g for g in t.get("Tags") or [] if isinstance(g, str)], sorted(stamps)))
+    return out
+
+
+def topic_span(stamps, next_start):
+    """(start, end) seconds of video a topic covers, estimated from its timestamps.
+
+    Uses the first to last timestamp. A topic with a single timestamp runs until the
+    next topic starts, capped at MIN_TOPIC_SECONDS.
+    """
+    if not stamps:
+        return None, None
+    start, end = stamps[0], stamps[-1]
+    if end - start < MIN_TOPIC_SECONDS:
+        end = start + MIN_TOPIC_SECONDS if next_start is None else min(start + MIN_TOPIC_SECONDS, max(next_start, start))
+    return round(start, 2), round(end, 2)
+
+
+def meeting_entry(summary):
+    """Per-meeting data the site uses for tags, filtering and charts."""
+    topics, tag_seconds = [], {}
+    raw = topics_of(summary)
+    starts = [stamps[0] if stamps else None for _, _, stamps in raw]
+    for i, (title, tags, stamps) in enumerate(raw):
+        later = [s for s in starts[i + 1:] if s is not None and stamps and s > stamps[0]]
+        start, end = topic_span(stamps, min(later) if later else None)
+        topics.append({"title": title, "tags": tags, "start": start, "end": end})
+        for tag in tags:
+            tag_seconds[tag] = tag_seconds.get(tag, 0) + ((end - start) if start is not None else 0)
+    main = [g for g in summary.get("Tags") or [] if isinstance(g, str)]
+    return {
+        "tags": main,
+        "tag_seconds": {t: round(v) for t, v in sorted(tag_seconds.items(), key=lambda kv: -kv[1])},
+        "topics": topics,
+    }
 
 
 def build_manifest(summaries_dir=SUMMARIES_DIR):
@@ -37,7 +92,8 @@ def build_manifest(summaries_dir=SUMMARIES_DIR):
             continue
         date, video_id = m.groups()
         try:
-            title = json.loads(f.read_text(encoding="utf-8")).get("Title", "")
+            summary = json.loads(f.read_text(encoding="utf-8"))
+            title = summary.get("Title", "")
         except (json.JSONDecodeError, AttributeError):
             print(f"skip   {f} (not a valid summary)", file=sys.stderr)
             continue
@@ -48,15 +104,19 @@ def build_manifest(summaries_dir=SUMMARIES_DIR):
             "video_id": video_id,
             "title": title,
             "model": provenance.get(f"{f.parent.name}/{f.stem}"),
+            **meeting_entry(summary),
         })
     meetings.sort(key=lambda m: (m["date"] or "", m["id"]), reverse=True)
     cities = sorted({m["city"] for m in meetings})
+    vocabulary = json.loads(TAGS_FILE.read_text(encoding="utf-8")) if TAGS_FILE.exists() else {"groups": [], "tags": []}
     manifest = {
         "cities": [{"slug": s, "name": names.get(s, s.replace("-", " ").title())} for s in cities],
+        "tag_groups": vocabulary["groups"],
+        "tags": [{k: t[k] for k in ("id", "label", "group")} for t in vocabulary["tags"]],
         "meetings": meetings,
     }
     summaries_dir.mkdir(parents=True, exist_ok=True)
-    (summaries_dir / "index.json").write_text(json.dumps(manifest, indent=1) + "\n", encoding="utf-8")
+    (summaries_dir / "index.json").write_text(json.dumps(manifest, separators=(",", ":")) + "\n", encoding="utf-8")
     return len(meetings)
 
 

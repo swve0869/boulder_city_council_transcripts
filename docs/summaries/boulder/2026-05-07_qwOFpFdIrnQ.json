@@ -1,94 +1,213 @@
 {
-  "Title": "May 7, 2026 - Regular Meeting of the Boulder City Council",
+  "Title": "May 7, 2026 Boulder City Council Regular Meeting",
+  "Tags": [
+    "council-governance",
+    "public-comment",
+    "labor",
+    "housing",
+    "elections",
+    "affordable-housing"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Call to Order, Roll Call, and Agenda Amendment",
-        "Summary": "Mayor Brockett called the meeting to order and the council confirmed a quorum through roll call. The council unanimously voted to remove item 4E from the consent agenda, so the June 11 session will remain a study session. The council then moved on to open public comment.",
+        "Title": "Call to order, roll call, and agenda amendment",
+        "Summary": "Council convened the regular meeting and took a roll call with all members present. Council voted unanimously to remove item 4E from the consent agenda, which means the June 11 study session will proceed as usual.",
         "related_timestamps": [
-          "321.28",
-          "406.6"
-        ]
+          321.28,
+          406.6
+        ],
+        "Tags": []
       }
     },
     {
       "Topic2": {
-        "Title": "Public Open Comment",
-        "Summary": "Residents spoke on a range of topics, including opposition to cutting the tipped minimum wage, support for a residential vacancy tax, and calls to refuse FAA grants that would commit the city to maintaining the airport. Other speakers raised a lot split and permitting difficulties, bike registration, South Boulder Rec Center pool closure concerns, and youth and climate issues. Several speakers also addressed Israel, Gaza, and related criminal sentencing, and some expressed concern about a speaker's conduct outside the building. Each speaker was limited to a set time under the council's public participation guidelines.",
+        "Title": "Open comment on tipped minimum wage",
+        "Summary": "Multiple residents urged council not to cut the tipped minimum wage, citing the living wage cost in Boulder and the hardship on service workers. Speakers argued that wage cuts would hurt local consumers and the economy and asked council to focus instead on corporate landlords and vacant commercial space.",
         "related_timestamps": [
-          "406.6",
-          "3350.92"
+          517.2,
+          630.08,
+          763.4,
+          1127.44,
+          1138.68,
+          1268.6,
+          1638.2,
+          1737.0,
+          2042.92,
+          2331.12,
+          2455.52
+        ],
+        "Tags": [
+          "labor",
+          "economic-development"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Staff and Council Responses to Public Comment",
-        "Summary": "Staff said tipped wage discussions would come later in the year and that no proposal would actually reduce the tipped minimum wage, though changes to the tip credit are under consideration. Staff committed to following up on a lot split question, a permitting concern, and the airport's future financial needs. Council members thanked staff, responded to a speaker's comments about a criminal sentencing, and encouraged continued public input on the tip credit before a July public hearing.",
+        "Title": "Open comment on residential vacancy tax and housing",
+        "Summary": "Several speakers urged council to place a residential vacancy tax on the ballot and raise the proposed amount from $2,000 to $5,000 per vacant unit. Speakers argued that vacant homes worsen the housing shortage and that a larger tax would be more effective. Speakers also raised concerns about commercial vacancy and tax base erosion.",
         "related_timestamps": [
-          "2894.52",
-          "3350.92"
+          868.48,
+          1000.16,
+          1268.6,
+          1305.0,
+          2042.92
+        ],
+        "Tags": [
+          "housing",
+          "taxes-fees",
+          "public-comment"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Recess",
-        "Summary": "The council took a 10-minute recess after open comment and reconvened for the business portion of the meeting at 8:00 p.m. No substantive action was taken during this period.",
+        "Title": "Open comment on Boulder Municipal Airport and FAA grants",
+        "Summary": "Speakers asked council never to accept FAA grants that would commit the city to maintaining the airport in perpetuity. A speaker also criticized an April 23 study session decision to dedicate 175 acres of city land to the FAA and aviation industry, saying the decision relied on unverified information and excluded public input.",
         "related_timestamps": [
-          "3350.92",
-          "3968.96"
+          1127.44,
+          1268.6,
+          1353.68,
+          2331.12
+        ],
+        "Tags": [
+          "intergovernmental",
+          "public-comment"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Declaration: National Day of Awareness for Missing and Murdered Indigenous Persons",
-        "Summary": "Council Member Adams presented a declaration recognizing May 5 or 6, 2026 as the National Day of Awareness for Missing and Murdered Indigenous Persons, which the mayor signed. Indigenous community speakers emphasized the need for real action beyond proclamations, including accountability, reparations, representation, and safety concerns about surveillance systems like Flock. Staff noted that the declaration includes a call for Boulder Police to receive culturally specific training.",
+        "Title": "Open comment on South Boulder Rec Center and other topics",
+        "Summary": "A youth speaker urged council to keep the pool at the South Boulder Recreation Center open, citing the 15-minute city goal. Other speakers raised bike registration, the Charge Bug energy app, an Israel-Gaza divestment request, and concerns about building permit red tape.",
         "related_timestamps": [
-          "3968.96",
-          "4976.2"
+          1138.68,
+          2457.84,
+          2596.0,
+          2602.68,
+          1493.84,
+          1623.64,
+          1832.0,
+          1500.0
+        ],
+        "Tags": [
+          "parks-recreation",
+          "bikes-pedestrians",
+          "energy",
+          "public-comment",
+          "intergovernmental"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Consent Agenda",
-        "Summary": "The council discussed the consent agenda, including the beverage licensing rules of procedure amendment, which was praised as a common-sense efficiency change. A motion was made and seconded, and the consent agenda (items 4A through 4D and 4F through 4L) was approved unanimously. Item 4E had been removed earlier in the meeting.",
+        "Title": "Staff response and council comments on open comment",
+        "Summary": "Staff said tipped credit changes would come later in the year and that the proposals under consideration would not reduce the tipped minimum wage. Staff committed to follow-up on the lot split question, a health-related concern, and the airport. Council members offered brief comments, including Councilmember Tasha's remarks on a planned July public hearing on tip credit.",
         "related_timestamps": [
-          "4976.2",
-          "5109.28"
+          2897.0,
+          3078.56,
+          3132.76,
+          3224.6,
+          3311.76
+        ],
+        "Tags": [
+          "labor",
+          "council-governance"
         ]
       }
     },
     {
       "Topic7": {
-        "Title": "Call-Up Check-Ins",
-        "Summary": "The council reviewed several land use items, including landmark alteration certificates for 409 Mountain View Road and the Chestnut and Arapahoe Houses at 2106 Arapahoe Avenue, a height modification at 1039 Mapleton Avenue, and an outside city utility permit at 1420 Cherryvale Road. Staff explained that a concept plan for permanently affordable senior housing at Arapahoe Avenue would not be affected by a call-up. No council members called up any items.",
+        "Title": "Consent agenda approval",
+        "Summary": "Council moved and approved the consent agenda, which included items 4A through 4D and 4F through 4L, after clarifying that the beverage licensing rules amendment would be discussed at second reading. The vote was unanimous.",
         "related_timestamps": [
-          "5109.28",
-          "5607.56"
+          4976.2,
+          5102.96
+        ],
+        "Tags": [
+          "council-governance"
         ]
       }
     },
     {
       "Topic8": {
-        "Title": "Public Hearing: Landmark Designation of 745 University Avenue (Ordinance 8741)",
-        "Summary": "Staff presented the second reading of Ordinance 8741 to designate 745 University Avenue as an individual landmark, to be named the Polls and Registration House. The 1907 Edwardian vernacular house served as a municipal polling place and registration site, including for the 1917 charter elections. Public speakers supported the designation, and the council unanimously adopted the ordinance.",
+        "Title": "National Day of Awareness for Missing and Murdered Indigenous Persons declaration",
+        "Summary": "Council Member Adams presented a declaration recognizing May 5 or 6, 2026 as the National Day of Awareness for Missing and Murdered Indigenous Persons, signed by Mayor Brockett. Speakers from community organizations urged real action beyond proclamations, including policing training, reparations, and caution about Flock camera surveillance harms to Indigenous communities.",
         "related_timestamps": [
-          "5609.8",
-          "6760.04"
+          3968.96,
+          4008.0,
+          4542.12,
+          4664.04
+        ],
+        "Tags": [
+          "equity",
+          "public-health",
+          "police"
         ]
       }
     },
     {
       "Topic9": {
-        "Title": "Public Hearing: Omnibus Land Use Code Amendment (Ordinance 8745)",
-        "Summary": "Staff presented the second reading of Ordinance 8745, an omnibus package of corrections, clarifications, and substantive changes to the land use code. Key changes include removing the office floor area limit, allowing height modifications up to 55 feet for certain community, cultural, and educational uses in three-story buildings, and clarifying parking and driveway rules. Council added an amendment removing outdoor patio size limits for breweries, wineries, and distilleries, and passed the ordinance 5-1 after public comment and discussion.",
+        "Title": "Call-up check-ins for landmark and site review items",
+        "Summary": "Council reviewed several call-up items, including landmark alteration applications for 409 Mountain View Road and the Chestnut and Arapahoe houses, a height modification at 1039 Mapleton Avenue, and a utility permit at 1420 Cherryvale Road. Council discussed a concept plan for 60 units of permanently affordable senior housing at Presbyterian Manor and decided not to call any items up.",
         "related_timestamps": [
-          "6780.16",
-          "10058.32"
+          5160.64,
+          5199.12,
+          5227.4,
+          5250.68,
+          5307.32,
+          5599.28
+        ],
+        "Tags": [
+          "historic-preservation",
+          "affordable-housing",
+          "development"
         ]
+      }
+    },
+    {
+      "Topic10": {
+        "Title": "Public hearing: Landmark designation of 745 University Avenue",
+        "Summary": "Council held the second reading and public hearing to designate 745 University Avenue as the Polls and Registration House, an individual landmark. The house was a municipal polling place for two decades and was tied to Boulder's early proportional voting history. Council unanimously adopted Ordinance 8741.",
+        "related_timestamps": [
+          5642.96,
+          6125.0,
+          6381.72,
+          6766.0
+        ],
+        "Tags": [
+          "historic-preservation",
+          "elections"
+        ]
+      }
+    },
+    {
+      "Topic11": {
+        "Title": "Public hearing: Omnibus land use code amendment (Ordinance 8745)",
+        "Summary": "Staff presented an omnibus ordinance to fix errors, clarify code, and amend height, use, and site review standards. Changes include removing office floor area limits, allowing height modifications up to 55 feet for certain community uses on three-story buildings, and clarifying parking in converted garages. Council added an amendment removing outdoor patio size limits for breweries and tap rooms, and the ordinance passed five to one.",
+        "related_timestamps": [
+          7838.88,
+          8224.0,
+          9224.0,
+          9924.92,
+          10034.04
+        ],
+        "Tags": [
+          "zoning",
+          "parking",
+          "economic-development"
+        ]
+      }
+    },
+    {
+      "Topic12": {
+        "Title": "Adjournment",
+        "Summary": "Council closed the meeting at 9:42 p.m. after completing the agenda.",
+        "related_timestamps": [
+          10058.32
+        ],
+        "Tags": []
       }
     }
   ]

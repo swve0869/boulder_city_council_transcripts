@@ -1,53 +1,101 @@
 {
-  "Title": "May 28, 2026 - City of Boulder City Council Special Meeting and Study Session",
+  "Title": "May 28, 2026 Boulder City Council Special Meeting and Study Session",
+  "Tags": [
+    "council-governance",
+    "taxes-fees",
+    "development",
+    "economic-development",
+    "parking",
+    "affordable-housing",
+    "budget",
+    "transportation",
+    "intergovernmental",
+    "public-comment"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Consent Agenda: Confirmation of Council Member Benjamin's CML Executive Board Nomination",
-        "Summary": "Council amended the agenda to add item 2A, a motion confirming Council's endorsement of Council Member Matt Benjamin's nomination to the Colorado Municipal League Executive Board. Benjamin explained that Boulder holds two CML appointments and that the board oversees the organization's policy positions on state legislation. Council approved the consent agenda 8-0, with Benjamin recusing himself from the vote.",
+        "Title": "Consent Agenda: Council Endorsement of Matt Benjamin's CML Executive Board Nomination",
+        "Summary": "Council voted to add item 2A to the consent agenda confirming endorsement of Councilmember Matt Benjamin's nomination to the Colorado Municipal League Executive Board. Benjamin explained CML's role lobbying state legislation and Boulder's two appointed seats. Benjamin recused himself, and the consent agenda passed 8 to 0.",
         "related_timestamps": [
-          "315.56",
-          "631.04"
+          333.08,
+          412.16,
+          480.08,
+          499.84,
+          617.56
+        ],
+        "Tags": [
+          "intergovernmental",
+          "council-governance",
+          "boards-appointments"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Public Hearing: Ordinance 8749 Authorizing Property Acquisition for Arapahoe Avenue Safety Project",
-        "Summary": "Staff presented Ordinance 8749, which authorizes acquiring property interests for the Arapahoe Avenue safety improvement project through negotiation, purchase, or eminent domain. The project uses a federal grant and city funds for a $12 million total budget, with 14 properties needing an average of about 700 square feet each. Staff said eminent domain is not expected to be needed, but the authority is needed to avoid schedule delays before the 2030 federal spending deadline. One member of the public spoke in opposition, and Council unanimously approved the ordinance.",
+        "Title": "Public Hearing: Ordinance 8749 Eminent Domain for Arapahoe Avenue Safety Project",
+        "Summary": "Staff presented the Arapahoe Avenue safety improvement project, a $12 million effort with $9.6 million in federal funding and $2.4 million in city funds. Acquiring about 700 square feet from each of 14 properties may require eminent domain authority to keep the schedule and meet the 2030 federal spending deadline, though staff does not expect to use it. One resident spoke against the ordinance during public comment. Council unanimously adopted Ordinance 8749.",
         "related_timestamps": [
-          "631.04",
-          "2093.08"
+          634.12,
+          659.32,
+          736.96,
+          1391.88,
+          1703.8,
+          2024.28,
+          2090.72
+        ],
+        "Tags": [
+          "transportation",
+          "bikes-pedestrians",
+          "legal",
+          "public-comment"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Matters from Council: Continued Use of Airport Land",
-        "Summary": "Council discussed whether to consider a motion affirming the continued airport use under city code on the consent agenda or at a public hearing. Several members said the community has strong interest on both sides and favored a public hearing, and the Mayor confirmed that five members supported that approach. Council also directed staff to return with two options, one that permits long-term encumbrance of the land and one that preserves local future control, along with legal research. Members raised questions about the timing, budget impacts, and expiring grant funds.",
+        "Title": "Matters: Council Direction on Continued Use of Airport Land",
+        "Summary": "Staff asked whether the question of continuing airport operations indefinitely should return as a consent item or a public hearing. Council members favored a public hearing for community input, and a majority voted for that path. Council also directed staff, by a vote of five, to bring back two options and legal research on long-term land encumbrance and FAA grant implications.",
         "related_timestamps": [
-          "2108.72",
-          "4364.56"
+          2100.0,
+          2123.44,
+          2296.0,
+          2640.0,
+          3780.0,
+          3816.0
+        ],
+        "Tags": [
+          "council-governance",
+          "legal",
+          "public-comment",
+          "budget"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Study Session: Downtown Development Authority Plan of Development and Financial Structure",
-        "Summary": "Staff presented a draft plan of development for a proposed Downtown Development Authority (DDA) that would support reinvestment in downtown and University Hill over a 30-year period. The proposed financing includes a 3.67 mill levy to replace existing GID levies, which would generate about $1.8 million annually, along with tax increment financing (TIF) and integration of GID parking assets. Staff noted the DDA would be formed only if voters approve ballot measures, with a potential November 2026 ballot referral. The presentation also covered governance, council oversight, and a timeline for an intergovernmental agreement.",
+        "Title": "Study Session: Downtown Development Authority (DDA) Formation Analysis",
+        "Summary": "Staff presented the draft DDA plan of development, a 30-year reinvestment framework covering downtown, University Hill, and connecting corridors. Financing would rely on a 3.67 mill levy replacing existing GID levies, tax increment financing, and parking asset integration. Staff requested direction on feedback to the plan, the financial structure, and drafting ballot measures for November 2026. Council members raised concerns about general fund impacts, parking governance, equity for the Hill, and measuring outcomes, and generally supported moving forward.",
         "related_timestamps": [
-          "4380.32",
-          "6213.56"
-        ]
-      }
-    },
-    {
-      "Topic5": {
-        "Title": "Study Session: Council Questions and Feedback on the DDA",
-        "Summary": "Council members asked about voter eligibility, the revenue impacts on the general fund and other taxing entities, and how the parking assets would be transferred and governed. Several members raised concerns about measuring economic outcomes, protecting University Hill interests, and ensuring accountability for diverted revenue. Members also requested more financial analysis and scenario planning before final decisions. Council indicated general support for staff drafting ballot measures for the November 2026 election, with the understanding that more information would follow.",
-        "related_timestamps": [
-          "6220.84",
-          "9502.36"
+          4386.96,
+          4460.0,
+          5050.0,
+          5560.0,
+          5950.0,
+          6220.84,
+          8410.0,
+          8996.52,
+          9300.0,
+          9500.0
+        ],
+        "Tags": [
+          "economic-development",
+          "taxes-fees",
+          "budget",
+          "parking",
+          "council-governance",
+          "development",
+          "equity"
         ]
       }
     }

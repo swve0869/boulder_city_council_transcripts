@@ -1,23 +1,65 @@
 {
-  "Title": "August 27, 2026 City of Boulder City Council Study Session",
+  "Title": "August 27, 2026 City of Boulder City Council Study Session - Excel Energy Partnership Update and Wildfire Resilience",
+  "Tags": [
+    "flock",
+    "energy",
+    "wildfire",
+    "fire-ems",
+    "emergency-management",
+    "public-comment",
+    "council-governance",
+    "climate",
+    "intergovernmental",
+    "water"
+  ],
   "Topics": [
     {
       "Topic1": {
         "Title": "Excel Energy Partnership Update",
-        "Summary": "Excel Energy presented its wildfire mitigation plan, underground feeder projects, the phased transmission rebuild, reliability upgrades adding 120 megawatts, and emissions progress toward 100% emissions-free electricity by 2030. Council asked about rolling outages, restoration times, customer service and billing problems, rate impacts, and support for community resilience tools like micro grids. Council members expressed a need for greater reliability, transparency, and communication, and requested follow-up on several items.",
+        "Summary": "Excel Energy presented progress under the 2020 franchise and energy partnership agreement, including 100% emissions-free electricity goals, 85% carbon-free by 2030, and emissions reductions of about 60% achieved by end of 2025. Excel described wildfire mitigation work, including AI panel cameras, enhanced power line safety settings, undergrounding of three feeders, and a transmission rebuild in two phases. Council members pressed on frequent outages, restoration communication, rate impacts, rolling outage risk, and customer service issues.",
         "related_timestamps": [
-          "316.08",
-          "2115.00"
+          316.08,
+          408.72,
+          1138.96,
+          2259.0
+        ],
+        "Tags": [
+          "energy",
+          "climate",
+          "wildfire"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Enhancing Boulder's Wildfire Resilience",
-        "Summary": "Staff presented progress on a council priority project to develop a home hardening implementation hub and assess current and planned city wildfire programs. The team outlined a wildfire-initiated community conflagration risk and inventoried roughly 137 projects across 25 programs, with 10 designated tier one priorities. A geographic WOOI risk index grouped western wildland-urban interface areas into risk tiers, and draft measures were introduced for 2030 targets. Council discussed barriers such as contractor access, renter participation, funding options, and whether to pursue mandatory retroactive home hardening, with staff returning in October.",
+        "Title": "Wildfire Resilience Home Hardening Hub and Mitigation Priorities",
+        "Summary": "Staff presented a council priority project on wildfire resilience, including a draft home hardening implementation hub to connect homeowners to guidance, incentives, and mitigation actions. Staff also presented a project inventory of about 137 projects grouped into 25 programs, 10 tier one priorities, and a draft WOOI risk index dividing the western wildland-urban interface into 12 sections. Council asked about contractor lists, renter participation, mandatory retroactive home hardening, funding models, and measurable 2030 targets.",
         "related_timestamps": [
-          "6664.32",
-          "9040.00"
+          6668.719,
+          7200.48,
+          8636.0,
+          8995.0
+        ],
+        "Tags": [
+          "wildfire",
+          "emergency-management",
+          "open-space",
+          "homelessness"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Public Comment and Council Questions Closing",
+        "Summary": "Council members gave short closing comments to Excel and staff, emphasizing reliability, transparency, customer service, and the need for measurable goals. Staff committed to follow-up responses and an October return for further discussion.",
+        "related_timestamps": [
+          5676.0,
+          9042.0,
+          9330.0
+        ],
+        "Tags": [
+          "public-comment",
+          "council-governance"
         ]
       }
     }

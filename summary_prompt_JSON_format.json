@@ -1,12 +1,16 @@
 {
   "Title": "<date / type of meeting>",
+  "Tags": ["<tag>", "<tag>"],
   "Topics": [
     {
       "Topic1": {
         "Title": "<title>",
         "Summary": "<summary>",
-        "related_timestamps": ["<timestamp1>", "<timestamp2>"]
-      },
+        "related_timestamps": ["<timestamp1>", "<timestamp2>"],
+        "Tags": ["<tag>"]
+      }
+    },
+    {
       "Topic2": {}
     }
   ]

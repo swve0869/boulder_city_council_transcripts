@@ -31,13 +31,14 @@ serve_transcripts.py ← Tailscale Funnel ←── browser fetch (HTTPS, CORS) 
 | `summarize.py` | Summarizes transcripts with the configured models and validates the result |
 | `summarizer.toml` | Model providers, models, prompts, fallback order and validation settings |
 | `summary_prompt_JSON_format.json` | The JSON format the summary prompt asks for |
+| `tags.json` | The tag vocabulary: 38 tags in 8 groups, with descriptions the model sees |
 | `build_site.py` | Writes `docs/summaries/index.json`; `--publish` commits and pushes summaries |
 | `serve_transcripts.py` | Read-only server for full transcripts on the host |
 | `combine_transcripts.py` | Joins a city's transcripts for a year or month into one text file |
 | `scripts/cron_watch.sh` | One watch cycle: loads `.env`, prevents overlapping runs (run by the systemd timer or cron) |
 | `scripts/setup_pi.sh` | Sets up a Raspberry Pi host (packages, venv, git identity, systemd units, log rotation) |
 | `deploy/` | systemd unit and logrotate templates installed by `setup_pi.sh` |
-| `docs/` | The GitHub Pages site (`config.js`, `app.js`, `index.html`, `meeting.html`, `summaries/`) |
+| `docs/` | The GitHub Pages site (`config.js`, `app.js`, `trends.js`, `index.html`, `meeting.html`, `trends.html`, `summaries/`) |
 
 ## Raspberry Pi setup (the production host)
 
@@ -221,11 +222,14 @@ The folder name is the city name lowercased with dashes (`example-city`). Videos
 
 > summarize this city council transcript into this JSON format {…} where related_timestamps are "start" fields from the JSON transcript where the topic begins and ends. Summary sections should not be longer than 5 sentences. DO NOT return anything else but the JSON formatted text
 
-A reply is accepted only if its structure checks pass:
+For Anthropic models, the request uses **structured outputs** (`output_config.format` with a JSON schema built from the format and `tags.json`). The reply is then guaranteed to be valid JSON in the right shape, using only known tags. The schema writes each `Topics` item as one of `{"Topic1": …}` … `{"Topic30": …}`. Structured outputs can't express "any key named Topic<N>" (every object needs `additionalProperties: false`, with at most 24 optional properties), and a 40-topic cap exceeds the API's grammar size limit with 38 tags. Meetings so far have at most 13 topics. Turn it off per model with `structured_output = false`; other providers rely on the prompt and validation.
+
+Replies are normalized (topics renumbered `Topic1…N`, duplicate tags removed, unknown tags dropped), then accepted only if the structure checks pass:
 
 - The top level has exactly `Title` (a string) and `Topics` (a non-empty list).
 - Each topic key looks like `Topic<N>`. Each topic has non-empty `Title` and `Summary` strings and a non-empty `related_timestamps` list.
 - Each timestamp is a number of seconds that falls within the transcript.
+- `Tags` (on the meeting and on each topic) are optional, so older summaries still validate. When present, they must come from `tags.json`.
 
 Timestamps that aren't exact segment starts, and summaries longer than five sentences, are logged as warnings. Both checks can be adjusted under `[summarize.validation]`.
 
@@ -256,6 +260,27 @@ python build_site.py --publish                    # rebuild the index and push
 ```
 
 `summarize.py` rebuilds `docs/summaries/index.json` itself, but it doesn't push.
+
+## Tags and the Trends page
+
+Each topic gets 1–3 tags from [tags.json](tags.json) (e.g. `police`, `flock`, `zoning`, `affordable-housing`, `wildfire`, `budget`, `public-comment`), and each meeting gets its 3–6 main tags. `build_site.py` turns the summaries into `docs/summaries/index.json`. For each meeting it records the topics (title, tags, start/end seconds) and `tag_seconds`, the estimated video time spent on each tag. A topic spans its first to last timestamp; a topic with one timestamp counts for up to 60 s.
+
+- **Meetings page:** every meeting shows its most-discussed tags. The tag panel filters by one or more tags (match any or all), alongside search and sorting (newest, oldest, most time on the selected tags, most topics). With a tag selected, each meeting lists its matching segments, each linking to that moment in the video. Filters live in the URL, so a filtered view can be shared.
+- **Meeting page:** tags are listed most-discussed first. Selecting one highlights its topics. Each topic's tags link to all meetings with that tag.
+- **Trends page** (`trends.html`):
+  - headline numbers
+  - "Most discussed issues": a ranked bar chart by discussion time, meetings or topics, colored by tag group
+  - "When issues come up": a month × tag heatmap
+  - "Discussed together": which tags share topics with a chosen tag
+
+  Every chart has a hover tooltip and a table view, and clicking a bar or cell opens the matching meetings. It can be filtered by year and tag group.
+
+Changing the vocabulary: edit `tags.json` (ids are what the model outputs; descriptions guide it; groups set colors in order), then re-summarize. `--missing-tags` re-summarizes only summaries made before tagging existed:
+
+```
+python summarize.py --city Boulder --missing-tags --jobs 4
+python build_site.py --publish
+```
 
 ## Full transcripts from the host (optional; the Pi uses Tailscale Funnel, above)
 

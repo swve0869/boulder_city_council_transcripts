@@ -1,61 +1,147 @@
 {
-  "Title": "October 1, 2026 City of Boulder City Council Meeting (Regular Meeting)",
+  "Title": "October 1, 2026 City of Boulder City Council Meeting (Regular Meeting with Public Hearing on 2027 Budget)",
+  "Tags": [
+    "budget",
+    "wildfire",
+    "council-governance",
+    "public-comment",
+    "parks-recreation",
+    "development"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Amend Agenda to Add Front Range Passenger Rail Sales Tax Discussion",
-        "Summary": "Council voted to amend the agenda to add item 8A, the Front Range passenger rail sales tax measure discussion. The amendment passed. Council later took a straw poll and unanimously directed staff to prepare a resolution of support for the measure at a future business meeting.",
+        "Title": "Amend agenda and open comment",
+        "Summary": "Council voted to add item 8A on the front range passenger rail sales tax measure to the agenda. Elisha reviewed the public participation guidelines and rules of decorum for open comment. Nineteen people signed up to speak with two-minute limits.",
         "related_timestamps": [
-          "353.44",
-          "376.639",
-          "3900.0",
-          "13343.0"
+          325.759,
+          465.52
+        ],
+        "Tags": [
+          "public-comment",
+          "council-governance"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Public Participation and Open Comment",
-        "Summary": "Nineteen speakers addressed topics including the CU South development and flood mitigation, the Boulderthon road closures, small cell tower installation, the Belmont homeless site, Gunbarrel parks and safety, Spruce Pool, and various national and international issues. Staff responded to several concerns, including tenant union resources, small cell tower limitations, the Boulderthon, CU South closure notification, and the Belmont site plan. Council members acknowledged staff and offered brief comments.",
+        "Title": "Open comment on federal, housing, tenant, and development concerns",
+        "Summary": "Residents spoke on a range of issues including a request for council to respond to federal actions, tenant union formation, Boulderthon road closures, unpermitted small cell towers near Boulder Meadows, Belmont property hazards, and CU South and Gunbarrel parks and safety. Speakers also raised concerns about Spruce Pool, a proposed botanic garden at Hogan Pancost, and the East Boulder Rec Center. Staff and council responded to several comments.",
         "related_timestamps": [
-          "465.52",
-          "1186.559",
-          "2659.28",
-          "3027.76"
+          563.519,
+          3018.5
+        ],
+        "Tags": [
+          "public-comment",
+          "housing",
+          "transportation",
+          "development",
+          "parks-recreation",
+          "historic-preservation"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Consent Agenda",
-        "Summary": "Council approved consent agenda items 3A through 3H unanimously after a motion and second. No questions or comments were raised on the consent items.",
+        "Title": "Consent agenda",
+        "Summary": "Council approved consent agenda items 3A through 3H unanimously after a motion and second with no questions raised.",
         "related_timestamps": [
-          "3924.64",
-          "4001.839"
-        ]
+          3934.24,
+          4001.839
+        ],
+        "Tags": []
       }
     },
     {
       "Topic4": {
-        "Title": "Call-Up Check-In: Nuropa Campus Site Review (LUR2026-0000003)",
-        "Summary": "Council reviewed a site review application to redevelop the Nuropa campus with about 135 residential units and a height modification to 55 feet. Council Member Winer raised concerns about shadow and setback impacts on Marine Street, and the applicant stated the buildings sit at least 40 feet from the west property line and comply with solar standards. No council member called up the item.",
+        "Title": "Call-up check-in for Nuropa campus site review",
+        "Summary": "Council reviewed a site review application to redevelop the Nuropa campus with about 135 residential units and a height modification to four stories and 55 feet. Council Member Winer raised shadow and setback concerns, and the applicant responded that setbacks exceed 40 feet and solar analysis met city standards. No member called the item up.",
         "related_timestamps": [
-          "4007.76",
-          "4251.0"
+          4007.76,
+          4248.88
+        ],
+        "Tags": [
+          "zoning",
+          "development",
+          "housing"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Public Hearing: 2027 Budget and Associated Ordinances",
-        "Summary": "Staff presented the 2027 recommended budget totaling $552.6 million, with a $417.2 million operating budget and $135.4 million capital budget, addressing a $6.3 million general fund gap. Council asked questions about Sundance revenues, wildfire funding, the Ranger Cottage and CIP reallocation options, the Care program, and the Parks and Recreation board's dissent. After public comment and extended debate, council did not adopt any budget amendments and passed ordinances 8777 through 8780 as proposed.",
+        "Title": "Public hearing on 2027 recommended budget and ordinances",
+        "Summary": "Staff presented the 2027 recommended budget totaling about 552.6 million, with a 2.35 percent operating budget increase and a 135.4 million capital budget. Highlights included wildfire funding of about 10.9 million, three new police lieutenants, affordable housing investments, and a proposed Spruce Pool operations reduction. Council discussed wildfire funding timing ahead of the October 22 study session and the relationship to open space funds.",
         "related_timestamps": [
-          "4256.96",
-          "5834.8",
-          "8252.719",
-          "8478.0",
-          "13124.0",
-          "13329.6"
+          4263.44,
+          6000
+        ],
+        "Tags": [
+          "budget",
+          "wildfire",
+          "taxes-fees",
+          "affordable-housing",
+          "parks-recreation"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Council proposals to hold or realign wildfire funding",
+        "Summary": "Council Member Benjamin proposed holding about 2.5 million for wildfire mitigation, while Council Member Kaplan proposed holding 600,000. Staff noted the funding source would need to be identified and that realignment could occur through the adjustment-to-base process. Straw polls did not reach a majority, so the budget proceeded without these changes and council planned to revisit wildfire funding after the October 22 study session.",
+        "related_timestamps": [
+          6880,
+          9760
+        ],
+        "Tags": [
+          "wildfire",
+          "budget",
+          "council-governance",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Council proposal to reallocate police funds to behavioral health response",
+        "Summary": "Council Member Tisha proposed redirecting part of police funding toward partnerships for mental health and behavioral response to non-emergency calls. Housing and Human Services staff explained that the care program was restructured because of low call volumes and would relaunch with clinicians and case managers. Council Member Tisha withdrew the amendment after the explanation.",
+        "related_timestamps": [
+          10010,
+          10900
+        ],
+        "Tags": [
+          "police",
+          "public-health",
+          "homelessness"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Adoption of 2027 budget ordinances",
+        "Summary": "Council voted on four ordinances: adopting the 2027 budget (7-1 with Adams opposed), setting property mill levies for 2026 (unanimous), appropriating funds for 2027 (unanimous), and amending fees and taxes in the Boulder Revised Code (7-1 with Adams opposed). Several members made closing remarks about budget process, staff work, and the need for a longer-term budget cycle.",
+        "related_timestamps": [
+          11000,
+          13329.6
+        ],
+        "Tags": [
+          "budget",
+          "taxes-fees",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "Straw poll supporting Front Range passenger rail sales tax measure",
+        "Summary": "Council Member Winer asked council whether to take a position of support on the Front Range passenger rail sales tax measure. The straw poll was unanimous, directing staff to prepare a resolution of support for a future business meeting.",
+        "related_timestamps": [
+          13336,
+          13399.439
+        ],
+        "Tags": [
+          "transit",
+          "elections",
+          "intergovernmental"
         ]
       }
     }

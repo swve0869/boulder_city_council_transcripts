@@ -1,23 +1,42 @@
 {
   "Title": "April 9, 2026 City of Boulder City Council Study Session",
+  "Tags": [
+    "council-governance",
+    "budget",
+    "arts-culture",
+    "parks-recreation",
+    "economic-development",
+    "public-comment"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Boulder Arts Blueprint Update",
-        "Summary": "Staff presented the Boulder Arts Blueprint, a 10-year roadmap aligned with the Comprehensive Plan and the CER framework, built on community engagement with nearly 2,000 people and approved by the Arts Commission on March 25. The blueprint outlines seven goals, including accessibility and inclusion, entrepreneurship and workforce, public art, nonprofits and institutions, and experimentation, funded largely by the Arts, Culture and Heritage Tax. Council asked about staffing and funding, and staff said the grant program increased to $2 million, staffing levels are adequate, and new partnerships and an arts fund are planned. Council discussed opportunities and risks from the Sundance Film Festival, back-of-house services for artists, and the need for measurable KPIs, baseline data, and reporting. Council members generally supported the implementation approach while asking for clearer prioritization and accountability.",
+        "Title": "Boulder Arts Blueprint update",
+        "Summary": "Staff presented the Boulder Arts Blueprint, a 10-year citywide arts and culture roadmap aligned with the Boulder Valley Comprehensive Plan and CERG goals. It is organized around seven goals and funded largely through the Arts, Culture and Heritage Tax and the 1% for Art policy. Council asked about staffing capacity, grant funding increases to $2 million, neighborhood reach, the back-of-house services cohort, the 2A tax dependency, Sundance Festival opportunities, and the lack of baseline data and KPIs. Several members supported the direction but asked for measurable metrics, reporting, and attention to artist affordability and prioritization.",
         "related_timestamps": [
-          "410.92",
-          "3424.76"
+          307.28,
+          1169.48
+        ],
+        "Tags": [
+          "arts-culture",
+          "economic-development",
+          "council-governance"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Facilities Investment Strategy and Recreation Center Scenarios",
-        "Summary": "Staff presented the Facilities Investment Strategy for the city's roughly 75 buildings, which are on average about 50 years old and in declining condition with a growing deferred maintenance backlog. Fifteen priority buildings need about $20 million in minimum repairs over the next 5 to 6 years, and modernizing them would cost roughly $500 million, about $400 million of it unfunded. The three recreation centers were presented in two scenarios, a lower-investment option that sustains service levels and a higher-investment option that modernizes and expands facilities. Staff recommended prioritizing minimum infrastructure repairs with currently available funds and developing investment scenarios across priority buildings, to return on May 14 with possible ballot measure options. Council members generally agreed with prioritizing minimum repairs, while asking for more financial data, a whole-system view, cost-saving approaches, and clearer community communication.",
+        "Title": "Facilities investment strategy and recreation center scenarios",
+        "Summary": "Staff presented the facilities investment strategy for roughly 75 city buildings, averaging about 50 years old, with 15 priority buildings including the South Boulder, North Boulder and East Boulder recreation centers. Minimum urgent repairs total about $20 million, while larger modernization projects total roughly $500 million, of which about $400 million is unfunded. Staff recommended prioritizing minimum infrastructure investment with current funds and developing investment scenarios for priority buildings, to return in May alongside possible tax ballot measures. Council questions covered sustainability versus cost, renovation versus new build, fire station consolidation, property disposal, and the unfunded liability definition. Council generally agreed with both recommendations while requesting more financial data and a clearer whole-picture view.",
         "related_timestamps": [
-          "3429.32",
-          "10359.0"
+          1234.0,
+          9440.0
+        ],
+        "Tags": [
+          "budget",
+          "parks-recreation",
+          "fire-ems",
+          "taxes-fees"
         ]
       }
     }

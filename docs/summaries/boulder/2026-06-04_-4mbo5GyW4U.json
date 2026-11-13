@@ -1,93 +1,192 @@
 {
-  "Title": "June 4, 2026 - City of Boulder City Council Special Meeting (Joint Public Hearing with Planning Board)",
+  "Title": "June 4, 2026 City of Boulder City Council Special Meeting (Joint Public Hearing with Planning Board on Boulder Valley Comprehensive Plan Major Update)",
+  "Tags": [
+    "council-governance",
+    "zoning",
+    "development",
+    "housing",
+    "public-comment",
+    "intergovernmental"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Call to Order and Roll Call",
-        "Summary": "Mayor Brockett called the special meeting of the Boulder City Council to order and staff conducted the roll call. All council members were present, and the mayor confirmed a quorum. The meeting was described as a joint session with the Planning Board, beginning with a council-only section.",
+        "Title": "Pride Month Declaration and Proclamation Remarks",
+        "Summary": "Mayor Brockett read a declaration commemorating June 2026 as Pride Month, honoring the Stonewall legacy and Boulder's LGBTQ+ community. Representatives from Rocky Mountain Equality spoke in response and thanked the council. Councilmember Mark gave a point of personal privilege condemning a student group's statement about a June 2025 attack, and the district attorney's statement was also read into the record.",
         "related_timestamps": [
-          "350.479",
-          "421.12"
+          420.479,
+          783.6
+        ],
+        "Tags": [
+          "equity",
+          "arts-culture"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Pride Month Declaration",
-        "Summary": "Council presented a proclamation declaring June 2026 as Pride Month and recognizing LGBTQ+ history, including the Stonewall uprising and local advocacy. Representatives from Rocky Mountain Equality accepted the declaration and spoke about Boulder's history of LGBTQ+ rights efforts. Council members thanked them and noted upcoming Boulder Pride events.",
+        "Title": "Consent Agenda Approval",
+        "Summary": "Council considered consent agenda items 2A through 2F, which covered several routine items. A motion and second were made, and the consent agenda was approved unanimously on a roll call vote.",
         "related_timestamps": [
-          "421.12",
-          "741.44"
+          993.44,
+          1052.16
+        ],
+        "Tags": [
+          "council-governance"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Points of Personal Privilege on a Student Group Letter",
-        "Summary": "Councilmember Lester read a statement condemning a letter from Boulder Students for Justice in Palestine that appeared to justify a 2025 terror attack that killed Karen Diamond and injured others. Mayor Pro Tem Winer read a statement from the District Attorney condemning the letter and affirming the sentence imposed on the attacker. Council members expressed support for condemning hate and antisemitism.",
+        "Title": "Joint Public Hearing Opening and Staff Presentation on Boulder Valley Comprehensive Plan Update",
+        "Summary": "Staff introduced the recommended major update to the Boulder Valley Comprehensive Plan, which was developed over about 20 months with more than 70 engagement opportunities and over a thousand comments. Presenters outlined goals for inclusive process, values-based approach, 104 usable policies, and a simplified 12-designation future land use strategy. Highlights included equity, housing supply, mobility, economic vitality, natural resources, Vision Zero, climate resilience, and city-county governance.",
         "related_timestamps": [
-          "780.0",
-          "976.959"
+          1060.559,
+          2456.8
+        ],
+        "Tags": [
+          "zoning",
+          "housing",
+          "climate",
+          "equity",
+          "economic-development",
+          "open-space"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Consent Agenda Approval",
-        "Summary": "Council considered consent agenda items 2A through 2F with no discussion. A motion to approve was made and seconded, and a roll call vote was taken. The consent agenda was approved unanimously.",
+        "Title": "Approval Process, Review Roles and Schedule",
+        "Summary": "Christopher Johnson explained that four bodies must approve the identical plan, with the city council and planning board handling all policies and map changes and county bodies reviewing county-related items. Council and planning board will deliberate separately on June 16 and June 25, with a county joint hearing on June 11. Any substantive amendments must be reconciled across all bodies, which could extend the timeline into summer or fall.",
         "related_timestamps": [
-          "976.959",
-          "1054.72"
+          2460.0,
+          3905.28
+        ],
+        "Tags": [
+          "intergovernmental",
+          "council-governance",
+          "zoning"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Opening of Joint Public Hearing on the Boulder Valley Comprehensive Plan",
-        "Summary": "Council opened the public hearing on the recommended major update to the Boulder Valley Comprehensive Plan, which is a joint hearing with the Planning Board. Planning Board Chair Laura Kaplan called the Planning Board meeting to order, confirmed a quorum with six of seven members present, and stated the purpose of the joint hearing. Mayor Brockett then resumed chairing the joint hearing and turned to staff for the presentation.",
+        "Title": "Council Questions on Land Use Map Changes, Maintenance Funding and Wildfire-Area Density",
+        "Summary": "Council asked for a delta map showing land use changes since the last draft, and staff agreed to prepare one for the June 16 meeting. Council members raised concerns about funding for long-term facility maintenance and affordable housing targets, and staff pointed to updated policies on asset maintenance and funding. Questions about increasing density near the wildland-urban interface led staff to explain that rezoning and public review would be needed before any such increase.",
         "related_timestamps": [
-          "1060.559",
-          "1263.76"
+          2945.44,
+          3300.0
+        ],
+        "Tags": [
+          "zoning",
+          "budget",
+          "wildfire",
+          "affordable-housing"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Staff Presentation on the Comprehensive Plan Update",
-        "Summary": "Staff presented the recommended major update to the comprehensive plan, the first of two approval sessions. Staff described the process, which included over 70 engagement opportunities, more than 1,000 public comments, and revisions to policies and the future land use map. Key changes included 104 plain-language policies, a simplified future land use strategy with 12 designations, and expanded focus on equity, housing, resilience, and open space. Staff also explained the approval sequence, noting that all four bodies must approve the same plan language and that substantive amendments would require reconciliation and possibly additional hearings.",
+        "Title": "Questions on Industrial Land Use, Residential Uses and Displacement Concerns",
+        "Summary": "Council members asked whether residential uses are prohibited in industrial designations and whether existing industrial businesses would be protected from displacement. Staff explained that zoning still governs allowed uses, that site review is more discretionary than use review, and that existing industrial tenants have limited protections under the plan. Staff noted that the plan aims to create housing elsewhere to reduce pressure on industrial land.",
         "related_timestamps": [
-          "1263.76",
-          "2907.68"
+          4223.0,
+          4623.44
+        ],
+        "Tags": [
+          "zoning",
+          "economic-development",
+          "development"
         ]
       }
     },
     {
       "Topic7": {
-        "Title": "Council and Planning Board Questions to Staff",
-        "Summary": "Council and Planning Board members asked staff about changes to the land use map, requesting a delta map before the next meeting. Questions addressed maintenance costs and funding, wildfire and evacuation risks in areas near the WUI, and how public amendments would be proposed and reconciled. Members also asked about residential uses in industrial designations, protections for existing industrial businesses, affordable housing targets, implementation and strategic planning, subcommunity and area planning, and groundwater protection. Staff clarified that the comprehensive plan sets high-level direction while zoning and future implementation determine specifics.",
+        "Title": "Questions on Affordable Housing Goal, Implementation and Indigenous Partnership",
+        "Summary": "Council asked why the plan keeps a 15 percent affordable housing goal, and staff said the goal is aspirational and was set to be ambitious. Members asked how the plan will move from policy to action, and staff pointed to the upcoming citywide strategic plan and council priority setting. A council member raised the need for stronger commitments to indigenous communities, including land back.",
         "related_timestamps": [
-          "2907.68",
-          "5876.48"
+          4623.44,
+          5000.0
+        ],
+        "Tags": [
+          "affordable-housing",
+          "council-governance",
+          "equity"
         ]
       }
     },
     {
       "Topic8": {
-        "Title": "Public Hearing Testimony",
-        "Summary": "Seventeen speakers provided testimony, each limited to two or three minutes. Speakers raised concerns about public notification of land use changes, the survey methodology, and the removal of residential as a potential use in industrial designations. Others supported the plan's innovation economy focus, expressed concern about middle-income housing, wildfire and water risks, and the impacts of density, and urged more specificity in policies. Several speakers also requested restoration of earlier neighborhood category distinctions and stronger commitments to affordable housing.",
+        "Title": "Questions on Planning Areas, Subcommunity Planning, Groundwater and Process for Proposed Amendments",
+        "Summary": "Council and planning board members questioned how amendments should be submitted, with staff advising that suggestions go to staff rather than through a public hotline to avoid serial meetings. Members asked about the future of subcommunity and area planning guidance, the IGA for the Area 3 planning reserve, and groundwater protection, which the state regulates. Staff confirmed the IGA runs through 2042 and will be revisited.",
         "related_timestamps": [
-          "5876.48",
-          "8104.96"
+          5000.0,
+          5870.0
+        ],
+        "Tags": [
+          "council-governance",
+          "boards-appointments",
+          "intergovernmental",
+          "water"
         ]
       }
     },
     {
       "Topic9": {
-        "Title": "Post-Testimony Clarifications and Continuance Motions",
-        "Summary": "Staff confirmed that the notification process through utility billing met legal requirements and clarified the origins and vetting of the survey questions. Planning Board voted 7-0 to continue its deliberation and action on the plan to June 16, 2026. Council voted unanimously to continue its deliberation and action to June 25, 2026, and the meeting was adjourned.",
+        "Title": "Public Hearing Procedures and Public Testimony",
+        "Summary": "Alicia read the public participation guidelines, and 17 speakers signed up with two-minute limits. Speakers raised concerns about land use designations changing residential and industrial zones, housing types and density, middle-income housing, notification of property owners, the survey's design, water supply and wildfire risk, and the process used to develop the plan. Some speakers supported the plan and its inclusive process and called for restoring residential uses in industrial designations.",
         "related_timestamps": [
-          "8104.96",
-          "8490.96"
+          5980.4,
+          8104.96
+        ],
+        "Tags": [
+          "public-comment",
+          "housing",
+          "zoning",
+          "wildfire",
+          "water"
+        ]
+      }
+    },
+    {
+      "Topic10": {
+        "Title": "Clarifying Questions on Notification, Survey Methods and Outreach Demographics",
+        "Summary": "Staff explained that property owners were notified through a utility billing insert because mailing 55,000 letters was not feasible, and the city attorney confirmed legal notice requirements were met. Staff said the survey was developed with a national consultant, and clarified that outreach was open to all residents without a specific 25 percent focus on college students. Council members also asked about how outreach reached renters and homeowners.",
+        "related_timestamps": [
+          8104.96,
+          8366.399
+        ],
+        "Tags": [
+          "public-comment",
+          "elections",
+          "legal"
+        ]
+      }
+    },
+    {
+      "Topic11": {
+        "Title": "Planning Board Continuance Motion",
+        "Summary": "The planning board chair asked for a motion to continue the item to June 16, 2026, for planning board deliberation and action. The motion was made and seconded, and it passed seven to zero. No additional public comment will be taken at that meeting, though emails will be read.",
+        "related_timestamps": [
+          8366.399,
+          8454.72
+        ],
+        "Tags": [
+          "boards-appointments",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic12": {
+        "Title": "Council Continuance Motion and Adjournment",
+        "Summary": "Council moved to continue the item to June 25, 2026, for council deliberation and action on the plan, with no additional public comment at that meeting. The motion was seconded and passed unanimously. The mayor thanked staff and planning board members and adjourned the meeting.",
+        "related_timestamps": [
+          8478.64,
+          8508.56
+        ],
+        "Tags": [
+          "council-governance"
         ]
       }
     }

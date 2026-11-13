@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Council Topic Trends</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="trends">
+<main>
+<nav class="top"><a href="index.html">Meetings</a><a href="trends.html" aria-current="page">Trends</a></nav>
+<h1>What the council talks about</h1>
+<p class="note">Built from the tags on each meeting summary. Discussion time is estimated from each topic's first and
+last timestamp, so overlapping topics (e.g. public comment on several issues) count toward each of their tags.</p>
+<p id="city-picker" hidden><label>City: <select id="city"></select></label></p>
+
+<section class="filters" aria-label="Chart options">
+  <div class="row">
+    <label>Measure <select id="metric">
+      <option value="hours">Discussion time (hours)</option>
+      <option value="meetings">Meetings</option>
+      <option value="topics">Topics</option>
+    </select></label>
+    <label>Period <select id="period"></select></label>
+    <label>Group <select id="group"><option value="">All groups</option></select></label>
+  </div>
+</section>
+
+<p id="status" class="status">Loading…</p>
+<div id="tiles" class="tiles"></div>
+
+<section>
+  <div class="chart-head"><h2>Most discussed issues</h2>
+    <div class="controls"><label>Order <select id="rank-order">
+      <option value="value">Largest first</option><option value="group">By group</option><option value="name">A–Z</option>
+    </select></label><button class="link" type="button" data-table="rank">Show table</button></div></div>
+  <div class="legend" id="legend"></div>
+  <div class="chart" id="rank"></div>
+</section>
+
+<section>
+  <div class="chart-head"><h2>When issues come up</h2>
+    <div class="controls"><label>Rows <select id="heat-rows"><option value="12">Top 12 tags</option><option value="20">Top 20</option><option value="all">All tags</option></select></label>
+    <button class="link" type="button" data-table="heat">Show table</button></div></div>
+  <p class="tag-note" id="heat-note"></p>
+  <div class="chart heat-wrap" id="heat"></div>
+</section>
+
+<section>
+  <div class="chart-head"><h2>Discussed together</h2>
+    <div class="controls"><label>Tag <select id="pair-tag"></select></label>
+    <button class="link" type="button" data-table="pairs">Show table</button></div></div>
+  <p class="tag-note">How often other tags appear on the same topics as the selected tag.</p>
+  <div class="chart" id="pairs"></div>
+</section>
+</main>
+<div id="tooltip" class="tooltip" role="tooltip"></div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+<script src="trends.js"></script>
+</body>
+</html>

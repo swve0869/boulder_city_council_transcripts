@@ -13,6 +13,7 @@ Usage:
     python summarize.py --city Boulder --limit 1        # newest Boulder transcripts lacking a summary
     python summarize.py --city Boulder --model deepseek --limit 1
     python summarize.py transcripts/boulder/2026-09-17_SS0nUFcZFq0.json --overwrite
+    python summarize.py --city Boulder --missing-tags --jobs 4  # add tags to older summaries
     python summarize.py --check docs/summaries/boulder/*.json     # validate only, no API calls
     python summarize.py --list-models
 """
@@ -23,14 +24,17 @@ import math
 import os
 import re
 import sys
+import threading
 import tomllib
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).parent
 CONFIG_FILE = ROOT / "summarizer.toml"
 PROVENANCE_FILE = "models.json"  # in output_dir: {"<city>/<stem>": "<model label>"}
 
-MODEL_DEFAULT_KEYS = ("prompt", "max_attempts", "transcript_format", "max_input_chars", "timeout_seconds")
+MODEL_DEFAULT_KEYS = ("prompt", "max_attempts", "transcript_format", "max_input_chars", "timeout_seconds",
+                      "structured_output")
 PROVIDER_TYPES = ("anthropic", "openai")
 TOPIC_KEY = re.compile(r"^Topic\d+$")
 SENTENCE_END = re.compile(r"[.!?](?:\s|$)")
@@ -85,6 +89,7 @@ def model_settings(config, name):
     model.setdefault("transcript_format", "json")
     model.setdefault("max_input_chars", 0)
     model.setdefault("timeout_seconds", 900)
+    model.setdefault("structured_output", True)
     model.setdefault("label", model["model"])
     model["name"] = name
     model["provider_config"] = config["providers"][model["provider"]]
@@ -99,14 +104,63 @@ def summary_path(transcript_path, city_slug, out_root):
     return Path(out_root) / city_slug / f"{Path(transcript_path).stem}.json"
 
 
-# ---- Prompt and transcript ------------------------------------------------------------
+# ---- Tags, prompt, schema -------------------------------------------------------------
+
+def load_tags(config):
+    """The tag vocabulary from tags.json: {"groups": [...], "tags": [{id, label, group, description}]}."""
+    path = ROOT / config.get("summarize", {}).get("tags_file", "tags.json")
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"groups": [], "tags": []}
+
+
+def tag_ids(config):
+    return [t["id"] for t in load_tags(config)["tags"]]
+
 
 def build_prompt(config, model):
     fmt_file = ROOT / config.get("summarize", {}).get("format_file", "summary_prompt_JSON_format.json")
     fmt = json.dumps(json.loads(fmt_file.read_text(encoding="utf-8")))
+    tags = "\n".join(f"- {t['id']}: {t['description']}" for t in load_tags(config)["tags"])
     prompt = config["prompts"][model["prompt"]]
     # str.replace, not str.format: the JSON format itself is full of braces.
-    return prompt.get("system", ""), prompt["text"].replace("{format}", fmt)
+    return prompt.get("system", ""), prompt["text"].replace("{format}", fmt).replace("{tags}", tags)
+
+
+def build_schema(config):
+    """JSON schema for structured outputs that matches summary_prompt_JSON_format.json.
+
+    Structured outputs need additionalProperties: false on every object and allow at most
+    24 optional properties, so "an object keyed Topic<N>" is written as: each Topics item is
+    anyOf N single-key objects {"Topic1": topic} ... {"TopicN": topic}. Tags are an enum, so
+    the model can only use tags from tags.json. The compiled grammar has a size limit: with
+    38 tags, N=30 compiles and N=40 is rejected ("compiled grammar is too large").
+    """
+    ids = tag_ids(config)
+    tag_list = {"type": "array", "items": {"type": "string", "enum": ids}} if ids else {"type": "array", "items": {"type": "string"}}
+    topic = {
+        "type": "object", "additionalProperties": False,
+        "required": ["Title", "Summary", "related_timestamps", "Tags"],
+        "properties": {
+            "Title": {"type": "string"},
+            "Summary": {"type": "string"},
+            "related_timestamps": {"type": "array", "items": {"type": "number"}},
+            "Tags": {"$ref": "#/$defs/tagList"},
+        },
+    }
+    n = config.get("summarize", {}).get("max_topics", 30)
+    return {
+        "type": "object", "additionalProperties": False,
+        "required": ["Title", "Tags", "Topics"],
+        "$defs": {"topic": topic, "tagList": tag_list},
+        "properties": {
+            "Title": {"type": "string"},
+            "Tags": {"$ref": "#/$defs/tagList"},
+            "Topics": {"type": "array", "items": {"anyOf": [
+                {"type": "object", "additionalProperties": False, "required": [f"Topic{i}"],
+                 "properties": {f"Topic{i}": {"$ref": "#/$defs/topic"}}}
+                for i in range(1, n + 1)
+            ]}},
+        },
+    }
 
 
 def render_transcript(transcript, fmt):
@@ -147,7 +201,7 @@ def get_client(model):
     return _clients[cache_key]
 
 
-def call_anthropic(model, system, prompt, transcript_text):
+def call_anthropic(model, system, prompt, transcript_text, schema=None):
     transcript_block = {"type": "text", "text": transcript_text}
     if model.get("prompt_cache", True):
         # Cached so retries after an invalid reply don't pay full price for the transcript again.
@@ -160,6 +214,10 @@ def call_anthropic(model, system, prompt, transcript_text):
     }
     if system:
         kwargs["system"] = system
+    if schema is not None:
+        # Merge with any output_config from params (e.g. effort).
+        kwargs["output_config"] = {**kwargs.get("output_config", {}),
+                                   "format": {"type": "json_schema", "schema": schema}}
     if model.get("fallbacks"):
         # On a safety decline, the API retries the request on a fallback model.
         kwargs["betas"] = ["server-side-fallback-2026-07-01"]
@@ -174,7 +232,7 @@ def call_anthropic(model, system, prompt, transcript_text):
     return "".join(b.text for b in message.content if b.type == "text")
 
 
-def call_openai(model, system, prompt, transcript_text):
+def call_openai(model, system, prompt, transcript_text, schema=None):
     messages = [{"role": "system", "content": system}] if system else []
     messages.append({"role": "user", "content": f"{prompt}\n\n{transcript_text}"})
     kwargs = {"model": model["model"], "messages": messages, **model.get("params", {})}
@@ -192,9 +250,9 @@ def call_openai(model, system, prompt, transcript_text):
 CALLERS = {"anthropic": call_anthropic, "openai": call_openai}
 
 
-def request_summary(model, system, prompt, transcript_text):
-    """One API call; returns the reply text."""
-    text = CALLERS[model["provider_config"]["type"]](model, system, prompt, transcript_text)
+def request_summary(model, system, prompt, transcript_text, schema=None):
+    """One API call; returns the reply text. schema (anthropic only) constrains the reply."""
+    text = CALLERS[model["provider_config"]["type"]](model, system, prompt, transcript_text, schema)
     if not text.strip():
         raise SummaryError("empty reply")
     return text
@@ -229,12 +287,67 @@ def parse_reply(text):
             raise SummaryError(f"reply is not valid JSON: {e}") from None
 
 
-def validate_summary(summary, segment_starts=None, max_sentences=5, exact_timestamps=False):
-    """Return (errors, warnings). Errors mean the structure doesn't match summary_prompt_JSON_format.json."""
+def normalize_summary(summary, known_tags=None):
+    """Tidy a parsed reply before validation; returns (summary, warnings).
+
+    - Topics become one object per list item, numbered Topic1, Topic2, ... in reply order
+      (the model may use either shape, or skip numbers).
+    - Tags are de-duplicated; tags not in the vocabulary are dropped with a warning
+      (only possible for providers without schema enforcement).
+    Leaves anything it doesn't understand alone for validate_summary to report.
+    """
+    warnings = []
+    if not isinstance(summary, dict) or not isinstance(summary.get("Topics"), list):
+        return summary, warnings
+    known = set(known_tags or [])
+
+    def clean(tags, where):
+        if not isinstance(tags, list):
+            return tags
+        out = []
+        for t in tags:
+            if known and t not in known:
+                warnings.append(f"{where}: dropped unknown tag {t!r}")
+            elif t not in out:
+                out.append(t)
+        return out
+
+    topics = []
+    for entry in summary["Topics"]:
+        if not isinstance(entry, dict):
+            return summary, warnings
+        topics.extend(entry[k] for k in sorted(entry, key=lambda k: int(k[5:]) if TOPIC_KEY.match(k) else 0))
+    for i, topic in enumerate(topics, 1):
+        if isinstance(topic, dict) and "Tags" in topic:
+            topic["Tags"] = clean(topic["Tags"], f"Topic{i}")
+    summary["Topics"] = [{f"Topic{i}": topic} for i, topic in enumerate(topics, 1)]
+    if "Tags" in summary:
+        summary["Tags"] = clean(summary["Tags"], "Tags")
+    return summary, warnings
+
+
+def check_tags(tags, where, known, errors):
+    if not isinstance(tags, list) or not all(isinstance(t, str) for t in tags):
+        errors.append(f'{where}: "Tags" must be a list of strings')
+    elif known:
+        unknown = [t for t in tags if t not in known]
+        if unknown:
+            errors.append(f"{where}: unknown tags {unknown} (not in tags.json)")
+
+
+def validate_summary(summary, segment_starts=None, max_sentences=5, exact_timestamps=False, known_tags=None):
+    """Return (errors, warnings). Errors mean the structure doesn't match summary_prompt_JSON_format.json.
+
+    "Tags" (meeting level and per topic) are optional so older summaries still validate,
+    but when present they must come from known_tags.
+    """
     errors, warnings = [], []
+    known = set(known_tags or [])
     if not isinstance(summary, dict):
         return ["top level is not a JSON object"], warnings
-    extra = set(summary) - {"Title", "Topics"}
+    if "Tags" in summary:
+        check_tags(summary["Tags"], "Tags", known, errors)
+    extra = set(summary) - {"Title", "Topics", "Tags"}
     if extra:
         errors.append(f"unexpected top-level keys: {sorted(extra)}")
     if not isinstance(summary.get("Title"), str) or not summary["Title"].strip():
@@ -259,9 +372,11 @@ def validate_summary(summary, segment_starts=None, max_sentences=5, exact_timest
                 errors.append(f"{where} must be an object")
                 continue
             count += 1
-            extra = set(topic) - {"Title", "Summary", "related_timestamps"}
+            extra = set(topic) - {"Title", "Summary", "related_timestamps", "Tags"}
             if extra:
                 errors.append(f"{where}: unexpected keys {sorted(extra)}")
+            if "Tags" in topic:
+                check_tags(topic["Tags"], where, known, errors)
             for field in ("Title", "Summary"):
                 if not isinstance(topic.get(field), str) or not topic[field].strip():
                     errors.append(f'{where}: "{field}" must be a non-empty string')
@@ -291,11 +406,15 @@ def validate_summary(summary, segment_starts=None, max_sentences=5, exact_timest
 
 # ---- Summarizing ----------------------------------------------------------------------
 
+_provenance_lock = threading.Lock()  # --jobs runs summaries in parallel threads
+
+
 def record_provenance(out_root, city_slug, stem, label):
     path = Path(out_root) / PROVENANCE_FILE
-    data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-    data[f"{city_slug}/{stem}"] = label
-    path.write_text(json.dumps(dict(sorted(data.items())), indent=1) + "\n", encoding="utf-8")
+    with _provenance_lock:
+        data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+        data[f"{city_slug}/{stem}"] = label
+        path.write_text(json.dumps(dict(sorted(data.items())), indent=1) + "\n", encoding="utf-8")
 
 
 def summarize_with_model(model, config, transcript, starts, log):
@@ -303,6 +422,9 @@ def summarize_with_model(model, config, transcript, starts, log):
     rules = config.get("summarize", {}).get("validation", {})
     system, prompt = build_prompt(config, model)
     transcript_text = render_transcript(transcript, model["transcript_format"])
+    known = tag_ids(config)
+    structured = model["structured_output"] and model["provider_config"]["type"] == "anthropic"
+    schema = build_schema(config) if structured else None
     limit = model["max_input_chars"]
     if limit and len(transcript_text) > limit:
         raise SummaryError(f"transcript is {len(transcript_text):,} chars, over this model's "
@@ -311,9 +433,12 @@ def summarize_with_model(model, config, transcript, starts, log):
     problems = []
     for attempt in range(1, model["max_attempts"] + 1):
         try:
-            summary = parse_reply(request_summary(model, system, prompt, transcript_text))
+            summary, notes = normalize_summary(
+                parse_reply(request_summary(model, system, prompt, transcript_text, schema)), known)
             errors, warnings = validate_summary(
-                summary, starts, rules.get("max_summary_sentences", 5), rules.get("exact_timestamps_required", False))
+                summary, starts, rules.get("max_summary_sentences", 5), rules.get("exact_timestamps_required", False),
+                known)
+            warnings = notes + warnings
         except Exception as e:
             if not retryable(e):
                 raise SummaryError(f"{type(e).__name__}: {e}") from None
@@ -370,9 +495,12 @@ def main():
     p.add_argument("--dir", default="transcripts", help="transcript root folder (default: transcripts)")
     p.add_argument("--limit", type=int, help="summarize at most N transcripts")
     p.add_argument("--overwrite", action="store_true", help="replace existing summaries")
+    p.add_argument("--missing-tags", action="store_true",
+                   help="re-summarize only existing summaries that have no Tags (made before tagging existed)")
     p.add_argument("--model", action="append", help="model name(s) from summarizer.toml to use instead of [summarize] models")
     p.add_argument("--config", default=str(CONFIG_FILE), help="config file (default: summarizer.toml)")
     p.add_argument("--list-models", action="store_true", help="show configured models and exit")
+    p.add_argument("--jobs", type=int, default=1, help="summarize N transcripts in parallel (default: 1)")
     p.add_argument("--check", metavar="SUMMARY", nargs="+", help="only validate existing summary files and exit")
     args = p.parse_args()
 
@@ -397,7 +525,8 @@ def main():
         bad = 0
         for f in args.check:
             errors, warnings = validate_summary(json.loads(Path(f).read_text(encoding="utf-8")),
-                                                max_sentences=rules.get("max_summary_sentences", 5))
+                                                max_sentences=rules.get("max_summary_sentences", 5),
+                                                known_tags=tag_ids(config))
             bad += bool(errors)
             print(f"{'INVALID' if errors else 'ok'}  {f}")
             for msg in errors + warnings:
@@ -413,20 +542,29 @@ def main():
             files = sorted((Path(args.dir) / slug).glob("*.json"),
                            key=lambda f: (not f.name.startswith("undated_"), f.name), reverse=True)
             jobs += [(f, slug) for f in files]
-    if not args.overwrite:
+    if args.missing_tags:
+        def untagged(f, slug):
+            path = summary_path(f, slug, out_root)
+            return path.exists() and "Tags" not in json.loads(path.read_text(encoding="utf-8"))
+        jobs = [(f, slug) for f, slug in jobs if untagged(f, slug)]
+    elif not args.overwrite:
         jobs = [(f, slug) for f, slug in jobs if not summary_path(f, slug, out_root).exists()]
     jobs = jobs[:args.limit] if args.limit else jobs
     print(f"{len(jobs)} transcript(s) to summarize with {args.model or config['summarize'].get('models')}",
           file=sys.stderr)
 
-    failures = 0
-    for f, slug in jobs:
+    def run(job):
+        f, slug = job
         try:
             out = summarize_transcript(f, slug, config, args.model, log=lambda m: print(m, file=sys.stderr))
             print(f"saved  {out}", file=sys.stderr)
+            return True
         except Exception as e:
-            failures += 1
             print(f"ERROR  {f.name}: {e}", file=sys.stderr)
+            return False
+
+    with ThreadPoolExecutor(max_workers=max(1, args.jobs)) as pool:
+        failures = sum(not ok for ok in pool.map(run, jobs))
 
     if jobs:
         from build_site import build_manifest

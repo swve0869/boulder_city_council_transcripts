@@ -1,23 +1,43 @@
 {
   "Title": "October 22, 2026 City Council Study Session",
+  "Tags": [
+    "council-governance",
+    "police",
+    "bikes-pedestrians",
+    "wildfire",
+    "homelessness",
+    "budget",
+    "zoning"
+  ],
   "Topics": [
     {
       "Topic1": {
         "Title": "Bike Security and Theft Reduction Update",
-        "Summary": "Staff from Transportation and Mobility and the Boulder Police Department presented the completed work of a council priority project to reduce bike theft and improve bike security. Bike thefts fell 14% year-over-year through August 2026, and the recovery rate of stolen bikes rose to 13%, putting the team on track for its goal of a 10% reduction. Key efforts included bike registration through Bike Index, public education on proper locking, short-term bike parking guidance for businesses, rack replacements, and data-driven targeted bike theft operations. Council members asked for full-year theft figures, raised concerns about police staffing and the project's future, and discussed e-bike theft and bike shop registration.",
+        "Summary": "Staff from Transportation and Mobility and the Boulder Police Department presented completed work on the council priority to reduce bike theft and improve bike security. Bike theft fell 14% year-over-year in 2026 and recovery rose 13%, with the team expecting to meet its 10% goals. Actions included Bike Index registration events, locking education, bike rack upgrades, and targeted bait-bike operations. Council members asked about data gaps, staffing constraints, e-bike theft, and encouraging bike shops to register bikes at sale. Remaining tasks include a long-term bike parking resource and downtown station signage.",
         "related_timestamps": [
-          "440.4",
-          "2895.96"
+          373.04,
+          1480.0
+        ],
+        "Tags": [
+          "bikes-pedestrians",
+          "police",
+          "crime"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Wildfire Ready 2030 Framework and Home Hardening Implementation Hub",
-        "Summary": "Staff presented the Wildfire Ready 2030 framework, which organizes about 137 projects under four strategies, 25 programs, and 10 tier-one priorities focused on reducing risk to life safety. The team introduced the Wildfire Ready Action Hub to help residents assess their risk and take practical steps to harden their homes, and the Wildland Urban Interface Risk Index to prioritize resources across 12 western sections. Fourteen performance measures were set through 2030, such as 55% of homes receiving detailed home assessments and 20% being hardened, and staff proposed about $1.85 million in additional 2027 enhancements. Council provided feedback on accelerating home hardening, consolidating building standards, improving evacuation and recovery planning, and considering policy options such as rental license requirements, with staff to return with updates in spring 2027.",
+        "Title": "Enhancing Boulder's Wildfire Resilience",
+        "Summary": "Staff presented the Wildfire Ready 2030 framework, organized into four strategies and 25 programs with 10 tier-one priorities, supported by a Wildland Urban Interface Risk Index that ranks 12 western sections. They also introduced a Wildfire Ready Action Hub for residents, 14 performance measures, and roughly $10 million in current tier-one investment. Staff proposed about $1.85 million in 2027 enhancements from grants and an open space fund realignment. Council members pressed for more aggressive hardening targets, a mandatory hardening ordinance, contractor quality standards, evacuation and cell-coverage planning, and reconciling wildfire building standards.",
         "related_timestamps": [
-          "2899.52",
-          "9664.52"
+          1480.0,
+          9600.0
+        ],
+        "Tags": [
+          "wildfire",
+          "emergency-management",
+          "zoning",
+          "budget"
         ]
       }
     }
