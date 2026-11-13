@@ -1,0 +1,41 @@
+:root {
+  --bg: #fdfdfc; --fg: #1d1d1b; --muted: #6b6b66; --link: #1a5fb4; --rule: #e2e2dc;
+  --chip: #eef3fb; --chip-fg: #1a4f94; --hl: #fff4c2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161615; --fg: #e8e8e3; --muted: #9a9a93; --link: #8fb8f0; --rule: #33332f;
+    --chip: #1f2a3a; --chip-fg: #a9c8f3; --hl: #3d3517;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.65 Georgia, "Times New Roman", serif; }
+main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 16px 4rem; }
+h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 .5rem; }
+h2 { font-size: 1.15rem; margin: 2.2rem 0 .6rem; padding-bottom: .3rem; border-bottom: 1px solid var(--rule); }
+h3 { font-size: 1.05rem; margin: 1.8rem 0 .3rem; }
+a { color: var(--link); }
+.meta, .note, .status { color: var(--muted); font: 14px/1.5 system-ui, sans-serif; }
+.note { margin-bottom: 1.5rem; }
+ul.meetings { list-style: none; padding: 0; margin: 0; }
+ul.meetings li { padding: .35rem 0; }
+ul.meetings .date { display: inline-block; min-width: 6.5rem; color: var(--muted); font: 14px system-ui, sans-serif; }
+select { font: 15px system-ui, sans-serif; padding: .25rem .4rem; }
+
+.player { position: sticky; top: 0; z-index: 1; background: var(--bg); padding: .5rem 0; }
+.player .frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.player .frame > * { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.topic p { margin: 0 0 .6rem; }
+.stamps { display: flex; flex-wrap: wrap; gap: .4rem; }
+.stamp {
+  font: 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-decoration: none;
+  background: var(--chip); color: var(--chip-fg); border-radius: 999px; padding: .35rem .6rem;
+}
+.stamp:hover, .stamp:focus-visible { text-decoration: underline; }
+
+.transcript { max-height: 28rem; overflow-y: auto; border: 1px solid var(--rule); padding: .5rem .75rem; font-size: 15px; }
+.transcript .seg { display: flex; gap: .6rem; padding: .1rem 0; }
+.transcript .seg.current { background: var(--hl); }
+.transcript .seg .stamp { flex: none; align-self: flex-start; }
+button.load { font: 14px system-ui, sans-serif; padding: .4rem .8rem; cursor: pointer; }

@@ -1,13 +1,23 @@
 __pycache__/
 *.pyc
+.venv/
 
-# Watcher state and logs
+# Full transcripts live only on the host machine; GitHub Pages gets summaries only.
+transcripts/
+
+# Watcher state, logs, lock
 seen_videos.json
 *.log
+.watch.lock
 
-# Never commit YouTube cookies
+# Secrets: API key and YouTube cookies
+.env
 cookies*.txt
 
 # Combined outputs (regenerate with combine_transcripts.py)
-boulder_council_transcripts_*.txt
+*_council_transcripts_*.txt
 testing_txt/
+
+# Local API key folder
+API Keys/
+sample_API_call

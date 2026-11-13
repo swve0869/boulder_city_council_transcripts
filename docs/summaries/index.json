@@ -1,0 +1,18 @@
+{
+ "cities": [
+  {
+   "slug": "boulder",
+   "name": "Boulder"
+  }
+ ],
+ "meetings": [
+  {
+   "city": "boulder",
+   "id": "undated_zA5JVdBVOQk",
+   "date": null,
+   "video_id": "zA5JVdBVOQk",
+   "title": "August 17, 2023 / Regular City Council Meeting",
+   "model": "Claude Sonnet 5.5"
+  }
+ ]
+}

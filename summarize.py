@@ -1,0 +1,438 @@
+"""Summarize saved council transcripts with the models configured in summarizer.toml.
+
+For each transcript, the models listed under [summarize] models are tried in order. Each
+gets the configured prompt (with summary_prompt_JSON_format.json inserted) plus the
+transcript; the reply must pass a structure check before it is saved to
+docs/summaries/<city-slug>/<stem>.json for the GitHub Pages site. Invalid replies are
+retried, then the next model is tried. Nothing is written unless a reply passes.
+
+Providers can be Anthropic or any OpenAI-compatible API (OpenAI, DeepSeek, Gemini,
+OpenRouter, Ollama, ...). API keys come from the environment variable each provider names.
+
+Usage:
+    python summarize.py --city Boulder --limit 1        # newest Boulder transcripts lacking a summary
+    python summarize.py --city Boulder --model deepseek --limit 1
+    python summarize.py transcripts/boulder/2026-09-17_SS0nUFcZFq0.json --overwrite
+    python summarize.py --check docs/summaries/boulder/*.json     # validate only, no API calls
+    python summarize.py --list-models
+"""
+
+import argparse
+import json
+import math
+import os
+import re
+import sys
+import tomllib
+from pathlib import Path
+
+ROOT = Path(__file__).parent
+CONFIG_FILE = ROOT / "summarizer.toml"
+PROVENANCE_FILE = "models.json"  # in output_dir: {"<city>/<stem>": "<model label>"}
+
+MODEL_DEFAULT_KEYS = ("prompt", "max_attempts", "transcript_format", "max_input_chars", "timeout_seconds")
+PROVIDER_TYPES = ("anthropic", "openai")
+TOPIC_KEY = re.compile(r"^Topic\d+$")
+SENTENCE_END = re.compile(r"[.!?](?:\s|$)")
+NON_RETRYABLE_STATUS = {400, 401, 403, 404, 422}
+
+
+class SummaryError(Exception):
+    pass
+
+
+# ---- Configuration --------------------------------------------------------------------
+
+def load_config(path=CONFIG_FILE):
+    """Read summarizer.toml and check that it is internally consistent."""
+    with open(path, "rb") as f:
+        config = tomllib.load(f)
+    settings = config.get("summarize", {})
+    providers, models, prompts = (config.get(k, {}) for k in ("providers", "models", "prompts"))
+    problems = []
+    for name, provider in providers.items():
+        if provider.get("type") not in PROVIDER_TYPES:
+            problems.append(f"providers.{name}: type must be one of {PROVIDER_TYPES}")
+    for name, model in models.items():
+        if model.get("provider") not in providers:
+            problems.append(f"models.{name}: unknown provider {model.get('provider')!r}")
+        if not model.get("model"):
+            problems.append(f"models.{name}: missing model ID")
+        prompt = model.get("prompt", settings.get("prompt", "default"))
+        if prompt not in prompts:
+            problems.append(f"models.{name}: unknown prompt {prompt!r}")
+        fmt = model.get("transcript_format", settings.get("transcript_format", "json"))
+        if fmt not in ("json", "lines"):
+            problems.append(f"models.{name}: transcript_format must be 'json' or 'lines'")
+    for name in settings.get("models", []):
+        if name not in models:
+            problems.append(f"summarize.models: unknown model {name!r}")
+    for name, prompt in prompts.items():
+        if "{format}" not in prompt.get("text", ""):
+            problems.append(f"prompts.{name}: text must contain {{format}}")
+    if problems:
+        raise SystemExit(f"{Path(path).name} has problems:\n  " + "\n  ".join(problems))
+    return config
+
+
+def model_settings(config, name):
+    """Merged settings for one model: [summarize] defaults, then the [models.<name>] entry."""
+    settings = config.get("summarize", {})
+    model = {k: settings[k] for k in MODEL_DEFAULT_KEYS if k in settings}
+    model.update(config["models"][name])
+    model.setdefault("prompt", "default")
+    model.setdefault("max_attempts", 3)
+    model.setdefault("transcript_format", "json")
+    model.setdefault("max_input_chars", 0)
+    model.setdefault("timeout_seconds", 900)
+    model.setdefault("label", model["model"])
+    model["name"] = name
+    model["provider_config"] = config["providers"][model["provider"]]
+    return model
+
+
+def output_dir(config):
+    return ROOT / config.get("summarize", {}).get("output_dir", "docs/summaries")
+
+
+def summary_path(transcript_path, city_slug, out_root):
+    return Path(out_root) / city_slug / f"{Path(transcript_path).stem}.json"
+
+
+# ---- Prompt and transcript ------------------------------------------------------------
+
+def build_prompt(config, model):
+    fmt_file = ROOT / config.get("summarize", {}).get("format_file", "summary_prompt_JSON_format.json")
+    fmt = json.dumps(json.loads(fmt_file.read_text(encoding="utf-8")))
+    prompt = config["prompts"][model["prompt"]]
+    # str.replace, not str.format: the JSON format itself is full of braces.
+    return prompt.get("system", ""), prompt["text"].replace("{format}", fmt)
+
+
+def render_transcript(transcript, fmt):
+    if fmt == "lines":
+        head = f"{transcript.get('title', '')}\n{transcript.get('url', '')}\nstart\ttext\n"
+        return head + "\n".join(f"{seg['start']}\t{seg['text']}" for seg in transcript["segments"])
+    return json.dumps(transcript, separators=(",", ":"), ensure_ascii=False)
+
+
+# ---- Providers ------------------------------------------------------------------------
+
+_clients = {}
+
+
+def api_key(provider):
+    env = provider.get("api_key_env", "")
+    if not env:
+        return None
+    key = os.environ.get(env, "").strip()
+    if not key:
+        raise SummaryError(f"environment variable {env} is not set")
+    return key
+
+
+def get_client(model):
+    provider = model["provider_config"]
+    cache_key = (model["provider"], model["timeout_seconds"])
+    if cache_key not in _clients:
+        if provider["type"] == "anthropic":
+            import anthropic
+            _clients[cache_key] = anthropic.Anthropic(
+                api_key=api_key(provider), base_url=provider.get("base_url"), timeout=model["timeout_seconds"])
+        else:
+            import openai
+            _clients[cache_key] = openai.OpenAI(
+                api_key=api_key(provider) or "not-needed", base_url=provider.get("base_url"),
+                timeout=model["timeout_seconds"])
+    return _clients[cache_key]
+
+
+def call_anthropic(model, system, prompt, transcript_text):
+    transcript_block = {"type": "text", "text": transcript_text}
+    if model.get("prompt_cache", True):
+        # Cached so retries after an invalid reply don't pay full price for the transcript again.
+        transcript_block["cache_control"] = {"type": "ephemeral"}
+    kwargs = {
+        "model": model["model"],
+        "max_tokens": model.get("max_tokens", 64000),
+        "messages": [{"role": "user", "content": [{"type": "text", "text": prompt}, transcript_block]}],
+        **model.get("params", {}),
+    }
+    if system:
+        kwargs["system"] = system
+    if model.get("fallbacks"):
+        # On a safety decline, the API retries the request on a fallback model.
+        kwargs["betas"] = ["server-side-fallback-2026-07-01"]
+        kwargs["fallbacks"] = model["fallbacks"]
+
+    with get_client(model).beta.messages.stream(**kwargs) as stream:
+        message = stream.get_final_message()
+    if message.stop_reason == "refusal":
+        raise SummaryError("request was declined (stop_reason=refusal)")
+    if message.stop_reason == "max_tokens":
+        raise SummaryError("reply was cut off at max_tokens")
+    return "".join(b.text for b in message.content if b.type == "text")
+
+
+def call_openai(model, system, prompt, transcript_text):
+    messages = [{"role": "system", "content": system}] if system else []
+    messages.append({"role": "user", "content": f"{prompt}\n\n{transcript_text}"})
+    kwargs = {"model": model["model"], "messages": messages, **model.get("params", {})}
+    if model.get("json_mode"):
+        kwargs["response_format"] = {"type": "json_object"}
+    response = get_client(model).chat.completions.create(**kwargs)
+    choice = response.choices[0]
+    if choice.finish_reason == "length":
+        raise SummaryError("reply was cut off at the output token limit")
+    if choice.finish_reason == "content_filter":
+        raise SummaryError("reply was blocked by the provider's content filter")
+    return choice.message.content or ""
+
+
+CALLERS = {"anthropic": call_anthropic, "openai": call_openai}
+
+
+def request_summary(model, system, prompt, transcript_text):
+    """One API call; returns the reply text."""
+    text = CALLERS[model["provider_config"]["type"]](model, system, prompt, transcript_text)
+    if not text.strip():
+        raise SummaryError("empty reply")
+    return text
+
+
+def retryable(exc):
+    """False for errors a retry can't fix (bad key, unknown model, bad request)."""
+    if isinstance(exc, ImportError):
+        return False
+    if isinstance(exc, SummaryError):
+        return "not set" not in str(exc)
+    return getattr(exc, "status_code", None) not in NON_RETRYABLE_STATUS
+
+
+# ---- Validation -----------------------------------------------------------------------
+
+def parse_reply(text):
+    """JSON object from the model's reply; tolerates a ```json fence or stray text around it."""
+    text = text.strip()
+    fenced = re.match(r"^```(?:json)?\s*(.*?)\s*```$", text, re.DOTALL)
+    if fenced:
+        text = fenced.group(1)
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        start, end = text.find("{"), text.rfind("}")
+        if start == -1 or end <= start:
+            raise SummaryError("reply is not JSON")
+        try:
+            return json.loads(text[start:end + 1])
+        except json.JSONDecodeError as e:
+            raise SummaryError(f"reply is not valid JSON: {e}") from None
+
+
+def validate_summary(summary, segment_starts=None, max_sentences=5, exact_timestamps=False):
+    """Return (errors, warnings). Errors mean the structure doesn't match summary_prompt_JSON_format.json."""
+    errors, warnings = [], []
+    if not isinstance(summary, dict):
+        return ["top level is not a JSON object"], warnings
+    extra = set(summary) - {"Title", "Topics"}
+    if extra:
+        errors.append(f"unexpected top-level keys: {sorted(extra)}")
+    if not isinstance(summary.get("Title"), str) or not summary["Title"].strip():
+        errors.append('"Title" must be a non-empty string')
+    topics = summary.get("Topics")
+    if not isinstance(topics, list) or not topics:
+        errors.append('"Topics" must be a non-empty list')
+        return errors, warnings
+
+    last_start = max(segment_starts) if segment_starts else None
+    count = 0
+    for i, entry in enumerate(topics):
+        if not isinstance(entry, dict) or not entry:
+            errors.append(f"Topics[{i}] must be a non-empty object")
+            continue
+        for key, topic in entry.items():
+            where = f"Topics[{i}].{key}"
+            if not TOPIC_KEY.match(key):
+                errors.append(f'{where}: key must look like "Topic1", "Topic2", ...')
+                continue
+            if not isinstance(topic, dict):
+                errors.append(f"{where} must be an object")
+                continue
+            count += 1
+            extra = set(topic) - {"Title", "Summary", "related_timestamps"}
+            if extra:
+                errors.append(f"{where}: unexpected keys {sorted(extra)}")
+            for field in ("Title", "Summary"):
+                if not isinstance(topic.get(field), str) or not topic[field].strip():
+                    errors.append(f'{where}: "{field}" must be a non-empty string')
+            stamps = topic.get("related_timestamps")
+            if not isinstance(stamps, list) or not stamps:
+                errors.append(f'{where}: "related_timestamps" must be a non-empty list')
+                continue
+            for t in stamps:
+                try:
+                    value = float(t)
+                except (TypeError, ValueError):
+                    errors.append(f"{where}: timestamp {t!r} is not a number")
+                    continue
+                if isinstance(t, bool) or not math.isfinite(value) or value < 0:
+                    errors.append(f"{where}: timestamp {t!r} is not a valid time")
+                elif last_start is not None and value > last_start + 1:
+                    errors.append(f"{where}: timestamp {t!r} is past the end of the transcript")
+                elif segment_starts and value not in segment_starts:
+                    (errors if exact_timestamps else warnings).append(
+                        f"{where}: timestamp {t!r} is not an exact segment start")
+            if isinstance(topic.get("Summary"), str) and len(SENTENCE_END.findall(topic["Summary"])) > max_sentences:
+                warnings.append(f"{where}: summary looks longer than {max_sentences} sentences")
+    if not count:
+        errors.append("no topics found")
+    return errors, warnings
+
+
+# ---- Summarizing ----------------------------------------------------------------------
+
+def record_provenance(out_root, city_slug, stem, label):
+    path = Path(out_root) / PROVENANCE_FILE
+    data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    data[f"{city_slug}/{stem}"] = label
+    path.write_text(json.dumps(dict(sorted(data.items())), indent=1) + "\n", encoding="utf-8")
+
+
+def summarize_with_model(model, config, transcript, starts, log):
+    """Try one model up to its max_attempts. Returns a valid summary dict or raises SummaryError."""
+    rules = config.get("summarize", {}).get("validation", {})
+    system, prompt = build_prompt(config, model)
+    transcript_text = render_transcript(transcript, model["transcript_format"])
+    limit = model["max_input_chars"]
+    if limit and len(transcript_text) > limit:
+        raise SummaryError(f"transcript is {len(transcript_text):,} chars, over this model's "
+                           f"max_input_chars ({limit:,})")
+
+    problems = []
+    for attempt in range(1, model["max_attempts"] + 1):
+        try:
+            summary = parse_reply(request_summary(model, system, prompt, transcript_text))
+            errors, warnings = validate_summary(
+                summary, starts, rules.get("max_summary_sentences", 5), rules.get("exact_timestamps_required", False))
+        except Exception as e:
+            if not retryable(e):
+                raise SummaryError(f"{type(e).__name__}: {e}") from None
+            errors, warnings = [f"{type(e).__name__}: {e}"], []
+        if not errors:
+            for w in warnings:
+                log(f"warn   {w}")
+            return summary
+        problems = errors
+        log(f"retry  {model['name']} attempt {attempt}/{model['max_attempts']} failed: {'; '.join(errors[:3])}")
+    raise SummaryError(f"no valid summary after {model['max_attempts']} attempts: {'; '.join(problems[:3])}")
+
+
+def summarize_transcript(transcript_path, city_slug, config=None, models=None, log=print):
+    """Summarize one transcript with the configured models (first valid reply wins).
+
+    Saves the summary to <output_dir>/<city>/<stem>.json and returns that path.
+    """
+    config = config or load_config()
+    models = models or config.get("summarize", {}).get("models", [])
+    if not models:
+        raise SummaryError("no models configured ([summarize] models in summarizer.toml)")
+    transcript_path = Path(transcript_path)
+    transcript = json.loads(transcript_path.read_text(encoding="utf-8"))
+    if not transcript.get("segments"):
+        raise SummaryError(f"{transcript_path.name} has no segments")
+    starts = {seg["start"] for seg in transcript["segments"]}
+
+    failures = []
+    for name in models:
+        model = model_settings(config, name)
+        try:
+            summary = summarize_with_model(model, config, transcript, starts,
+                                           lambda m: log(f"{transcript_path.stem}: {m}"))
+        except SummaryError as e:
+            log(f"{transcript_path.stem}: {name} failed: {e}")
+            failures.append(f"{name}: {e}")
+            continue
+        out_root = output_dir(config)
+        out = summary_path(transcript_path, city_slug, out_root)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        record_provenance(out_root, city_slug, transcript_path.stem, model["label"])
+        return out
+    raise SummaryError("all models failed: " + " | ".join(failures))
+
+
+def main():
+    from council_transcripts import select_cities, slugify
+
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("files", nargs="*", help="transcript .json files (city is taken from the parent folder name)")
+    p.add_argument("--city", action="append", help="summarize this city's transcripts that lack a summary (repeatable)")
+    p.add_argument("--dir", default="transcripts", help="transcript root folder (default: transcripts)")
+    p.add_argument("--limit", type=int, help="summarize at most N transcripts")
+    p.add_argument("--overwrite", action="store_true", help="replace existing summaries")
+    p.add_argument("--model", action="append", help="model name(s) from summarizer.toml to use instead of [summarize] models")
+    p.add_argument("--config", default=str(CONFIG_FILE), help="config file (default: summarizer.toml)")
+    p.add_argument("--list-models", action="store_true", help="show configured models and exit")
+    p.add_argument("--check", metavar="SUMMARY", nargs="+", help="only validate existing summary files and exit")
+    args = p.parse_args()
+
+    config = load_config(args.config)
+    if args.model:
+        unknown = [m for m in args.model if m not in config.get("models", {})]
+        if unknown:
+            p.error(f"unknown model(s) {unknown}; see --list-models")
+
+    if args.list_models:
+        active = config.get("summarize", {}).get("models", [])
+        for name in config.get("models", {}):
+            m = model_settings(config, name)
+            env = m["provider_config"].get("api_key_env") or "-"
+            key = "key set" if env == "-" or os.environ.get(env) else f"{env} not set"
+            mark = f"[{active.index(name) + 1}]" if name in active else "   "
+            print(f"{mark} {name:12} {m['provider']:10} {m['model']:22} prompt={m['prompt']:9} {key}")
+        return 0
+
+    if args.check:
+        rules = config.get("summarize", {}).get("validation", {})
+        bad = 0
+        for f in args.check:
+            errors, warnings = validate_summary(json.loads(Path(f).read_text(encoding="utf-8")),
+                                                max_sentences=rules.get("max_summary_sentences", 5))
+            bad += bool(errors)
+            print(f"{'INVALID' if errors else 'ok'}  {f}")
+            for msg in errors + warnings:
+                print(f"    {msg}")
+        return 1 if bad else 0
+
+    out_root = output_dir(config)
+    jobs = [(Path(f), Path(f).parent.name) for f in args.files]
+    if args.city or not args.files:
+        for name, _ in select_cities(args.city or []):
+            slug = slugify(name)
+            # Newest dated meetings first; undated ones last.
+            files = sorted((Path(args.dir) / slug).glob("*.json"),
+                           key=lambda f: (not f.name.startswith("undated_"), f.name), reverse=True)
+            jobs += [(f, slug) for f in files]
+    if not args.overwrite:
+        jobs = [(f, slug) for f, slug in jobs if not summary_path(f, slug, out_root).exists()]
+    jobs = jobs[:args.limit] if args.limit else jobs
+    print(f"{len(jobs)} transcript(s) to summarize with {args.model or config['summarize'].get('models')}",
+          file=sys.stderr)
+
+    failures = 0
+    for f, slug in jobs:
+        try:
+            out = summarize_transcript(f, slug, config, args.model, log=lambda m: print(m, file=sys.stderr))
+            print(f"saved  {out}", file=sys.stderr)
+        except Exception as e:
+            failures += 1
+            print(f"ERROR  {f.name}: {e}", file=sys.stderr)
+
+    if jobs:
+        from build_site import build_manifest
+        build_manifest(out_root)
+    return 1 if failures else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,156 +1,169 @@
-# Boulder City Council Transcript Scraper
+# City Council Meeting Summaries
 
-Tools for downloading and combining transcripts of City of Boulder (Colorado) City Council meetings.
+Watches city council YouTube channels, saves each new meeting's English captions as a transcript, summarizes the transcript with an LLM (Claude Sonnet 5.5 by default; configurable in `summarizer.toml`), and publishes the summaries to a static site on GitHub Pages.
 
-The city doesn't publish written transcripts. Meeting videos are posted to the city's YouTube channel ([youtube.com/user/bouldercoloradogov](https://www.youtube.com/user/bouldercoloradogov)), and these scripts save the English captions from those videos. The city's uploaded captions are used when they exist; otherwise YouTube's auto-generated captions are used.
+Cities don't publish written transcripts, so this uses the captions on the meeting videos: the city's uploaded captions when they exist, otherwise YouTube's auto-generated ones.
 
-| Script | Purpose |
+## How it fits together
+
+```
+host machine (private network, dynamic DNS)                   GitHub Pages (docs/)
+──────────────────────────────────────────                    ────────────────────
+cron → scripts/cron_watch.sh
+        └ watch_council_videos.py --once --fetch --summarize --publish
+            ├ new video on a channel in national_city_councils.json
+            ├ transcript → transcripts/<city>/<date>_<id>.json   (stays here)
+            ├ summarize.py → models from summarizer.toml → structure check
+            └ docs/summaries/<city>/<date>_<id>.json ── git push ──→ summaries/…json
+                                                                  index.html, meeting.html
+serve_transcripts.py (optional) ←── browser fetch (HTTPS, CORS) ── "Load full transcript"
+```
+
+- **GitHub Pages stores only summaries.** `transcripts/` is gitignored and never leaves the host.
+- The site is static HTML and JavaScript. The browser fetches each summary's JSON file and renders it, so there's no per-meeting HTML. Clicking a timestamp jumps the embedded YouTube player to that moment.
+- If the host runs `serve_transcripts.py`, the meeting page can also load the full transcript from it and scroll to each timestamp.
+
+| File | Purpose |
 | --- | --- |
-| `boulder_council_transcripts.py` | Finds council meeting videos and saves each one's transcript |
-| `combine_transcripts.py` | Joins saved transcripts for a year or month into one dated text file |
-| `watch_council_videos.py` | Checks the channel every 20 minutes for new council videos |
-| `build_site.py` | Builds a static website of all saved transcripts |
+| `national_city_councils.json` | `{"City name": "YouTube channel URL"}` for every watched city |
+| `watch_council_videos.py` | Checks each city's channel for new council videos; fetches, summarizes, publishes |
+| `council_transcripts.py` | Lists a channel's council videos and saves transcripts (also the shared library) |
+| `summarize.py` | Summarizes transcripts with the configured models and validates the result |
+| `summarizer.toml` | Model providers, models, prompts, fallback order and validation settings |
+| `summary_prompt_JSON_format.json` | The JSON format the summary prompt asks for |
+| `build_site.py` | Writes `docs/summaries/index.json`; `--publish` commits and pushes summaries |
+| `serve_transcripts.py` | Read-only server for full transcripts on the host |
+| `combine_transcripts.py` | Joins a city's transcripts for a year or month into one text file |
+| `scripts/cron_watch.sh` | Cron wrapper: loads `.env`, prevents overlapping runs, runs one watch cycle |
+| `docs/` | The GitHub Pages site (`config.js`, `app.js`, `index.html`, `meeting.html`, `summaries/`) |
 
-## Setup
+## Host machine setup
 
-Requires Python 3.9+.
+Requires Python 3.11+ and git with push access to this repo.
 
 ```
-pip install yt-dlp
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+cp .env.example .env          # then set ANTHROPIC_API_KEY=sk-ant-... in it
+# or: put the bare key in "API Keys/city_council_summary_API_key"
 ```
 
-## 1. Download transcripts
+`scripts/cron_watch.sh` uses `.venv/bin/python` if it exists, otherwise `python3` (override with `PYTHON=`).
+
+### Cron
 
 ```
-python boulder_council_transcripts.py [options]
+crontab -e
+*/20 * * * * /path/to/repo/scripts/cron_watch.sh >> /path/to/repo/cron.log 2>&1
 ```
 
-The script lists every video on the channel whose title contains "City Council": regular meetings, study sessions and special meetings. It reads the meeting date from the title and saves the newest meetings first.
+Each run checks every city in `national_city_councils.json`. The first run for a city only records the videos already on its channel, so it doesn't backfill. Extra arguments are passed through, for example `scripts/cron_watch.sh --cookies /path/to/cookies.txt` when YouTube asks you to sign in.
 
-### Options
+### Adding a city
 
-| Option | Description |
+Add an entry to `national_city_councils.json`:
+
+```json
+{
+  "Boulder": "https://www.youtube.com/user/bouldercoloradogov",
+  "Example City": "https://www.youtube.com/@ExampleCityGov"
+}
+```
+
+The folder name is the city name lowercased with dashes (`example-city`). Videos are matched by "City Council" in the title.
+
+## Summaries
+
+`summarize.py` sends the transcript to the models configured in [summarizer.toml](summarizer.toml). The default prompt is the one below; the `{format}` placeholder is filled from `summary_prompt_JSON_format.json`:
+
+> summarize this city council transcript into this JSON format {…} where related_timestamps are "start" fields from the JSON transcript where the topic begins and ends. Summary sections should not be longer than 5 sentences. DO NOT return anything else but the JSON formatted text
+
+A reply is accepted only if its structure checks pass:
+
+- The top level has exactly `Title` (a string) and `Topics` (a non-empty list).
+- Each topic key looks like `Topic<N>`. Each topic has non-empty `Title` and `Summary` strings and a non-empty `related_timestamps` list.
+- Each timestamp is a number of seconds that falls within the transcript.
+
+Timestamps that aren't exact segment starts, and summaries longer than five sentences, are logged as warnings. Both checks can be adjusted under `[summarize.validation]`.
+
+### Choosing models (`summarizer.toml`)
+
+| Section | What it sets |
 | --- | --- |
-| `--since YYYY-MM-DD` | Only meetings on or after this date |
-| `--limit N` | Fetch at most N meetings |
-| `--video ID` | Fetch a specific YouTube video ID instead of listing the channel. Can be repeated. |
-| `--out DIR` | Output folder (default: `transcripts`) |
-| `--no-timestamps` | Write the `.txt` transcript as plain prose without timestamps |
-| `--overwrite` | Re-fetch meetings that are already saved (they're skipped by default) |
-| `--delay SECONDS` | Pause between videos (default: 3) |
-| `--cookies-from-browser NAME` | Load YouTube cookies from `chrome`, `edge`, `firefox`, etc. |
-| `--cookies FILE` | Load cookies from a Netscape-format `cookies.txt` |
+| `[summarize]` | `models`, an ordered list of models to try. The first valid reply wins, and a model that errors, refuses or keeps returning invalid JSON hands off to the next. Also the format file, the output folder, and per-model defaults: `prompt`, `max_attempts`, `transcript_format`, `max_input_chars`, `timeout_seconds`. |
+| `[prompts.<name>]` | `text` (must contain `{format}`) and an optional `system` prompt. |
+| `[providers.<name>]` | `type` (`anthropic`, or `openai` for any OpenAI-compatible API), `base_url`, and `api_key_env`, the environment variable holding the key. |
+| `[models.<name>]` | `provider`, `model` ID, `label` (shown on the site), `max_tokens`, `json_mode`, `prompt_cache`, `fallbacks`, and `params`, which is passed straight to the API (e.g. `temperature`). |
 
-### Examples
+The config ships with Anthropic, OpenAI, DeepSeek, Gemini, OpenRouter and Ollama (local) providers. Put their keys in `.env` (`OPENAI_API_KEY=...`, `DEEPSEEK_API_KEY=...`). Model IDs other than Claude's are examples; check each provider's current model list. For small-context models, set `transcript_format = "lines"` (about 30% fewer tokens) and `max_input_chars`, so too-long transcripts skip that model instead of being cut off.
 
-```
-# Every 2026 meeting
-python boulder_council_transcripts.py --since 2026-01-01 --cookies-from-browser chrome
+The model that wrote each summary is recorded in `docs/summaries/models.json` and credited on the meeting page.
 
-# The five most recent meetings
-python boulder_council_transcripts.py --limit 5 --cookies-from-browser chrome
+Claude models use prompt caching, so retries cost much less, and server-side refusal fallback (`fallbacks = "default"`).
 
-# One specific meeting
-python boulder_council_transcripts.py --video SS0nUFcZFq0 --cookies-from-browser chrome
-```
-
-### Output
-
-Two files are saved for each meeting in `transcripts/`, named `<meeting date>_<video id>`:
-
-- **`2026-09-17_SS0nUFcZFq0.txt`**: a header (title, video URL, caption type) followed by timestamped lines:
-  ```
-  [00:03:52] Thursday, September 3rd, 2026 special
-  ```
-- **`2026-09-17_SS0nUFcZFq0.json`**: the same content in structured form:
-  ```json
-  {
-    "video_id": "SS0nUFcZFq0",
-    "title": "September 17, 2026 City of Boulder City Council Meeting",
-    "date": "2026-09-17",
-    "url": "https://www.youtube.com/watch?v=SS0nUFcZFq0",
-    "auto_generated": true,
-    "segments": [{"start": 228.4, "text": "..."}]
-  }
-  ```
-
-Meetings fetched with `--video` have no title date, so their files start with `undated_`. Rename them to `YYYY-MM-DD_<id>` so `combine_transcripts.py` includes them.
-
-## 2. Combine transcripts
+Cost with Claude Sonnet 5.5: a long meeting transcript runs to roughly 100–200k input tokens, about $0.20–0.40 per meeting.
 
 ```
-python combine_transcripts.py PERIOD [--dir DIR] [--out FILE]
+python summarize.py --list-models                # configured models, fallback order, which keys are set
+python summarize.py --city Boulder --limit 3      # backfill: newest transcripts that lack a summary
+python summarize.py --city Boulder --limit 1 --model deepseek   # use a specific model
+python summarize.py transcripts/boulder/2026-09-17_SS0nUFcZFq0.json --overwrite
+python summarize.py --check docs/summaries/boulder/*.json    # validate saved summaries
+python build_site.py --publish                    # rebuild the index and push
 ```
 
-| Argument | Description |
-| --- | --- |
-| `PERIOD` | `YYYY` for a whole year or `YYYY-MM` for one month |
-| `--dir DIR` | Folder of saved transcripts (default: `transcripts`) |
-| `--out FILE` | Output file (default: `boulder_council_transcripts_<PERIOD>.txt`) |
+`summarize.py` rebuilds `docs/summaries/index.json` itself, but it doesn't push.
 
-### Examples
+## Full transcripts from the host (optional)
 
 ```
-python combine_transcripts.py 2026       # -> boulder_council_transcripts_2026.txt
-python combine_transcripts.py 2026-09    # -> boulder_council_transcripts_2026-09.txt
+python serve_transcripts.py --origin https://<user>.github.io     # listens on :8765
 ```
 
-Meetings are written in date order. Each meeting starts with a header block, and every line carries the meeting date and the time into the video:
+The server answers only `GET /<city>/<stem>.json`: no directory listings and no other file types. GitHub Pages is HTTPS, so browsers block plain-HTTP requests to your host. Put the server behind a TLS reverse proxy on your dynamic-DNS name, for example Caddy:
 
 ```
-================================================================================
-September 3, 2026 City of Boulder City Council Special Meeting and Regular Meeting
-https://www.youtube.com/watch?v=wKTZP4C5Csw
-Captions: auto-generated
-================================================================================
-[2026-09-03 00:03:48] go ahead um and call us to order for the
-[2026-09-03 00:03:52] Thursday, September 3rd, 2026 special
+council.example.ddns.net {
+    reverse_proxy localhost:8765
+}
 ```
 
-The script reads the `.json` files, so `--no-timestamps` in step 1 doesn't affect it. An existing output file is overwritten.
+Then set `transcriptHost: "https://council.example.ddns.net"` in `docs/config.js` and commit it. With it left empty, the site shows summaries and video timestamps only.
 
-## 3. Watch for new meetings
-
-```
-python watch_council_videos.py [options]
-```
-
-Checks the channel every 20 minutes and logs any council video it hasn't seen before. The first run only records the videos already on the channel. Seen videos are kept in `seen_videos.json` and every check is logged to `watch_council_videos.log`. Stop it with Ctrl+C.
-
-| Option | Description |
-| --- | --- |
-| `--interval MINUTES` | Minutes between checks (default: 20) |
-| `--once` | Check once and exit, e.g. when run from Windows Task Scheduler |
-| `--fetch` | Also save each new video's transcript to `--out`. Videos without captions yet are retried on later checks. |
-| `--out DIR` | Transcript folder for `--fetch` (default: `transcripts`) |
-| `--scan N` | Newest videos to scan per channel tab (default: 30) |
-| `--state FILE` / `--log FILE` | Seen-videos file and log file |
-| `--cookies-from-browser NAME` / `--cookies FILE` | Same as in step 1 |
+## Manual tools
 
 ```
-python watch_council_videos.py --fetch --cookies-from-browser chrome
+# Download transcripts for a city
+python council_transcripts.py --city Boulder --since 2026-01-01 --cookies-from-browser chrome
+python council_transcripts.py --city Boulder --limit 5
+python council_transcripts.py --city Boulder --video SS0nUFcZFq0
+
+# Watch without cron (checks every 20 minutes; Ctrl+C to stop)
+python watch_council_videos.py --fetch --summarize
+
+# Combine a city's transcripts for a year or month
+python combine_transcripts.py 2026 --city Boulder          # -> boulder_council_transcripts_2026.txt
+
+# Preview the site locally (fetch() doesn't work from file://)
+python -m http.server -d docs 8000
 ```
 
-## 4. Build the website
+`council_transcripts.py` options: `--since YYYY-MM-DD`, `--limit N`, `--video ID` (repeatable), `--out DIR`, `--no-timestamps`, `--overwrite`, `--delay SECONDS`, `--cookies-from-browser NAME`, `--cookies FILE`.
 
-```
-python build_site.py [--dir DIR] [--out DIR]
-```
+`watch_council_videos.py` options: `--city NAME` (repeatable), `--once`, `--fetch`, `--summarize`, `--publish`, `--interval MINUTES`, `--scan N`, `--state FILE`, `--log FILE`, and the cookie options. State lives in `seen_videos.json`, keyed by city. It holds the videos already seen, videos still waiting for captions, and transcripts whose summary failed. Both waiting lists are retried on every run.
 
-Writes a static site to `docs/` (default): `index.html` links every meeting, grouped by year and newest first, and each meeting gets its own page with the transcript as plain text. Timestamps are removed, and a new paragraph starts at each `>>` (the captions' speaker-change marker). GitHub Pages serves it from `main` / `/docs`; any static host works.
+### Transcript files
+
+Each meeting is saved as `transcripts/<city>/<meeting date>_<video id>.{txt,json}`. The `.json` has `video_id`, `title`, `date`, `url`, `auto_generated` and `segments: [{"start": seconds, "text": ...}]`. Meetings fetched with `--video` have no title date and are saved as `undated_<id>`. Rename them to `YYYY-MM-DD_<id>` to date them.
 
 ## Troubleshooting
 
-**"Sign in to confirm you're not a bot"**: YouTube is blocking anonymous requests from your network. Pass `--cookies-from-browser` with a browser where you're signed in to YouTube. Close Chrome or Edge first if they lock their cookie database.
-
-**"HTTP Error 429: Too Many Requests"**: you're being rate-limited. Wait a while, raise `--delay`, and run the same command again. Meetings that were already saved are skipped.
-
-**`none ... (no English captions yet)`**: captions for very recent meetings, especially live streams, can take a few days to appear. Run the script again later.
-
-**Exit code 1**: at least one video failed. The errors are printed for each video, and the other meetings are still saved.
+- **"Sign in to confirm you're not a bot"**: pass `--cookies-from-browser` or `--cookies`. On a headless host, export a `cookies.txt` from a signed-in browser.
+- **"HTTP Error 429"**: you're rate-limited by YouTube. Wait, raise `--delay`, and rerun; already-saved meetings are skipped.
+- **"This live event will begin in …" / no English captions yet**: captions for live streams appear hours to days later. The watcher keeps retrying.
+- **"environment variable … is not set"**: the provider's key is missing. Put it in `.env`. Failed summaries are retried on the next run.
 
 ## Caveats
 
-- Most transcripts are YouTube auto-generated captions. Names, numbers and technical terms are often wrong. Check quotes against the video before relying on them.
-- A transcript's timestamp is the time into the video, not the time of day.
-- Titles are matched on "City Council", so any other channel video with that phrase in its title, such as a candidate forum, would also be included.
+- Most transcripts are auto-generated captions, so names, numbers and technical terms are often wrong, and summaries inherit those errors. Check against the video before relying on them.
+- Timestamps are the time into the video, not the time of day.
+- Any video whose title contains "City Council" is included, such as a candidate forum.

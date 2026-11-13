@@ -4,8 +4,8 @@ Each line is prefixed with the meeting date and timestamp, e.g.
     [2026-09-17 01:23:45] Good evening and welcome...
 
 Usage:
-    python combine_transcripts.py 2026            # all meetings in 2026
-    python combine_transcripts.py 2026-09         # September 2026 only
+    python combine_transcripts.py 2026                  # all Boulder meetings in 2026
+    python combine_transcripts.py 2026-09 --city Boulder
     python combine_transcripts.py 2026-09 --out sept.txt --dir transcripts
 """
 
@@ -15,7 +15,7 @@ import re
 import sys
 from pathlib import Path
 
-from boulder_council_transcripts import fmt_ts
+from council_transcripts import fmt_ts, select_cities, slugify
 
 SEPARATOR = "=" * 80
 
@@ -23,19 +23,22 @@ SEPARATOR = "=" * 80
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("period", help="YYYY or YYYY-MM")
-    p.add_argument("--dir", default="transcripts", help="folder of saved transcripts (default: transcripts)")
-    p.add_argument("--out", help="output file (default: boulder_council_transcripts_<period>.txt)")
+    p.add_argument("--city", default="Boulder", help="city name from national_city_councils.json (default: Boulder)")
+    p.add_argument("--dir", default="transcripts", help="transcript root folder (default: transcripts)")
+    p.add_argument("--out", help="output file (default: <city>_council_transcripts_<period>.txt)")
     args = p.parse_args()
 
     if not re.fullmatch(r"\d{4}(-(0[1-9]|1[0-2]))?", args.period):
         p.error("period must be YYYY or YYYY-MM, e.g. 2026 or 2026-09")
 
-    files = sorted(Path(args.dir).glob(f"{args.period}-*.json"))
+    [(city, _)] = select_cities([args.city])
+    src = Path(args.dir) / slugify(city)
+    files = sorted(src.glob(f"{args.period}-*.json"))
     if not files:
-        print(f"No transcripts found for {args.period} in {args.dir}/", file=sys.stderr)
+        print(f"No transcripts found for {args.period} in {src}/", file=sys.stderr)
         return 1
 
-    out_path = Path(args.out or f"boulder_council_transcripts_{args.period}.txt")
+    out_path = Path(args.out or f"{slugify(city)}_council_transcripts_{args.period}.txt")
     total = 0
     with out_path.open("w", encoding="utf-8") as out:
         for f in files:

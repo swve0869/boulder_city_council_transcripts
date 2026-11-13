@@ -1,0 +1,4 @@
+yt-dlp
+anthropic>=2.8
+# Only needed for openai-type providers in summarizer.toml (OpenAI, DeepSeek, Gemini, Ollama, ...)
+openai
