@@ -81,6 +81,14 @@ if [ -z "${TRANSCRIPT_ORIGIN:-}" ]; then
   fi
 fi
 
+say "Git identity for publishing commits"
+if [ -z "$(git config user.email || true)" ]; then
+  # Repo-local, so it doesn't touch the user's global git config.
+  run git config user.name "Council Pi"
+  run git config user.email "${GH_USER:-council-pi}@users.noreply.github.com"
+fi
+echo "commits as: $(git config user.name || echo '?') <$(git config user.email || echo '?')>"
+
 say "systemd services (user $USER_NAME, origin $TRANSCRIPT_ORIGIN, port $PORT)"
 RENDERED="$(mktemp -d)"
 trap 'rm -rf "$RENDERED"' EXIT
