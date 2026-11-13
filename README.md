@@ -35,10 +35,12 @@ serve_transcripts.py ← Tailscale Funnel ←── browser fetch (HTTPS, CORS) 
 | `build_site.py` | Writes `docs/summaries/index.json`; `--publish` commits and pushes summaries |
 | `serve_transcripts.py` | Read-only server for full transcripts on the host |
 | `combine_transcripts.py` | Joins a city's transcripts for a year or month into one text file |
+| `date_undated.py` | Renames `undated_<id>` transcripts and summaries using the date in the video title |
+| `tests/` | Unit tests (`python -m unittest discover -s tests -t .`) |
 | `scripts/cron_watch.sh` | One watch cycle: loads `.env`, prevents overlapping runs (run by the systemd timer or cron) |
 | `scripts/setup_pi.sh` | Sets up a Raspberry Pi host (packages, venv, git identity, systemd units, log rotation) |
 | `deploy/` | systemd unit and logrotate templates installed by `setup_pi.sh` |
-| `docs/` | The GitHub Pages site (`config.js`, `app.js`, `trends.js`, `index.html`, `meeting.html`, `trends.html`, `summaries/`) |
+| `docs/` | The GitHub Pages site: `index.html`, `meeting.html`, `issue.html`, `trends.html`, their scripts, `feed.xml`, `summaries/` |
 
 ## Raspberry Pi setup (the production host)
 
@@ -261,26 +263,62 @@ python build_site.py --publish                    # rebuild the index and push
 
 `summarize.py` rebuilds `docs/summaries/index.json` itself, but it doesn't push.
 
-## Tags and the Trends page
+## Tags and site features
 
-Each topic gets 1–3 tags from [tags.json](tags.json) (e.g. `police`, `flock`, `zoning`, `affordable-housing`, `wildfire`, `budget`, `public-comment`), and each meeting gets its 3–6 main tags. `build_site.py` turns the summaries into `docs/summaries/index.json`. For each meeting it records the topics (title, tags, start/end seconds) and `tag_seconds`, the estimated video time spent on each tag. A topic spans its first to last timestamp; a topic with one timestamp counts for up to 60 s.
+Each topic gets 1–3 tags from [tags.json](tags.json) (e.g. `police`, `flock`, `zoning`, `affordable-housing`, `wildfire`, `budget`, `public-comment`), and each meeting gets its 3–6 main tags. A tag can also list `keywords`: a topic whose title or summary mentions one (whole words) gets the tag even if the model left it off. That keeps precise terms like "Flock" reliable.
 
-- **Meetings page:** every meeting shows its most-discussed tags. The tag panel filters by one or more tags (match any or all), alongside search and sorting (newest, oldest, most time on the selected tags, most topics). With a tag selected, each meeting lists its matching segments, each linking to that moment in the video. Filters live in the URL, so a filtered view can be shared.
-- **Meeting page:** tags are listed most-discussed first. Selecting one highlights its topics. Each topic's tags link to all meetings with that tag.
-- **Trends page** (`trends.html`):
-  - headline numbers
-  - "Most discussed issues": a ranked bar chart by discussion time, meetings or topics, colored by tag group
-  - "When issues come up": a month × tag heatmap
-  - "Discussed together": which tags share topics with a chosen tag
+`build_site.py` turns the summaries into three files the site reads:
 
-  Every chart has a hover tooltip and a table view, and clicking a bar or cell opens the matching meetings. It can be filtered by year and tag group.
+| File | Contents |
+| --- | --- |
+| `docs/summaries/index.json` | Every meeting with its topics (title, tags, start/end seconds) and `tag_seconds`, plus the tag vocabulary |
+| `docs/summaries/search.json` | Topic summary text, loaded only when someone searches or opens a preview |
+| `docs/feed.xml` | Atom feed of the newest 40 dated meetings (site URL from `[site]` in `summarizer.toml`) |
 
-Changing the vocabulary: edit `tags.json` (ids are what the model outputs; descriptions guide it; groups set colors in order), then re-summarize. `--missing-tags` re-summarizes only summaries made before tagging existed:
+Time per tag is an estimate. A topic spans its first to last timestamp (a single timestamp counts for up to 60 s), and that time is split across the topic's tags by order (weights 1, ½, ⅓, …), so a meeting's tag times add up to its real length.
+
+The watcher also writes `docs/summaries/status.json`, the meetings it has found that are still waiting for captions or a summary.
+
+**Meetings page (`index.html`)**
+- Every meeting shows its most-discussed tags, its topic count and length, and a "Show topics" preview.
+- Filter by one or more tags (match any or all). Search words are matched against titles and summaries, and matches are highlighted in snippets.
+- Sort by newest, oldest, most time on the selected tags, or most topics.
+- With a filter or search active, each meeting lists its matching segments, each linking to that moment in the video.
+- Filters live in the URL (`?tags=police,budget&match=all&q=…`), so views can be shared.
+- "Coming soon" lists meetings awaiting captions.
+
+**Meeting page (`meeting.html`)**
+- A timeline under the video shows each topic as a block colored by tag group. Click a block to jump there; a playhead follows playback and the current topic is highlighted.
+- Tags are listed most-discussed first; selecting one highlights its topics.
+- Each topic has timestamp links and a "Read the transcript" toggle that shows just that part of the captions, loaded from the host.
+
+**Issue page (`issue.html?tag=police`)**
+- Follows one tag across meetings: headline numbers, time per month, tags it's often discussed with, and every discussion with its summary and a link to the moment.
+
+**Trends page (`trends.html`)**
+- Headline numbers.
+- "Most discussed issues": ranked by time, meetings or topics.
+- "Where the time goes each month": stacked by tag group, as share or hours.
+- "When issues come up": a month × tag heatmap.
+- "Discussed together": tags that share topics with a chosen tag.
+- Every chart has a hover tooltip and a table view. The page can be filtered by year and tag group.
+
+Changing the vocabulary: edit `tags.json` (ids are what the model outputs; descriptions guide it; groups set the 8 colors in order), then re-summarize.
 
 ```
-python summarize.py --city Boulder --missing-tags --jobs 4
-python build_site.py --publish
+python summarize.py --apply-keywords                          # re-apply keyword rules to saved summaries (no API calls)
+python summarize.py --city Boulder --missing-tags --jobs 4    # re-summarize summaries that have no tags
+python date_undated.py                                        # date undated_<id> files from their video titles
+python build_site.py --publish                                # rebuild index/search/feed and push
 ```
+
+## Tests
+
+```
+python -m unittest discover -s tests -t .
+```
+
+The tests need no network or API key. They cover reply parsing, normalization, validation, the structured-output schema limits, tag vocabulary consistency, the manifest, search text, the feed, and date parsing.
 
 ## Full transcripts from the host (optional; the Pi uses Tailscale Funnel, above)
 
