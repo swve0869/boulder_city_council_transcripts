@@ -63,6 +63,15 @@ last timestamp, split across a topic's tags with the first (most specific) tag w
   <div class="chart heat-wrap" id="heat"></div>
 </section>
 
+<section id="change-section" hidden>
+  <div class="chart-head"><h2>What changed between years</h2>
+    <div class="controls"><label>From <select id="year-a"></select></label><label>to <select id="year-b"></select></label>
+    <button class="link" type="button" data-table="change">Show table</button></div></div>
+  <p class="tag-note" id="change-note"></p>
+  <div class="legend"><span class="up">Larger share of council time</span><span class="down">Smaller share</span></div>
+  <div class="chart" id="change"></div>
+</section>
+
 <section>
   <div class="chart-head"><h2>Discussed together</h2>
     <div class="controls"><label>Tag <select id="pair-tag"></select></label>

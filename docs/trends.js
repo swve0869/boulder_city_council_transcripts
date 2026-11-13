@@ -65,6 +65,15 @@
     state.mix = "share";
     $("mix-mode").addEventListener("change", () => { state.mix = $("mix-mode").value; update(); });
 
+    if (years.length >= 2) {
+      for (const y of [...years].reverse()) { $("year-a").append(el("option", { value: y }, y)); $("year-b").append(el("option", { value: y }, y)); }
+      state.yearA = years[years.length - 1]; state.yearB = years[0]; // oldest -> newest
+      $("year-a").value = state.yearA; $("year-b").value = state.yearB;
+      $("year-a").addEventListener("change", () => { state.yearA = $("year-a").value; update(); });
+      $("year-b").addEventListener("change", () => { state.yearB = $("year-b").value; update(); });
+      $("change-section").hidden = false;
+    }
+
     const bind = (id, key) => $(id).addEventListener("change", () => { state[key] = $(id).value; update(); });
     bind("metric", "metric"); bind("period", "period"); bind("group", "group");
     bind("rank-order", "order"); bind("heat-rows", "rows"); bind("pair-tag", "pair");
@@ -241,6 +250,44 @@
       box.replaceChildren(grid);
     }
 
+    // Diverging bars: change in each tag's share of tagged discussion time between two years.
+    // Shares (not hours) so years with different numbers of meetings compare fairly.
+    function drawChange() {
+      if (years.length < 2) return;
+      const inYear = (y) => (manifest.meetings || []).filter((m) => m.city === state.city && m.date && m.date.startsWith(y));
+      const shares = (y) => {
+        const secs = new Map(); let total = 0;
+        for (const m of inYear(y)) for (const [id, v] of Object.entries(m.tag_seconds || {})) { secs.set(id, (secs.get(id) || 0) + v); total += v; }
+        return { get: (id) => (total ? (100 * (secs.get(id) || 0)) / total : 0), n: inYear(y).length };
+      };
+      const a = shares(state.yearA), b = shares(state.yearB);
+      $("change-note").textContent = `Each issue's share of tagged discussion time in ${state.yearB} (${b.n} meetings) ` +
+        `compared with ${state.yearA} (${a.n} meetings), in percentage points.`;
+      const rows = [...tags.byId.keys()].filter(inGroup).map((id) => ({ id, a: a.get(id), b: b.get(id), d: b.get(id) - a.get(id) }))
+        .filter((r) => r.a || r.b).sort((x, y) => y.d - x.d);
+      const box = $("change");
+      if (state.yearA === state.yearB || !rows.length) { box.replaceChildren(el("p", { class: "status" }, "Pick two different years with tagged meetings.")); return; }
+      const pts = (v) => `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v).toFixed(1)} pts`;
+      if (tablesOpen.has("change")) {
+        box.replaceChildren(table(["Tag", state.yearA, state.yearB, "Change"], rows.map((r) => [tags.label(r.id), `${r.a.toFixed(1)}%`, `${r.b.toFixed(1)}%`, pts(r.d)])));
+        return;
+      }
+      const max = Math.max(...rows.map((r) => Math.abs(r.d))) || 1;
+      // Longest bar as a % of the track, per side: the rest is room for the value label (less on phones).
+      const side = box.clientWidth < 520 ? 18 : 36;
+      const grid = el("div", { class: "bars diverge" });
+      for (const r of rows) {
+        const w = (side * Math.abs(r.d)) / max;
+        const track = el("div", { class: "track", "aria-label": `${tags.label(r.id)}: ${pts(r.d)}` },
+          el("div", { class: `bar ${r.d >= 0 ? "up" : "down"}`, style: r.d >= 0 ? `left:50%;width:${w}%` : `right:50%;width:${w}%` }),
+          el("span", { class: "val", style: r.d >= 0 ? `left:calc(50% + ${w}% + .4rem)` : `right:calc(50% + ${w}% + .4rem)` }, pts(r.d)));
+        hover(track, () => [tags.label(r.id), `${state.yearA}: ${r.a.toFixed(1)}% · ${state.yearB}: ${r.b.toFixed(1)}%`, `Change: ${pts(r.d)}`]);
+        track.addEventListener("click", () => { location.href = goTo(r.id); });
+        grid.append(el("a", { class: "label", href: goTo(r.id) }, tags.label(r.id)), track);
+      }
+      box.replaceChildren(grid);
+    }
+
     function drawPairs(list, tot) {
       const sel = $("pair-tag");
       const ids = [...tot.keys()].sort((a, b) => tot.get(b).topics - tot.get(a).topics);
@@ -286,6 +333,7 @@
       drawTiles(list);
       drawRank(tot);
       drawMix(list);
+      drawChange();
       drawHeat(list, tot);
       drawPairs(list, tot);
     }

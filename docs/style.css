@@ -183,3 +183,11 @@ a.skip:focus { left: 8px; top: 8px; }
 :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
 ul.meetings li > .overview { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--fg); }
+/* Diverging bars (change between years): blue = more, red = less, zero line in the middle */
+.bars.diverge .track { position: relative; height: 16px; background: linear-gradient(var(--rule), var(--rule)) 50% 0 / 1px 100% no-repeat; }
+.bars.diverge .bar { position: absolute; top: 2px; height: 12px; min-width: 1px; }
+.bars.diverge .bar.up { background: var(--series-1); border-radius: 0 4px 4px 0; }
+.bars.diverge .bar.down { background: var(--series-8); border-radius: 4px 0 0 4px; }
+.bars.diverge .val { position: absolute; top: 0; margin: 0; line-height: 16px; }
+.legend span.up::before { background: var(--series-1); }
+.legend span.down::before { background: var(--series-8); }
