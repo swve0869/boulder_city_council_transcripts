@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.youtube.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https: http://localhost:* http://127.0.0.1:*; img-src 'self' data: https://i.ytimg.com; style-src 'self'; style-src-attr 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About these summaries</title>
+<meta name="description" content="How the city council meeting summaries, tags and time estimates on this site are made, and what to keep in mind when using them.">
+<meta property="og:title" content="About these summaries">
+<meta property="og:description" content="How the city council meeting summaries, tags and time estimates on this site are made, and what to keep in mind when using them.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="City Council Meeting Summaries" href="feed.xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="about">
+<a class="skip" href="#content">Skip to content</a>
+<main id="content">
+<nav class="top"><a href="index.html">Meetings</a><a href="trends.html">Trends</a><a href="issue.html">Issues</a><a href="about.html" aria-current="page">About</a></nav>
+<h1>About these summaries</h1>
+<p class="note">This is an independent project, not an official city record.</p>
+
+<article class="prose">
+<h2>Where the text comes from</h2>
+<p>City councils publish video of their meetings but rarely a written transcript. This site watches each city's
+YouTube channel for council meetings and saves the video's English captions. When the city uploads its own captions
+those are used; otherwise the captions are YouTube's automatic ones, which often get names, numbers and technical terms wrong.</p>
+
+<h2>How summaries are written</h2>
+<p>An AI model reads the full caption transcript of a meeting and writes: a short overview, a list of topics, a summary of
+each topic (five sentences at most), the timestamps where each topic begins and ends, and tags for each topic.
+The model's reply must pass an automatic structure check before it is published; the name of the model is shown on each meeting page.</p>
+<p>Summaries can be wrong. The model can misread a garbled caption, attribute a remark to the wrong person, or miss
+something. <strong>Before quoting or relying on anything here, open the timestamp and watch that part of the meeting.</strong>
+Every topic links to its moment in the video, and "Read the transcript" shows the captions for just that topic.</p>
+
+<h2>Tags</h2>
+<p>Tags come from a fixed list of about 40 subjects (police, zoning, budget, wildfire and so on), grouped into eight areas that share a color.
+The model may only choose tags from that list. A few precise terms, such as "Flock" for license-plate-reader cameras, are also
+tagged automatically whenever they appear in a topic's title or summary.</p>
+
+<h2>Time estimates</h2>
+<p>"Time on a topic" is the span from the first to the last timestamp the model gave for it. When a topic has several tags, its time is
+divided among them with the first (most specific) tag weighted highest, so the times for one meeting add up to roughly its length.
+Topics that overlap, such as public comment that jumps between subjects, make these estimates approximate. Treat the charts on the
+Trends and Issues pages as a guide to where attention went, not a stopwatch.</p>
+
+<h2>Updates</h2>
+<p>New meetings are checked for several times an hour. A meeting appears under "Coming soon" while its captions are not yet available,
+which can take hours or a few days after a live stream. You can follow new summaries with the
+<a href="feed.xml">Atom feed</a> in any feed reader.</p>
+
+<h2>Corrections and source code</h2>
+<p>The code that produces this site is public: <a href="https://github.com/swve0869/boulder_city_council_transcripts">source on GitHub</a>.
+If you find an error in a summary, please open an issue there with a link to the meeting.</p>
+</article>
+
+<footer class="site">
+  <a href="feed.xml">Subscribe (Atom feed)</a> ·
+  <a href="https://github.com/swve0869/boulder_city_council_transcripts">Source on GitHub</a> ·
+  Summaries are AI-generated from video captions; verify against the video.
+</footer>
+</main>
+</body>
+</html>

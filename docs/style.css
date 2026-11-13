@@ -191,3 +191,11 @@ ul.meetings li > .overview { display: -webkit-box; -webkit-line-clamp: 3; line-c
 .bars.diverge .val { position: absolute; top: 0; margin: 0; line-height: 16px; }
 .legend span.up::before { background: var(--series-1); }
 .legend span.down::before { background: var(--series-8); }
+button.copy { background: none; border: 0; cursor: pointer; font: 12px system-ui, sans-serif; color: var(--muted); padding: 0 .2rem; opacity: .55; }
+button.copy:hover, button.copy:focus-visible { opacity: 1; }
+.neighbors { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.5rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font: 14px/1.45 system-ui, sans-serif; }
+.neighbors a { text-decoration: none; }
+.neighbors a:last-child { text-align: right; }
+.neighbors .dir { color: var(--muted); font-size: 12.5px; }
+.prose h2 { margin-top: 1.8rem; }
+.prose p { margin: 0 0 1rem; }

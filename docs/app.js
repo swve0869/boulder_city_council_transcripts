@@ -677,7 +677,19 @@
     const container = $("topics");
     if (!topics.length) status("This summary has no topics.");
     const sections = topics.map((t) => {
-      const section = el("section", { class: "topic", id: `topic-${container.children.length + 1}` }, el("h3", {}, t.title));
+      const heading = el("h3", {}, t.title);
+      if (t.stamps.length) {
+        // Copies a link that opens this meeting at this topic.
+        const share = el("button", { type: "button", class: "copy", title: "Copy a link to this topic", "aria-label": `Copy a link to: ${t.title}` }, "🔗");
+        share.addEventListener("click", async () => {
+          const url = `${location.origin}${location.pathname}${location.search}#t=${Math.floor(t.stamps[0])}`;
+          try { await navigator.clipboard.writeText(url); share.textContent = "✓ copied"; }
+          catch (_) { prompt("Copy this link:", url); }
+          setTimeout(() => { share.textContent = "🔗"; }, 1500);
+        });
+        heading.append(" ", share);
+      }
+      const section = el("section", { class: "topic", id: `topic-${container.children.length + 1}` }, heading);
       if (t.tags.length) {
         section.append(el("div", { class: "tags" }, ...t.tags.map((g) => tagChip(tags, g, {
           href: `issue.html?city=${encodeURIComponent(city)}&tag=${encodeURIComponent(g)}`,
@@ -721,6 +733,22 @@
     const spans = entry && entry.topics && entry.topics.length === topics.length ? entry.topics
       : topics.map((t) => ({ title: t.title, tags: t.tags, start: t.stamps.length ? t.stamps[0] : null,
         end: t.stamps.length ? Math.max(t.stamps[t.stamps.length - 1], t.stamps[0] + 60) : null }));
+    // Previous / next meeting in this city, by date.
+    const sameCity = (manifest.meetings || []).filter((m) => m.city === city && m.date)
+      .sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
+    const at = sameCity.findIndex((m) => m.id === id);
+    if (at >= 0) {
+      const link = (m, label) => {
+        const dd = parseDate(m.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+        return el("a", { href: `meeting.html?city=${encodeURIComponent(city)}&id=${encodeURIComponent(m.id)}` },
+          el("span", { class: "dir" }, label), el("br"), `${dd}: ${m.title}`);
+      };
+      const nav = $("neighbors");
+      nav.append(at > 0 ? link(sameCity[at - 1], "← Earlier meeting") : el("span"),
+        at < sameCity.length - 1 ? link(sameCity[at + 1], "Later meeting →") : el("span"));
+      nav.hidden = false;
+    }
+
     if (CONFIG.transcriptHost) {
       sections.forEach((s, i) => {
         if (spans[i] && spans[i].start !== null) s.section.append(excerptButton(city, id, spans[i]));
@@ -729,7 +757,11 @@
     const tick = drawTimeline(spans.map((s, i) => ({ ...s, title: topics[i].title, tags: topics[i].tags })), tags, sections);
     setInterval(() => tick(currentTime()), 1000);
     const startAt = /#t=(\d+)/.exec(location.hash);
-    if (startAt) tick(Number(startAt[1]));
+    if (startAt) {
+      tick(Number(startAt[1]));
+      const playing = document.querySelector(".topic.playing");
+      if (playing) playing.scrollIntoView({ block: "center" });
+    }
 
     if (CONFIG.transcriptHost) {
       $("transcript-section").hidden = false;

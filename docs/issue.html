@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.youtube.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https: http://localhost:* http://127.0.0.1:*; img-src 'self' data: https://i.ytimg.com; style-src 'self'; style-src-attr 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Issue tracker</title>
 <meta name="description" content="Follow one issue across city council meetings: when it came up, for how long, and what was said.">
@@ -15,7 +16,7 @@
 <body data-page="issue">
 <a class="skip" href="#content">Skip to content</a>
 <main id="content">
-<nav class="top"><a href="index.html">Meetings</a><a href="trends.html">Trends</a><a href="issue.html" aria-current="page">Issues</a></nav>
+<nav class="top"><a href="index.html">Meetings</a><a href="trends.html">Trends</a><a href="issue.html" aria-current="page">Issues</a><a href="about.html">About</a></nav>
 <p class="meta"><label>Issue <select id="tag"></select></label>
   <span id="city-picker" hidden> · <label>City <select id="city"></select></label></span></p>
 <h1 id="title">Loading…</h1>
@@ -45,7 +46,7 @@
 <footer class="site">
   <a href="feed.xml">Subscribe (Atom feed)</a> ·
   <a href="https://github.com/swve0869/boulder_city_council_transcripts">Source on GitHub</a> ·
-  Summaries are AI-generated from video captions; verify against the video.
+  Summaries are AI-generated from video captions; verify against the video. <a href="about.html">How this works</a>
 </footer>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>

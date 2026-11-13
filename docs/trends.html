@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.youtube.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https: http://localhost:* http://127.0.0.1:*; img-src 'self' data: https://i.ytimg.com; style-src 'self'; style-src-attr 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Council Topic Trends</title>
 <meta name="description" content="Which issues a city council spends its time on: rankings, a month-by-month heatmap, and issues discussed together.">
@@ -15,7 +16,7 @@
 <body data-page="trends">
 <a class="skip" href="#content">Skip to content</a>
 <main id="content">
-<nav class="top"><a href="index.html">Meetings</a><a href="trends.html" aria-current="page">Trends</a><a href="issue.html">Issues</a></nav>
+<nav class="top"><a href="index.html">Meetings</a><a href="trends.html" aria-current="page">Trends</a><a href="issue.html">Issues</a><a href="about.html">About</a></nav>
 <h1>What the council talks about</h1>
 <p class="note">Built from the tags on each meeting summary. Discussion time is estimated from each topic's first and
 last timestamp, split across a topic's tags with the first (most specific) tag weighted highest.</p>
@@ -82,7 +83,7 @@ last timestamp, split across a topic's tags with the first (most specific) tag w
 <footer class="site">
   <a href="feed.xml">Subscribe (Atom feed)</a> ·
   <a href="https://github.com/swve0869/boulder_city_council_transcripts">Source on GitHub</a> ·
-  Summaries are AI-generated from video captions; verify against the video.
+  Summaries are AI-generated from video captions; verify against the video. <a href="about.html">How this works</a>
 </footer>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>

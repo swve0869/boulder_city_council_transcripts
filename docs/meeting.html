@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.youtube.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https: http://localhost:* http://127.0.0.1:*; img-src 'self' data: https://i.ytimg.com; style-src 'self'; style-src-attr 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meeting Summary</title>
 <meta name="description" content="Summary of a city council meeting by topic, with tags and links to each moment in the video.">
@@ -15,7 +16,7 @@
 <body data-page="meeting">
 <a class="skip" href="#content">Skip to content</a>
 <main id="content">
-<nav class="top"><a id="back" href="index.html">&larr; All meetings</a><a href="trends.html">Trends</a><a href="issue.html">Issues</a></nav>
+<nav class="top"><a id="back" href="index.html">&larr; All meetings</a><a href="trends.html">Trends</a><a href="issue.html">Issues</a><a href="about.html">About</a></nav>
 <h1 id="title">Loading…</h1>
 <p id="meta" class="meta"></p>
 <p id="overview" class="overview" hidden></p>
@@ -29,6 +30,7 @@ Check the video before quoting. Not an official city record.</p>
 <div id="timeline" class="timeline" hidden aria-label="Topics along the video. Select one to jump there."></div></div>
 <p id="status" class="status"></p>
 <div id="topics"></div>
+<nav id="neighbors" class="neighbors" aria-label="Other meetings" hidden></nav>
 <section id="transcript-section" hidden>
   <h2>Full transcript</h2>
   <button id="load-transcript" class="load" type="button">Load full transcript</button>
@@ -37,7 +39,7 @@ Check the video before quoting. Not an official city record.</p>
 <footer class="site">
   <a href="feed.xml">Subscribe (Atom feed)</a> ·
   <a href="https://github.com/swve0869/boulder_city_council_transcripts">Source on GitHub</a> ·
-  Summaries are AI-generated from video captions; verify against the video.
+  Summaries are AI-generated from video captions; verify against the video. <a href="about.html">How this works</a>
 </footer>
 </main>
 <script src="config.js"></script>
