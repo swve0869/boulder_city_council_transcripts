@@ -250,7 +250,7 @@ The model that wrote each summary is recorded in `docs/summaries/models.json` an
 
 Claude models use prompt caching, so retries cost much less. Sonnet and Opus also use server-side refusal fallback (`fallbacks = "default"`). Haiku has none, so list a second model after it if you want refusals covered.
 
-Cost: a long meeting transcript runs to roughly 100–200k input tokens. That's a few cents per meeting with Claude Haiku 5.5 (the current model) and about $0.20–0.40 with Sonnet 5.5.
+Cost: every API request's token counts are appended to `summarize_usage.log` (gitignored), and each saved summary logs a line like `haiku used 82,355 tokens in, 1,193 out, about $0.009`. The dollar figure comes from the model's optional `price` table in `summarizer.toml` and ignores cache discounts, so it's an upper bound. With Claude Haiku 5.5 a meeting costs roughly 1–10 cents (prompts over 100K tokens are billed at a higher rate); Sonnet 5.5 is about $0.20–0.40.
 
 ```
 python summarize.py --list-models                # configured models, fallback order, which keys are set

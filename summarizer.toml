@@ -113,6 +113,8 @@ api_key_env = ""
 # structured_output anthropic only: schema-constrained JSON (default true; see [summarize])
 # fallbacks    anthropic only: "default" lets the API retry a refused request on another model
 # params       extra arguments passed straight to the API call (temperature, effort, etc.)
+# price        optional $ per million tokens, for the cost estimate in logs: { input, output } plus
+#              long_threshold / long_input / long_output when large prompts are billed at a higher rate
 # Any [summarize] default (prompt, max_attempts, transcript_format, max_input_chars,
 # timeout_seconds) can be set per model too.
 
@@ -124,6 +126,7 @@ max_tokens = 64000
 prompt_cache = true
 fallbacks = "default"
 # params = { output_config = { effort = "medium" } }
+price = { input = 2.00, output = 10.00 }
 
 [models.haiku]
 provider = "anthropic"
@@ -133,6 +136,7 @@ max_tokens = 64000
 prompt_cache = true
 # No `fallbacks`: Haiku has no server-side refusal fallback. To fall back on a
 # refusal, list another model after it in [summarize] models, e.g. ["haiku", "claude"].
+price = { input = 0.10, output = 0.50, long_threshold = 100000, long_input = 0.50, long_output = 2.50 }
 
 [models.claude-opus]
 provider = "anthropic"
@@ -141,6 +145,7 @@ label = "Claude Opus 5.5"
 max_tokens = 64000
 prompt_cache = true
 fallbacks = "default"
+price = { input = 4.00, output = 20.00 }
 
 [models.gpt]
 provider = "openai"

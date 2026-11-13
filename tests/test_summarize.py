@@ -175,6 +175,12 @@ class ConfigAndSchema(unittest.TestCase):
             self.assertRegex(t["id"], r"^[a-z0-9-]+$")
             self.assertTrue(t["label"] and t["description"])
 
+    def test_cost_estimate_uses_long_prompt_rates(self):
+        haiku = s.model_settings(self.config, "haiku")
+        self.assertAlmostEqual(s.estimate_cost(haiku, 50_000, 2_000), (50_000 * 0.10 + 2_000 * 0.50) / 1e6)
+        self.assertAlmostEqual(s.estimate_cost(haiku, 150_000, 2_000), (150_000 * 0.50 + 2_000 * 2.50) / 1e6)
+        self.assertIsNone(s.estimate_cost({"model": "x"}, 10, 10))
+
     def test_render_transcript_formats(self):
         tr = {"title": "T", "url": "u", "segments": [{"start": 1.5, "text": "hello"}]}
         self.assertEqual(json.loads(s.render_transcript(tr, "json")), tr)

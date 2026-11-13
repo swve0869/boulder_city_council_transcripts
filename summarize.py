@@ -177,6 +177,56 @@ def render_transcript(transcript, fmt):
     return json.dumps(transcript, separators=(",", ":"), ensure_ascii=False)
 
 
+# ---- Token usage ----------------------------------------------------------------------
+
+USAGE_LOG = ROOT / "summarize_usage.log"   # gitignored (*.log); one line per API request
+_usage_lock = threading.Lock()
+_usage_last = threading.local()            # the calling thread's most recent request
+usage_totals = {"requests": 0, "input": 0, "output": 0, "cost": 0.0}
+
+
+def estimate_cost(model, input_tokens, output_tokens):
+    """Approximate dollars for one request from the model's optional `price` table ($ per million tokens).
+
+    `long_threshold` switches to the `long_*` rates for prompts above that size (Haiku 5.5's
+    pricing does this at 100K). Cache discounts are ignored, so this is an upper bound.
+    """
+    price = model.get("price")
+    if not price:
+        return None
+    long = price.get("long_threshold") and input_tokens > price["long_threshold"]
+    rate_in = price.get("long_input", price["input"]) if long else price["input"]
+    rate_out = price.get("long_output", price["output"]) if long else price["output"]
+    return (input_tokens * rate_in + output_tokens * rate_out) / 1_000_000
+
+
+def record_usage(model, input_tokens, output_tokens, cached=0):
+    """Note one request's token counts: keep them for the caller's log line, the run total and the usage log."""
+    cost = estimate_cost(model, input_tokens, output_tokens)
+    _usage_last.value = {"input": input_tokens, "output": output_tokens, "cached": cached, "cost": cost}
+    with _usage_lock:
+        usage_totals["requests"] += 1
+        usage_totals["input"] += input_tokens
+        usage_totals["output"] += output_tokens
+        usage_totals["cost"] += cost or 0
+        try:
+            from datetime import datetime
+            with USAGE_LOG.open("a", encoding="utf-8") as f:
+                f.write(f"{datetime.now():%Y-%m-%d %H:%M:%S}\t{model['model']}\tin={input_tokens}\tcached={cached}\t"
+                        f"out={output_tokens}\tcost={'' if cost is None else f'{cost:.4f}'}\n")
+        except OSError:
+            pass  # usage logging must never fail a summary
+
+
+def usage_note():
+    """'12,345 tokens in, 2,100 out, about $0.012' for this thread's last request ('' if unknown)."""
+    u = getattr(_usage_last, "value", None)
+    if not u:
+        return ""
+    note = f"{u['input']:,} tokens in, {u['output']:,} out"
+    return note + (f", about ${u['cost']:.3f}" if u["cost"] is not None else "")
+
+
 # ---- Providers ------------------------------------------------------------------------
 
 _clients = {}
@@ -232,6 +282,10 @@ def call_anthropic(model, system, prompt, transcript_text, schema=None):
 
     with get_client(model).beta.messages.stream(**kwargs) as stream:
         message = stream.get_final_message()
+    usage = message.usage
+    cached = (getattr(usage, "cache_read_input_tokens", 0) or 0)
+    record_usage(model, usage.input_tokens + cached + (getattr(usage, "cache_creation_input_tokens", 0) or 0),
+                 usage.output_tokens, cached)
     if message.stop_reason == "refusal":
         raise SummaryError("request was declined (stop_reason=refusal)")
     if message.stop_reason == "max_tokens":
@@ -246,6 +300,8 @@ def call_openai(model, system, prompt, transcript_text, schema=None):
     if model.get("json_mode"):
         kwargs["response_format"] = {"type": "json_object"}
     response = get_client(model).chat.completions.create(**kwargs)
+    if getattr(response, "usage", None):
+        record_usage(model, response.usage.prompt_tokens or 0, response.usage.completion_tokens or 0)
     choice = response.choices[0]
     if choice.finish_reason == "length":
         raise SummaryError("reply was cut off at the output token limit")
@@ -534,6 +590,8 @@ def summarize_transcript(transcript_path, city_slug, config=None, models=None, l
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         record_provenance(out_root, city_slug, transcript_path.stem, model["label"])
+        if usage_note():
+            log(f"{transcript_path.stem}: {model['name']} used {usage_note()}")
         return out
     raise SummaryError("all models failed: " + " | ".join(failures))
 
@@ -657,6 +715,10 @@ def main():
 
     with ThreadPoolExecutor(max_workers=max(1, args.jobs)) as pool:
         failures = sum(not ok for ok in pool.map(run, jobs))
+    if usage_totals["requests"]:
+        print(f"usage  {usage_totals['requests']} request(s), {usage_totals['input']:,} tokens in, {usage_totals['output']:,} out"
+              + (f", about ${usage_totals['cost']:.2f}" if usage_totals["cost"] else "") + f" (details: {USAGE_LOG.name})",
+              file=sys.stderr)
 
     if jobs:
         from build_site import build_manifest
