@@ -256,6 +256,8 @@ Cost: every API request's token counts are appended to `summarize_usage.log` (gi
 ```
 python summarize.py --list-models                # configured models, fallback order, which keys are set
 python summarize.py --city Boulder --limit 3      # backfill: newest transcripts that lack a summary
+python summarize.py --city Boulder --batch        # same, as one Message Batch: half price, results in minutes to an hour
+python summarize.py --batch-resume <batch id>     # collect a batch after an interrupted run
 python summarize.py --city Boulder --limit 1 --model deepseek   # use a specific model
 python summarize.py transcripts/boulder/2026-09-17_SS0nUFcZFq0.json --overwrite
 python summarize.py --check docs/summaries/boulder/*.json    # validate saved summaries
@@ -263,6 +265,8 @@ python build_site.py --publish                    # rebuild the index and push
 ```
 
 `summarize.py` rebuilds `docs/summaries/index.json` itself, but it doesn't push.
+
+`--batch` (Anthropic models only) submits every selected transcript in one request to the Message Batches API and waits. Replies go through the same normalization and validation as live ones; a transcript whose reply fails gets no summary, so a normal run picks it up afterwards. The batch id is saved under `.batches/` so `--batch-resume` can collect results later. Use it for bulk backfills; the watcher uses live requests so new meetings publish promptly.
 
 ## Tags and site features
 

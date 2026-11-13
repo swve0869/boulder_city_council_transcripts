@@ -35,6 +35,8 @@ check("about page renders", await c.ev(`document.querySelectorAll("article h2").
 
 await c.size(390, 2000);
 for (const p of ["trends.html", "issue.html?tag=police", "about.html"]) { await c.go(p); check(`${p}: no horizontal scroll at phone width`, !(await c.overflow())); }
+// Start from "system" even if an earlier, interrupted run left a saved theme behind.
+await c.ev(`try { localStorage.removeItem("theme") } catch (e) {}`);
 await c.size(1100, 1200, true); await c.go("trends.html");
 check("dark mode renders charts", await c.ev(`document.querySelectorAll("#rank .track").length`) > 0);
 

@@ -21,3 +21,6 @@ testing_txt/
 # Local API key folder
 API Keys/
 sample_API_call
+
+# Submitted Message Batches (resume state)
+.batches/

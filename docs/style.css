@@ -242,3 +242,11 @@ button.theme:hover { color: var(--fg); }
 .mixbar span { background: var(--g); min-width: 2px; flex-basis: 0; }
 .mixbar span:first-child { border-radius: 3px 0 0 3px; }
 .mixbar span:last-child { border-radius: 0 3px 3px 0; }
+.topic .stamps { align-items: center; }
+
+/* Site-wide notice: summaries are AI-generated; transcripts are available */
+.notice { font: 14px/1.55 system-ui, sans-serif; color: var(--fg); background: var(--surface-2); border-left: 3px solid var(--link);
+  border-radius: 0 6px 6px 0; padding: .6rem .8rem; margin: .4rem 0 1.25rem; }
+/* The video is sticky at the top, so the jump target must land below it. */
+#transcript-section { scroll-margin-top: calc(min(100vw, 46rem) * 0.5625 + 4rem); }
+@media print { .notice { border: 1px solid #999; background: none; } }

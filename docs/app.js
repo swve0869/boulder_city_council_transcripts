@@ -61,12 +61,15 @@
       groups: manifest.tag_groups || [],
       label: (id) => (byId.get(id) || { label: id }).label,
       group: (id) => (byId.get(id) || {}).group || "",
+      description: (id) => (byId.get(id) || {}).description || "",
     };
   }
 
   // A tag chip. As a button it toggles (aria-pressed); with href it's a link.
   function tagChip(tags, id, { pressed, count, href, onClick, title } = {}) {
-    const attrs = { class: `tag g-${tags.group(id)}`, title };
+    // Tooltip: what the caller says about this chip, plus what the tag covers.
+    const about = tags.description(id);
+    const attrs = { class: `tag g-${tags.group(id)}`, title: [title, about].filter(Boolean).join(" — ") || undefined };
     let chip;
     if (href) chip = el("a", { ...attrs, href }, tags.label(id));
     else chip = el("button", { ...attrs, type: "button", "aria-pressed": pressed ? "true" : "false" }, tags.label(id));
@@ -796,6 +799,10 @@
       nav.hidden = false;
     }
 
+    sections.forEach((s, i) => { // "about 18 min" beside each topic's timestamps
+      const span = spans[i], row = s.section.querySelector(".stamps");
+      if (span && span.start !== null && row) row.append(el("span", { class: "tag-note" }, `about ${fmtDuration(span.end - span.start)}`));
+    });
     if (CONFIG.transcriptHost) {
       sections.forEach((s, i) => {
         if (spans[i] && spans[i].start !== null) s.section.append(excerptButton(city, id, spans[i]));

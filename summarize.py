@@ -14,6 +14,7 @@ Usage:
     python summarize.py --city Boulder --model deepseek --limit 1
     python summarize.py transcripts/boulder/2026-09-17_SS0nUFcZFq0.json --overwrite
     python summarize.py --city Boulder --missing-tags --jobs 4  # add tags to older summaries
+    python summarize.py --city Boulder --batch                  # bulk backfill at half price (asynchronous)
     python summarize.py --check docs/summaries/boulder/*.json     # validate only, no API calls
     python summarize.py --list-models
 """
@@ -258,7 +259,8 @@ def get_client(model):
     return _clients[cache_key]
 
 
-def call_anthropic(model, system, prompt, transcript_text, schema=None):
+def anthropic_params(model, system, prompt, transcript_text, schema=None, batch=False):
+    """Messages API parameters for one summary request (shared by the live call and batch mode)."""
     transcript_block = {"type": "text", "text": transcript_text}
     if model.get("prompt_cache", True):
         # Cached so retries after an invalid reply don't pay full price for the transcript again.
@@ -275,11 +277,15 @@ def call_anthropic(model, system, prompt, transcript_text, schema=None):
         # Merge with any output_config from params (e.g. effort).
         kwargs["output_config"] = {**kwargs.get("output_config", {}),
                                    "format": {"type": "json_schema", "schema": schema}}
-    if model.get("fallbacks"):
-        # On a safety decline, the API retries the request on a fallback model.
+    if model.get("fallbacks") and not batch:
+        # On a safety decline, the API retries the request on a fallback model (not allowed in batches).
         kwargs["betas"] = ["server-side-fallback-2026-07-01"]
         kwargs["fallbacks"] = model["fallbacks"]
+    return kwargs
 
+
+def call_anthropic(model, system, prompt, transcript_text, schema=None):
+    kwargs = anthropic_params(model, system, prompt, transcript_text, schema)
     with get_client(model).beta.messages.stream(**kwargs) as stream:
         message = stream.get_final_message()
     usage = message.usage
@@ -560,6 +566,101 @@ def summarize_with_model(model, config, transcript, starts, log):
     raise SummaryError(f"no valid summary after {model['max_attempts']} attempts: {'; '.join(problems[:3])}")
 
 
+# ---- Batch mode (Message Batches API: asynchronous, half price) --------------------------
+
+BATCH_DIR = ROOT / ".batches"   # gitignored: one JSON file per submitted batch, so a run can be resumed
+
+
+def batch_submit(jobs, config, model_name, log=print):
+    """Submit one request per (transcript path, city slug) as a single batch. Returns the batch id.
+
+    Only for anthropic models. Each request is the same as a live one (minus streaming and
+    fallbacks); replies are checked later by batch_collect.
+    """
+    model = model_settings(config, model_name)
+    if model["provider_config"]["type"] != "anthropic":
+        raise SummaryError(f"--batch needs an anthropic model; {model_name} is {model['provider_config']['type']}")
+    system, prompt = build_prompt(config, model)
+    schema = build_schema(config) if model["structured_output"] else None
+    requests, mapping = [], {}
+    for n, (path, slug) in enumerate(jobs):
+        transcript = json.loads(Path(path).read_text(encoding="utf-8"))
+        if not transcript.get("segments"):
+            log(f"skip   {Path(path).name} (no segments)")
+            continue
+        custom_id = f"job{n}"   # ids must be [A-Za-z0-9_-]; file names go in the mapping
+        params = anthropic_params(model, system, prompt, render_transcript(transcript, model["transcript_format"]),
+                                  schema, batch=True)
+        requests.append({"custom_id": custom_id, "params": params})
+        mapping[custom_id] = {"transcript": str(path), "city": slug}
+    if not requests:
+        raise SummaryError("nothing to submit")
+    batch = get_client(model).messages.batches.create(requests=requests)
+    BATCH_DIR.mkdir(exist_ok=True)
+    (BATCH_DIR / f"{batch.id}.json").write_text(json.dumps({"model": model_name, "jobs": mapping}, indent=1), encoding="utf-8")
+    log(f"batch  {batch.id}: {len(requests)} request(s) submitted with {model_name}")
+    return batch.id
+
+
+def batch_collect(batch_id, config, log=print, poll_seconds=30, wait=True):
+    """Wait for a batch, then validate and save each reply like a live summary.
+
+    Returns (saved, failed) counts, or None if wait=False and the batch is still running.
+    Failed transcripts have no summary written, so a normal run picks them up afterwards.
+    """
+    import time
+    state = json.loads((BATCH_DIR / f"{batch_id}.json").read_text(encoding="utf-8"))
+    model = model_settings(config, state["model"])
+    client = get_client(model)
+    while True:
+        batch = client.messages.batches.retrieve(batch_id)
+        if batch.processing_status == "ended":
+            break
+        if not wait:
+            return None
+        c = batch.request_counts
+        log(f"batch  {batch_id}: {c.processing} processing, {c.succeeded} done, {c.errored} errored")
+        time.sleep(poll_seconds)
+
+    rules = config.get("summarize", {}).get("validation", {})
+    known, keywords, out_root = tag_ids(config), tag_keywords(config), output_dir(config)
+    saved = failed = 0
+    for result in client.messages.batches.results(batch_id):   # arrives in any order: match by custom_id
+        job = state["jobs"].get(result.custom_id)
+        if not job:
+            continue
+        path = Path(job["transcript"])
+        try:
+            if result.result.type != "succeeded":
+                raise SummaryError(f"request {result.result.type}")
+            message = result.result.message
+            if message.stop_reason in ("refusal", "max_tokens"):
+                raise SummaryError(f"stop_reason={message.stop_reason}")
+            usage = message.usage
+            cached = getattr(usage, "cache_read_input_tokens", 0) or 0
+            tokens_in = usage.input_tokens + cached + (getattr(usage, "cache_creation_input_tokens", 0) or 0)
+            record_usage({**model, "price": {k: (v / 2 if k != "long_threshold" else v) for k, v in model["price"].items()}
+                          if model.get("price") else None}, tokens_in, usage.output_tokens, cached)
+            starts = {seg["start"] for seg in json.loads(path.read_text(encoding="utf-8"))["segments"]}
+            summary, notes = normalize_summary(
+                parse_reply("".join(b.text for b in message.content if b.type == "text")), known, keywords)
+            errors, warnings = validate_summary(summary, starts, rules.get("max_summary_sentences", 5),
+                                                rules.get("exact_timestamps_required", False), known)
+            if errors:
+                raise SummaryError("; ".join(errors[:3]))
+            out = summary_path(path, job["city"], out_root)
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+            record_provenance(out_root, job["city"], path.stem, model["label"])
+            log(f"saved  {out} ({usage_note()}, batch price)")
+            saved += 1
+        except Exception as e:
+            log(f"ERROR  {path.name}: {e}")
+            failed += 1
+    (BATCH_DIR / f"{batch_id}.json").rename(BATCH_DIR / f"{batch_id}.done.json")
+    return saved, failed
+
+
 def summarize_transcript(transcript_path, city_slug, config=None, models=None, log=print):
     """Summarize one transcript with the configured models (first valid reply wins).
 
@@ -611,6 +712,9 @@ def main():
     p.add_argument("--config", default=str(CONFIG_FILE), help="config file (default: summarizer.toml)")
     p.add_argument("--list-models", action="store_true", help="show configured models and exit")
     p.add_argument("--jobs", type=int, default=1, help="summarize N transcripts in parallel (default: 1)")
+    p.add_argument("--batch", action="store_true",
+                   help="submit the transcripts as one Message Batch (half price, asynchronous; anthropic models only) and wait")
+    p.add_argument("--batch-resume", metavar="BATCH_ID", help="collect the results of a batch submitted earlier")
     p.add_argument("--add-overviews", action="store_true",
                    help="add an Overview to saved summaries that lack one (small API request each) and exit")
     p.add_argument("--apply-keywords", action="store_true",
@@ -633,6 +737,13 @@ def main():
             mark = f"[{active.index(name) + 1}]" if name in active else "   "
             print(f"{mark} {name:12} {m['provider']:10} {m['model']:22} prompt={m['prompt']:9} {key}")
         return 0
+
+    if args.batch_resume:
+        saved, failed = batch_collect(args.batch_resume, config, log=lambda m: print(m, file=sys.stderr))
+        print(f"batch  {saved} saved, {failed} failed", file=sys.stderr)
+        from build_site import build_manifest
+        build_manifest(output_dir(config))
+        return 1 if failed else 0
 
     if args.add_overviews:
         model = model_settings(config, (args.model or config["summarize"]["models"])[0])
@@ -702,6 +813,17 @@ def main():
     jobs = jobs[:args.limit] if args.limit else jobs
     print(f"{len(jobs)} transcript(s) to summarize with {args.model or config['summarize'].get('models')}",
           file=sys.stderr)
+
+    if args.batch and jobs:
+        say = lambda m: print(m, file=sys.stderr)
+        batch_id = batch_submit(jobs, config, (args.model or config["summarize"]["models"])[0], say)
+        say(f"batch  waiting (Ctrl+C is safe; resume with: python summarize.py --batch-resume {batch_id})")
+        saved, failed = batch_collect(batch_id, config, say)
+        say(f"batch  {saved} saved, {failed} failed"
+            + (f"; usage about ${usage_totals['cost']:.2f}" if usage_totals["cost"] else ""))
+        from build_site import build_manifest
+        build_manifest(out_root)
+        return 1 if failed else 0
 
     def run(job):
         f, slug = job
