@@ -1,0 +1,106 @@
+{
+  "Title": "November 12, 2026 Boulder City Council Special Meeting",
+  "Overview": "The council approved a consent agenda including an emergency ordinance raising the recreational marijuana sales tax from 3.5% to 5.5% effective January 1, 2027, then unanimously annexed a 5.43-acre Cherryville Road property with RR2 zoning and a Neighborhood One land use change. It unanimously adopted the rezoning of 3550 and 3850 Frontier Avenue to MU4 with a 3.5 FAR and 55-foot height allowance for a planned arts-centered mixed-use project, and approved by a 5-3 vote a non-conforming use expansion for a duplex at 969 10th Street. Council also directed staff to research legal options for University Hill compliance and to prepare options for an independent performance audit function.",
+  "Tags": [
+    "taxes-fees",
+    "intergovernmental",
+    "development",
+    "zoning",
+    "arts-culture",
+    "university",
+    "budget",
+    "council-governance"
+  ],
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Emergency Ordinance Raising Recreational Marijuana Sales Tax",
+        "Summary": "Council added an item to the agenda to adopt emergency ordinance 8791, which raises the additional recreational marijuana sales tax from 3.5% to 5.5%. The change was included in the 2027 budget after three budget sessions. Staff said it was brought as an emergency to meet the 45-day notice requirement to the Colorado Department of Revenue for a January 1 effective date. The consent agenda, including this item, was approved unanimously.",
+        "related_timestamps": [
+          309.44,
+          663.519
+        ],
+        "Tags": [
+          "taxes-fees",
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Cherryville Road Annexation and Initial Zoning",
+        "Summary": "Council held a public hearing on annexing approximately 5.43 acres at 1275 Cherryville Road and 5995 Maxwell Lane. Staff explained that the Boulder Valley Comprehensive Plan update required a concurrent land use change from rural lands to Neighborhood One before annexation. The planning board had unanimously recommended the change, and the site would receive RR2 zoning. Council unanimously approved the land use map change, resolution 1384, and ordinance 8764 after no members of the public signed up to speak.",
+        "related_timestamps": [
+          701.0,
+          1627.44
+        ],
+        "Tags": [
+          "development",
+          "zoning",
+          "intergovernmental"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Frontier Avenue Rezoning to MU4 (Pearl Arts District)",
+        "Summary": "Council considered second reading of ordinance 8782 to rezone about 14.84 acres at 3550 and 3850 Frontier Avenue from industrial zoning to MU4, with amendments allowing a 3.5 FAR and 55-foot height for the future site review. Staff said the change was needed to match the regional hub land use designation and the TVAP Phase 2 vision. The applicant described a project with a performing arts venue, rehearsal space, housing, and a hotel, and asked council not to adopt two planning board amendments. Council unanimously adopted the ordinance as drafted by staff.",
+        "related_timestamps": [
+          1627.44,
+          4902.32
+        ],
+        "Tags": [
+          "zoning",
+          "development",
+          "arts-culture",
+          "affordable-housing"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Non-Conforming Use Review at 969 10th Street",
+        "Summary": "Council held a quasi-judicial public hearing on a non-conforming use review to convert attic space into habitable area and add one bedroom to each unit of an existing duplex in the RL1 zone, with no exterior expansion. Staff found the criteria met with conditions, including a declaration of use and bike storage. Several council members raised concerns about occupancy, wildfire evacuation, and neighborhood impacts, though staff noted occupancy is not a regulated criterion. Council approved the application by a 5-3 vote.",
+        "related_timestamps": [
+          4921.52,
+          8680.72
+        ],
+        "Tags": [
+          "housing",
+          "zoning",
+          "university",
+          "wildfire"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "University Hill Legal Research Request",
+        "Summary": "Council member Tara Shuart requested direction for legal research and policy alternatives on University Hill compliance and the effects of the family-friendly vibrant neighborhoods ordinance. The city attorney said the request was too broad and that staff needed specific questions. Council agreed to withdraw the item for now and return with a narrower request at a future meeting.",
+        "related_timestamps": [
+          8724.0,
+          9996.8
+        ],
+        "Tags": [
+          "housing",
+          "university",
+          "legal"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Independent Performance Audit Function",
+        "Summary": "Council member Rob Spear requested direction for staff to research options for an independent performance audit function, including elected, council-appointed, contracted, or shared models, with costs and charter implications. Staff said they already had internal capacity for performance audits and agreed to provide options. Council members discussed whether the item should be a council priority and what problem an auditor would solve. Council voted 6 to 2 to direct staff to begin the research.",
+        "related_timestamps": [
+          10007.439,
+          11042.72
+        ],
+        "Tags": [
+          "budget",
+          "council-governance"
+        ]
+      }
+    }
+  ]
+}
