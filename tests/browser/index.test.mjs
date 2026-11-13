@@ -36,6 +36,17 @@ await c.go("index.html?tags=budget&q=wildfire", 2500);
 const deep = await c.ev(`document.getElementById("active").textContent`);
 check("filters restore from the URL", /Budget/.test(deep) && /wildfire/.test(deep), deep);
 
+await c.go("index.html");
+const total = await c.ev(`document.querySelectorAll("#list ul.meetings > li").length`);
+await c.ev(`document.getElementById("kind").value = "study"; document.getElementById("kind").dispatchEvent(new Event("change"))`); await sleep(200);
+const study = await c.ev(`({n: document.querySelectorAll("#list ul.meetings > li").length, url: location.search, active: document.getElementById("active").textContent})`);
+check("type filter narrows the list", study.n > 0 && study.n < total && study.url.includes("type=study") && /study sessions/.test(study.active), study);
+const year = await c.ev(`document.getElementById("year").options[1]?.value`);
+await c.ev(`document.getElementById("year").value = "${year}"; document.getElementById("year").dispatchEvent(new Event("change"))`); await sleep(200);
+check("year filter applies with the type filter", await c.ev(`[...document.querySelectorAll("#list h2")].every((h) => h.textContent === "${year}") && location.search.includes("year=")`));
+await c.ev(`document.querySelector("#active button").click()`); await sleep(200);
+check("Clear filters resets everything", await c.ev(`document.querySelectorAll("#list ul.meetings > li").length`) === total);
+
 await c.size(390, 1200); await c.go("index.html");
 check("no horizontal scroll at phone width", !(await c.overflow()));
 finish(c);

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://swve0869.github.io/boulder_city_council_transcripts/sitemap.xml

@@ -43,6 +43,11 @@ class Spans(unittest.TestCase):
         self.assertEqual(list(entry["tag_seconds"])[0], "police")   # most discussed first
         self.assertAlmostEqual(sum(entry["tag_seconds"].values()), 300 + 60, delta=1)
 
+    def test_meeting_kind(self):
+        self.assertEqual(b.meeting_kind("October 22, 2026 City Council Study Session"), "study")
+        self.assertEqual(b.meeting_kind("July 23, 2026 - Special Meeting (Airport Funding)"), "special")
+        self.assertEqual(b.meeting_kind("October 1, 2026 City Council Meeting"), "regular")
+
     def test_both_topic_shapes_and_bad_timestamps(self):
         one_object = {"Title": "m", "Topics": [{"Topic2": topic("B", [50], []), "Topic1": topic("A", ["x", 5], [])}]}
         self.assertEqual([t[0] for t in b.topics_of(one_object)], ["A", "B"])
@@ -82,6 +87,13 @@ class Manifest(unittest.TestCase):
         self.assertEqual(len(entries), 2, "undated meetings are left out of the feed")
         self.assertIn("meeting.html?city=boulder&id=2026-10-01_xyz", entries[0].find("a:link", ns).get("href"))
         self.assertIn("Budget &lt;vote&gt;", entries[1].find("a:content", ns).text)
+
+    def test_sitemap_lists_pages_and_meetings(self):
+        root = ET.parse(self.dir / "sitemap.xml").getroot()
+        locs = [u.find("{http://www.sitemaps.org/schemas/sitemap/0.9}loc").text for u in root]
+        self.assertEqual(len(locs), 4 + 3)
+        self.assertTrue(any("id=undated_q_1" in u for u in locs))
+        self.assertIn("Sitemap:", (self.dir / "robots.txt").read_text())
 
 
 class AssetVersions(unittest.TestCase):

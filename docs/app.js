@@ -119,6 +119,8 @@
       match: p.get("match") === "all" ? "all" : "any",
       sort: p.get("sort") || "newest",
       q: p.get("q") || "",
+      year: /^\d{4}$/.test(p.get("year") || "") ? p.get("year") : "",
+      kind: ["regular", "study", "special"].includes(p.get("type")) ? p.get("type") : "",
     };
   }
 
@@ -129,6 +131,8 @@
     if (state.match === "all") p.set("match", "all");
     if (state.sort !== "newest") p.set("sort", state.sort);
     if (state.q) p.set("q", state.q);
+    if (state.year) p.set("year", state.year);
+    if (state.kind) p.set("type", state.kind);
     const qs = p.toString();
     history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
   }
@@ -166,6 +170,12 @@
       });
     }
     if (state.tags.length) $("tag-panel").open = true; // arriving from a tag link: show what's selected
+    const yearsHere = () => [...new Set(all.filter((m) => m.city === state.city && m.date).map((m) => m.date.slice(0, 4)))].sort().reverse();
+    for (const y of yearsHere()) $("year").append(el("option", { value: y }, y));
+    $("year").value = state.year;
+    $("kind").value = state.kind;
+    $("year").addEventListener("change", () => { state.year = $("year").value; update(); });
+    $("kind").addEventListener("change", () => { state.kind = $("kind").value; update(); });
     $("q").value = state.q;
     $("sort").value = state.sort;
     $("match").value = state.match;
@@ -232,6 +242,8 @@
       const q = state.q.toLowerCase();
       return all.filter((m) => {
         if (m.city !== state.city) return false;
+        if (state.year && !(m.date || "").startsWith(state.year)) return false;
+        if (state.kind && m.kind !== state.kind) return false;
         if (state.tags.length) {
           const have = new Set(meetingTags(m));
           const hit = state.match === "all" ? state.tags.every((t) => have.has(t)) : state.tags.some((t) => have.has(t));
@@ -284,10 +296,16 @@
       const bits = [];
       if (state.tags.length) bits.push(`tagged ${state.tags.map(tags.label).join(state.match === "all" ? " and " : " or ")}`);
       if (state.q) bits.push(`matching “${state.q}”`);
+      if (state.year) bits.push(`in ${state.year}`);
+      if (state.kind) bits.push({ regular: "regular meetings only", study: "study sessions only", special: "special meetings only" }[state.kind]);
       p.hidden = !bits.length;
       if (!bits.length) return;
       const clear = el("button", { type: "button", class: "link" }, "Clear filters");
-      clear.addEventListener("click", () => { state.tags = []; state.q = ""; $("q").value = ""; update(); });
+      clear.addEventListener("click", () => {
+        state.tags = []; state.q = ""; state.year = ""; state.kind = "";
+        $("q").value = ""; $("year").value = ""; $("kind").value = "";
+        update();
+      });
       p.replaceChildren(`Showing ${shown} of ${total} meetings ${bits.join(", ")}.`, clear);
     }
 

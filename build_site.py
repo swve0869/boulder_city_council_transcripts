@@ -31,6 +31,16 @@ TAGS_FILE = ROOT / "tags.json"
 MIN_TOPIC_SECONDS = 60  # a topic with a single timestamp still counts as some discussion
 
 
+def meeting_kind(title):
+    """'study', 'special' or 'regular', from the meeting title (used as a filter on the site)."""
+    t = title.lower()
+    if "study session" in t:
+        return "study"
+    if "special" in t:
+        return "special"
+    return "regular"
+
+
 def topics_of(summary):
     """[(title, tags, timestamps)] in order; accepts one topic per list item or several."""
     out = []
@@ -123,6 +133,7 @@ def build_manifest(summaries_dir=SUMMARIES_DIR):
             "date": None if date == "undated" else date,
             "video_id": video_id,
             "title": title,
+            "kind": meeting_kind(title),
             "overview": summary.get("Overview") or None,
             "model": provenance.get(f"{f.parent.name}/{f.stem}"),
             **meeting_entry(summary),
@@ -177,6 +188,15 @@ def build_feed(manifest, search, summaries_dir):
     out.append("</feed>")
     path = summaries_dir.parent / "feed.xml"
     path.write_text("\n".join(out) + "\n", encoding="utf-8")
+
+    # sitemap.xml: the fixed pages plus every meeting page, so search engines can find them.
+    urls = [(base, updated[:10])] + [(f"{base}{page}", updated[:10]) for page in ("trends.html", "issue.html", "about.html")]
+    urls += [(f"{base}meeting.html?city={m['city']}&id={m['id']}", m["date"]) for m in manifest["meetings"]]
+    sitemap = ['<?xml version="1.0" encoding="utf-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    sitemap += [f"<url><loc>{escape(u)}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>" for u, d in urls]
+    sitemap.append("</urlset>")
+    (summaries_dir.parent / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
+    (summaries_dir.parent / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}sitemap.xml\n", encoding="utf-8")
     return path
 
 
@@ -213,7 +233,8 @@ def git(*args):
 
 def publish(message="Update meeting summaries"):
     """Commit docs/summaries and push. Returns True if something was pushed."""
-    git("add", "--", str(SUMMARIES_DIR.relative_to(ROOT)), str((SUMMARIES_DIR.parent / "feed.xml").relative_to(ROOT)))
+    docs = SUMMARIES_DIR.parent.relative_to(ROOT)
+    git("add", "--", str(SUMMARIES_DIR.relative_to(ROOT)), *(str(docs / name) for name in ("feed.xml", "sitemap.xml", "robots.txt")))
     if git("diff", "--cached", "--quiet").returncode == 0:
         return False
     for step in (("commit", "-m", message), ("pull", "--rebase", "--autostash"), ("push",)):
