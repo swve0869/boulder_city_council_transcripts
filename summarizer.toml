@@ -13,7 +13,7 @@
 # Models to try, in order. The first one to return a valid summary wins; if a model
 # errors, refuses, or keeps returning invalid JSON, the next one is tried.
 # Override on the command line: python summarize.py --model deepseek ...
-models = ["claude"]
+models = ["haiku"]
 
 # JSON shape the prompt asks for and the validator checks.
 format_file = "summary_prompt_JSON_format.json"
@@ -109,6 +109,15 @@ max_tokens = 64000
 prompt_cache = true
 fallbacks = "default"
 # params = { output_config = { effort = "medium" } }
+
+[models.haiku]
+provider = "anthropic"
+model = "claude-haiku-5-5"
+label = "Claude Haiku 5.5"
+max_tokens = 64000
+prompt_cache = true
+# No `fallbacks`: Haiku has no server-side refusal fallback. To fall back on a
+# refusal, list another model after it in [summarize] models, e.g. ["haiku", "claude"].
 
 [models.claude-opus]
 provider = "anthropic"
