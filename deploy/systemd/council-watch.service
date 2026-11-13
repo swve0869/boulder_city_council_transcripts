@@ -1,0 +1,15 @@
+# One watch cycle: new videos -> transcripts -> summaries -> git push.
+# Started by council-watch.timer; run by hand with `sudo systemctl start council-watch`.
+[Unit]
+Description=City council video watcher (one cycle)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=@USER@
+WorkingDirectory=@REPO@
+ExecStart=@REPO@/scripts/cron_watch.sh
+# Summarizing several long meetings can take a while.
+TimeoutStartSec=2h
+Nice=10

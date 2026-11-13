@@ -1,0 +1,21 @@
+# Serves full transcripts to the GitHub Pages site (see serve_transcripts.py).
+# Listens on localhost only; expose it with `tailscale funnel --bg @PORT@`.
+[Unit]
+Description=City council transcript server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=@USER@
+WorkingDirectory=@REPO@
+ExecStart=@REPO@/.venv/bin/python serve_transcripts.py --bind 127.0.0.1 --port @PORT@ --origin @ORIGIN@
+Restart=on-failure
+RestartSec=10
+# Read-only access is all it needs.
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

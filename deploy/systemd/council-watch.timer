@@ -1,0 +1,12 @@
+# Runs council-watch.service every 20 minutes. Persistent=true catches up on a
+# missed run after the Pi was off.
+[Unit]
+Description=Check city council channels every 20 minutes
+
+[Timer]
+OnCalendar=*:0/20
+Persistent=true
+RandomizedDelaySec=60
+
+[Install]
+WantedBy=timers.target

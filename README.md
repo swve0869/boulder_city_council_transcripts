@@ -37,7 +37,40 @@ serve_transcripts.py (optional) ←── browser fetch (HTTPS, CORS) ── "Lo
 | `scripts/cron_watch.sh` | Cron wrapper: loads `.env`, prevents overlapping runs, runs one watch cycle |
 | `docs/` | The GitHub Pages site (`config.js`, `app.js`, `index.html`, `meeting.html`, `summaries/`) |
 
-## Host machine setup
+## Raspberry Pi setup (recommended host)
+
+Use Raspberry Pi OS Bookworm **64-bit** or newer (Python 3.11+). On the Pi:
+
+```
+git clone git@github.com:<you>/boulder_city_council_transcripts.git && cd boulder_city_council_transcripts
+scripts/setup_pi.sh            # --dry-run to preview, --no-timer to skip the watcher timer
+```
+
+The script installs packages, creates `.venv`, and creates `.env` if it's missing. It then installs and starts two systemd units:
+
+- **`council-transcripts.service`** runs `serve_transcripts.py` on `127.0.0.1:8765`. The allowed site origin is taken from the git remote.
+- **`council-watch.timer`** runs `scripts/cron_watch.sh` every 20 minutes. It catches up after the Pi was off, so you don't need a crontab entry.
+
+It also adds log rotation for `watch_council_videos.log`, and warns if the Pi can't push to GitHub or has no `transcripts/` folder yet.
+
+Then:
+
+1. **Secrets and data:** put your keys in `.env`. Copy over `transcripts/` (and `seen_videos.json`, if you have one) from the old machine, e.g. `rsync -a old:boulder_city_council_transcripts/transcripts ./`.
+2. **Push access:** create a deploy key on the Pi (`ssh-keygen -t ed25519 -f ~/.ssh/council_deploy`). Add the `.pub` under the repo's Settings → Deploy keys with write access, and point `~/.ssh/config` at it for `github.com`.
+3. **HTTPS without the router:** install Tailscale (`curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up`), then run `sudo tailscale funnel --bg 8765`. Set `transcriptHost` in `docs/config.js` to the `https://….ts.net` address it prints, then commit and push.
+4. **One watcher only:** stop any cron job or watcher on other machines, so two hosts don't push the same summaries.
+
+Day to day:
+
+```
+systemctl status council-transcripts council-watch.timer
+journalctl -u council-watch -n 50          # last watcher run
+sudo systemctl start council-watch         # run a cycle now
+```
+
+YouTube rarely challenges home connections. If it does, export `cookies.txt` from a signed-in browser elsewhere, copy it to the Pi, and add `--cookies /path/cookies.txt` to `ExecStart` in `/etc/systemd/system/council-watch.service`. Then run `sudo systemctl daemon-reload`.
+
+## Host machine setup (manual / other Linux)
 
 Requires Python 3.11+ and git with push access to this repo.
 
