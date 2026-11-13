@@ -481,14 +481,69 @@
 
   const transcript = { starts: [], rows: [], current: null };
 
+  // The transcript JSON from the host, fetched once per page and shared by the full
+  // panel and the per-topic excerpts.
+  let transcriptRequest = null;
+  function transcriptData(city, id) {
+    if (!transcriptRequest) {
+      const host = CONFIG.transcriptHost.replace(/\/+$/, "");
+      transcriptRequest = getJSON(`${host}/${city}/${id}.json`);
+      transcriptRequest.catch(() => { transcriptRequest = null; }); // allow a retry after a failure
+    }
+    return transcriptRequest;
+  }
+
+  // What was said during one topic: caption lines between its start and end, joined into
+  // paragraphs. A new paragraph starts at each ">>" (speaker change) or about every 45 s.
+  function excerpt(segments, start, end) {
+    const box = el("div", { class: "excerpt" });
+    let para = null, paraStart = 0;
+    for (const seg of segments) {
+      const t = Number(seg.start), text = String(seg.text || "").trim();
+      if (!Number.isFinite(t) || t < start - 0.5 || t > end || !text) continue;
+      const speaker = text.startsWith(">>");
+      if (!para || speaker || t - paraStart > 45) {
+        para = el("p", {}, stampLink(t), " ");
+        paraStart = t;
+        box.append(para);
+      }
+      para.append(`${text.replace(/^>>\s*/, "")} `);
+    }
+    if (!box.children.length) box.append(el("p", { class: "tag-note" }, "No captions for this part of the video."));
+    return box;
+  }
+
+  function excerptButton(city, id, span) {
+    const button = el("button", { type: "button", class: "link excerpt-toggle" }, "Read the transcript");
+    let box = null;
+    button.addEventListener("click", async () => {
+      if (box) { // toggle
+        box.hidden = !box.hidden;
+        button.textContent = box.hidden ? "Read the transcript" : "Hide the transcript";
+        return;
+      }
+      button.disabled = true;
+      button.textContent = "Loading…";
+      try {
+        const data = await transcriptData(city, id);
+        box = excerpt(data.segments || [], span.start, span.end);
+        button.after(box);
+        button.textContent = "Hide the transcript";
+      } catch (e) {
+        button.textContent = "Transcript unavailable right now (try again)";
+      }
+      button.disabled = false;
+    });
+    return button;
+  }
+
   async function loadTranscript(city, id) {
     const box = $("transcript"), button = $("load-transcript");
     button.disabled = true;
     button.textContent = "Loading…";
-    const host = CONFIG.transcriptHost.replace(/\/+$/, "");
     let data;
     try {
-      data = await getJSON(`${host}/${city}/${id}.json`);
+      data = await transcriptData(city, id);
     } catch (e) {
       button.disabled = false;
       button.textContent = "Load full transcript";
@@ -617,6 +672,11 @@
     const spans = entry && entry.topics && entry.topics.length === topics.length ? entry.topics
       : topics.map((t) => ({ title: t.title, tags: t.tags, start: t.stamps.length ? t.stamps[0] : null,
         end: t.stamps.length ? Math.max(t.stamps[t.stamps.length - 1], t.stamps[0] + 60) : null }));
+    if (CONFIG.transcriptHost) {
+      sections.forEach((s, i) => {
+        if (spans[i] && spans[i].start !== null) s.section.append(excerptButton(city, id, spans[i]));
+      });
+    }
     const tick = drawTimeline(spans.map((s, i) => ({ ...s, title: topics[i].title, tags: topics[i].tags })), tags, sections);
     setInterval(() => tick(currentTime()), 1000);
     const startAt = /#t=(\d+)/.exec(location.hash);

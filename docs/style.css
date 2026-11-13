@@ -156,3 +156,7 @@ mark { background: var(--hl); color: inherit; padding: 0 .1em; border-radius: 2p
 .discussion p { margin: 0 0 .5rem; }
 .discussion .stamps { align-items: center; }
 footer.site { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font: 13px/1.6 system-ui, sans-serif; }
+.excerpt-toggle { font: 13.5px system-ui, sans-serif; margin-top: .5rem; display: inline-block; }
+.excerpt { max-height: 24rem; overflow-y: auto; border: 1px solid var(--rule); border-radius: 6px; padding: .6rem .75rem; margin-top: .5rem; font-size: 15px; }
+.excerpt p { margin: 0 0 .7rem; }
+.excerpt .stamp { margin-right: .2rem; }
