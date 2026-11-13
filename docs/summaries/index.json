@@ -8,6 +8,14 @@
  "meetings": [
   {
    "city": "boulder",
+   "id": "2026-10-22_MSfuBum_rZ0",
+   "date": "2026-10-22",
+   "video_id": "MSfuBum_rZ0",
+   "title": "October 22, 2026 City Council Study Session",
+   "model": "Claude Haiku 5.5"
+  },
+  {
+   "city": "boulder",
    "id": "undated_zA5JVdBVOQk",
    "date": null,
    "video_id": "zA5JVdBVOQk",
