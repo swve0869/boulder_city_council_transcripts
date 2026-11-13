@@ -169,7 +169,41 @@
     $("q").value = state.q;
     $("sort").value = state.sort;
     $("match").value = state.match;
-    $("q").addEventListener("input", () => { state.q = $("q").value.trim(); update(); });
+    // Topic summary text for full-text search: {"<city>/<id>": [summary per topic]}, fetched on first use.
+    let searchText = null, searchRequested = false;
+    function ensureSearchText() {
+      if (searchRequested) return;
+      searchRequested = true;
+      getJSON("summaries/search.json", { cache: "no-cache" }).then((data) => { searchText = data; update(); })
+        .catch(() => { /* titles-only search still works */ });
+    }
+    const words = () => state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    const summaryOf = (m, i) => (searchText && (searchText[`${m.city}/${m.id}`] || [])[i]) || "";
+    // Topics of a meeting that mention any search word, with where the first match is.
+    function searchHits(m) {
+      const ws = words();
+      if (!ws.length) return [];
+      return (m.topics || []).map((t, i) => ({ t, summary: summaryOf(m, i) }))
+        .filter(({ t, summary }) => ws.some((w) => t.title.toLowerCase().includes(w) || summary.toLowerCase().includes(w)));
+    }
+    // "…text around the first match…" with matches wrapped in <mark>.
+    function snippet(text, ws) {
+      const lower = text.toLowerCase();
+      const first = Math.min(...ws.map((w) => lower.indexOf(w)).filter((i) => i >= 0));
+      if (!Number.isFinite(first)) return null;
+      const from = Math.max(0, first - 60), to = Math.min(text.length, first + 110);
+      const piece = (from ? "…" : "") + text.slice(from, to) + (to < text.length ? "…" : "");
+      const out = el("span", { class: "snippet" });
+      const re = new RegExp(`(${ws.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "ig");
+      for (const part of piece.split(re)) {
+        if (!part) continue;
+        out.append(ws.includes(part.toLowerCase()) ? el("mark", {}, part) : part);
+      }
+      return out;
+    }
+
+    $("q").addEventListener("input", () => { state.q = $("q").value.trim(); if (state.q) ensureSearchText(); update(); });
+    if (state.q) ensureSearchText();
     $("sort").addEventListener("change", () => { state.sort = $("sort").value; update(); });
     $("match").addEventListener("change", () => { state.match = $("match").value; update(); });
 
@@ -189,8 +223,9 @@
           if (!hit) return false;
         }
         if (q) {
-          const text = [m.title, ...(m.topics || []).map((t) => t.title)].join(" ").toLowerCase();
-          if (!text.includes(q)) return false;
+          // Every word must appear somewhere in the meeting: its title, topic titles or summaries.
+          const text = [m.title, ...(m.topics || []).map((t, i) => `${t.title} ${summaryOf(m, i)}`)].join(" ").toLowerCase();
+          if (!words().every((w) => text.includes(w))) return false;
         }
         return true;
       });
@@ -253,14 +288,23 @@
           title: `about ${fmtDuration(m.tag_seconds[id])} of discussion · select to filter`,
         }))));
       }
-      if (state.tags.length) {
-        // Jump links to the topics that carry the selected tags.
-        const hits = (m.topics || []).filter((t) => t.start !== null && t.tags.some((g) => state.tags.includes(g)));
-        if (hits.length) {
-          li.append(el("ul", { class: "segments", "aria-label": "Matching segments" }, ...hits.map((t) =>
-            el("li", {}, el("a", { class: "stamp", href: `${href}#t=${Math.floor(t.start)}` }, fmtTime(t.start)),
-              el("span", {}, t.title)))));
-        }
+      // Jump links to the topics that match: by search words if searching, else by selected tags.
+      const ws = words();
+      let hits = [];
+      if (ws.length) {
+        hits = searchHits(m).filter(({ t }) => !state.tags.length || t.tags.some((g) => state.tags.includes(g)));
+        if (!hits.length) hits = searchHits(m);
+      } else if (state.tags.length) {
+        hits = (m.topics || []).filter((t) => t.tags.some((g) => state.tags.includes(g))).map((t) => ({ t, summary: "" }));
+      }
+      hits = hits.filter(({ t }) => t.start !== null);
+      if (hits.length) {
+        li.append(el("ul", { class: "segments", "aria-label": "Matching segments" }, ...hits.map(({ t, summary }) => {
+          const body = el("span", {}, t.title);
+          const snip = ws.length && summary ? snippet(summary, ws) : null;
+          if (snip) body.append(el("br"), snip);
+          return el("li", {}, el("a", { class: "stamp", href: `${href}#t=${Math.floor(t.start)}` }, fmtTime(t.start)), body);
+        })));
       }
       return li;
     }

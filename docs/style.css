@@ -141,3 +141,5 @@ button.link { background: none; border: 0; color: var(--link); cursor: pointer; 
 .timeline .playhead { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--fg); pointer-events: none; z-index: 2; }
 .topic { scroll-margin-top: 45vh; border-left: 3px solid transparent; padding-left: .6rem; margin-left: -.75rem; }
 .topic.playing { border-left-color: var(--link); }
+.snippet { color: var(--muted); font-size: 14px; }
+mark { background: var(--hl); color: inherit; padding: 0 .1em; border-radius: 2px; }

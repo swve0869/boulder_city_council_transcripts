@@ -2,6 +2,7 @@
 
 The site in docs/ is static HTML + JavaScript. The browser loads docs/summaries/index.json
 (written here) to list meetings, then fetches each summary's JSON as-is and renders it.
+docs/summaries/search.json (also written here) holds topic summary text for search.
 docs/summaries/models.json (written by summarize.py) says which model wrote each summary.
 Only summaries are published; full transcripts stay on the host machine.
 
@@ -42,7 +43,8 @@ def topics_of(summary):
                     stamps.append(float(x))
                 except (TypeError, ValueError):
                     pass
-            out.append((str(t.get("Title", key)), [g for g in t.get("Tags") or [] if isinstance(g, str)], sorted(stamps)))
+            out.append((str(t.get("Title", key)), [g for g in t.get("Tags") or [] if isinstance(g, str)], sorted(stamps),
+                        str(t.get("Summary", ""))))
     return out
 
 
@@ -78,8 +80,8 @@ def meeting_entry(summary):
     """Per-meeting data the site uses for tags, filtering and charts."""
     topics, tag_seconds = [], {}
     raw = topics_of(summary)
-    starts = [stamps[0] if stamps else None for _, _, stamps in raw]
-    for i, (title, tags, stamps) in enumerate(raw):
+    starts = [stamps[0] if stamps else None for _, _, stamps, _ in raw]
+    for i, (title, tags, stamps, _) in enumerate(raw):
         later = [s for s in starts[i + 1:] if s is not None and stamps and s > stamps[0]]
         start, end = topic_span(stamps, min(later) if later else None)
         topics.append({"title": title, "tags": tags, "start": start, "end": end})
@@ -99,7 +101,7 @@ def build_manifest(summaries_dir=SUMMARIES_DIR):
     names = {slugify(name): name for name in load_cities()}
     provenance_file = summaries_dir / "models.json"
     provenance = json.loads(provenance_file.read_text(encoding="utf-8")) if provenance_file.exists() else {}
-    meetings = []
+    meetings, search = [], {}
     for f in summaries_dir.glob("*/*.json"):
         m = STEM.match(f.stem)
         if not m:
@@ -120,6 +122,8 @@ def build_manifest(summaries_dir=SUMMARIES_DIR):
             "model": provenance.get(f"{f.parent.name}/{f.stem}"),
             **meeting_entry(summary),
         })
+        # Topic summary text, in topic order, for the site's full-text search (loaded on demand).
+        search[f"{f.parent.name}/{f.stem}"] = [text for _, _, _, text in topics_of(summary)]
     meetings.sort(key=lambda m: (m["date"] or "", m["id"]), reverse=True)
     cities = sorted({m["city"] for m in meetings})
     vocabulary = json.loads(TAGS_FILE.read_text(encoding="utf-8")) if TAGS_FILE.exists() else {"groups": [], "tags": []}
@@ -131,6 +135,8 @@ def build_manifest(summaries_dir=SUMMARIES_DIR):
     }
     summaries_dir.mkdir(parents=True, exist_ok=True)
     (summaries_dir / "index.json").write_text(json.dumps(manifest, separators=(",", ":")) + "\n", encoding="utf-8")
+    (summaries_dir / "search.json").write_text(json.dumps(search, separators=(",", ":"), ensure_ascii=False) + "\n",
+                                                encoding="utf-8")
     return len(meetings)
 
 
