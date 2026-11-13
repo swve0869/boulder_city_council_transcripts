@@ -1,58 +1,60 @@
 {
-  "Title": "Boulder City Council Study Session 8-24-23 (Community Broadband, Airport Community Conversation, Minimum Wage)",
-  "Overview": "The Boulder City Council study session covered community broadband, the airport community conversation, and minimum wage. Council generally leaned toward a backbone lease option for broadband, which carries about $218 million in build costs and a roughly $14 million annual subsidy, while the airport discussion on noise, leaded fuel, and airspace reached no decision. On minimum wage, council gave a split direction to stay with its 2025 timeline rather than join Boulder County's faster 2024 schedule.",
+  "Title": "Boulder City Council Study Session - August 24, 2023",
+  "Overview": "The council held a study session covering three items: Community Broadband (staff presented research on three potential paths forward, including a municipal utility, a public-private partnership, and a backbone lease, with council asking for more information on take rates, costs, and lease terms before a future public hearing), the Boulder Airport community conversation (council requested more information on FAA grant obligations and closure feasibility before staff returns in early 2024), and minimum wage (staff reported on regional efforts; council debated accelerating to a 2024 increase, and by a 5-4 split directed staff to stay with the 2025 regional timeline). No formal decisions were made on broadband or the airport.",
   "Tags": [
-    "council-governance",
+    "flock",
+    "economic-development",
+    "labor",
     "intergovernmental",
+    "council-governance",
     "budget",
-    "public-comment",
     "technology",
-    "transportation"
+    "transportation",
+    "public-comment"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Community Broadband Update and Path Forward",
-        "Summary": "Staff presented research on internet access, resident survey results, and three potential paths for community broadband: a municipal internet utility, a public-private partnership, or a backbone lease and right-of-way agreement with a private provider. Financial modeling estimated about $218 million in build costs and a required average annual general fund subsidy of about $14 million. Council discussed concerns about cost, competition, shallow trenching impacts, and lease terms, and was generally leaning toward the backbone lease option.",
+        "Title": "Community Broadband",
+        "Summary": "Staff presented research on internet access and affordability, noting over 99 percent of households have wired broadband but only about 36 percent have fiber, with limited provider choice. Three potential paths were outlined: a municipal internet utility (estimated at $218 million, requiring about $268 million in debt and roughly $14 million annual general fund subsidy), a public-private partnership, and a non-exclusive backbone lease, which staff recommended as the lowest-risk and fastest option. Council asked follow-up questions on take rates, lease conditions, equity of build-out, and financing, and staff will return with more information at a future public hearing.",
         "related_timestamps": [
-          413.34,
-          3000.0
+          374.66,
+          2412.0
         ],
         "Tags": [
           "technology",
           "budget",
-          "energy"
+          "economic-development"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Airport Community Conversation Update",
-        "Summary": "Staff presented the Boulder Municipal Airport community engagement process, including open houses, questionnaires, and a community working group that developed four long-term scenarios and near-term action items. Staff noted FAA grant assurances constrain closure options. Council asked about noise, leaded fuel, airspace, and whether further engagement should wait until new Council members take office.",
+        "Title": "Boulder Airport Community Conversation",
+        "Summary": "Staff presented results of community engagement on the future of the Boulder Municipal Airport, including questionnaires, open houses, and a community working group, and four draft scenarios ranging from enhanced maintenance to decommissioning and redeveloping the site. Community input emphasized noise, leaded fuel, and safety concerns, with near-term action items identified. Council discussed FAA grant assurances and closure obligations, with the FAA indicating closure would be difficult, and asked for more legal and factual clarity before returning in early 2024.",
         "related_timestamps": [
-          3010.0,
-          6680.0
+          2412.0,
+          8200.0
         ],
         "Tags": [
           "transportation",
-          "arts-culture",
-          "zoning",
+          "public-comment",
           "intergovernmental"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Minimum Wage Regional Effort and Timeline",
-        "Summary": "Staff reviewed the regional minimum wage working group with Longmont, Louisville, Lafayette, and Erie, and Boulder County's decision to pursue a faster 2024 implementation. Staff explained the trade-offs of joining the county's timeline, including loss of collaboration and limited engagement. Council debated whether to move to a 2024 increase or hold to the 2025 timeline previously chosen, and ultimately gave a split direction to stay the course.",
+        "Title": "Minimum Wage Regional Effort",
+        "Summary": "Staff updated council on the regional minimum wage working group with Longmont, Louisville, Lafayette, and Erie, and on Boulder County's decision to pursue a 15 percent increase effective January 2024. Staff noted that accelerating Boulder's timeline would require pausing regional collaboration and conducting a shorter engagement process without an economic analysis. Council members debated the tradeoffs between responding to urgent community need and maintaining regional partnership, and by a 5-4 vote directed staff to stay with the regional 2025 timeline.",
         "related_timestamps": [
-          6680.0,
-          18050.0
+          14293.0,
+          18000.0
         ],
         "Tags": [
           "labor",
-          "economic-development",
-          "intergovernmental"
+          "intergovernmental",
+          "economic-development"
         ]
       }
     }

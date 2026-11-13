@@ -1,101 +1,82 @@
 {
-  "Title": "February 19, 2026 Regular City Council Meeting (Boulder City Council)",
-  "Overview": "The February 19, 2026 Boulder City Council regular meeting opened with public comment on the future of the South Boulder Rec Center pool and gym, where many residents and swim team members urged the council to keep the facilities, though staff said no decisions have been made and rec center discussions are planned for spring study sessions. The council also approved consent agenda items 3A and 3B, adopted Resolution 1370, Ordinance 8734, and a Boulder Valley Comprehensive Plan land use change to annex about 24 acres at 5399 Kowani Drive and 5697 South Boulder Road, and gave non-binding feedback on a concept to redevelop the Pearl Street storage site with about 281 apartments. Other public comments covered topics such as trail safety, property taxes, and climate resilience, and staff committed to follow up on several of them.",
+  "Title": "February 19, 2026 Regular City Council Meeting",
+  "Overview": "The Boulder City Council held its regular Thursday meeting, opening with extensive public comment, mostly from residents urging the city to keep the lap pool at the South Boulder Rec Center. The council unanimously approved the consent agenda and adopted resolution 1370 and ordinance 8734 to annex about 24 acres of city-owned Hogan-Pancost land, along with a land use map change for future parks and flood mitigation. Council also gave non-binding feedback on a concept plan for 281 apartments at 4880 Pearl Street, with members concerned about eroding industrial land.",
   "Tags": [
-    "council-governance",
     "parks-recreation",
+    "public-comment",
     "development",
     "zoning",
-    "public-comment",
-    "affordable-housing"
+    "housing"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Roll Call and Open Comment Procedures",
-        "Summary": "Council convened the regular meeting with roll call confirming a quorum. The clerk reviewed public participation guidelines and rules of decorum for open comment.",
+        "Title": "Open Comment and South Boulder Rec Center Pool",
+        "Summary": "Residents, students, and families spoke during open comment, with most urging council to preserve the lap pool, gym, and cardio at the South Boulder Rec Center. Speakers cited its walkability, its role for Fairview swim team and schools, and a city petition with thousands of signatures. Other speakers raised concerns about foreign policy, a dog program, and homelessness and ambulance care. Council thanked the speakers, and staff said no decisions had been made on the rec center, which received $2 million in the 2025 budget, with study sessions planned for March and April.",
         "related_timestamps": [
           297.52,
-          343.28
+          3186.48
         ],
         "Tags": [
-          "council-governance"
+          "parks-recreation",
+          "public-comment",
+          "homelessness"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Open Comment on South Boulder Rec Center Pool",
-        "Summary": "Many residents, students, and Fairview swim team members urged council to keep the South Boulder Rec Center pool and gym, citing proximity for families, seniors, and youth. Speakers questioned the 2025 engineering report and parks department priorities. Staff said no decisions have been made and that more discussions on rec centers are planned for spring study sessions.",
+        "Title": "Staff Responses to Open Comment",
+        "Summary": "Staff responded to open comment on the city's new ambulance provider and an allegation of chemical sedation by the former provider, noting the related lawsuit was dismissed. Staff also said they would follow up on the Voice and Sight dog program concerns. Council members asked follow-up questions and thanked youth speakers and South Boulder residents.",
         "related_timestamps": [
-          343.28,
-          3200.0
+          2913.76,
+          3121.92
         ],
         "Tags": [
-          "parks-recreation",
-          "public-comment",
-          "budget"
+          "fire-ems",
+          "public-comment"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Open Comment on Other Community Issues",
-        "Summary": "Speakers raised concerns including Middle East policy, dog off-leash trail safety and the Voice and Sight tag program, ambulance sedation allegations against a former provider, property taxes, and climate resilience and microgrids. Council members thanked speakers and staff committed to follow-up on several items.",
+        "Title": "Consent Agenda",
+        "Summary": "Council considered consent agenda item 3, which included items 3A and 3B. Council members asked no questions, and a motion and second were made. The consent agenda was approved unanimously by roll call.",
         "related_timestamps": [
-          3200.0,
-          3908.4
+          3908.4,
+          3972.48
         ],
-        "Tags": [
-          "public-comment",
-          "public-health",
-          "energy",
-          "police"
-        ]
+        "Tags": []
       }
     },
     {
       "Topic4": {
-        "Title": "Consent Agenda",
-        "Summary": "Council approved consent agenda items 3A and 3B by unanimous roll call vote.",
+        "Title": "Annexation and Land Use Change for Hogan-Pancost Property",
+        "Summary": "Council held a public hearing on annexing about 24 acres of city-owned Hogan-Pancost property and a portion of 55th Street right-of-way. Staff and Parks and Recreation described future flood mitigation and parks uses on the western portion, with open space preserved east of 55th Street. The annexation adopted resolution 1370 and ordinance 8734 with public zoning and RL2 zoning for the right-of-way, and the Boulder Valley Comprehensive Plan map change was approved. All votes were unanimous, and no public speakers were able to testify due to connection issues.",
         "related_timestamps": [
-          3908.4,
-          3974.319
-        ],
-        "Tags": [
-          "council-governance"
-        ]
-      }
-    },
-    {
-      "Topic5": {
-        "Title": "Hogan-Pancost Property Annexation and Land Use Change",
-        "Summary": "Council held a public hearing on annexing about 24 acres at 5399 Kowani Drive and 5697 South Boulder Road, including part of 55th Street, with public zoning and RL-2 for right-of-way. Parks and Recreation proposed flood mitigation and parks use west of 55th, with open space east of 55th. Council adopted Resolution 1370, Ordinance 8734, and the Boulder Valley Comprehensive Plan land use map change unanimously. Public comment included a botanic garden proposal.",
-        "related_timestamps": [
-          4040.0,
-          6000.0
+          4003.76,
+          5855.28
         ],
         "Tags": [
           "development",
-          "zoning",
           "parks-recreation",
+          "zoning",
           "open-space"
         ]
       }
     },
     {
-      "Topic6": {
-        "Title": "Pearl Street Storage Site Concept Review",
-        "Summary": "Council gave feedback on a concept review for redeveloping the Boulder Storage site at 4880 and 4898 Pearl Street with about 281 apartments and a new storage building in a General Industrial zone. Key issues were consistency with the BVCP, the East Boulder subcommunity plan, and the six-percent contiguity rule for residential use. Council members generally wanted to preserve industrial character and asked the applicant to rethink the design and mix of uses. No formal action was taken.",
+      "Topic5": {
+        "Title": "Concept Review for 4880 Pearl Street Residential Project",
+        "Summary": "Council reviewed a concept plan for redeveloping the Boulder Storage site with four residential buildings containing 281 apartments and an 85,000-square-foot storage building. Staff said the General Industrial land use and IG zoning likely make residential inconsistent with the Boulder Valley Comprehensive Plan and East Boulder subcommunity plan, and raised contiguity and phasing concerns. Council members expressed concern about losing industrial land, the precedent for nearby parcels, and the need for more clarity on contiguity rules. No formal action was taken, and the applicant was asked to return with a revised concept.",
         "related_timestamps": [
-          6000.0,
-          11068.0
+          5886.8,
+          11060.88
         ],
         "Tags": [
           "development",
           "zoning",
-          "housing",
-          "economic-development"
+          "housing"
         ]
       }
     }

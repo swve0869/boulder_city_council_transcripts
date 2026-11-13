@@ -220,3 +220,25 @@ nav.top { align-items: center; flex-wrap: wrap; }
 button.theme { margin-left: auto; background: none; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);
   font: 12.5px system-ui, sans-serif; padding: .15rem .6rem; cursor: pointer; }
 button.theme:hover { color: var(--fg); }
+
+/* Print: the text of the page, without the video, controls or navigation */
+@media print {
+  :root, :root[data-theme="dark"], :root:not([data-theme="light"]) { --bg: #fff; --fg: #000; --muted: #444; --link: #000; --rule: #bbb; --chip-bg: #fff; --surface-2: #fff; }
+  body { font-size: 11.5pt; }
+  main { max-width: none; padding: 0; }
+  nav.top, .player, .filters, button, .excerpt-toggle, footer.site, a.skip, .neighbors, #transcript-section, .tooltip, .awaiting { display: none !important; }
+  a { text-decoration: none; }
+  .topic { break-inside: avoid; border: 0; margin-left: 0; padding-left: 0; }
+  .topic.dim { opacity: 1; }
+  .stamp { background: none; padding: 0; color: #000; }
+  .stamps::before { content: "Video time: "; color: #444; font: 10pt system-ui, sans-serif; }
+  ul.meetings li > .overview { display: block; overflow: visible; }
+  .tag { border-color: #999; }
+}
+.player .keys { margin: .25rem 0 0; font-size: 12px; }
+@media (hover: none) { .player .keys { display: none; } }
+@media print { .keys { display: none; } }
+.mixbar { display: flex; gap: 2px; height: 6px; margin: .4rem 0 .1rem; }
+.mixbar span { background: var(--g); min-width: 2px; flex-basis: 0; }
+.mixbar span:first-child { border-radius: 3px 0 0 3px; }
+.mixbar span:last-child { border-radius: 0 3px 3px 0; }

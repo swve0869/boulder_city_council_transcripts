@@ -1,192 +1,165 @@
 {
-  "Title": "Boulder City Council Regular Meeting - September 17, 2026",
-  "Overview": "The September 17, 2026 Boulder City Council regular meeting heard public comment on the Panka Place vacation for Fraser Meadows senior housing, Boulder Valley School District school closures, the Glenn Huntington Bandshell seating redesign, CU South open space closure, and wildfire risk and density on University Hill. Council approved the consent agenda, with Shuhart and Spear voting no on items 4D and 4F and Benjamin voting no on 4F, and voted to call up the bandshell landmark alteration and a non-conforming duplex expansion at 969 10th Street, the latter 7-1. Council also unanimously adopted Ordinances 8765 and 8766, designating the Bird Stova House and the Hileman Bedell Stefanic Property as landmarks, and Ordinance 8770, repealing marijuana cultivation energy offset requirements.",
+  "Title": "September 17, 2026 - Regular City Council Meeting",
+  "Overview": "The council heard extensive open comment on the Panka Place street vacation, BBSD school closures, the CU South full closure for flood mitigation, and the Glenn Huntington Bandshell seating, then approved the consent agenda including the Panka Place vacation. Council also called up the bandshell landmark alteration for another review, adopted landmark designations for the Bird Stova House and the Hailman Bedell Stanic property, and repealed cannabis cultivation energy offset requirements.",
   "Tags": [
-    "council-governance",
     "public-comment",
     "development",
-    "wildfire",
-    "elections",
-    "homelessness"
+    "historic-preservation",
+    "open-space",
+    "intergovernmental",
+    "climate"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Roll Call and Open Comment Guidelines",
-        "Summary": "The meeting was called to order and a roll call confirmed a quorum. Staff reviewed public participation guidelines covering decorum, sign-up requirements, audio-only testimony, and limits on remarks to city business. Twenty speakers had signed up, each allotted two minutes.",
+        "Title": "Panka Place Street Vacation for Fraser Expansion",
+        "Summary": "Fraser residents and neighbors spoke in favor of vacating Panka Place, arguing it would create a safer shared street while keeping through access for emergency vehicles and pedestrians. Opponents and supporters debated traffic, walkability, and the church's parking lot. The council approved the vacation as part of the consent agenda.",
         "related_timestamps": [
-          253.2,
-          372.4
-        ],
-        "Tags": []
-      }
-    },
-    {
-      "Topic2": {
-        "Title": "Panka Place Vacation and Fraser Meadows Expansion Comments",
-        "Summary": "Multiple speakers from Fraser Meadows and neighboring areas spoke in favor of vacating Panka Place to create a safer shared street that keeps vehicle, emergency, and delivery access. Supporters cited lack of city maintenance, improved walkability, and preserving the church's presence. The project is intended to support senior housing expansion.",
-        "related_timestamps": [
-          403.0,
-          515.68,
-          1047.36,
-          1661.76
+          383.039,
+          1135.679,
+          1661.76,
+          1753.2,
+          4558.88,
+          4904.239
         ],
         "Tags": [
           "development",
-          "transportation",
-          "housing"
+          "transportation"
         ]
       }
     },
     {
-      "Topic3": {
-        "Title": "Boulder Valley School District Closures Comments",
-        "Summary": "Several residents urged council to advocate for a pause on BVSD plans to close neighborhood schools, citing lack of coordination with the comprehensive plan and housing goals. Speakers argued that declining enrollment stems from high housing costs and affordability, and asked council to request clear answers from the district. Staff said the district holds the final decision and the city has been coordinating with BVSD on future school site uses.",
+      "Topic2": {
+        "Title": "BBSD School Closures and Council Role",
+        "Summary": "Residents urged council to press the Boulder Valley School District to pause proposed elementary school closures, citing neighborhood cohesion, declining enrollment drivers, and the new comprehensive plan. Staff said the district makes the final decision and that the city has been coordinating with it on future school site uses. Council members Tisha Adams and Matt Benjamin said they would send letters asking for answers and more time.",
         "related_timestamps": [
-          522.16,
-          652.24,
-          1281.6,
-          1493.0,
-          1762.88,
-          1903.28,
-          2140.24,
-          2366.0
+          522.159,
+          784.959,
+          1381.679,
+          1508.32,
+          2567.599,
+          2686.0,
+          3137.359,
+          3204.559
         ],
         "Tags": [
           "intergovernmental",
-          "housing",
-          "equity",
           "human-services"
         ]
       }
     },
     {
-      "Topic4": {
-        "Title": "Band Shell Seating Redesign and Landmark Demolition Comments",
-        "Summary": "Speakers asked council not to call up the Landmarks Board decision rejecting the Parks Department proposal to demolish the Glenn Huntington Bandshell seating. They argued the historic wooden seats are integral to a city landmark, the redesign with concrete benches and turf lawns is costly and environmentally unsound, and it could invite camping. Speakers requested the Parks Department return with a design that preserves the seats.",
+      "Topic3": {
+        "Title": "CU South Full Closure for Flood Mitigation",
+        "Summary": "Speakers asked the council to allow partial public access to the CU South open space during flood mitigation construction, noting the annexation agreement's recreation access provision and the 119 acres to become permanent open space. Speakers also questioned the flood mitigation design, cost, and lack of independent peer review. Staff said phasing was not feasible and that alternative recreation sites and FAQs would be provided.",
         "related_timestamps": [
-          799.68,
-          911.12,
-          1017.36
+          1538.88,
+          1653.12,
+          1762.88,
+          1888.8,
+          2152.079,
+          2271.2,
+          2426.079,
+          2562.56
         ],
         "Tags": [
-          "historic-preservation",
-          "parks-recreation",
-          "budget"
+          "open-space",
+          "water"
         ]
       }
     },
     {
-      "Topic5": {
-        "Title": "CU South Open Space Closure Comments",
-        "Summary": "Residents spoke about the planned full closure of CU South open space during flood mitigation construction, which may last three to five years. Speakers requested that the closure be minimized in area and duration, that partial public access be explored, and that a parking lot be provided for access to the remaining open space. Staff responded that full closure is necessary due to construction staging and environmental restoration on the 119 acres the city now owns, and committed to publishing a fuller explanation online.",
+      "Topic4": {
+        "Title": "Glenn Huntington Bandshell Landmark Alteration Call-Up",
+        "Summary": "Speakers opposed the Parks Department proposal to demolish the bandshell seating, arguing it would harm a city landmark, add concrete and lawn maintenance costs, and create lingering issues. Council voted to call up the landmark alteration certificate application for another review. The vote to call it up passed.",
         "related_timestamps": [
-          1340.0,
-          1520.0,
-          1770.0,
-          2157.0,
-          2570.0
+          789.36,
+          911.12,
+          917.6,
+          1041.439,
+          4924.96,
+          4993.76
         ],
         "Tags": [
-          "open-space",
-          "water",
+          "historic-preservation",
           "parks-recreation"
         ]
       }
     },
     {
-      "Topic6": {
-        "Title": "Wildfire Risk and University Hill Density Concerns",
-        "Summary": "A University Hill resident and fire adapted ambassador raised concerns about a proposed 13-bedroom duplex near the wildland urban interface and the cumulative density of student rentals on Grant Place. She asked why the city is not educating residents about high wildfire risk and cited Boulder Valley Comprehensive Plan policy on fire adapted communities. Council members later asked staff about the impact of density on evacuation and life safety.",
+      "Topic5": {
+        "Title": "Landmark Designations: Bird Stova House and Hailman Bedell Stanic Property",
+        "Summary": "Staff presented two University Hill landmark designations recommended unanimously by the Landmarks Board. The Bird Stova House at 1004 Lincoln Place is a Craftsman and Tudor Revival home tied to the Stova family's long stewardship, and the Hailman Bedell Stanic property at 844-850 12th Street includes a southwest Mediterranean house by architect David Hull Holmes. Council adopted both ordinances unanimously after public hearings.",
         "related_timestamps": [
-          2279.0,
-          2400.0,
-          2790.0,
-          2930.0
+          5177.52,
+          5814.159,
+          6014.159,
+          6830.32
         ],
         "Tags": [
-          "wildfire",
-          "housing",
-          "zoning"
+          "historic-preservation"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Repeal of Cannabis Cultivation Energy Offset Requirements",
+        "Summary": "Staff recommended repealing energy offset requirements for marijuana cultivators because cultivation has declined from about 44 businesses to nine and the city struggled to collect impact fees. Advisory boards supported the change and staff said it would pursue industry-neutral building performance approaches later. A public speaker opposed the repeal, and council adopted Ordinance 8770 unanimously.",
+        "related_timestamps": [
+          6834.96,
+          7642.239
+        ],
+        "Tags": [
+          "climate",
+          "energy"
         ]
       }
     },
     {
       "Topic7": {
-        "Title": "Consent Agenda Approval",
-        "Summary": "Council reviewed the consent agenda, with Council Member Shuhart and Council Member Spear voting no on item 4D (FAA grant obligations for the airport) and item 4F (county commissioner seat reorganization), and Council Member Benjamin voting no on item 4F. The remaining items passed unanimously, and the consent agenda was approved.",
+        "Title": "Declarations: Little League, Welcoming Week, and UN International Day of Peace",
+        "Summary": "Council read a declaration honoring the South Boulder Little League 11U All-Star state champions. Council then recognized Welcoming Week, with Intercomo CEO John Lopez speaking about adult English learning programs. Council also proclaimed September 21, 2026 as the UN International Day of Peace.",
         "related_timestamps": [
-          4569.0,
-          4780.0,
-          4880.0
+          3863.2,
+          4124.4,
+          4124.4,
+          4551.92
         ],
         "Tags": [
-          "council-governance",
-          "elections",
-          "intergovernmental"
+          "parks-recreation",
+          "equity"
         ]
       }
     },
     {
       "Topic8": {
-        "Title": "Call-Up of Landmark Alteration for Bandshell and Non-Conforming Use at 969 10th Street",
-        "Summary": "Council voted to call up the landmark alteration certificate for changes at the Glenn Huntington Bandshell, which passed on a show of hands. Council also voted 7-1 to call up a non-conforming use review for an expansion of an existing duplex at 969 10th Street, to take a closer look at whether it meets all applicable criteria.",
+        "Title": "Consent Agenda with Contested Items",
+        "Summary": "Council approved the consent agenda items 4A through 4G, including the FAA airport grant and a resolution on the county commissioner seat reorganization. Council members Ryan Shuhart, Nicole Spear, Matt Benjamin, and others voted no or abstained on items D and F. The consent agenda was approved unanimously with noted exceptions.",
         "related_timestamps": [
-          4930.0,
-          5040.0,
-          5108.0
+          4558.88,
+          4889.04
         ],
         "Tags": [
-          "historic-preservation",
-          "zoning",
-          "housing"
+          "intergovernmental",
+          "elections"
         ]
       }
     },
     {
       "Topic9": {
-        "Title": "Ordinance 8765: Bird Stova House Landmark Designation",
-        "Summary": "Council held a public hearing on the second reading of Ordinance 8765 to designate 1004 Lincoln Place as an individual landmark known as the Bird Stova House. Staff described the 1920s Craftsman and Tudor Revival home, its association with the Stova family and research in biofeedback, and its location in the potential University Hill historic district. The ordinance was adopted unanimously.",
+        "Title": "Grant Place Student Density and Wildfire Risk",
+        "Summary": "Alicia Curtain described a proposed 13-bedroom student duplex near Grant Place and raised wildfire risk concerns for the University Hill area. Council members asked staff about the status of the Grant Place request and about wildfire evacuation impacts. Council also discussed concerns over stealth dorms and the need to review the outcomes of the family-focused ordinance.",
         "related_timestamps": [
-          5179.0,
-          5443.0,
-          5810.0,
-          6012.0
+          2276.96,
+          2402.8,
+          2876.8,
+          2973.92,
+          3060.64,
+          3134.96
         ],
         "Tags": [
-          "historic-preservation"
-        ]
-      }
-    },
-    {
-      "Topic10": {
-        "Title": "Ordinance 8766: Hileman Bedell Stefanic Property Landmark Designation",
-        "Summary": "Council held a public hearing on the second reading of Ordinance 8766 to designate 844-850 12th Street as an individual landmark known as the Hileman Bedell Stefanic Property. Staff described the Southwest Mediterranean style house designed by David Hull Holmes, the first owner's Red Cross service, and the accessory house. The ordinance was adopted unanimously.",
-        "related_timestamps": [
-          6034.0,
-          6253.0,
-          6565.0,
-          6812.0
-        ],
-        "Tags": [
-          "historic-preservation"
-        ]
-      }
-    },
-    {
-      "Topic11": {
-        "Title": "Ordinance 8770: Repeal of Marijuana Cultivation Energy Offset Requirements",
-        "Summary": "Staff recommended repealing energy offset requirements for marijuana cultivation in BRC chapters 14 and 16, since cultivation now represents a small share of emissions, licensed cultivators have fallen from about 44 to nine, and enforcement consumes significant staff time. The Cannabis Licensing Advisory Board and Environmental Advisory Board supported the change. One speaker opposed the repeal, and the ordinance was adopted unanimously.",
-        "related_timestamps": [
-          6859.0,
-          7100.0,
-          7392.0,
-          7622.0
-        ],
-        "Tags": [
-          "climate",
-          "energy",
-          "economic-development"
+          "housing",
+          "wildfire"
         ]
       }
     }

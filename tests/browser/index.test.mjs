@@ -10,6 +10,8 @@ const first = await c.ev(`({meetings: document.querySelectorAll("#list ul.meetin
 check("lists meetings grouped by year", first.meetings > 0 && first.years > 0, first);
 check("tag panel and row tags render", first.chips > 10 && first.rowChips > 0, first);
 check("rows show topic count", /topic/.test(first.meta || ""), first.meta);
+const mix = await c.ev(`(() => { const b = document.querySelector(".mixbar"); return b ? { parts: b.children.length, label: b.getAttribute("aria-label") } : null; })()`);
+check("rows show a labelled topic-mix bar", mix && mix.parts > 0 && /%/.test(mix.label), mix);
 
 await c.click(".row-meta button"); await sleep(900);
 const open = await c.ev(`({items: document.querySelectorAll("ol.preview li").length, text: document.querySelectorAll("ol.preview p").length})`);

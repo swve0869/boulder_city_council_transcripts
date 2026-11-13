@@ -1,63 +1,57 @@
 {
-  "Title": "May 21, 2026 City of Boulder City Council Meeting (Regular Meeting)",
-  "Overview": "The May 21, 2026 regular meeting centered on public comment about the San Lazaro mobile home park purchase, Boulder Municipal Airport local control, and lease and service changes at Golden West Manor, with council and staff pledging to coordinate with the county, explore financial support, and return to the airport topic later. Council approved the consent agenda, with Councilmember Wallach voting no on item 3B, and unanimously adopted Ordinance 8750 for the $18.6 million first budget adjustment. Council also agreed to add non-binding language for straw polls and to clarify how study sessions can be used, while no council members called up the 777 Broadway or 990 Arapahoe items.",
+  "Title": "May 21, 2026 - Boulder City Council Regular Meeting (open comment, consent agenda, call-up check-ins, public hearing on Adjustment to Base Budget One, and matters from mayor and council on study sessions and straw polls)",
+  "Overview": "Council heard extensive open comment on San Lazaro mobile home park residents seeking to buy their park, airport local control, Golden West senior housing utility changes, and minimum wage. It approved the consent agenda 8-0 except for Wallach's no vote on item 3B, and unanimously adopted Ordinance 8750 (Adjustment to Base Budget One, about $18.6 million). Council then discussed clarifying study session practice, straw poll terminology, and reconsideration rules, agreeing to use 'non-binding nod of five' language and to document informational study sessions in the rules of procedure.",
   "Tags": [
     "affordable-housing",
+    "council-governance",
+    "budget",
     "public-comment",
     "intergovernmental",
-    "budget",
-    "council-governance",
-    "homelessness",
-    "elections",
-    "taxes-fees",
-    "labor",
-    "transportation",
-    "wildfire"
+    "housing",
+    "elections"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Open Comment: San Lazaro Mobile Home Park Purchase",
-        "Summary": "Multiple San Lazaro residents and a steering committee spoke in Spanish and English through interpretation, describing displacement fears, rising lot rents under private equity ownership, and a $42.5 million purchase offer. Speakers asked the city to help residents buy the park and to raise the issue with Boulder County. Council members and staff responded that the city supports the effort, is coordinating with the county, and is splitting the cost of a new appraisal. Staff said financial support options are being explored.",
+        "Title": "Open comment: San Lazaro mobile home park purchase",
+        "Summary": "Multiple residents of San Lazaro mobile home park spoke about a notice of sale and risk of displacement, asking the city to help residents buy the park. A steering committee described a $42.5 million purchase price and concerns about private equity ownership. Staff said the city and county agreed to a new appraisal, that financial support options are being explored, and that the city supports the effort.",
         "related_timestamps": [
-          311.48,
-          1200.72,
+          306.28,
           1291.56
         ],
         "Tags": [
           "affordable-housing",
-          "public-comment",
+          "housing",
           "intergovernmental"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Open Comment: Boulder Municipal Airport and FAA Local Control",
-        "Summary": "Several residents urged council to place a ballot measure before voters on keeping local control of the municipal airport rather than accepting FAA grants that impose long-term obligations. Speakers raised noise, leaded fuel, and enforcement concerns, and cited airports in Santa Monica and Torrance as examples of local control. A speaker also said council's recent study session on the airport relied on incomplete information and asked for a do-over. Staff responded that funding decisions depend on future land use and that CDOT funding limits had been misstated, with the topic to return to council.",
+        "Title": "Open comment: airport local control and ballot measure",
+        "Summary": "Several speakers urged council to maintain local control of the municipal airport and avoid FAA grant obligations, citing noise, leaded fuel, and aviation safety. Others argued the airport is a science and disaster-response resource. Speakers asked for a ballot measure and a do-over on study session information. Staff responded that funding decisions and CDOT funding limits are under review and the airport will return to council soon.",
         "related_timestamps": [
           1408.28,
-          1605.04,
-          1743.12,
-          2186.68,
+          2184.0,
+          2197.4,
           2340.16
         ],
         "Tags": [
           "transportation",
           "elections",
-          "council-governance"
+          "intergovernmental"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Open Comment: Golden West Utilities and Lease Changes",
-        "Summary": "Golden West Manor residents, many of them seniors on fixed incomes, said cable, TV, and telephone services will no longer be included in their leases starting September 1, and that parking now costs $50 per month. They also raised elevator reliability problems in the 14-story building. Staff said the Comcast contract is ending, free Wi-Fi will continue with a rent reduction of about $40 to $45, and Boulder Housing Partners will provide support for transitioning residents.",
+        "Title": "Open comment: Golden West senior housing utilities and parking",
+        "Summary": "Golden West residents, many seniors on fixed incomes, said the Boulder Housing Partners lease change ending bundled cable, TV and telephone service would cost them, and raised parking fees and elevator problems. Staff said the Comcast contract expired, free Wi-Fi continues, and rents drop about $40 to $45 per month, but additional services cost more. Council asked BHP for follow-up information and support options.",
         "related_timestamps": [
-          2473.6,
+          2464.72,
+          2713.0,
           2851.76,
-          2943.72,
-          3051.9
+          2943.72
         ],
         "Tags": [
           "housing",
@@ -68,29 +62,27 @@
     },
     {
       "Topic4": {
-        "Title": "Open Comment: Other Public Comments on Wages, Housing, and Civic Issues",
-        "Summary": "Speakers addressed a range of topics including opposition to the tipped minimum wage freeze and support for a vacancy tax, a request for a streamlined city process for tree-protection and lot reviews, and a proposal for Colorado independence. Other speakers raised concerns about federal actions, international conflicts, and the rights of residents. Council members and staff thanked speakers and responded briefly.",
+        "Title": "Open comment: minimum wage and vacancy tax",
+        "Summary": "A resident opposed a proposed refusal to raise the tipped minimum wage in line with a 2024 study, arguing that wage freezes reduce buying power and drive workers away. He proposed a Boulder vacancy tax to address rising rents instead. Another speaker asked the city to speed up development review for trees and energy-efficient homes. Council received these comments as part of open comment.",
         "related_timestamps": [
+          2585.8,
           2710.52,
-          2839.4,
-          3320.0,
-          3535.72
+          2841.4
         ],
         "Tags": [
           "labor",
           "housing",
-          "taxes-fees",
-          "public-comment"
+          "zoning"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Consent Agenda Items 3A and 3B",
-        "Summary": "Council approved the consent agenda with a motion and second. Councilmember Wallach voted no on item 3B, an ordinance amending Title 7 height limitations, citing imprecise drafting. Items 3A and 3B passed unanimously otherwise.",
+        "Title": "Consent agenda approval (items 3A and 3B)",
+        "Summary": "Council approved the consent agenda, which included items 3A and 3B, by voice roll call. Councilmember Wallach voted no on item 3B, an ordinance amending Title 7 height limitations, citing sloppy drafting. The motion passed with that one exception.",
         "related_timestamps": [
-          3942.92,
-          3999.36,
+          3940.0,
+          4002.64,
           4039.84
         ],
         "Tags": [
@@ -101,57 +93,59 @@
     },
     {
       "Topic6": {
-        "Title": "Call-Up Check-Ins: 777 Broadway Site Review and 990 Arapahoe Landmark",
-        "Summary": "No council members called up the 777 Broadway site review for redevelopment with 63 residential units, or the Landmarks Board decision not to designate 990 Arapahoe Avenue as an individual landmark. Mayor Pro Tem Weiner used the landmark item to suggest reviewing the landmarking process at next year's retreat, citing conflicts with affordable housing and displacement.",
+        "Title": "Call-up check-ins: 777 Broadway site review and 990 Arapahoe landmark",
+        "Summary": "Council reviewed call-up items for a site review at 777 Broadway for 63 residential units and a Landmarks Board decision not to designate 990 Arapahoe Avenue. No one called up either item. Councilmember Matt then commented on the landmarking process, suggesting reform at next year's retreat because of its effect on senior affordable housing and displacement.",
         "related_timestamps": [
           4054.12,
-          4095.68,
           4121.4,
-          4139.72
+          4214.0
         ],
         "Tags": [
           "development",
           "historic-preservation",
-          "zoning",
+          "housing",
           "affordable-housing"
         ]
       }
     },
     {
       "Topic7": {
-        "Title": "Public Hearing: First Adjustment to Base Budget (ATB1) and Ordinance 8750",
-        "Summary": "Staff presented ATB1, an $18.6 million budget adjustment including $13.1 million from fund balance, $5.3 million in mid-year grants, and $129,000 in additional revenue. Most fund balance draws are restricted to specific purposes such as radio replacement for public safety, affordable housing projects, and wildfire programs. The public hearing included comments on the budget and a discussion of communications staffing. Council unanimously adopted Ordinance 8750.",
+        "Title": "Public hearing: Ordinance 8750, Adjustment to Base Budget One",
+        "Summary": "Staff presented the first 2026 adjustment to base totaling about $18.6 million, including $13.1 million from fund balance, $5.3 million from mid-year grants, and $129,000 from additional revenue. Items included business incentives, wildfire programs, affordable housing carryover, and a $7.3 million radio replacement purchased early at a discount. Council questioned fund balance levels and communications staffing, and the ordinance was adopted unanimously after a public hearing with no speakers in favor or against.",
         "related_timestamps": [
-          4247.44,
-          4337.0,
-          5000.0,
-          5316.0,
-          5859.44,
-          6172.52
+          5222.24,
+          5313.72,
+          5779.32,
+          6065.56,
+          6175.2
         ],
         "Tags": [
           "budget",
-          "affordable-housing",
+          "public-comment",
           "public-health",
-          "wildfire"
+          "wildfire",
+          "affordable-housing"
         ]
       }
     },
     {
       "Topic8": {
-        "Title": "Matters: Study Session Procedures, Straw Polls, and Reconsideration",
-        "Summary": "City Attorney Teresa Taylor Tate explained that official action occurs only at regular or special meetings, while study sessions provide non-binding direction to staff. Council discussed how straw polls function, what counts as a material change warranting reconsideration, and how consent items and calls-up work. Council agreed to add non-binding language for straw polls and to clarify that study sessions may include information-only items, with staff to provide a summary of look-ahead agenda items.",
+        "Title": "Matters from mayor and council: study sessions, straw polls, and reconsideration",
+        "Summary": "City Attorney Teresa Tate explained that study sessions give non-binding direction to staff, that straw polls are not addressed in procedure, and that reconsideration applies only after a material change in law or fact, requiring five votes to schedule. Council discussed the confusion from a recent study session on the airport and agreed to use 'non-binding nod of five' language. Council also agreed to document informational study sessions in the rules of procedure and to review CAC agenda item titles.",
         "related_timestamps": [
-          6198.0,
           6710.96,
-          7098.12,
-          8100.0,
-          10851.0,
-          11272.32
+          7095.64,
+          7557.84,
+          8022.12,
+          8908.9,
+          10332.56,
+          11089.08,
+          11444.88
         ],
         "Tags": [
           "council-governance",
-          "elections"
+          "elections",
+          "legal"
         ]
       }
     }

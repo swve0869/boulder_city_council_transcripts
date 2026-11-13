@@ -1,103 +1,166 @@
 {
-  "Title": "July 23, 2026 - Boulder City Council Special Meeting (Airport Funding and BVCP Public Hearings)",
-  "Overview": "The Boulder City Council special meeting focused on airport funding and the Boulder Valley Comprehensive Plan. Council unanimously approved the consent agenda, moved the BVCP adoption hearing to August 6, and heard staff financial scenarios, legal advice on FAA obligations, and dozens of public comments on the airport's future. After amendment, council voted 8-1 to continue airport operations, with council approval required for the next FAA grant that carries perpetuity obligations. Councilmember Wallik also announced his resignation at the end of the meeting.",
+  "Title": "July 23, 2026 - City of Boulder City Council Special Meeting",
+  "Overview": "The council amended its agenda, approved the consent agenda, and continued the Boulder Valley Comprehensive Plan adoption to August 6, 2026. After a long public hearing on the Boulder Municipal Airport's continued operation, the council voted 8-1 to approve continued indefinite operation with a condition that any FAA grant carrying perpetuity obligations come back to council for a vote before acceptance. Councilmember Wallik resigned from council at the end of the meeting.",
   "Tags": [
     "flock",
+    "surveillance",
+    "housing",
+    "affordable-housing",
+    "zoning",
+    "development",
     "budget",
     "transportation",
-    "economic-development",
-    "council-governance",
+    "bikes-pedestrians",
+    "transit",
+    "climate",
     "public-comment",
-    "intergovernmental"
+    "council-governance",
+    "legal",
+    "intergovernmental",
+    "elections",
+    "parks-recreation",
+    "wildfire",
+    "fire-ems",
+    "economic-development",
+    "arts-culture"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Agenda amendments and consent agenda approval",
-        "Summary": "Council voted unanimously to amend the agenda, removing the BVCP adoption from the agenda and adding items for special counsel appointment and holding the July 30 meeting in person. The consent agenda (items 2A through 2F) was then approved unanimously after brief questions about ballot measure language and a special counsel appointment for code of conduct complaints.",
+        "Title": "Roll Call and Agenda Amendment",
+        "Summary": "The council took roll with all members present and a quorum established. The agenda was amended to continue item 3A (BVCP adoption) and add items 2E (special counsel appointment for code of conduct complaints) and 2F (holding the July 30 special meeting in person). The amendment passed unanimously.",
         "related_timestamps": [
           284.639,
-          662.8
+          444.8
         ],
         "Tags": [
-          "council-governance",
-          "legal",
-          "elections"
-        ]
-      }
-    },
-    {
-      "Topic2": {
-        "Title": "BVCP public hearing continued to August 6",
-        "Summary": "Council opened the Boulder Valley Comprehensive Plan adoption public hearing, which staff introduced before council moved to continue it to August 6. The motion passed unanimously and the item was removed from tonight's deliberations.",
-        "related_timestamps": [
-          672.56,
-          848.399
-        ],
-        "Tags": [
-          "zoning",
           "council-governance"
         ]
       }
     },
     {
-      "Topic3": {
-        "Title": "Airport continued operation: staff presentation and financial scenarios",
-        "Summary": "Staff presented financial scenarios for continued airport operations, including options with and without FAA grants and a range of projected deficits. Staff noted that FAA obligations may extend in perpetuity for land-acquisition grants and that a state infrastructure bank loan is the only alternative financing identified. Options for landing fees, hangar development, solar, and other revenue were reviewed, though none were seen as fully closing the gap.",
+      "Topic2": {
+        "Title": "Consent Agenda",
+        "Summary": "The consent agenda (items 2A through 2F) was approved unanimously. Item 2E authorized the city attorney to appoint special counsel because the city attorney's office had a conflict in investigating a complaint against a board member under the code of conduct. Council also praised the firefighters union for progress on collective bargaining charter language for a future ballot.",
         "related_timestamps": [
-          855.36,
-          2583.599
+          453.199,
+          658.64
         ],
         "Tags": [
-          "budget",
-          "taxes-fees",
-          "economic-development"
+          "council-governance",
+          "legal",
+          "labor"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Boulder Valley Comprehensive Plan Adoption Continued",
+        "Summary": "Staff introduced the BVCP adoption, the first public hearing, and the four bodies reviewing it. Council agreed to open and continue the hearing because of limited time and high public interest. The item was continued to August 6, 2026, and the motion passed unanimously.",
+        "related_timestamps": [
+          666.399,
+          848.399
+        ],
+        "Tags": [
+          "zoning",
+          "development",
+          "council-governance"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Council questions on airport legal options and closure",
-        "Summary": "Council asked outside counsel about the legal and practical implications of FAA obligations, including perpetuity, litigation timelines and costs, and the possibility of closure through litigation, congressional action, or a replacement airport. Counsel described the process as complex, with low probability and costly litigation paths, and staff noted that the 2017 Santa Monica litigation took about 10 years and roughly $10 million.",
+        "Title": "Airport Public Hearing Presentation",
+        "Summary": "Transportation and Mobility staff presented updated financial scenarios for the Boulder Municipal Airport, including indefinite operation with and without FAA grants. Staff estimated a deficit of about $7 million to $26 million depending on the scenario and identified alternative revenue ideas such as landing fees, hangar development, and solar. Staff said no single alternative would close the gap, and that FAA grants carry perpetual obligations for land acquisition.",
+        "related_timestamps": [
+          873.12,
+          2583.599
+        ],
+        "Tags": [
+          "budget",
+          "transportation",
+          "intergovernmental",
+          "economic-development",
+          "energy"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Council Questions to Staff and Special Counsel",
+        "Summary": "Councilmembers asked about alternative financing, the near-term FAA grant deadlines, and whether the city could restrict noise. Special outside counsel explained federal obligations, FAA perpetuity conditions, and litigation risks and timelines, including Santa Monica's roughly 12-year dispute. Staff also noted the city's position in ongoing litigation that the perpetuity requirement does not apply.",
         "related_timestamps": [
           2583.599,
           4329.12
         ],
         "Tags": [
           "legal",
-          "intergovernmental"
-        ]
-      }
-    },
-    {
-      "Topic5": {
-        "Title": "Public hearing testimony on airport future",
-        "Summary": "Dozens of residents, pilots, business representatives, and neighbors testified. Supporters emphasized emergency response, flight training, youth aviation programs, science research, and economic activity, while opponents raised concerns about noise, lead pollution, perpetual FAA obligations, land use, and the need for a public vote. Testimony also addressed landing fees, unleaded fuel, and comparisons to Santa Monica and Longmont.",
-        "related_timestamps": [
-          4334.0,
-          12183.84
-        ],
-        "Tags": [
-          "public-comment",
-          "parks-recreation",
-          "public-health",
-          "surveillance"
+          "intergovernmental",
+          "budget",
+          "council-governance"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Council deliberation and votes on FAA grant acceptance",
-        "Summary": "Council members discussed fiscal responsibility, budget pressures, noise, climate, and the risk of perpetuity obligations. A motion to require a one-year delay on perpetuity-covenant FAA grants failed 6-3, and a motion to approve continued operation was amended to require council approval of the next FAA grant with perpetuity obligations, which passed 6-3. The amended motion then passed 8-1 after a further vote. Councilmember Wallik announced his resignation at the end of the meeting.",
+        "Title": "Public Hearing on Airport Operations",
+        "Summary": "Speakers were limited to two minutes each and roughly 70 people signed up. Supporters cited emergency medevac and firefighting uses, flight training and youth programs, research flights, economic impact, and the value of unleaded fuel and quieter aircraft. Opponents raised noise and lead concerns, land-use and perpetuity risks, the need for a public vote, and the view that landing fees and self-sustaining models were unexamined. Many speakers asked the council to put the question to voters.",
         "related_timestamps": [
-          12187.52,
-          16194.319
+          4334.0,
+          12141.76
         ],
         "Tags": [
-          "budget",
-          "council-governance",
-          "elections"
+          "public-comment",
+          "transportation",
+          "public-health",
+          "emergency-management",
+          "elections",
+          "arts-culture",
+          "economic-development",
+          "climate"
         ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Council Deliberation and Motions",
+        "Summary": "Councilmembers discussed fiscal risk, deferred maintenance, long-term land value, climate and wildfire needs, and the value of aviation to the community. A motion by Councilmember Shuhart for a one-year waiting period on perpetuity-covenant obligations was defeated 6 to 3. A staff-recommended motion to approve continued operation was then amended by Councilmember Spear to require council approval of the next FAA grant with perpetuity obligations, and the amendment passed 6 to 3. The amended motion passed 8 to 1.",
+        "related_timestamps": [
+          12241.439,
+          15962.04
+        ],
+        "Tags": [
+          "council-governance",
+          "budget",
+          "legal",
+          "elections",
+          "transportation",
+          "wildfire"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Councilmember Resignation",
+        "Summary": "Councilmember Wallik made a personal privilege statement opposing the airport decision as a surrender of land in perpetuity and announced his immediate resignation from council. Other members expressed regret and thanked him for his service, and staff expressed their respect for his decision.",
+        "related_timestamps": [
+          15972.399,
+          16161.12
+        ],
+        "Tags": [
+          "council-governance",
+          "boards-appointments"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "Adjournment",
+        "Summary": "The mayor closed the meeting at 10:25 p.m. after the closing remarks and staff comments concluded.",
+        "related_timestamps": [
+          16194.319
+        ],
+        "Tags": []
       }
     }
   ]

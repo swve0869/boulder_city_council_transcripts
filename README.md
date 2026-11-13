@@ -168,6 +168,7 @@ Stop any cron job, `watch_council_videos.py`, or `serve_transcripts.py` on other
 ### Day to day
 
 ```
+scripts/status.sh                                            # one-screen health check (exits 1 if something needs attention)
 systemctl status council-transcripts council-watch.timer     # both should be active
 systemctl list-timers council-watch.timer                    # next/last watcher run
 journalctl -u council-watch -n 50 -o cat                     # what the last runs did
@@ -244,7 +245,7 @@ Timestamps that aren't exact segment starts, and summaries longer than five sent
 | `[providers.<name>]` | `type` (`anthropic`, or `openai` for any OpenAI-compatible API), `base_url`, and `api_key_env`, the environment variable holding the key. |
 | `[models.<name>]` | `provider`, `model` ID, `label` (shown on the site), `max_tokens`, `json_mode`, `prompt_cache`, `fallbacks`, and `params`, which is passed straight to the API (e.g. `temperature`). |
 
-The config ships with Anthropic, OpenAI, DeepSeek, Gemini, OpenRouter and Ollama (local) providers. Put their keys in `.env` (`OPENAI_API_KEY=...`, `DEEPSEEK_API_KEY=...`). Model IDs other than Claude's are examples; check each provider's current model list. For small-context models, set `transcript_format = "lines"` (about 30% fewer tokens) and `max_input_chars`, so too-long transcripts skip that model instead of being cut off.
+The config ships with Anthropic, OpenAI, DeepSeek, Gemini, OpenRouter and Ollama (local) providers. Put their keys in `.env` (`OPENAI_API_KEY=...`, `DEEPSEEK_API_KEY=...`). Model IDs other than Claude's are examples; check each provider's current model list. `transcript_format = "lines"` sends one `<start>\t<text>` line per caption instead of the JSON file. It uses about 35% fewer tokens and, measured on these meetings, makes the model's timestamps land on real caption starts far more often, so it is the setting for Haiku. For small-context models also set `max_input_chars`, so too-long transcripts skip that model instead of being cut off.
 
 The model that wrote each summary is recorded in `docs/summaries/models.json` and credited on the meeting page.
 
@@ -280,9 +281,9 @@ Time per tag is an estimate. A topic spans its first to last timestamp (a single
 The watcher also writes `docs/summaries/status.json`, the meetings it has found that are still waiting for captions or a summary.
 
 **Meetings page (`index.html`)**
-- Every meeting shows its most-discussed tags, its topic count and length, and a "Show topics" preview.
+- Every meeting shows a short overview, its most-discussed tags, a thin bar of its time by subject area, its topic count and length, and a "Show topics" preview.
 - Filter by one or more tags (match any or all). Search words are matched against titles and summaries, and matches are highlighted in snippets.
-- Sort by newest, oldest, most time on the selected tags, or most topics.
+- Filter by year and by meeting type (regular, study session, special). Sort by newest, oldest, most time on the selected tags, or most topics. Press `/` to jump to search.
 - With a filter or search active, each meeting lists its matching segments, each linking to that moment in the video.
 - Filters live in the URL (`?tags=police,budget&match=all&q=…`), so views can be shared.
 - "Coming soon" lists meetings awaiting captions.
@@ -290,7 +291,8 @@ The watcher also writes `docs/summaries/status.json`, the meetings it has found 
 **Meeting page (`meeting.html`)**
 - A timeline under the video shows each topic as a block colored by tag group. Click a block to jump there; a playhead follows playback and the current topic is highlighted.
 - Tags are listed most-discussed first; selecting one highlights its topics.
-- Each topic has timestamp links and a "Read the transcript" toggle that shows just that part of the captions, loaded from the host.
+- Each topic has timestamp links, a copy-link button, and a "Read the transcript" toggle that shows just that part of the captions, loaded from the host.
+- J and K jump to the next and previous topic. Earlier/later meeting links sit at the bottom. The page prints as plain text without the video or controls.
 
 **Issue page (`issue.html?tag=police`)**
 - Follows one tag across meetings: headline numbers, time per month, tags it's often discussed with, and every discussion with its summary and a link to the moment.
@@ -301,7 +303,10 @@ The watcher also writes `docs/summaries/status.json`, the meetings it has found 
 - "Where the time goes each month": stacked by tag group, as share or hours.
 - "When issues come up": a month × tag heatmap.
 - "Discussed together": tags that share topics with a chosen tag.
+- "What changed between years": each tag's share of time in one year versus another.
 - Every chart has a hover tooltip and a table view. The page can be filtered by year and tag group.
+
+All pages have a system/light/dark theme switch, an About page (`about.html`) explaining the method and its limits, a Content Security Policy, and content-hashed asset URLs stamped by `build_site.py`.
 
 Changing the vocabulary: edit `tags.json` (ids are what the model outputs; descriptions guide it; groups set the 8 colors in order), then re-summarize.
 

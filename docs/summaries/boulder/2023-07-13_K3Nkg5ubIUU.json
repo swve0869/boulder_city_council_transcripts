@@ -1,39 +1,38 @@
 {
   "Title": "Boulder City Council Special Meeting - July 13, 2023",
-  "Overview": "The July 13, 2023 special meeting covered a Parks and Recreation Month declaration, which council adopted, and the consent agenda, which it approved unanimously. Council also held comment-only reviews of the New Vista High School site development plan and a North Boulder mixed-use concept at 4401 Broadway that includes a new museum, and it requested a referral to the Tax Advisory Board on the latter. On the sales tax ballot question, council directed staff to prepare a 50/50 split alternative between the general fund and arts and to conduct further outreach, while most members chose to wait until 2024 rather than extend midterm recruitment for boards and commissions.",
+  "Overview": "The council held a special meeting covering a Parks and Recreation Month declaration, a consent agenda, and public hearings on the New Vista High School site development plan and the 4401 Broadway concept plan for a mixed-use creative campus with a new Boulder Museum of Contemporary Art, with no formal approvals taken on those items. In matters from the mayor and council, members discussed unifying competing ballot measures on extending the 0.15 sales tax, and directed staff to prepare a 50/50 alternative split between arts and the general fund, and agreed to defer board and commission vacancies to the 2024 annual recruitment.",
   "Tags": [
     "council-governance",
-    "public-comment",
     "development",
-    "zoning",
-    "elections",
-    "budget",
     "arts-culture",
-    "boards-appointments"
+    "taxes-fees",
+    "elections",
+    "boards-appointments",
+    "zoning",
+    "public-comment"
   ],
   "Topics": [
     {
       "Topic1": {
         "Title": "Parks and Recreation Month Declaration",
-        "Summary": "Council added and adopted a declaration recognizing July as Parks and Recreation Month in Boulder. Parks and Recreation staff described the department's health, climate, and access programs. Staff noted rising enrollment and financial aid use and highlighted projects including Violet Park and North Boulder Park upgrades.",
+        "Summary": "Council recognized July as Parks and Recreation Month, and Parks and Recreation staff reflected on departmental achievements, including record free-access program visits and upcoming projects such as Violet Park. Council thanked staff for their work. No vote was required beyond the agenda amendment.",
         "related_timestamps": [
-          587.0,
-          917.5,
-          1158.9
+          692.459,
+          1138.98
         ],
         "Tags": [
           "parks-recreation",
-          "human-services"
+          "public-health"
         ]
       }
     },
     {
       "Topic2": {
         "Title": "Consent Agenda",
-        "Summary": "Council approved the consent agenda, items 2A through 2C, unanimously.",
+        "Summary": "Council approved the consent agenda, consisting of items 2A through 2C, by unanimous voice vote after a motion and second.",
         "related_timestamps": [
-          1158.9,
-          1203.8
+          1177.0,
+          1203.84
         ],
         "Tags": []
       }
@@ -41,98 +40,74 @@
     {
       "Topic3": {
         "Title": "New Vista High School Site Development Plan Review",
-        "Summary": "Council held a public hearing to review and comment on the school district's site development plan to replace New Vista High School with a new two-story building, sports field, and updated parking and access. Staff explained that state law requires this review without approval authority. The district presented design changes, including reduced parking, added bike parking, EV charging, and improved drop-off and safe access. Council asked about materials, waste, geothermal grants, and a multi-use path on the east side. Council members praised the responsiveness and encouraged continued access work.",
+        "Summary": "Council held a public hearing to review and comment on the Boulder Valley School District's site development plan to replace New Vista High School with a roughly 74,000 square foot two-story building, new sports field, and reconfigured parking and access. Staff explained the review is per state statute and no approval or denial was taken. The district presented changes made since May, including 18 fewer parking spaces, 64 bike stalls, added EV charging, a sidewalk link, and a revised athletic field approach. Council members praised the responsiveness, asked about construction waste, cross-laminated timber, geothermal grants, and an accessible multi-use path from the east, and a resident urged the project proceed quickly.",
         "related_timestamps": [
-          1212.6,
           1244.82,
-          1438.0,
-          1540.0,
-          2960.0,
-          4345.0
+          2975.0,
+          4362.54,
+          4365.48
         ],
         "Tags": [
           "development",
           "transportation",
           "bikes-pedestrians",
-          "historic-preservation"
+          "energy",
+          "university"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Public Comment on New Vista High School",
-        "Summary": "A New Vista parent and PTO president spoke in support of moving the project forward quickly. She said the current building has water leaks and safety problems. She also raised concerns about parking needs for open enrollment students and for CU football and Chautauqua shuttle events.",
+        "Title": "4401 Broadway Concept Plan Review",
+        "Summary": "Council reviewed a concept plan for a roughly 107,250 square foot mixed-use North Boulder Creative Campus including a new Boulder Museum of Contemporary Art, 67 residential units, retail, and studio space, requiring a 29-space parking reduction and several code modifications. Staff explained the museum use is prohibited in the MU-2 zone and live-work units are prohibited in RM-1, so rezoning, a North Boulder subcommunity plan update, and likely a flex zone would be needed. Council members were generally supportive of the museum use, the land use change path, and the project's consistency with comprehensive plan goals, and asked the applicant to address liquor licensing near the school, the land donation value, and displacement of existing tenants. Council also discussed a possible referral to the Design Advisory Board and Transportation Advisory Board, with the applicant to decide timing, and asked that bike and pedestrian safety be coordinated with Community Cycles.",
         "related_timestamps": [
-          4375.0,
-          4607.0
+          4401.0,
+          5110.0,
+          6337.0,
+          9400.0,
+          10300.0,
+          10575.0
         ],
         "Tags": [
-          "public-comment",
-          "development"
-        ]
-      }
-    },
-    {
-      "Topic5": {
-        "Title": "North Boulder Creative Campus Concept Review (4401 Broadway)",
-        "Summary": "Council reviewed a concept plan for a mixed-use project including a new Boulder Museum of Contemporary Art, about 67 housing units, retail, and live-work space. Staff explained that the museum use and the proposed density and parking reduction require code modifications, rezoning, and a North Boulder subcommunity plan update. The applicant described community engagement and affordability goals. Council members supported the museum use and the nobo plan update, asked about parking, land donation value, and liquor licensing, and asked for a referral to tab.",
-        "related_timestamps": [
-          4711.0,
-          6333.0,
-          8583.0,
-          10000.0,
-          12700.0
-        ],
-        "Tags": [
-          "development",
           "zoning",
-          "affordable-housing",
+          "development",
           "arts-culture",
           "housing",
+          "affordable-housing",
+          "historic-preservation",
           "parking"
         ]
       }
     },
     {
-      "Topic6": {
-        "Title": "Public Comment Period for Creative Campus Concept Review",
-        "Summary": "No members of the public signed up to speak on the North Boulder creative campus concept review.",
+      "Topic5": {
+        "Title": "Unification of Arts and General Fund Sales Tax Ballot Measures",
+        "Summary": "Staff presented polling by Probolsky Research showing about 70 percent support for extending the 0.15 percent sales tax, with a 62 percent approval rating for city services. Council discussed a compromise proposed by petitioners of the arts ballot measure to split the 0.15 percent tax 50/50 between arts and the general fund, which would roughly double arts funding. Members debated the trade-offs, the dedicated-funds concern, the 1.8 million dollar existing arts allocation, and legal options. Seven members directed staff to prepare a 50/50 alternative ballot measure for next week, and staff was asked to conduct outreach to bipoc and lower-income arts organizations before final decisions.",
         "related_timestamps": [
-          8583.0,
-          8650.0
+          5683.0,
+          11700.0,
+          13350.0,
+          15000.0,
+          17000.0
         ],
         "Tags": [
+          "elections",
+          "budget",
+          "taxes-fees",
+          "arts-culture",
+          "equity",
           "public-comment"
         ]
       }
     },
     {
-      "Topic7": {
-        "Title": "Proposed Unification of Sales Tax Ballot Measures",
-        "Summary": "Staff and pollster Adam Probolsky presented polling showing about 70 percent support for extending the 0.15 sales tax through 2044 and strong approval of city services. Council discussed a compromise to split the 0.15 tax 50/50 between the general fund and arts, versus competing ballot measures. Members debated dedicated funding, budget trade-offs, the library savings, racial equity, and whether the Arts initiative petitioners would agree. Council directed staff to prepare a 50/50 alternative and to conduct further outreach.",
+      "Topic6": {
+        "Title": "Midterm Board and Commission Vacancy Recruitment",
+        "Summary": "Staff reported that 12 applications were received for 12 vacancies, with several boards receiving no eligible applicants and interviews completed by council members. Council discussed whether applicants could be placed on other boards and whether the recruitment should be extended. A majority of council, seven members, directed staff to defer unfilled vacancies to the 2024 annual recruitment, which will be prepared beginning in September 2023.",
         "related_timestamps": [
-          9737.0,
-          11000.0,
-          12000.0,
-          16300.0,
-          17600.0
-        ],
-        "Tags": [
-          "budget",
-          "taxes-fees",
-          "elections",
-          "arts-culture",
-          "council-governance"
-        ]
-      }
-    },
-    {
-      "Topic8": {
-        "Title": "Boards and Commissions Midterm Recruitment Extension",
-        "Summary": "Staff reported that the midterm recruitment for boards and commissions had 12 applications for 12 vacancies, with some boards receiving none. Staff asked whether to extend recruitment now or wait until the 2024 annual recruitment. Most council members preferred waiting until 2024, and a consultant is expected to help with future recruitment.",
-        "related_timestamps": [
-          17350.0,
-          17770.0
+          17190.0,
+          17660.0,
+          17760.0
         ],
         "Tags": [
           "boards-appointments",

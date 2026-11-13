@@ -1,38 +1,36 @@
 {
-  "Title": "March 5, 2026 - Boulder City Council Regular Meeting",
-  "Overview": "At its March 5, 2026 regular meeting, the Boulder City Council heard public comment on the Flock Safety license-plate-reader contract and the South Boulder Recreation Center, received updates on the Frontier Avenue redevelopment and the city's affordable housing program, and took action on several agenda items. The council unanimously approved the consent agenda and the 2026 board and commission appointments, and it directed staff to revise the Area Three guidance so that housing there is not limited to middle-income ownership. No decisions were made on the Flock contract or the recreation center, which staff will address further in future work, including an April 9 study session on facilities funding.",
+  "Title": "March 5, 2026 - Regular City Council Meeting (Boulder City Council)",
+  "Overview": "The council heard extensive open comment on Flock Safety license-plate-reader cameras and on funding and future of the South Boulder Rec Center, declined to call up the Frontier Avenue concept plan, and approved the consent agenda (excluding item 3E, which was revised for staff direction) along with the 2026 board and commission appointments effective immediately for the Boulder Urban Renewal Authority. The meeting closed with a city staff presentation on affordable housing, prompting questions on cash-in-lieu, middle-income ownership, and the 15% affordable housing goal.",
   "Tags": [
-    "council-governance",
-    "public-comment",
     "flock",
     "surveillance",
-    "parks-recreation",
+    "budget",
     "affordable-housing",
-    "boards-appointments"
+    "boards-appointments",
+    "development"
   ],
   "Topics": [
     {
       "Topic1": {
         "Title": "Open Comment: Flock Safety Cameras",
-        "Summary": "Multiple residents urged council to cancel or not renew the Flock Safety license-plate-reader contract, citing immigration enforcement concerns, data-sharing risks, security vulnerabilities, and Flock's alleged misconduct. Speakers asked for public votes and data-retention policies, and some pointed to Denver, Longmont, and state legislation as examples. Council members said they were uncomfortable with the vulnerabilities and that staff is developing both near-term contract decisions and a broader policy. Staff noted that policy on surveillance and data sharing falls within council's purview.",
+        "Summary": "Multiple residents urged the council to cancel or not renew the Flock Safety contract, citing ICE data-sharing concerns, racial profiling, security vulnerabilities, and reported misuse in other jurisdictions. Speakers asked for on-premises data storage alternatives and a surveillance-technology policy. Council members acknowledged the concerns and said staff is working on near-term contract decisions and a broader policy.",
         "related_timestamps": [
           566.0,
-          1870.0
+          1200.0
         ],
         "Tags": [
           "flock",
           "surveillance",
-          "public-comment"
+          "equity"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Open Comment: South Boulder Recreation Center",
-        "Summary": "Many speakers, including seniors, swimmers, parents, and a 10-year-old student, urged council to keep the South Boulder Rec Center open with its pool, gym, and basketball court. Speakers cited crowded pools, the loss of other city pools, walkability, and the 15-minute neighborhood goal. Staff said a study session on facilities funding is scheduled for April 9 that will cover rec centers.",
+        "Title": "Open Comment: South Boulder Rec Center",
+        "Summary": "Many speakers, including seniors, swimmers, parents, and a 10-year-old, urged funding to keep the South Boulder Rec Center open with its pool and gym. Speakers raised concerns about pool consolidation, aging infrastructure, and the 15-minute neighborhood goal. An engineering challenge and a petition for a retrofit commission were also presented.",
         "related_timestamps": [
-          535.0,
-          2100.0,
+          888.0,
           2950.0
         ],
         "Tags": [
@@ -44,41 +42,55 @@
     },
     {
       "Topic3": {
-        "Title": "Consent Agenda and Item 3E Area Three Guidance",
-        "Summary": "Council pulled item 3E, the Area Three planning reserve resolution, for separate discussion. Council members agreed to revise the language so Area Three housing is not limited to middle-income ownership and can include other housing types such as senior or service-supported housing. Council gave a unanimous straw poll direction to staff, and the remaining consent agenda items were approved unanimously.",
+        "Title": "Staff Responses and Council Comments on Open Comment",
+        "Summary": "Staff said a April 9 study session will cover facilities funding and rec centers, and that Flock conversations are ongoing. The city attorney noted operations fall under the city manager, while council can set surveillance and privacy policy. Council members thanked speakers and encouraged continued civic participation, with speakers not selected being prioritized next meeting.",
         "related_timestamps": [
-          3940.0,
-          4240.0
+          2993.0,
+          3700.0
         ],
         "Tags": [
-          "zoning",
-          "affordable-housing",
-          "council-governance"
+          "flock",
+          "council-governance",
+          "surveillance"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Call-Up Check-In: 3550 and 3850 Frontier Avenue Redevelopment",
-        "Summary": "Council reviewed a concept plan for a mixed-use redevelopment with a 2,500-capacity events venue, a hotel, about 500 apartments, and commercial space, requiring rezoning and height modifications. Council members said they did not need to call up the project and were open to legislative action if needed to allow it. Staff noted that a tailored zone district may be needed and that council would review specific issues such as inclusionary housing at site review.",
+        "Title": "Consent Agenda and Item 3E Revision",
+        "Summary": "The council amended the agenda to add item 3J on the external audit firm. Item 3E, concerning area three planning reserve guidance, was pulled for separate discussion and revised to make housing types broader than middle-income ownership. The remaining consent agenda items were approved unanimously.",
         "related_timestamps": [
-          4400.0,
-          4770.0
+          3930.0,
+          4360.0
         ],
         "Tags": [
+          "budget",
           "development",
-          "zoning",
-          "affordable-housing"
+          "zoning"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "2026 Board and Commission Appointments",
-        "Summary": "Council held a public hearing on 2026 board and commission appointments, with two speakers offering general comments. The city clerk explained the nomination and voting process, and council nominated and voted on candidates for each open seat, including the Boulder Urban Renewal Authority. Council unanimously approved the 2026 appointments, with the Urban Renewal Authority appointments taking effect immediately.",
+        "Title": "Call-Up Check-In: Frontier Avenue Concept Plan",
+        "Summary": "The council considered whether to call up a concept plan for redevelopment of 3550 and 3850 Frontier Avenue including an events venue, hotel, apartments, and commercial space. Council members noted zoning does not perfectly fit the mix of uses and expressed willingness to consider legislative changes later. The council declined to call up the project, with input to be given at site review.",
         "related_timestamps": [
-          4765.0,
-          8560.0
+          4360.0,
+          4760.0
+        ],
+        "Tags": [
+          "development",
+          "zoning"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Board and Commission Appointments 2026",
+        "Summary": "A public hearing was held on 2026 board and commission appointments, with two speakers offering comments. Council members nominated candidates seat by seat, using straw votes and elimination rounds to narrow finalists. All appointments were approved unanimously, with Boulder Urban Renewal Authority appointments made effective immediately after a replacement motion.",
+        "related_timestamps": [
+          4760.0,
+          8580.0
         ],
         "Tags": [
           "boards-appointments",
@@ -87,17 +99,32 @@
       }
     },
     {
-      "Topic6": {
+      "Topic7": {
         "Title": "Affordable Housing Review",
-        "Summary": "Staff presented an overview of Boulder's affordable housing program, including the gap between incomes and home prices, the rental and ownership market, supply and demand programs, and partnerships with Boulder Housing Partners. Staff said the city has produced affordable units at about 37 percent of new development, outperforming its 25 percent inclusionary requirement, and that most local funding comes from local sources. Council asked about middle-income ownership, cash-in-lieu payments, the 15 percent housing goal, unused down-payment funds, and land banking, and staff said next steps include zoning reforms, expanded down-payment assistance, and continued innovation.",
+        "Summary": "Staff presented the current state of affordable housing, including the gap between stagnant area median income and rising home prices, Dr. Cog rental and ownership gaps, and the city's inclusionary housing outperformance at 37% of new development. Programs discussed include the affordable homeownership program, scattered-site acquisition, Boulder Mod, and the down payment assistance pilot. Council asked about cash-in-lieu economics, the 15% goal, unused $10 million voter-approved funds, and federal and vouchers impacts.",
         "related_timestamps": [
-          8600.0,
-          12960.0
+          8580.0,
+          13075.0
         ],
         "Tags": [
           "affordable-housing",
           "housing",
           "budget"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Closing Remarks and Community Announcement",
+        "Summary": "Council members thanked staff for the affordable housing presentation and the city manager's office was encouraged to use the memo format as a model. A council member announced a community invitation to a Ramadan event at the mosque. The meeting was closed at 9:05 p.m.",
+        "related_timestamps": [
+          13075.0,
+          13160.0
+        ],
+        "Tags": [
+          "council-governance",
+          "public-comment",
+          "affordable-housing"
         ]
       }
     }

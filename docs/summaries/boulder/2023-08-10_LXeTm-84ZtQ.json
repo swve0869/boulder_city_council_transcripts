@@ -1,27 +1,25 @@
 {
-  "Title": "Boulder City Council Special Meeting and Study Session - August 10, 2023",
-  "Overview": "The Boulder City Council special meeting and study session covered board appointments, revitalization of the University Hill commercial district, and a proposed affordable commercial pilot program. Council made five appointments to the Environmental Advisory Board, Landmarks Board, Open Space Board of Trustees, and University Hill Commercial Area Management Commission, approving them unanimously after a finalist process. On University Hill, council generally backed staff's plan to prioritize district-wide strategies before redeveloping the 14th Street parking lot and asked staff to explore code changes, while on the affordable commercial pilot it supported further exploration but raised questions about cost, sustainability, and selection criteria.",
+  "Title": "August 10, 2023 - Boulder City Council Special Meeting (Board and Commission Appointments) and Study Session (University Hill Revitalization and Affordable Commercial Program)",
+  "Overview": "The council held a special meeting with a public hearing on 2023 midterm board and commission appointments, then appointed Hannah Davis and Greg Hill, Renee Golbeck and James Lindberg, Harmon Zuckerman, and Tell Jones to vacant seats by acclamation or vote. In the study session, staff presented revitalization strategies for the University Hill commercial area, including district-wide identity, connectivity, and activation efforts, plus a longer-term look at the 14th Street parking lot, and council generally supported prioritizing broad strategies and exploring liquor-rule code changes. Staff also presented a proposed affordable commercial pilot program developed with CU Boulder, and council supported moving forward with its exploration.",
   "Tags": [
     "council-governance",
     "boards-appointments",
-    "development",
     "economic-development",
-    "affordable-housing",
-    "parking"
+    "zoning",
+    "parking",
+    "affordable-housing"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Boards and Commission Appointments Public Hearing",
-        "Summary": "Council held a public hearing on 2023 midterm board and commission appointments. Staff presented vacancies for the Environmental Advisory Board, Landmarks Board, Open Space Board of Trustees, and University Hill Commercial Area Management Commission. A speaker who had signed up was not present. Council nominated and voted on candidates using a finalist process, appointing Hannah Davis, Greg Hill, Renee Golbeck, Harmon Zuckerman, and Tell Jones, and then approved the appointments unanimously.",
+        "Title": "Public Hearing and Appointments to Boards and Commissions",
+        "Summary": "The city clerk outlined vacancies on the Environmental Advisory Board, Landmarks Board, Open Space Board of Trustees, and University Hill Commercial Area Management Commission. No one signed up to speak during the public hearing, which was closed. Council nominated and voted on candidates using the finalist process, with the rounds producing Hannah Davis, Greg Hill, Renee Golbeck, Harmon Zuckerman, and Tell Jones as appointees. Council then unanimously approved the slate.",
         "related_timestamps": [
           352.32,
-          646.14,
-          1847.16
+          1716.0
         ],
         "Tags": [
           "boards-appointments",
-          "council-governance",
           "public-comment",
           "historic-preservation",
           "open-space"
@@ -30,39 +28,33 @@
     },
     {
       "Topic2": {
-        "Title": "University Hill Commercial Area Revitalization",
-        "Summary": "Community Vitality staff presented strategies to revitalize the University Hill commercial district, including its General Improvement District funding limits, regulatory constraints on liquor hours and food sales, high vacancy rates, and safety concerns. Staff recommended prioritizing broad district-wide strategies such as district identity, connectivity, and activation before redeveloping the 14th Street surface parking lot. Council generally supported the approach and asked staff to explore code changes, including the liquor hours and 50 percent food sales rules.",
+        "Title": "University Hill Revitalization Strategies",
+        "Summary": "Staff presented history, regulations, safety concerns, a 14 percent commercial vacancy rate, and funding constraints for the University Hill General Improvement District. Recommendations included district identity work, improved connectivity along 13th Street, and activation efforts, with staff proposing to prioritize these before redeveloping the 14th Street lot. Council asked questions about the liquor rules, parking, and the Hill Hotel's impact, and members generally supported the broad strategies and exploring code changes.",
         "related_timestamps": [
-          1850.0,
-          2300.0,
-          4240.0,
-          5095.0,
-          6470.0
+          2004.0,
+          5229.06,
+          6273.42
         ],
         "Tags": [
           "economic-development",
+          "zoning",
           "parking",
-          "transportation",
-          "council-governance"
+          "transportation"
         ]
       }
     },
     {
       "Topic3": {
         "Title": "Affordable Commercial Pilot Program",
-        "Summary": "Staff and CU Real Estate Center graduate students presented research on rising commercial lease costs in Boulder and proposed developing an affordable commercial pilot program. The model would involve a master lease subdivided into micro-spaces for small businesses and nonprofits, with shared education and training resources. Staff proposed an RFP for a community partner and community engagement in 2023 and 2024, using ARPA and Central Area General Improvement District funds. Council supported exploring the program while raising questions about cost, sustainability, and selection criteria.",
+        "Summary": "Staff and CU Real Estate Center graduate students presented research on rising commercial lease costs in Boulder and peer programs in other cities. The proposal is a five-year pilot in which the city would master-lease space and sublease to small businesses and nonprofits at reduced operating costs, paired with free education, with a program administrator selected through an RFP. Council members raised questions about eligibility, sustainability, funding sources, and cost to the city, and generally supported continuing the exploration.",
         "related_timestamps": [
-          9050.0,
-          9560.0,
-          10100.0,
-          10790.0,
-          12030.0
+          8996.1,
+          12583.739
         ],
         "Tags": [
           "economic-development",
           "affordable-housing",
-          "budget",
-          "development"
+          "budget"
         ]
       }
     }

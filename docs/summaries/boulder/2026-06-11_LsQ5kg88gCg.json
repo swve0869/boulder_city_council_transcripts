@@ -1,67 +1,63 @@
 {
-  "Title": "June 11, 2026 City of Boulder City Council Study Session - 2026 State Legislative Session Update",
-  "Overview": "The June 11, 2026 Boulder City Council study session reviewed the outcomes of the 2026 state legislative session, with staff highlighting the budget shortfall, the passage of several city-supported housing and homelessness bills, and the defeat of others such as the utility on-bill repayment program. Council members then discussed concerns about several November 2026 ballot initiatives, asked for staff research and summaries on each measure, and requested further information on fiscal impacts, marijuana tax effects, and data center legislation. No formal votes or positions were taken, and staff will return with additional analysis at a future meeting.",
+  "Title": "June 11, 2026 City Council Study Session: 2026 State Legislative Update",
+  "Overview": "Intergovernmental Affairs Officer Heather Staer reviewed the outcomes of the 2026 Colorado legislative session, including state budget cuts, bills the city supported or opposed, and the November 2026 ballot measures. Council asked questions on budget and grant impacts, wildfire and utility reliability, and data center bills, and gave feedback on future advocacy timing. Council reached consensus to direct staff to return with more information on the ballot measures, including Initiative 175, before taking formal positions by resolution at a future meeting.",
   "Tags": [
-    "council-governance",
     "intergovernmental",
     "budget",
     "elections",
     "housing",
-    "energy"
+    "transit",
+    "wildfire"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Overview of 2026 State Legislative Session and City Advocacy",
-        "Summary": "Heather Staer, intergovernmental affairs officer, reviewed the outcomes of the 2026 state legislative session, which ran January 14 to May 13 and passed around 450 of 626 bills. The city took positions on 58 bills, and the state budget was the defining force of the session. The governor had vetoed 12 bills with a final action deadline the following day.",
+        "Title": "Session Overview and Governor Action",
+        "Summary": "The 2026 legislature met for a 120-day session from January 14 to May 13 and introduced about 626 bills, with roughly 450 sent to the governor. The governor had already vetoed 12 bills and had until the following day to act on the rest. The city took positions on 58 bills and posted a new bill tracker on its website.",
         "related_timestamps": [
           418.08,
-          495.0
+          523.36
         ],
         "Tags": [
-          "intergovernmental",
-          "budget"
+          "intergovernmental"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "State Budget Shortfall and Impacts on Boulder",
-        "Summary": "The Joint Budget Committee had to cut about a billion dollars, leaving little room for new programs, and Medicaid costs are a major driver of the deficit. Senate Bill 135 refers a question to voters on the Taber cap for K-12 funding, and Senate Bill 187 created a Medicaid commission. The direct hit to the city is the elimination of the local retail marijuana sales tax share, about $150,000, while indirect impacts include cuts to multimodal transportation funds and affordable housing finance funds.",
+        "Title": "State Budget Shortfall and Medicaid",
+        "Summary": "The Joint Budget Committee had to cut about one billion dollars, leaving little room for new programs, and K-12 was prioritized. Medicaid costs are outpacing state revenue and drive much of the deficit. The legislature created a commission to recommend Medicaid policy changes by December, and a budget forecast is expected in June or July.",
         "related_timestamps": [
           523.36,
-          1199.6,
-          1200.0
+          618.88
         ],
         "Tags": [
           "budget",
-          "taxes-fees",
-          "intergovernmental",
-          "affordable-housing"
+          "intergovernmental"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Immigration Bills and Federal Response",
-        "Summary": "The majority party focused on responding to federal actions, particularly immigration, and Democrats struggled to unite behind a single path. Of five immigration bills, two were killed in committee and one was vetoed, while House Bill 1276 passed to address civil liability for sharing immigration status information and authorize detention center inspections. Other bills responded to federal challenges to mail-in voting and federal orders keeping coal plants open.",
+        "Title": "Federal Response, Immigration Bills, and Initiative 175 Counter-Measure",
+        "Summary": "The majority party focused on responding to federal immigration policies, passing House Bill 1276 on civil liability for sharing immigration status information and detention center inspections. Election-year primaries highlighted tensions between moderate and progressive Democrats. House Bill 1430 was passed as a counter to Initiative 175, a road-funding initiative that could reduce local revenues, and proponents appear to be moving forward with the initiative.",
         "related_timestamps": [
           622.56,
-          706.0
+          831.2
         ],
         "Tags": [
           "intergovernmental",
-          "equity"
+          "elections"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Priority Bills: Homelessness, AI and Utility On-Bill Repayment",
-        "Summary": "House Bill 1202 passed, creating multi-jurisdictional homelessness authorities and requiring a state homelessness strategy. Senate Bill 189 on automated decisionmaking passed and clarifies city responsibilities for AI use. Senate Bill 148, the city's utility on-bill repayment program, failed in appropriations despite years of work and will be re-evaluated over the interim.",
+        "Title": "City Priority Bills: Homelessness, AI, and Utility On-Bill Repayment",
+        "Summary": "House Bill 1202 passed, allowing multi-jurisdictional homelessness authorities and requiring a state homelessness strategy. Senate Bill 189, which clarifies city responsibilities for automated decision-making and AI, passed and was signed. Senate Bill 148, the utility on-bill repayment program, failed in appropriations after a funding error and disputes over the unclaimed property trust fund, and staff will revisit it over the interim.",
         "related_timestamps": [
           831.2,
-          908.8
+          1017.92
         ],
         "Tags": [
           "homelessness",
@@ -72,128 +68,227 @@
     },
     {
       "Topic5": {
-        "Title": "Housing, Land Use and Transit-Oriented Development Bills",
-        "Summary": "Several housing bills the city supported passed, including Senate Bill 40 on affordable homeownership and House Bill 1065 creating transit and housing investment zones with an affordable housing tax credit. House Bill 1224 strengthened protections for mobile home park residents. The city opposed House Bill 1114 on minimum lot sizes and House Bill 1308 on lot splitting, both of which failed in committee.",
+        "Title": "Direct and Indirect Budget Impacts on the City",
+        "Summary": "The largest direct impact is the elimination of the local share of the retail marijuana sales tax, which will cost the general fund about 150,000 dollars. An amendment to preserve that share failed, though council can raise local marijuana taxes to close the gap. Multimodal transportation funding was cut by 10.5 million dollars, and affordable housing finance funding was reduced by about 130 million dollars statewide.",
         "related_timestamps": [
-          1308.8,
-          1438.0
+          1017.92,
+          1239.919
         ],
         "Tags": [
-          "housing",
-          "affordable-housing",
-          "zoning"
+          "budget",
+          "taxes-fees",
+          "affordable-housing"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Data Center Bills and Clean Energy Legislation",
-        "Summary": "Dueling data center bills, House Bill 1030 offering incentives without energy requirements and Senate Bill 102 setting strict requirements, both failed, and sponsors are expected to return next session. Clean energy wins included plug-in solar passing and House Bill 1226 on coal units, while Senate Bill 208 removing wind as a clean energy standard was defeated. Staff noted the bills preserved local control.",
+        "Title": "Dueling Data Center Bills",
+        "Summary": "House Bill 1030 would have offered data center incentives without strong energy or environmental requirements, and the city opposed it. Senate Bill 102 would have set strict requirements for large-load data centers, and the city supported it. Both bills died in committee, and the Senate Bill 102 sponsors plan to bring a new version next session.",
         "related_timestamps": [
-          1244.0,
-          1305.2,
-          1465.84,
-          1484.24
+          1239.919,
+          1305.2
         ],
         "Tags": [
-          "energy",
-          "climate",
-          "technology"
+          "technology",
+          "energy"
         ]
       }
     },
     {
       "Topic7": {
-        "Title": "Public Safety Bills and Firearm Safety",
-        "Summary": "The city opposed three major bills that would have eroded local and state firearm safety laws, and all three were defeated. The city supported House Bill 1144 placing guardrails on 3D printing of firearms. These items reflect the city's advocacy in an election year.",
+        "Title": "Housing and Land Use Legislation",
+        "Summary": "The city supported Senate Bill 40, which expands the affordable homeownership program, and House Bill 1065, which creates transit and housing investment zones and a state tax credit for affordable housing. House Bill 1224 on mobile home park sales and resident fees also passed. The city opposed House Bill 1114 on minimum lot sizes and House Bill 1308 on lot splitting, and both failed in the Senate Local Government Committee.",
         "related_timestamps": [
-          1499.279,
-          1530.799
+          1305.2,
+          1465.84
         ],
         "Tags": [
-          "police",
-          "public-health"
+          "housing",
+          "zoning",
+          "affordable-housing"
         ]
       }
     },
     {
       "Topic8": {
-        "Title": "RTD Board Modernization (House Bill 1150)",
-        "Summary": "The legislature passed House Bill 1150, reducing the RTD board from 15 to nine members with five elected and four governor-appointed, and redrawing districts. The city sought seven elected members, equity language in gubernatorial nominations, and a lower signature threshold, securing only a return to 250 signatures. Requests for more elected seats and equity language were not granted.",
+        "Title": "Clean Energy Bills",
+        "Summary": "The city supported several clean energy bills, including plug-in solar, which passed. House Bill 1226, addressing federal actions on coal plants, was also supported. The city helped defeat Senate Bill 208, which would have removed wind energy from Colorado's clean energy standards.",
+        "related_timestamps": [
+          1465.84,
+          1499.279
+        ],
+        "Tags": [
+          "climate",
+          "energy"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "Firearm Safety Bills",
+        "Summary": "The city opposed three bills that would have eroded local and state firearm safety laws, and all three were defeated. The city supported House Bill 1144, which adds guardrails around 3D printing of firearms, and it passed.",
+        "related_timestamps": [
+          1499.279,
+          1534.96
+        ],
+        "Tags": [
+          "public-health"
+        ]
+      }
+    },
+    {
+      "Topic10": {
+        "Title": "RTD Modernization (House Bill 1150)",
+        "Summary": "House Bill 1150 reduces the RTD board from 15 to nine members, with five elected and four appointed by the governor, and redraws district boundaries. The city sought seven elected seats, equity language in nominations, and a lower signature threshold, and only the signature threshold was restored to 250. The governor's office pointed to existing equity policies, so no additional equity language was added.",
         "related_timestamps": [
           1534.96,
           1655.2
         ],
         "Tags": [
           "transit",
-          "boards-appointments",
           "intergovernmental"
         ]
       }
     },
     {
-      "Topic9": {
-        "Title": "Looking Ahead: 2026 Election, Leadership Changes and Budget Outlook",
-        "Summary": "The November 2026 election will determine control of the General Assembly, with Democrats likely retaining control but a possible shift between moderate and progressive factions. New legislative leadership and a new governor may change priorities, and the budget may require a special session. Staff expects a budget forecast in mid to late June.",
+      "Topic11": {
+        "Title": "Looking Ahead: 2026 Election and 2027 Session Outlook",
+        "Summary": "Democrats are expected to keep control of the legislature after the November 2026 general election, but a new governor and new House leadership may shift priorities. The state budget remains a problem, and a special session may be needed. Staff noted that August 3 is the deadline for initiative signatures and September 2 is when the final ballot will be known.",
         "related_timestamps": [
           1659.039,
           1730.88
         ],
         "Tags": [
           "elections",
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic12": {
+        "Title": "November Ballot Measures: Initiatives 85, 95, 108, 109, and 110",
+        "Summary": "Staff described Initiative 85, which raises felony penalties for fentanyl and synthetic opioid offenses, mandates treatment for some drug felonies, and narrows exemptions. Initiative 95 requires law enforcement to notify federal immigration authorities in certain cases. Initiatives 108, 109, and 110 address child sex trafficking penalties, school athletics based on biological sex, and surgeries for minors.",
+        "related_timestamps": [
+          1757.12,
+          1932.24
+        ],
+        "Tags": [
+          "elections",
+          "crime"
+        ]
+      }
+    },
+    {
+      "Topic13": {
+        "Title": "Referred Measure SB 135 and Initiatives in Circulation",
+        "Summary": "Senate Bill 135 refers a measure to voters to let the state keep revenue above the TABOR cap, up to 4.8 billion dollars, for K-12 and child programs. Initiative 175 would dedicate transportation taxes and fees to roads and bridges and could reduce general fund revenue by about 540 million dollars in future years. Initiatives 177 and 195, which would add a natural gas right and a graduated income tax, are still gathering signatures.",
+        "related_timestamps": [
+          1932.24,
+          2145.839
+        ],
+        "Tags": [
+          "elections",
+          "budget",
+          "taxes-fees"
+        ]
+      }
+    },
+    {
+      "Topic14": {
+        "Title": "Council Questions on Budget Impacts and Grants",
+        "Summary": "Council asked for an aggregate estimate of the city's exposure if the TABOR cap increase fails, and staff said a projection depends on state revenue forecasts and would come later in the budget process. Staff agreed to analyze Initiative 85 with the police chief, sheriff, and judge. Council also asked how Boulder's marijuana tax loss compares with other cities, and staff said the grant loss may affect Boulder more because it is a successful grant applicant.",
+        "related_timestamps": [
+          2157.92,
+          2280.0
+        ],
+        "Tags": [
           "budget",
           "intergovernmental"
         ]
       }
     },
     {
-      "Topic10": {
-        "Title": "November 2026 Ballot Measures Overview",
-        "Summary": "Heather Staer reviewed the ballot measures, including Initiatives 85, 95, 108, 109 and 110 that are officially on the ballot, and the referred measure Senate Bill 135 on retaining revenue above the Taber cap. Initiative 175 on dedicating transportation taxes to roads was expected to be verified soon, and Initiatives 177 and 195 were in circulation. The council may take positions via resolution at a future meeting.",
+      "Topic15": {
+        "Title": "Council Questions on Data Centers and Grants",
+        "Summary": "Council asked how close the dueling data center bills came to passing and whether local home rule policies would be preempted. Staff said Senate Bill 102 preserved local control, and both bills stalled in committee because of labor and environmental opposition. Will Coin said data center incentives are losing bipartisan support.",
         "related_timestamps": [
-          1757.12,
-          1932.24,
-          2007.039
+          2461.76,
+          2549.04
         ],
         "Tags": [
-          "elections",
-          "transportation",
-          "taxes-fees"
+          "technology",
+          "energy"
         ]
       }
     },
     {
-      "Topic11": {
-        "Title": "Council Discussion of Ballot Measures and Next Steps",
-        "Summary": "Council members raised concerns about Initiatives 95, 108, 109, 110, 85 and 175, noting potential harms to vulnerable communities and state funding, and asked who backs the measures. Council requested staff research and summaries on each measure, including Initiative 175, before deciding whether to take positions by resolution. Staff will bring back additional analysis at a future meeting.",
+      "Topic16": {
+        "Title": "Wildfire Risk and Utility Reliability",
+        "Summary": "Council asked whether other communities share common goals on wildfire protection and power reliability that could support collective action. Staff said a utility civil immunity proposal was shut down last summer, and the Public Utilities Commission was reauthorized for seven years with quality-of-service plan requirements. A possible initiative, 308, could fund wildfire and forest work through a sporting goods sales tax.",
         "related_timestamps": [
-          3477.0,
-          3486.24,
-          3588.96,
-          3603.76,
-          3634.88
+          2629.839,
+          2921.28
         ],
         "Tags": [
-          "elections",
+          "wildfire",
+          "energy"
+        ]
+      }
+    },
+    {
+      "Topic17": {
+        "Title": "Right to Natural Gas Initiative",
+        "Summary": "A council member asked why the right to natural gas initiative was pursued, and staff said similar bills have failed for years in the legislature. Staff said the measure would preempt the city's building and energy conservation codes and remove local control over natural gas limits.",
+        "related_timestamps": [
+          3013.52,
+          3144.48
+        ],
+        "Tags": [
+          "energy",
+          "climate"
+        ]
+      }
+    },
+    {
+      "Topic18": {
+        "Title": "Advocacy Timing and Legislative Priorities",
+        "Summary": "Council discussed when to start advocating for next year's legislation, and staff said outreach typically picks up in August and September. A council member proposed that council members send staff their ideas for legislation in July to build momentum before the fall priority-setting process. Staff noted that the election year may distract legislators.",
+        "related_timestamps": [
+          3302.0,
+          3483.44
+        ],
+        "Tags": [
+          "intergovernmental",
           "council-governance"
         ]
       }
     },
     {
-      "Topic12": {
-        "Title": "Council Questions on Grants, Data Centers and Wildfire-Related Utility Reliability",
-        "Summary": "Council asked about the aggregate fiscal impact of a failed Taber cap increase, the comparative marijuana tax impact on other communities, and data center bill status. Council also asked about collective action on wildfire and power reliability, and staff noted a PUC reauthorization included quality of service plans. Staff said they would look into the grant success rate and monitor state budget forecasts.",
+      "Topic19": {
+        "Title": "Council Discussion of November Ballot Measures",
+        "Summary": "Council members expressed concern about several measures, particularly Initiatives 108, 109, 110, and 95, which some said could harm transgender people or people seeking reproductive care. Others said Initiative 85 needs more analysis of its effects on sentencing and treatment. Council also noted that the group behind the measures is a dark money organization that spent heavily to gather signatures.",
         "related_timestamps": [
-          2157.92,
-          2280.88,
-          2585.0,
-          2645.0,
-          2723.2
+          3483.44,
+          4086.64
         ],
         "Tags": [
-          "wildfire",
-          "energy",
-          "budget"
+          "elections",
+          "crime"
+        ]
+      }
+    },
+    {
+      "Topic20": {
+        "Title": "Next Steps for Ballot Position Decisions",
+        "Summary": "Council agreed to ask staff for more information on all six ballot measures, including Initiative 175, before taking formal positions. Staff will return with research on who supports each measure and what each would affect, and it will consider positions by resolution at a future regular meeting. Council did not take a straw poll and moved on after reaching this direction.",
+        "related_timestamps": [
+          4086.64,
+          4505.84
+        ],
+        "Tags": [
+          "elections",
+          "council-governance"
         ]
       }
     }

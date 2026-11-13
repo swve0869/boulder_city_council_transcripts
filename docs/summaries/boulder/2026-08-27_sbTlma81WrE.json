@@ -1,66 +1,72 @@
 {
-  "Title": "August 27, 2026 City of Boulder City Council Study Session - Excel Energy Partnership Update and Wildfire Resilience",
-  "Overview": "At the August 27, 2026 Boulder City Council study session, Excel Energy reported on its 2020 franchise and energy partnership, including about 60% emissions reductions by the end of 2025 and wildfire mitigation work such as undergrounding three feeders and a two-phase transmission rebuild, while council pressed on outages, restoration communication, rates, and customer service. Staff then presented a draft home hardening hub, a project inventory of about 137 projects, and a draft risk index dividing the western wildland-urban interface into 12 sections, and council asked about contractors, renters, funding, and measurable 2030 targets. No formal decisions were made; staff committed to follow-up responses and a return to council in October.",
+  "Title": "August 27, 2026 - Boulder City Council Study Session",
+  "Overview": "Council received an Xcel Energy partnership update covering wildfire mitigation, undergrounding, reliability, and emissions progress, then questioned Xcel on outages, rates, resilience hubs, and microgrids. Staff then presented a midyear progress check on the council-priority wildfire resilience project, including a home hardening hub and a prioritization framework with a WOOI risk index. No binding votes were taken; staff will return with follow-up responses and further materials in October.",
   "Tags": [
-    "flock",
-    "energy",
     "wildfire",
-    "fire-ems",
+    "energy",
     "emergency-management",
-    "public-comment",
-    "council-governance",
     "climate",
-    "intergovernmental",
-    "water"
+    "budget"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Excel Energy Partnership Update",
-        "Summary": "Excel Energy presented progress under the 2020 franchise and energy partnership agreement, including 100% emissions-free electricity goals, 85% carbon-free by 2030, and emissions reductions of about 60% achieved by end of 2025. Excel described wildfire mitigation work, including AI panel cameras, enhanced power line safety settings, undergrounding of three feeders, and a transmission rebuild in two phases. Council members pressed on frequent outages, restoration communication, rate impacts, rolling outage risk, and customer service issues.",
+        "Title": "Xcel Energy Partnership Update and Wildfire Mitigation Presentation",
+        "Summary": "Xcel Energy leaders presented progress under the Boulder energy partnership agreement, including emissions reduction targets, coal retirements, and 2030 carbon-free goals. Xcel detailed its wildfire mitigation plan, including undergrounding of three feeders, a two-phase transmission rebuild, enhanced power line safety settings, AI cameras, and public safety power shutoff preparations. The presentation also covered 120 megawatts of planned capacity additions, a clean heat pilot with a June 2027 PUC filing, and a second voter report. Staff noted that Excel's outage and reliability work is being coordinated with city staff through a weekly meeting.",
         "related_timestamps": [
           316.08,
-          408.72,
-          1138.96,
-          2259.0
+          2515.36
         ],
         "Tags": [
           "energy",
-          "climate",
-          "wildfire"
+          "wildfire",
+          "climate"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Wildfire Resilience Home Hardening Hub and Mitigation Priorities",
-        "Summary": "Staff presented a council priority project on wildfire resilience, including a draft home hardening implementation hub to connect homeowners to guidance, incentives, and mitigation actions. Staff also presented a project inventory of about 137 projects grouped into 25 programs, 10 tier one priorities, and a draft WOOI risk index dividing the western wildland-urban interface into 12 sections. Council asked about contractor lists, renter participation, mandatory retroactive home hardening, funding models, and measurable 2030 targets.",
+        "Title": "Energy Resilience Priority and Council Questions to Xcel",
+        "Summary": "Staff introduced the energy resilience council priority and a set of questions on whether the partnership is delivering expected outcomes. Council pressed Xcel on rolling outages, market purchases and rate impacts, and the frequency and duration of outages in Boulder neighborhoods. Councilmembers asked about resilience hubs, community microgrids, a $10 million energy assistance commitment, billing and customer service issues tied to a PUC investigation, and whether the utility can provide a scorecard. Xcel committed to written follow-up on many questions, and council members were given one-minute closing comments.",
         "related_timestamps": [
-          6668.719,
-          7200.48,
-          8636.0,
-          8995.0
+          2515.36,
+          6499.44
         ],
         "Tags": [
-          "wildfire",
+          "energy",
           "emergency-management",
-          "open-space",
-          "homelessness"
+          "equity"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Public Comment and Council Questions Closing",
-        "Summary": "Council members gave short closing comments to Excel and staff, emphasizing reliability, transparency, customer service, and the need for measurable goals. Staff committed to follow-up responses and an October return for further discussion.",
+        "Title": "Wildfire Resilience Priority: Home Hardening Implementation Hub",
+        "Summary": "Staff provided a progress check on the wildfire resilience council priority, starting with an overview from the Office of Disaster Management on wildland urban interface conflagration risk and regional coordination. The team described a planned home hardening implementation hub with pathways for low-cost projects, cost estimates, insurance guidance, and neighbor engagement, with a soft launch planned for late September. Council discussed barriers such as finding qualified contractors, renter participation, and the need for trusted vetted resources. Staff noted that a local contractor list would need legal review to avoid implied endorsement.",
         "related_timestamps": [
-          5676.0,
-          9042.0,
-          9330.0
+          6499.44,
+          8635.84
         ],
         "Tags": [
-          "public-comment",
-          "council-governance"
+          "wildfire",
+          "emergency-management",
+          "equity"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Wildfire Mitigation Prioritization, WOOI Risk Index, and Council Discussion",
+        "Summary": "Staff presented an inventory of about 137 wildfire projects organized into 25 programs, with 10 tier one programs identified through a survey of wildfire professionals. A draft WOOI risk index divided the western wildland urban interface into 12 sections, showing highest risk west of Broadway, and staff proposed 2030 measures and targets. Council asked about scenario planning under drier or hotter conditions, evacuation capacity, retroactive and mandatory home hardening, funding tradeoffs, revolving loan options, and how land use decisions interact with high-risk areas. Staff will bring the final risk index, refined measures, and a full study session in October.",
+        "related_timestamps": [
+          8635.84,
+          13381.36
+        ],
+        "Tags": [
+          "wildfire",
+          "emergency-management",
+          "budget",
+          "zoning"
         ]
       }
     }

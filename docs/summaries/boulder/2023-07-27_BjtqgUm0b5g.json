@@ -1,22 +1,22 @@
 {
-  "Title": "Boulder City Council Study Session - July 27, 2023 (Police Oversight Ordinance Update; Use Table and Standards Update - Neighborhood Centers)",
-  "Overview": "The Boulder City Council study session on July 27, 2023, covered two topics: a preliminary review of revisions to the city's police oversight ordinance, including panel scope, selection, onboarding, and training, and the third module of the use table update for neighborhood center business and mixed-use zones. Council members supported the police oversight work and asked for comparisons with other cities, and they broadly backed streamlining restaurant approvals and expanding small-business uses while debating ground-floor residential uses, drive-throughs and gas stations, and clubs and hostels. No formal decisions were made, and the police oversight recommendations are expected in the fall, while the neighborhood center ordinance is slated for October after community input closes July 31 and planning board review in August.",
+  "Title": "Boulder City Council Study Session - July 27, 2023",
+  "Overview": "The study session covered two items: an update on the police oversight ordinance revision process led by consultant Farah Muscadin, where council discussed ordinance drafting, panel scope, monitor roles, selection criteria, training, and outside counsel, with no formal votes taken. The second item presented Module 3 of the Use Table and Standards update focused on neighborhood centers, including proposals for restaurants, duplexes and townhomes, vehicle-related uses, and other use changes, with council providing direction ahead of a planned October ordinance first reading and November second reading. The meeting ended about 30 minutes early with no formal decisions.",
   "Tags": [
     "police",
     "council-governance",
     "zoning",
     "economic-development",
     "housing",
-    "public-comment"
+    "bikes-pedestrians"
   ],
   "Topics": [
     {
       "Topic1": {
         "Title": "Police Oversight Ordinance Revision Update",
-        "Summary": "Consultant Farah Muscadin presented preliminary observations and community feedback on revising Boulder's police oversight ordinance, including panel scope, selection process, onboarding, and training. Council asked about whether issues stem from ordinance drafting or implementation, the meaning of oversight versus advisory roles, the monitor's non-voting role on the panel, and the use of outside counsel. Council members expressed support for the work and asked for comparisons with other cities. The work group timeline targets community feedback in late summer and recommendations in fall.",
+        "Summary": "City Manager Nuria Rivera-Vandermyde introduced consultant Farah Muscadin, former Austin oversight director, who presented preliminary observations and a timeline for revising the police oversight ordinance. Her recommendations included removing the independent monitor from the panel as a non-voting member, formalizing onboarding and training within 90 days, and using standard operating procedures for details better suited than ordinance text. Council members asked about ordinance drafting versus implementation, the term oversight, the panel's size, and monitor hiring. Council discussed the ambiguous perceived bias criterion and how the panel's discipline recommendation process should work.",
         "related_timestamps": [
-          370.02,
-          1602.299
+          422.16,
+          1603.58
         ],
         "Tags": [
           "police",
@@ -27,18 +27,91 @@
     },
     {
       "Topic2": {
-        "Title": "Use Table and Standards Update: Neighborhood Centers (Module 3)",
-        "Summary": "Staff presented the third module of the use table project focused on neighborhood center business and mixed-use zones to implement comprehensive plan policies for walkable 15-minute neighborhoods. Proposed changes include easing restaurant approvals, allowing duplexes and townhomes on ground floors in BT and BR districts, reconsidering vehicle-related uses downtown, and allowing additional uses like retail, post offices, and small performance venues. Council broadly supported streamlining restaurant approvals and expanding small-business uses, with debate on residential ground-floor uses, drive-throughs and gas stations, and clubs and hostels. Community engagement via a story map and questionnaire closes July 31, with planning board review in August and an ordinance expected in October.",
+        "Title": "Council Comments on Police Oversight and Outside Counsel",
+        "Summary": "Council members thanked Farah and the working group and asked for further attention to training development, a grievance process for disagreements over discipline, and a regular cadence for revisiting the ordinance. Questions about outside counsel led staff to explain that the City Attorney's Office represents all boards and commissions and would hire outside counsel only for significant conflicts. Council asked for a survey of how other cities structure their panels.",
         "related_timestamps": [
-          3620.0,
-          10380.0
+          3617.64,
+          3924.059
+        ],
+        "Tags": [
+          "police",
+          "legal",
+          "boards-appointments"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Use Table Module 3 Neighborhood Centers Overview",
+        "Summary": "Planner Lisa Hood presented the third and final use table module, focused on neighborhood centers in business, downtown, and mixed-use zones, to implement Boulder Valley Comprehensive Plan policies on walkable 15-minute neighborhoods. Residential zoning changes were deferred to the future comprehensive plan update. Staff summarized community engagement through a story map, questionnaire (about 190 responses by early July, closing July 31), pop-ups, and working group input. Public input favored more restaurants, small grocery stores, and local retail while expressing concern about auto-oriented uses.",
+        "related_timestamps": [
+          3931.26,
+          5543.28
         ],
         "Tags": [
           "zoning",
           "economic-development",
-          "development",
+          "development"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Restaurant Approval Streamlining",
+        "Summary": "Staff explained that 12 different restaurant regulations across zones make most restaurants require use review, and proposed raising by-right size thresholds, easing patio size limits, and allowing by-right restaurants in downtown zones. Council members broadly supported simplifying approvals and making Boulder a top place to open a restaurant, with suggestions to extend changes to the Hill and to consider limits on chain restaurants. Staff said the City Attorney would investigate chain restaurant distinctions. Staff noted that revenue is cost recovery and that administrative oversight would remain.",
+        "related_timestamps": [
+          5543.28,
+          5938.679
+        ],
+        "Tags": [
+          "economic-development",
+          "zoning",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Duplexes and Townhomes in Neighborhood Centers",
+        "Summary": "Staff proposed allowing duplexes and townhomes on ground floors by right in BT and BR zones, which currently require use review, while keeping BC retail cores unchanged. Council members were divided: some supported middle housing and transition to residential areas, while others worried about displacing retail, density compatibility, and equity and mixed-income concerns. Staff said it had enough direction to move forward and that the questionnaire would provide additional input.",
+        "related_timestamps": [
+          6729.0,
+          7779.0
+        ],
+        "Tags": [
+          "housing",
+          "zoning",
+          "affordable-housing"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Vehicle-Related Uses in Downtown Zones",
+        "Summary": "Staff proposed prohibiting car washes, drive-throughs, fuel service stations, and fuel sales in downtown zoning districts to support walkability, noting few such uses currently exist downtown and that proposals would still need use review criteria. Council members raised concerns about accessibility for people with mobility limits, pharmacy and food drive-throughs, convenience stores serving food deserts, EV charging, and whether prohibition was needed. Many members preferred retaining review rather than outright prohibition.",
+        "related_timestamps": [
+          8022.42,
+          8970.359
+        ],
+        "Tags": [
+          "zoning",
           "transportation",
-          "public-comment"
+          "parking"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Other Use Table Changes for Neighborhood Centers",
+        "Summary": "Staff presented additional proposed changes to allow government facilities such as post offices, small retail in mixed-use zones, small-scale medical offices and repair services, small theaters or music venues, and temporary events in mixed-use zones, while reviewing museums, lodges, hostels, and animal hospitals more carefully. Council generally supported the changes, especially retail and post offices, though members asked for more information about hostels and lodges and cautioned about noise and compatibility for performance spaces. Members also urged reimagining older neighborhood centers and consideration of small arts spaces.",
+        "related_timestamps": [
+          8970.359,
+          10048.319
+        ],
+        "Tags": [
+          "zoning",
+          "economic-development",
+          "arts-culture"
         ]
       }
     }

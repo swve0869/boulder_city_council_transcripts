@@ -1,116 +1,126 @@
 {
-  "Title": "July 30, 2026 - City of Boulder City Council Special Meeting (Tip Offset Ordinance 8754 Second Reading and Public Hearing; Wildfire Resilience on Open Space Ballot Measure Direction)",
-  "Overview": "The Boulder City Council's July 30, 2026 special meeting centered on a second reading and public hearing on Tip Offset Ordinance 8754, which would set a local tip offset for food and beverage workers, and on direction for a wildfire resilience measure on open space. After hearing from about 28 residents and industry groups, the council took no action to amend the tip offset, so the existing minimum wage schedule will proceed as scheduled. On wildfire resilience, the council opted against a ballot measure this year, chose to pursue an ordinance instead, and scheduled an executive session for legal advice before further action.",
+  "Title": "July 30, 2026 - City of Boulder City Council Special Meeting",
+  "Overview": "The council held a public hearing on second reading of Ordinance 8754 to amend the local minimum wage code and set a local tip offset amount for food and beverage workers, hearing extensive public testimony from workers, labor groups, restaurant representatives, and residents. After discussion, no motion was made to change the tip offset, so the existing minimum wage schedule will proceed unchanged, and council expressed support for a task force on restaurant sustainability. The meeting also addressed a direction request on a wildfire resilience open space measure, where council agreed to pursue an ordinance rather than a ballot measure and to hold an executive session on legal advice before proceeding.",
   "Tags": [
-    "budget",
+    "economic-development",
     "labor",
-    "equity",
-    "elections",
+    "taxes-fees",
+    "wildfire",
     "council-governance",
     "public-comment"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Roll Call, Quorum, and Agenda Amendment",
-        "Summary": "The Mayor called the special meeting to order and the council took roll call, confirming a quorum. The council voted unanimously to amend the agenda to add item 4A, direction on wildfire resilience on open space ballot measure.",
+        "Title": "Consent Agenda and Agenda Amendment",
+        "Summary": "Council added item 4A to the agenda unanimously and then approved consent agenda items 2A and 2B by roll call vote.",
         "related_timestamps": [
-          306.639,
-          373.6
+          346.0,
+          440.0
+        ],
+        "Tags": []
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Staff Presentation on Tip Offset Ordinance 8754",
+        "Summary": "Staff presented the second reading of Ordinance 8754, explaining the tip offset mechanics, the 2026 offset of $3.20 and Colorado law allowing a local increase up to $4.68. Presenters reviewed restaurant industry sales tax, job, and visitation trends showing slowing growth. Community engagement results from about 280 questionnaire responses were summarized, followed by four options ranging from status quo to a temporary base wage freeze.",
+        "related_timestamps": [
+          552.0,
+          1539.0
+        ],
+        "Tags": [
+          "economic-development",
+          "labor",
+          "taxes-fees"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Council Questions on Restaurant Savings Messaging",
+        "Summary": "Council member Matt questioned how the status quo option could be presented as $62,800 in restaurant savings, arguing it was misleading because it is not new money. Staff explained the figure reflects current savings from the existing $3.20 offset. Council member Tina asked whether the sales tax chart was inflation adjusted, and staff said it was not.",
+        "related_timestamps": [
+          1541.0,
+          1679.0
+        ],
+        "Tags": [
+          "economic-development",
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Public Hearing on Tip Offset",
+        "Summary": "Public hearing testimony from roughly 28 signed-up speakers, with two-minute limits, featured workers, union organizers, students, and restaurant representatives. Most speakers urged council to keep the scheduled minimum wage increases and avoid expanding the tip offset, citing rents and cost of living. Speakers also proposed alternatives such as commercial vacancy taxes, rent relief, delivery fee caps, and a task force, while the Boulder Chamber and Colorado Restaurant Association urged policy relief for restaurants.",
+        "related_timestamps": [
+          1687.0,
+          4921.0
+        ],
+        "Tags": [
+          "public-comment",
+          "labor",
+          "economic-development"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Council Deliberation and Task Force Support",
+        "Summary": "Council members discussed the tension between supporting restaurants and protecting workers, with several calling for a collaborative task force including labor, business, landlords, and experts. Members expressed that the current schedule should stay in place, and no motion was made to change the tip offset. Council also discussed other levers such as power outage reduction, permitting efficiency, and fee structures.",
+        "related_timestamps": [
+          4948.0,
+          6540.0
+        ],
+        "Tags": [
+          "economic-development",
+          "labor",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Task Force Process Question",
+        "Summary": "Council member Matt asked how quickly a restaurant and workforce task force could begin, and staff requested clarity on scope, leadership, and resources. The mayor suggested a future council action request with a specific proposal, and council member Nicole offered to convene informal discussions independently. The mayor confirmed that the task force would be brought back at a future meeting.",
+        "related_timestamps": [
+          6610.0,
+          6826.0
         ],
         "Tags": [
           "council-governance",
+          "economic-development"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Agenda Item 4A: Wildfire Resilience Open Space Measure Direction",
+        "Summary": "Staff from the city manager's office asked council for direction on whether to pursue a charter amendment ballot measure, a code change, or neither for wildfire resilience on open space. The Open Space Board of Trustees had recommended a charter amendment, while staff recommended a code change. Council indicated consensus against a ballot measure and in favor of an ordinance.",
+        "related_timestamps": [
+          6838.0,
+          7386.0
+        ],
+        "Tags": [
           "wildfire",
+          "council-governance",
           "open-space",
           "elections"
         ]
       }
     },
     {
-      "Topic2": {
-        "Title": "Consent Agenda Approval",
-        "Summary": "Council considered consent agenda item 2, consisting of items 2A and 2B, and approved them unanimously by roll call vote.",
+      "Topic8": {
+        "Title": "Executive Session and Process Concerns",
+        "Summary": "Council agreed unanimously to hold an executive session to receive confidential legal advice before deciding on an ordinance. Council members raised concerns about late receipt of a confidential memo and that the Open Space Board did not receive the legal advice before voting. Staff committed to better timing and process going forward.",
         "related_timestamps": [
-          379.759,
-          438.56
-        ],
-        "Tags": [
-          "council-governance"
-        ]
-      }
-    },
-    {
-      "Topic3": {
-        "Title": "Second Reading and Public Hearing on Tip Offset Ordinance 8754",
-        "Summary": "Staff presented proposed Ordinance 8754 amending the minimum wage chapter to set a local tip offset amount for food and beverage workers, outlining four options and community survey results. Restaurant industry data showed slowing sales, jobs, and visits, while most surveyed workers favored no change to the offset.",
-        "related_timestamps": [
-          448.479,
-          1539.52
-        ],
-        "Tags": [
-          "labor",
-          "budget",
-          "economic-development"
-        ]
-      }
-    },
-    {
-      "Topic4": {
-        "Title": "Council Questions on Tip Offset Presentation",
-        "Summary": "Council members asked about whether the sales tax chart was inflation adjusted and questioned how the status quo option was presented as restaurant savings of $62,800, which staff explained as the amount restaurants currently save under the existing $3.32 offset.",
-        "related_timestamps": [
-          1541.2,
-          1679.6
-        ],
-        "Tags": [
-          "budget",
-          "labor"
-        ]
-      }
-    },
-    {
-      "Topic5": {
-        "Title": "Public Hearing on Tip Offset Ordinance",
-        "Summary": "Roughly 28 residents, labor organizers, restaurant workers, business representatives, students, and online participants spoke at two-minute limits. Most urged keeping the scheduled minimum wage increases and the current tip offset, citing rising rents and cost of living, while the Boulder Chamber, Colorado Restaurant Association, and Downtown Boulder Partnership asked for a collaborative task force and relief for restaurants.",
-        "related_timestamps": [
-          1681.2,
-          4923.92
-        ],
-        "Tags": [
-          "public-comment",
-          "labor",
-          "economic-development",
-          "housing"
-        ]
-      }
-    },
-    {
-      "Topic6": {
-        "Title": "Council Discussion and Decision on Tip Offset",
-        "Summary": "Council members expressed sympathy for both workers and restaurant owners and broad support for a task force including labor, business, landlords, and experts. Several members said they would keep the current minimum wage schedule, and no motion was made to amend the ordinance, so the existing schedule will proceed.",
-        "related_timestamps": [
-          4935.6,
-          6546.0
-        ],
-        "Tags": [
-          "labor",
-          "economic-development",
-          "council-governance"
-        ]
-      }
-    },
-    {
-      "Topic7": {
-        "Title": "Direction on Wildfire Resilience on Open Space Ballot Measure",
-        "Summary": "Staff sought council direction on whether to pursue a charter amendment or code change for wildfire resilience on open space, noting the Open Space Board of Trustees recommended a charter amendment while staff recommended a code change. Council agreed not to pursue a ballot measure this year and to consider an ordinance instead, with an executive session for legal advice before further action.",
-        "related_timestamps": [
-          6551.199,
+          7386.0,
           7684.0
         ],
         "Tags": [
-          "elections",
-          "council-governance",
           "legal",
+          "council-governance",
           "wildfire",
           "open-space"
         ]

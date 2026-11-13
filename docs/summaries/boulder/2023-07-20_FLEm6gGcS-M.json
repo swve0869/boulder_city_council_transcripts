@@ -1,67 +1,86 @@
 {
-  "Title": "Boulder City Council Regular Meeting - July 20, 2023",
-  "Overview": "The July 20, 2023 Boulder City Council regular meeting opened with public participation, where residents urged the council to keep smoke-free air laws and raised concerns about minimum wage, airport noise, lead exposure, and homelessness. The council then discussed whether to opt into state law allowing marijuana hospitality establishments, weighing workload, consultant costs, and whether a future council should decide, and most members preferred not to begin engagement now. The meeting also covered Boulder Creek safety after recent drownings, including county flow thresholds, planned throw line stations, signage, expanded swim lessons, and possible changes to rescue protocols and youth outreach.",
+  "Title": "July 20, 2023 - Boulder City Council Regular Meeting",
+  "Overview": "The Council heard extensive public comment on smoke-free laws, cannabis hospitality, minimum wage, and airport issues. It unanimously passed the consent agenda, including three alternative versions of a sales tax extension ballot measure for first reading. Council took no action to add marijuana hospitality establishments to the work plan or to fund engagement, leaving that question to a future Council, and it then discussed safety on Boulder Creek after recent drownings.",
   "Tags": [
-    "council-governance",
     "public-comment",
-    "crime",
-    "homelessness",
-    "economic-development",
     "public-health",
-    "budget",
-    "labor",
-    "transportation",
-    "fire-ems",
-    "water",
-    "parks-recreation",
     "elections",
-    "taxes-fees"
+    "economic-development",
+    "council-governance",
+    "emergency-management"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Public Participation Guidelines and Open Comment",
-        "Summary": "Staff reviewed decorum rules and participation guidelines before open comment. Residents spoke on smoke-free air laws, opposing any move to allow smoking or cannabis use in restaurants and public spaces. Speakers also addressed the Boulder Chamber's cannabis policy framework, a minimum wage increase, airport noise and lead exposure, and a homelessness harm-reduction concern.",
+        "Title": "Public Comment on Smoke-Free Laws and Cannabis Hospitality",
+        "Summary": "Residents, representatives of public health groups, and industry advocates spoke during open comment. Public health speakers urged the Council to keep smoke-free air protections and opposed allowing smoking or vaping in public places, including cannabis. Chamber of Commerce and cannabis industry speakers supported marijuana hospitality establishments as a way to regulate consumption and support business. Several speakers also raised concerns about drug harm reduction services and public drug use downtown.",
         "related_timestamps": [
-          177.2,
-          397.08
+          401.4,
+          2446.74
         ],
         "Tags": [
           "public-comment",
           "public-health",
-          "economic-development",
-          "homelessness",
-          "labor"
+          "economic-development"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Cannabis Marijuana Hospitality Establishments Direction",
-        "Summary": "Staff presented the Cannabis Licensing Advisory Board recommendations on opting into state law allowing marijuana hospitality establishments. Staff asked whether to add the topic to a future work plan and what engagement level to use. Council discussed workload trade-offs, consultant costs, and whether a future council should decide. Most members preferred not to start engagement now.",
+        "Title": "Minimum Wage Public Comment",
+        "Summary": "Union members and residents urged the Council to join Boulder County in raising the local minimum wage, with some asking for implementation in 2024 rather than 2025. Speakers framed the wage increase as an economic security and housing affordability measure. The Chamber of Commerce asked for a deliberate process that accounts for small nonprofit budgets. A staff update later noted that nearby communities preferred 2025 implementation.",
         "related_timestamps": [
-          2396.0,
-          3070.0
+          1424.7,
+          1522.799,
+          2938.0
         ],
         "Tags": [
-          "economic-development",
-          "public-health",
-          "council-governance"
+          "labor",
+          "equity"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Boulder Creek Public Safety and Drowning Prevention",
-        "Summary": "Fire Chief and Parks and Recreation staff addressed recent Boulder Creek drownings and current rescue protocols. Staff described county flow thresholds of 700 cubic feet per second and planned measures including throw line stations, signage, and expanded swim lessons. Council discussed personal flotation devices, whether thresholds should be lower, and youth outreach.",
+        "Title": "Consent Agenda and Sales Tax Ballot Measures",
+        "Summary": "The Council approved consent agenda items 3A through 3H unanimously. The agenda included three alternative versions of a ballot measure to extend the 0.15 percent sales tax that would otherwise expire at the end of next year. Council planned to pass all three on first reading and hold a public hearing on August 3 before narrowing the options. Another consent item allowed land use approvals to remain valid for three years instead of one.",
         "related_timestamps": [
-          7522.56,
-          9288.6
+          2972.22,
+          3198.9
         ],
         "Tags": [
-          "fire-ems",
-          "water",
-          "parks-recreation"
+          "taxes-fees",
+          "elections"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Marijuana Hospitality Establishments Direction",
+        "Summary": "Staff presented Cannabis Licensing Advisory Board recommendations on opting in to state law allowing marijuana hospitality establishments. Staff asked whether Council wanted this added to a future work plan and what level of public engagement to pursue. Most Council members said the item should not be added this year because of staff capacity and the timing near the end of the term. Council opted not to direct a consultant or engagement now and suggested the next Council consider the item at its retreat.",
+        "related_timestamps": [
+          3247.2,
+          7484.54
+        ],
+        "Tags": [
+          "public-health",
+          "economic-development",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Boulder Creek Public Safety After Drownings",
+        "Summary": "Fire Chief Calderazzo and Parks and Recreation Director Rhodes described emergency response to recent Boulder Creek drownings and current closure protocols tied to county flow thresholds of 700 cubic feet per second. Proposed measures include throw-line stations, temporary and permanent signage by April 2024, and a Creek Management Plan. Council discussed requiring personal flotation devices, expanding swim lessons through financial aid, and coordinating with the sheriff and the school district. Council members expressed condolences to the families affected.",
+        "related_timestamps": [
+          7493.099,
+          9308.76
+        ],
+        "Tags": [
+          "emergency-management",
+          "parks-recreation",
+          "public-health"
         ]
       }
     }

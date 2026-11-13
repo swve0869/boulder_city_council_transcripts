@@ -1,37 +1,22 @@
 {
-  "Title": "January 22, 2026 City of Boulder City Council Special Meeting",
-  "Overview": "The January 22, 2026 special meeting covered the consent agenda, a purchasing code update, community change requests for the Boulder Valley Comprehensive Plan, a proposed metro district policy framework, and a regional homelessness appointment, along with a Holocaust Remembrance Day declaration. Council unanimously passed consent items 3A through 3G, adopted Ordinance 8731 to modernize the city's purchasing procedures, and approved an amended list of comprehensive plan change requests that removed a Sue Drive request and added wildfire mitigation and agricultural water use requests. No final action was taken on the metro district framework, which staff will bring back in April with a regulating ordinance, and the regional homelessness working group appointment was deferred to a later consent item, with Tina volunteering as alternate.",
+  "Title": "January 22, 2026 - City Council Special Meeting",
+  "Overview": "The Boulder City Council read a Holocaust Remembrance Day declaration, passed a consent agenda unanimously, and unanimously adopted Ordinance 8731, which modernizes city purchasing rules and raises the informal bid threshold to $100,000. The council also approved, with one request removed and two added back, the list of community change requests for the Boulder Valley Comprehensive Plan update, and directed staff to return with a commercial-focused metro district policy framework for adoption in April. Council closed the meeting after discussing a volunteer for the regional homelessness working group.",
   "Tags": [
-    "council-governance",
-    "elections",
-    "development",
-    "zoning",
-    "boards-appointments",
-    "economic-development",
     "budget",
-    "public-comment"
+    "zoning",
+    "economic-development",
+    "taxes-fees",
+    "council-governance",
+    "boards-appointments"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Opening, announcements, and roll call",
-        "Summary": "The meeting was called to order with an announcement about 2026 boards and commissions recruitment, which is open until January 25th. Council took roll call and confirmed a quorum was present.",
+        "Title": "International Holocaust Remembrance Day Declaration",
+        "Summary": "Mayor Pro Tem Winer read a declaration designating January 27, 2026 as International Holocaust Remembrance Day. The declaration recounts the Nazi persecution and murder of Jews, Roma, disabled people, and others. It condemns antisemitism, hatred, and bigotry in all forms and pledges solidarity with the Jewish community. The declaration was presented as a ceremonial item.",
         "related_timestamps": [
-          301.6,
-          373.28
-        ],
-        "Tags": [
-          "boards-appointments"
-        ]
-      }
-    },
-    {
-      "Topic2": {
-        "Title": "International Holocaust Remembrance Day declaration",
-        "Summary": "Mayor Pro Tem Winer read a declaration recognizing January 27th, 2026 as International Holocaust Remembrance Day. The declaration condemns antisemitism, hatred, and bigotry and pledges solidarity with the Jewish community.",
-        "related_timestamps": [
-          405.759,
-          542.48
+          399.759,
+          545.519
         ],
         "Tags": [
           "equity"
@@ -39,12 +24,12 @@
       }
     },
     {
-      "Topic3": {
-        "Title": "Consent agenda items 3A through 3G",
-        "Summary": "Council discussed the consent agenda, including a letter to Xcel Energy regarding expectations after the city declined an offer in 2025. Council praised staff's draft and then passed items 3A through 3G unanimously.",
+      "Topic2": {
+        "Title": "Consent Agenda (Items 3A-3G)",
+        "Summary": "Council took up the consent agenda, covering items 3A through 3G. Council members commented on item G, a letter to Xcel Energy setting out the city's expectations after the city declined an offer in 2025. Staff were praised for the draft letter. The consent agenda passed unanimously by roll call.",
         "related_timestamps": [
-          547.12,
-          681.279
+          545.519,
+          686.959
         ],
         "Tags": [
           "energy",
@@ -53,24 +38,23 @@
       }
     },
     {
-      "Topic4": {
-        "Title": "Ordinance 8731 purchasing procedures update",
-        "Summary": "Staff presented updates to the city's purchasing code, the first since 1997, including raising the informal bid threshold from $50,000 to $100,000, allowing alternative construction delivery methods, and creating a business opportunity program. Council asked about support for small, minority, and women-owned businesses and about environmental sustainability language. Ordinance 8731 was adopted unanimously after a public comment period.",
+      "Topic3": {
+        "Title": "Ordinance 8731: Purchasing Procedures Update",
+        "Summary": "Staff presented updates to Chapter 2-8 of the Boulder Revised Code to modernize purchasing, the first update since 1997. Key changes include raising the informal bid threshold from $50,000 to $100,000, allowing alternative construction delivery methods, clarifying piggyback contracting and bid rejection, strengthening equity and sustainability language, and creating a business opportunity program for small, minority, and women-owned businesses. A public speaker raised divestment from Israel, which the mayor ruled off topic. Council adopted the ordinance unanimously on second reading.",
         "related_timestamps": [
-          688.32,
-          1600.48
+          692.48,
+          1633.12
         ],
         "Tags": [
           "budget",
-          "economic-development",
-          "equity"
+          "economic-development"
         ]
       }
     },
     {
-      "Topic5": {
-        "Title": "Community change requests for the Boulder Valley Comprehensive Plan update",
-        "Summary": "Staff screened 34 community change requests for the comprehensive plan update and recommended which should advance for further analysis. Council removed request 10 on the south side of Sue Drive after residents raised concerns about lack of outreach and neighborhood impacts, and added back requests 26 and 27 on wildfire mitigation and agricultural water use. Council approved the amended list unanimously.",
+      "Topic4": {
+        "Title": "Boulder Valley Comprehensive Plan Community Change Requests",
+        "Summary": "Staff presented 34 community change requests received between August and October 2025 and recommended which should advance to further analysis in the draft plan due March 2. Council heard from several residents opposing request 10 on Sue Drive, which was removed from the list by a 7-2 straw vote. Council added requests 26 and 27, on wildfire mitigation and agricultural water use, back into the list after staff had recommended against them. Council then approved the amended list unanimously, with staff to evaluate the requests further and report back in the draft plan.",
         "related_timestamps": [
           1635.279,
           6601.679
@@ -78,20 +62,18 @@
         "Tags": [
           "zoning",
           "development",
-          "wildfire",
-          "water",
           "housing",
-          "public-comment"
+          "wildfire"
         ]
       }
     },
     {
-      "Topic6": {
-        "Title": "Metro district policy framework",
-        "Summary": "Staff presented a policy framework for regulating commercial-focused metropolitan districts, covering development type, mill levy caps, operations and maintenance, fees and revenue bonds, privately placed debt, and amendment oversight. Council asked questions about governance, oversight, and competitiveness and generally supported the approach. Staff plans to return in April with a regulating ordinance and model service plan.",
+      "Topic5": {
+        "Title": "Metro District Policy Framework",
+        "Summary": "Staff presented recommendations for a policy framework regulating commercial-focused metropolitan districts, targeting an ordinance and model service plan for adoption in April ahead of a possible November 2026 ballot cycle. Key recommendations include limiting residential to about 10% of floor area, a 50 debt mill levy cap with a combined cap, provisions for operations and maintenance and fees, third-party certification of developer debt, and periodic reviews. Council asked about tax burdens compared with other Front Range communities, anti-displacement review, and protections for the city in interactions with other special districts. Council affirmed staff to move forward with the framework.",
         "related_timestamps": [
-          6610.0,
-          10290.56
+          6609.44,
+          10310.16
         ],
         "Tags": [
           "economic-development",
@@ -101,17 +83,16 @@
       }
     },
     {
-      "Topic7": {
-        "Title": "Regional homelessness working group appointment",
-        "Summary": "Council discussed filling a vacancy on the Boulder County Elected Officials Regional Working Group on Homelessness, previously held by Lauren Folkart. Council members Matt and Mark were asked to resolve who would volunteer, with Tina volunteering as alternate, and the appointment will be handled later on consent.",
+      "Topic6": {
+        "Title": "Boulder County Regional Homelessness Working Group Vacancy",
+        "Summary": "The mayor noted a vacancy on the Boulder County Elected Officials Regional Working Group on Homelessness, previously held by Lauren Folkart. Tara declined the permanent seat, and Tina volunteered to serve as alternate. Matt and Mark were both interested in the permanent seat and agreed to resolve it offline. The appointment is expected to be finalized on consent at a future meeting.",
         "related_timestamps": [
-          10316.0,
-          10398.56
+          10318.64,
+          10406.72
         ],
         "Tags": [
-          "homelessness",
           "boards-appointments",
-          "intergovernmental"
+          "homelessness"
         ]
       }
     }

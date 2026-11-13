@@ -1,58 +1,65 @@
 {
-  "Title": "March 12, 2026 City Council Study Session",
-  "Overview": "The March 12, 2026 study session covered a remembrance declaration, the proposed Downtown Development Authority, and the city's long-term financial and ballot strategy. The council's declaration designating March 22 as Boulder Day of Remembrance for the 2021 King Soopers shooting victims was signed by Mayor Brockett, with a ceremony set for that day. On the DDA, council generally supported further refinement toward a possible November ballot decision, and on ballot measures, straw polls narrowed the options to four, with staff returning in April and May.",
+  "Title": "March 12, 2026 - City of Boulder City Council Study Session",
+  "Overview": "The council held a study session covering a Boulder Strong Day of Remembrance declaration, a preliminary look at forming a Downtown Development Authority (DDA) with tax increment financing and a possible November 2026 ballot, and a preliminary discussion of potential 2026 tax ballot measures. Council supported continued refinement of the DDA model with standalone governance and fiscal safeguards, and in the ballot discussion narrowed options to moving forward with the mid-range public realm mill levy, residential vacancy excise tax, general fund debt authorization, and combining dedicated sales taxes, while dropping the transformational and other mid-range options for 2026.",
   "Tags": [
-    "budget",
     "economic-development",
-    "taxes-fees",
+    "council-governance",
     "elections",
-    "affordable-housing",
-    "council-governance"
+    "taxes-fees",
+    "budget",
+    "development"
   ],
   "Topics": [
     {
       "Topic1": {
         "Title": "Boulder Strong Day of Remembrance Declaration",
-        "Summary": "Councilmember Wallach presented a declaration designating March 22 as the Boulder Day of Remembrance to honor the 10 people killed in the March 22, 2021 King Soopers mass shooting. The council read the victims' names and announced a remembrance ceremony at the Boulder Museum on March 22 from 3:30 to 4:30 p.m. The declaration was signed by Mayor Aaron Brockett.",
+        "Summary": "Councilmember Wallach presented a declaration designating March 22 as the Boulder Day of Remembrance to honor the ten people killed in the 2021 King Soopers mass shooting. He read the victims' names and announced a remembrance ceremony at the Boulder Museum on March 22. The declaration was introduced as a ceremonial item before the work sessions began.",
         "related_timestamps": [
+          0.7,
           52.87,
           226.62
         ],
         "Tags": [
-          "council-governance",
-          "public-health"
+          "arts-culture",
+          "public-comment"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Downtown Development Authority Formation and Initial Recommendations",
-        "Summary": "Staff presented the proposed Downtown Development Authority, a tax increment financing tool to fund long-term reinvestment in downtown and the Hill, with a study area still under refinement and no final boundaries. Staff recommended exploring a standalone DDA with a 1-2 year transition, a funding model combining a mill levy, property and sales tax increment, and possibly parking assets, with fiscal safeguards. Council asked about voting thresholds, the base year, parking and GID asset transfers, staff costs, liability, and oversight, and generally supported continued refinement toward a November ballot decision.",
+        "Title": "Downtown Development Authority Formation and Analysis",
+        "Summary": "Staff presented the proposed DDA as a tool to capture tax increment from property and sales tax growth within a study area and reinvest in downtown and the Hill. Staff's initial direction was a standalone DDA with a 1-2 year transition, a plan of development, and possible transfer of parking assets, with a June return to council and a possible November ballot. Council asked clarifying questions about voting thresholds, liability, base year, revenue sharing, and staff capacity. Most members supported continued refinement of the model, while Taisha Adams urged that climate and nature be included in the analysis.",
         "related_timestamps": [
-          255.21,
-          2757.3,
-          3862.32
+          38.4,
+          301.68,
+          2060.739,
+          2126.35,
+          4153.79
         ],
         "Tags": [
           "development",
           "economic-development",
-          "taxes-fees"
+          "elections",
+          "council-governance"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "2026 Ballot Measures and Long-Term Financial Strategy",
-        "Summary": "Finance staff presented the long-term financial strategy, noting that 68% of city revenues are dedicated and that property tax growth has slowed sharply. Staff previewed transformational, mid-range, and structural tax ballot options, including a sales tax on services, a sales-to-property tax swap, a general purpose mill levy, a public realm mill levy, a residential vacancy excise tax, a general fund debt authorization, a mill levy cap increase, and consolidation of dedicated sales taxes. Through straw polls, council narrowed the options to the public realm mill levy, residential vacancy excise tax, general fund debt authorization, and consolidation of dedicated sales taxes, with staff returning in April and May.",
+        "Title": "Preliminary Discussion of 2026 Tax Ballot Measures",
+        "Summary": "Finance staff presented the long-term financial strategy, noting that 68% of city revenue is dedicated and sales tax is flattening. Staff reviewed transformational, mid-range, and structural ballot measure options and the timeline toward a May 14 narrowing and a June polling result. Council straw polls kept the mid-range public realm mill levy, residential vacancy excise tax, general fund debt authorization, and combining dedicated sales taxes for further work, and moved transformational options and the general mill levy off the 2026 list.",
         "related_timestamps": [
           4170.609,
+          4190.58,
           5524.6,
+          8557.75,
           10134.38
         ],
         "Tags": [
-          "elections",
           "budget",
-          "taxes-fees"
+          "taxes-fees",
+          "elections",
+          "council-governance"
         ]
       }
     }

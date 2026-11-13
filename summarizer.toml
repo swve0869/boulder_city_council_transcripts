@@ -133,6 +133,8 @@ provider = "anthropic"
 model = "claude-haiku-5-5"
 label = "Claude Haiku 5.5"
 max_tokens = 64000
+transcript_format = "lines"   # 35% fewer tokens than JSON, keeps most meetings under Haiku's 100K price
+                              # threshold, and timestamps land on caption starts far more often
 prompt_cache = true
 # No `fallbacks`: Haiku has no server-side refusal fallback. To fall back on a
 # refusal, list another model after it in [summarize] models, e.g. ["haiku", "claude"].

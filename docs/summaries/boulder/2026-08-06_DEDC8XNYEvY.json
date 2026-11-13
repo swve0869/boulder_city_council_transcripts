@@ -1,121 +1,80 @@
 {
   "Title": "August 6, 2026 - Boulder City Council Regular Meeting",
-  "Overview": "The August 6, 2026 Boulder City Council meeting centered on five potential November 2026 ballot measures, following open comment on topics including the shelter, Spruce Pool, and affordable housing HOA costs. Council referred the recreation and safety bond, the firefighter collective bargaining amendment, the residential vacancy excise tax (7-1, with Spear opposed), and the debt limit charter amendment to the ballot, while the downtown development authority failed 4-4 and staff was directed to scope further community engagement. Council also unanimously approved the remaining conditions and amendments to the Boulder Valley Comprehensive Plan update and passed consent agenda items 3A through 3C.",
+  "Overview": "The council heard extensive open comment and staff presentations, then voted on five ordinances for the November 3, 2026 ballot. It unanimously referred the firefighter collective bargaining charter amendment (8761), the recreation and safety bond (8758, amended to name a lap pool), and the debt limit charter amendment (8762), and referred the residential vacancy excise tax (8759) by a 7-1 vote. The downtown development authority measure (8763) failed 4-4, and the council then directed staff to scope community engagement; the meeting ended by approving the Boulder Valley Comprehensive Plan update conditions and amendments.",
   "Tags": [
-    "council-governance",
     "elections",
     "budget",
-    "development",
-    "public-comment",
-    "parks-recreation"
+    "economic-development",
+    "parks-recreation",
+    "zoning",
+    "labor"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Open Comment Period",
-        "Summary": "Residents spoke during open comment on topics including Palestine and Israel, the Fort Chambers interpretive design, Spruce Pool repairs, permanently affordable housing HOA costs, shelter sanitary conditions, and council investment divestment. Staff responded on open space, Spruce Pool closure through Labor Day, HOA affordability, and the shelter bathroom issue. Council members commented on tribal consultation and investment portfolio governance.",
+        "Title": "Open Comment",
+        "Summary": "Residents spoke on the Fort Chambers interpretive design, Sand Creek memorialization, Spruce Pool and South Boulder Rec Center, a shelter bathroom sanitation issue, HOA costs in permanently affordable homes, and Middle East policy. Staff responded that they would follow up with Right Relationship Boulder, Spruce Pool would close for renovations after Labor Day, and the shelter issue was being addressed with shelter leadership and public health. Council members raised tribal consultation timing, CU Boulder coordination, and the city's investment portfolio.",
         "related_timestamps": [
-          56.079,
-          3649.839
+          95.04,
+          1960.08
         ],
         "Tags": [
           "public-comment",
+          "open-space",
           "homelessness",
-          "equity",
-          "affordable-housing",
-          "open-space"
+          "university"
         ]
       }
     },
     {
       "Topic2": {
         "Title": "Consent Agenda and Call-Up Check-Ins",
-        "Summary": "Council passed the consent agenda items 3A through 3C. Three outside city utility permit requests for properties on Cherryville Road, Frying Pan Road, and Cottonwood Drive were reviewed during call-up check-ins and none were called up.",
+        "Summary": "After reconvening at 6:30 p.m., the council passed the consent agenda items 3A through 3C by voice vote. Three outside city utility permit requests on Cherryville Road, Frying Pan Road, and Cottonwood Drive were not called up for discussion.",
         "related_timestamps": [
           3669.52,
-          3701.2
+          3768.0
         ],
         "Tags": [
-          "boards-appointments"
+          "development"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Ballot Measures Staff Presentation",
-        "Summary": "Staff presented five potential November 2026 ballot measures: the recreation and safety bond, the residential vacancy excise tax, the firefighter collective bargaining charter amendment, the debt limit charter amendment, and the downtown development authority. Staff explained financial pressures, the long-term financial strategy, facilities backlog of 15 priority buildings, and DDA mechanics including tax increment financing and governance.",
+        "Title": "Recreation and Safety Bond Presentation and Debate",
+        "Summary": "Staff presented a proposed 400 million dollar general obligation bond to fund replacing the South Boulder Rec Center, renovating North Boulder Rec Center and the West Senior Center, and building a public safety and 911 dispatch facility, along with fire station and municipal building work. Staff said the bond would address a backlog of facilities needs that developed over decades and cited a 6.5 million dollar projected 2027 general fund gap. Residents and council members pressed for binding ballot language guaranteeing the South Boulder Rec Center's core amenities, such as a lap pool and gym.",
         "related_timestamps": [
           3894.96,
-          4964.159,
-          5452.0
+          4777.2
         ],
         "Tags": [
           "budget",
-          "taxes-fees",
-          "elections",
-          "development",
-          "labor"
+          "parks-recreation",
+          "elections"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Public Hearing on Ballot Measures Public Comment",
-        "Summary": "Dozens of residents spoke on the five ballot measures. Supporters of the DDA cited downtown vacancies and small business needs, while opponents cited diversion of dedicated open space and library funds and lack of citizen input. Many speakers, especially from South Boulder, demanded binding language protecting South Boulder Rec Center amenities, and firefighters and the Boulder Chamber urged referral. Others supported the residential vacancy tax.",
+        "Title": "Debt Limit Charter Amendment",
+        "Summary": "Staff explained that ordinance 8762 would change the city charter debt limit calculation from assessed value to actual value, bringing Boulder in line with other Boulder County communities and state statute. Council discussed the change as part of its long-term financial strategy. The council then approved the measure unanimously for the November ballot.",
         "related_timestamps": [
-          7058.719,
-          8466.8,
-          12092.08
+          4777.2,
+          4828.7
         ],
         "Tags": [
-          "public-comment",
-          "elections",
-          "parks-recreation",
-          "development",
-          "taxes-fees",
-          "open-space"
+          "budget",
+          "elections"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Ordinance 8761 Firefighter Collective Bargaining Charter Amendment",
-        "Summary": "Council unanimously adopted Ordinance 8761 to refer to the November 3, 2026 ballot a charter amendment guaranteeing full-time fire department employees the right to bargain collectively. The measure was negotiated with IAFF Local 900 leadership and city staff.",
+        "Title": "Residential Vacancy Excise Tax",
+        "Summary": "Ordinance 8759 would impose an excise tax on homes occupied 183 days or fewer per year, starting January 1, 2028, at 4,000 dollars per unit with annual CPI adjustments up to a maximum of 7,000 dollars per unit. Supporters said it would encourage long-term rentals and help housing affordability, and staff said an implementing ordinance would address exemptions. Council member Nicole Speer opposed, arguing a fee would be a better approach, and the council referred it to the ballot 7-1.",
         "related_timestamps": [
-          13908.0,
-          13994.239
-        ],
-        "Tags": [
-          "labor",
-          "elections",
-          "fire-ems"
-        ]
-      }
-    },
-    {
-      "Topic6": {
-        "Title": "Ordinance 8758 Recreation and Safety Bond",
-        "Summary": "Council adopted Ordinance 8758 as amended to refer a general obligation bond for recreation, public safety, and capital projects to the November ballot. The amendment changed South Boulder Rec Center language to specify a lap pool, after debate about specificity and community engagement. Projects include South Boulder Rec Center replacement, North Boulder Rec Center renovation, West Senior Center, a public safety building, and fire station renovations.",
-        "related_timestamps": [
-          14029.68,
-          15327.92
-        ],
-        "Tags": [
-          "budget",
-          "parks-recreation",
-          "elections",
-          "fire-ems",
-          "police"
-        ]
-      }
-    },
-    {
-      "Topic7": {
-        "Title": "Ordinance 8759 Residential Vacancy Excise Tax",
-        "Summary": "Council voted 7 to 1 to refer Ordinance 8759 to the November ballot, which would impose a vacancy excise tax of 4,000 per unit on homes occupied 183 days or less per year starting January 1, 2028, with CPI adjustment up to 7,000. Council member Spear voted no. Council discussed possible exemptions such as probate.",
-        "related_timestamps": [
-          15538.56,
-          15571.52
+          4828.7,
+          4883.7
         ],
         "Tags": [
           "housing",
@@ -125,58 +84,79 @@
       }
     },
     {
-      "Topic8": {
-        "Title": "Ordinance 8762 Debt Limit Charter Amendment",
-        "Summary": "Council unanimously approved Ordinance 8762 to refer to the November ballot an amendment to the Boulder home rule charter changing the city's debt limit calculation from assessed value to actual value, bringing the city in line with other Colorado communities and state statute.",
+      "Topic6": {
+        "Title": "Firefighter Collective Bargaining Charter Amendment",
+        "Summary": "Ordinance 8761 would add a new charter section guaranteeing full-time fire department employees the right to bargain collectively, along with changes to the impasse procedure. The Boulder Association of Firefighters and city leadership reached agreement on the language, avoiding a petition effort. The council adopted the ordinance unanimously for the November ballot.",
         "related_timestamps": [
-          15591.12,
-          15685.2
+          4883.7,
+          4964.1
         ],
         "Tags": [
-          "budget",
+          "labor",
+          "elections"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Downtown Development Authority Presentation and Council Questions",
+        "Summary": "Staff presented the proposed downtown development authority covering downtown and University Hill, with tax increment financing projections, a draft letter of intent, and council oversight through appointments and budget approval. Staff said the DDA would be a separate entity, that roughly 2,200 qualified electors in the district would vote, and that the bond and DDA projections were separate from the city's citywide forecast. Council questions addressed sales tax base years, Sundance Film Festival timing, precedents from other Colorado DDAs, and whether water supply was included in long-term projections.",
+        "related_timestamps": [
+          4964.1,
+          6934.0
+        ],
+        "Tags": [
+          "economic-development",
           "elections",
-          "council-governance"
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Public Hearing on Ballot Measures",
+        "Summary": "More than 60 residents spoke, with strong opposition and support on the DDA, the rec center bond's lack of binding amenity language, and the vacancy tax. Speakers included library trustees requesting a board seat and an IGA, Downtown Boulder Partnership and Chamber representatives supporting the DDA, and Sierra Club and open space advocates raising concerns about dedicated tax revenue. Several speakers also opposed or supported the collective bargaining measure and questioned the bond's debt obligations.",
+        "related_timestamps": [
+          7058.72,
+          13836.8
+        ],
+        "Tags": [
+          "public-comment",
+          "elections",
+          "economic-development",
+          "open-space",
+          "labor"
         ]
       }
     },
     {
       "Topic9": {
-        "Title": "Ordinance 8763 Downtown Development Authority",
-        "Summary": "Council debated Ordinance 8763 to form a Boulder Downtown Development Authority and refer it to November ballot. Supporters emphasized revitalizing downtown and University Hill, vacancies, and sales tax decline. Opponents raised concerns about diverting dedicated open space and library funds, nonresident corporate voting, lack of library and county engagement, and climate and water risks. A motion to add a post-approval engagement process failed 4-4. The main motion failed 4-4. Council then gave staff direction to scope next steps for continued community engagement, which received six votes.",
+        "Title": "Council Votes on Ballot Measures",
+        "Summary": "The council unanimously adopted ordinance 8761 for firefighter collective bargaining and then approved ordinance 8758 unanimously after adding a lap pool to the South Boulder Rec Center language. Ordinance 8759 passed 7-1 with Council Member Spear opposed, and ordinance 8762 passed unanimously. Ordinance 8763 to form the DDA failed 4-4, and council gave staff direction to scope next steps and community engagement by a 6-0 show of hands.",
         "related_timestamps": [
-          15700.0,
-          16520.0,
-          17010.0,
-          18770.0,
-          18800.0
+          13836.8,
+          18334.0
         ],
         "Tags": [
-          "development",
-          "economic-development",
           "elections",
-          "budget",
           "council-governance",
-          "open-space"
+          "economic-development",
+          "labor"
         ]
       }
     },
     {
       "Topic10": {
-        "Title": "Boulder Valley Comprehensive Plan Update Conditions and Amendments",
-        "Summary": "Council considered remaining conditions and recommended amendments to the Boulder Valley Comprehensive Plan update from planning board, the Board of County Commissioners, and county planning commission. Items included removing the history section, municipal airport policy 79, future land use changes in planning area 2, housing diversity policy 82, rural lands definition, near-transit language, and fire-adapted communities policy 89. Council approved all three motion sets unanimously, accepting staff recommendations, and asked for a future resolution on the history section.",
+        "Title": "Boulder Valley Comprehensive Plan Update",
+        "Summary": "Staff presented remaining conditions of approval and recommended amendments from the planning board, county commissioners, and county planning commission. Council accepted staff's recommendation to approve the conditions and amendments, including the county's revised municipal airport policy, the removal of the history section, and the rural lands designation for area 2. A proposal to restore near-transit language for neighborhood one housing failed a straw poll, and all three motions passed unanimously.",
         "related_timestamps": [
-          19985.0,
-          20980.0,
-          21090.0,
-          21230.0,
-          21276.32
+          18848.56,
+          21288.0
         ],
         "Tags": [
           "zoning",
-          "climate",
-          "housing",
           "intergovernmental",
-          "council-governance"
+          "water"
         ]
       }
     }

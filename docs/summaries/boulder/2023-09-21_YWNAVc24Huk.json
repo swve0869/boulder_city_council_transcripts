@@ -1,25 +1,25 @@
 {
   "Title": "Boulder City Council Regular Meeting - September 21, 2023",
-  "Overview": "At its September 21, 2023 regular meeting, the Boulder City Council presented Hispanic Heritage Month and Energy Efficiency Day declarations, heard public comment on topics including a library building, a Central Park homeless camping incident, and local housing, and approved its consent agenda. The council also unanimously approved Boulder Junction Phase 2 Transit Village Area Plan amendments and approved the affordable and modest-size housing zoning ordinance on second reading with changes, deferring several proposed amendments to a later phase. Council agreed to send a letter to the County Commissioners supporting a proposed affordable housing tax ballot measure and requesting support for permanent supportive housing.",
+  "Overview": "The Council opened with proclamations for Hispanic Heritage Month and Energy Efficiency Day, then heard extensive open comment and consent agenda items. The main actions were approving amendments to the Transit Village Area Plan (Boulder Junction Phase 2) and its Comprehensive Plan summary, and amending Ordinance 8599 on zoning for affordable and modest-size housing, with several changes deferred to phase two. The Council also discussed a letter endorsing county housing support, with a directive to bring a formal endorsement back later.",
   "Tags": [
-    "council-governance",
-    "housing",
     "zoning",
+    "affordable-housing",
     "development",
-    "intergovernmental",
-    "public-comment"
+    "housing",
+    "public-comment",
+    "council-governance"
   ],
   "Topics": [
     {
       "Topic1": {
         "Title": "Hispanic Heritage Month and Energy Efficiency Day Declarations",
-        "Summary": "Council presented a Hispanic Heritage Month declaration, with Spanish interpretation and remarks from community interpreters and advocates on language justice. Council then presented an Energy Efficiency Day declaration, highlighting energy efficiency's economic and climate benefits and designating October 2023 as Energy Efficiency Day.",
+        "Summary": "Council presented a proclamation recognizing Hispanic Heritage Month from September 15 to October 15, with interpreters and community members speaking in Spanish and English. Council then presented an Energy Efficiency Day declaration for October 2023, urging residents to support clean energy goals.",
         "related_timestamps": [
-          483.06,
-          1242.2
+          483.0,
+          1242.0
         ],
         "Tags": [
-          "equity",
+          "human-services",
           "climate"
         ]
       }
@@ -27,73 +27,74 @@
     {
       "Topic2": {
         "Title": "Open Comment Period",
-        "Summary": "Eight in-person speakers and one virtual speaker addressed council on topics including a library building disposition, a Black history museum exhibit, a homeless camping incident near Central Park, a child-friendly restroom request, a police incident at a hardware store, historic house demolition review, and the 28th and J middle-income housing project. Staff responded on the Central Park incident and child-friendly cities initiative, and council members commented on the library buildings and public safety.",
+        "Summary": "Eight in-person speakers and one virtual speaker addressed Council on topics including library building disposition, a Museum of Boulder exhibit, police monitor and homelessness near Central Park, architectural preservation, potty training facilities, a Landmarks Design Review Committee demolition, and a 28th and J housing project. Staff responded to several concerns, including the Central Park incident and the housing project.",
         "related_timestamps": [
-          1245.96,
-          2554.14
+          1250.0,
+          2551.0
         ],
         "Tags": [
           "public-comment",
           "homelessness",
-          "public-health",
-          "historic-preservation",
-          "development"
+          "historic-preservation"
         ]
       }
     },
     {
       "Topic3": {
         "Title": "Consent Agenda and Call-Up Check-In",
-        "Summary": "Council approved consent agenda items 3A through 3F unanimously by roll call vote. For the call-up check-in on a Life Sciences facility at Walnut Street, a council member expressed interest in calling it up for its sustainability leadership, but no member called it up.",
+        "Summary": "Council approved consent agenda items 3A through 3F unanimously by roll call. No council member called up the Life Sciences site review at 3825 Walnut Street, so it proceeded without a call-up.",
         "related_timestamps": [
-          2937.24,
-          3051.48
+          2934.0,
+          3046.0
         ],
         "Tags": [
-          "development",
-          "climate"
+          "zoning",
+          "development"
         ]
       }
     },
     {
       "Topic4": {
         "Title": "Boulder Junction Phase 2 Transit Village Area Plan Amendments",
-        "Summary": "Staff presented amendments to the Transit Village Area Plan phase two covering land use categories (mutod, mui, pkuo), urban design, and transportation connections, along with a chapter five summary update. Staff noted market analysis favoring residential uses and the need for business stabilization strategies. Planning board recommended approval with a revision removing office from the neighborhood Tod place type, which staff did not support. Council approved both motions unanimously by roll call vote.",
+        "Summary": "Staff presented amendments to the 2007 Transit Village Area Plan covering land use, transportation connections, and urban design for the Boulder Junction Phase 2 area. Council discussed mixed-use transit-oriented development versus mixed-use industrial zoning, anti-displacement strategies for small businesses, and retail sizing. Council approved both motions unanimously, including the staff recommendation not to add the planning board's office restriction.",
         "related_timestamps": [
-          3068.099,
-          5068.5
+          3185.0,
+          4904.0,
+          6986.0,
+          7034.0
         ],
         "Tags": [
           "development",
           "zoning",
+          "transportation",
           "economic-development"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Affordable and Modest Size Housing Zoning Ordinance 8599",
-        "Summary": "Staff presented an ordinance amending land use code provisions on site review, density, parking, and subdivision standards to encourage affordable, middle, and modest-sized housing. Changes included exempting certain middle housing from site review, replacing unit-based density with floor area ratios, reducing parking requirements, and allowing duplexes and triplexes in some low-density zones. Council discussed numerous amendments, deferred several to a future phase two, and approved the ordinance on second reading with changes unanimously, with third reading to follow on consent.",
+        "Title": "Ordinance 8599: Zoning for Affordable and Modest-Size Housing",
+        "Summary": "Staff presented second reading amendments to the land use code to ease density, parking, and subdivision rules, aiming to increase middle housing and modest-size units. Council discussed site review exemptions, efficiency living unit use review, floor area bonuses, and rmx-1 rezoning, deferring several items to a future phase. Council amended and passed the ordinance unanimously, with a third reading expected as a consent item.",
         "related_timestamps": [
-          5070.42,
-          13000.0
+          7078.0,
+          14163.0,
+          14190.0
         ],
         "Tags": [
-          "housing",
           "affordable-housing",
+          "housing",
           "zoning",
-          "parking",
-          "council-governance"
+          "parking"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Letter Supporting County Affordable Housing Ballot Measure",
-        "Summary": "Council member Benjamin proposed a letter to County Commissioners endorsing a proposed affordable and attainable housing tax ballot measure and requesting support for permanent supportive housing with substantial wraparound services and transitional housing. Council agreed to send the letter, with formal endorsement to be considered later through a hotline request.",
+        "Title": "Letter to County Commissioners on Housing Ballot Measure",
+        "Summary": "Council member Benjamin proposed a letter to County Commissioners endorsing a proposed affordable and attainable housing tax, requesting investment in permanent supportive housing with wraparound services and transitional housing. Council generally supported sending the letter, with a formal endorsement resolution to follow through a future request.",
         "related_timestamps": [
-          13000.0,
-          14010.0
+          14270.0,
+          15403.0
         ],
         "Tags": [
           "intergovernmental",

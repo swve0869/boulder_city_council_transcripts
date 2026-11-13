@@ -11,7 +11,8 @@ Python 3.11+ (`tomllib`). Dependencies: `pip install -r requirements.txt` (yt-dl
 ## Commands
 
 ```
-scripts/cron_watch.sh                                        # what cron runs: one full cycle for all cities
+scripts/cron_watch.sh                                        # what the timer runs: one full cycle for all cities
+scripts/status.sh                                            # host health check (services, watcher, funnel, usage)
 python watch_council_videos.py --once --fetch --summarize    # same, without pushing
 python summarize.py --list-models                            # models, fallback order, keys present
 python summarize.py --city Boulder --limit 1 [--model NAME]  # summarize transcripts lacking a summary (costs API $)

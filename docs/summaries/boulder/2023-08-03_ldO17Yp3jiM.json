@@ -1,55 +1,62 @@
 {
-  "Title": "Boulder City Council Regular Meeting - August 3, 2023",
-  "Overview": "The August 3, 2023 Boulder City Council meeting covered a pollinator declaration, extensive public comment on homelessness, housing, and development, and several land-use, ballot, and homeless-services items. Council approved the consent agenda (with Weiner, Yates, and Mayor Pro Tem Walling opposed to item 3B), unanimously adopted Ordinance 8580 designating the Powers House at 830 14th Street as a landmark, and selected a 50/50 split for the proposed 0.15 percent sales tax extension, with three related ballot ordinances held for final action on August 17. Council also directed staff to add safe outdoor spaces and micro communities to the scope of the external homeless services evaluation, and staff gave an update on the 311 Mapleton land dedication, which is set to close the following week.",
+  "Title": "August 3, 2023 - Boulder City Council Regular Meeting",
+  "Overview": "The Council opened with a pollinator appreciation declaration featuring local children, then heard extended open public comment on homelessness, housing, transit, and landmark issues. It passed the consent agenda (with three dissenting votes on the first reading of the occupancy ordinance), designated the Powers House as an individual landmark, and advanced the 50/50 Arts and general fund sales tax compromise ordinance 8591 and the arts petition ordinance 8589 to final reading, while deferring other ballot ordinances to August 17. It also received updates on the 311 Mapleton affordable housing agreement, which now yields a land donation and $1.7 million in cash, and on the homelessness services evaluation and safe outdoor camping planning.",
   "Tags": [
     "elections",
-    "arts-culture",
-    "budget",
     "taxes-fees",
     "homelessness",
-    "public-comment"
+    "public-comment",
+    "affordable-housing"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Pollinator and Little Creature Appreciation Declaration",
-        "Summary": "Council Member Yates presented a declaration recognizing August and September 2023 as a time to celebrate pollinators and little creatures. Children from a local program joined the council to help read the declaration. Staff noted the library gallery exhibit and the ninth Boulder Festival in Central Park on September 9th.",
+        "Title": "Agenda Amendment and Roll Call",
+        "Summary": "The Council voted unanimously to amend the agenda to add a birthday tribute for Councilmember Tara Leonard. Roll call was then taken for the meeting.",
         "related_timestamps": [
-          455.88,
-          862.02
+          281.4,
+          445.38
         ],
-        "Tags": [
-          "arts-culture",
-          "climate"
-        ]
+        "Tags": []
       }
     },
     {
       "Topic2": {
-        "Title": "Public Comment on Homelessness, Housing, Transit and Other Concerns",
-        "Summary": "Residents spoke about a proposed homeless daycare center on Folsom Street and police incidents nearby, bird habitat and wildlife preservation near Goose and Canyon to Mile Creeks, and encampment sweeps and homelessness policy. Speakers also addressed historic preservation of the Civic Area, mental health and jail conditions, minimum wage increases, bus frequency, and tenant lease issues with BHP. Several speakers raised concerns about occupancy limits and development projects.",
+        "Title": "Pollinator and Little Creature Appreciation Declaration",
+        "Summary": "Council Member Yates presented a declaration recognizing August and September 2023 as a time to celebrate pollinators and little creatures. Staff described the library gallery exhibit and the Boulder Festival on September 9th. Local children joined the Council to help read the declaration.",
         "related_timestamps": [
-          906.72,
-          2505.9
+          445.38,
+          873.0
         ],
         "Tags": [
-          "public-comment",
-          "homelessness",
-          "public-health",
-          "housing",
-          "transit",
-          "affordable-housing",
-          "labor"
+          "climate",
+          "open-space"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Consent Agenda",
-        "Summary": "Council approved the consent agenda items 3A through 3E, including the occupancy item 3B on first reading. Council members Weiner, Yates and Mayor Pro Tem Walling voted no on item 3B. Staff noted a public hearing on occupancy would be held at second reading on August 17th.",
+        "Title": "Open Public Comment",
+        "Summary": "Residents spoke on a proposed homeless daycare center on Folsom Street, camping and sweeps, historic preservation of the Civic Area park, the Saddle Creek wall, and mental health and jail concerns. Other speakers addressed minimum wage, bus service, lease paperwork at Boulder Housing Partners, and occupancy limits. Staff and Council responded by noting upcoming study sessions and referring issues to RTD and the County.",
+        "related_timestamps": [
+          906.72,
+          2644.68
+        ],
+        "Tags": [
+          "public-comment",
+          "homelessness",
+          "transit",
+          "labor"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Consent Agenda and Occupancy Ordinance First Reading",
+        "Summary": "The Council approved the consent agenda items A through E with a motion and second. Item 3B, the occupancy ordinance on first reading, received no votes from Councilmembers Weiner and Yates and Mayor Pro Tem Wallach. Councilmember Friend disclosed a short-term rental license and chose not to recuse. The public hearing on occupancy is scheduled for August 17.",
         "related_timestamps": [
           2984.22,
-          3179.52
+          3195.96
         ],
         "Tags": [
           "housing",
@@ -58,11 +65,11 @@
       }
     },
     {
-      "Topic4": {
-        "Title": "Call-Ups and Landmark Designation of 830 14th Street (Powers House)",
-        "Summary": "No call-ups were requested for the items on the call-up list. Council held a public hearing and unanimously adopted Ordinance 8580 designating the property at 830 14th Street as an individual landmark known as the Powers House. The Craftsman bungalow built in 1920 is within the University Place historic district.",
+      "Topic5": {
+        "Title": "Powers House Landmark Designation",
+        "Summary": "The Council held a public hearing on second reading of Ordinance 8580 to designate 830 14th Street as the Powers House, an individual landmark within the University Place historic district. Staff described the 1920 Craftsman Bungalow and its associations with Kate and Patrick Powers. One speaker questioned the Landmarks Board process and the demolition of nearby historic homes. The Council adopted the ordinance unanimously.",
         "related_timestamps": [
-          3223.68,
+          3300.9,
           3975.18
         ],
         "Tags": [
@@ -71,49 +78,88 @@
       }
     },
     {
-      "Topic5": {
-        "Title": "Ballot Measures for November 2023 Election",
-        "Summary": "Council reviewed five ballot-related ordinances: Safe Zones for Kids, Charter amendments on election procedures, and three sales tax extension measures. Council unanimously considered the 0.15 percent sales tax extension and selected a 50/50 compromise split between general fund and arts, culture and heritage programs. Ordinances 8586, 8587 and 8588 were held for final action on August 17th.",
+      "Topic6": {
+        "Title": "Safe Zones for Kids and Charter Amendments First Reading",
+        "Summary": "Staff presented Ordinance 8586, the Safe Zones for Kids petition, which would prioritize removal of prohibited items near schools and multi-use paths. Staff also presented Ordinance 8587, which would amend Charter sections on election procedures and petition signature requirements. Both items were continued to August 17 for final action, with a public hearing held at that time.",
         "related_timestamps": [
-          4023.42,
-          8756.22
+          4093.44,
+          4276.8
         ],
         "Tags": [
           "elections",
-          "budget",
-          "taxes-fees",
-          "arts-culture",
           "council-governance"
         ]
       }
     },
     {
-      "Topic6": {
-        "Title": "311 Mapleton Land Dedication Update",
-        "Summary": "Staff updated council on the 311 Mapleton development, where the developer will donate the Fruhauf site to the city and pay 1.7 million dollars in cash in lieu, totaling about 8 million dollars in value compared to roughly 3.8 million required under inclusionary housing. Closing is targeted for the following week and the city will transfer the site to Boulder Housing Partners for affordable senior housing.",
+      "Topic7": {
+        "Title": "Sales Tax Extension Ballot Measures Staff Presentation",
+        "Summary": "Staff explained the expiring 0.15 percent sales and use tax and the three competing ordinances: the Arts for Boulder petition (8589), the staff proposal (8588), and the compromise (8591). The compromise would split revenue 50 percent to the general fund and 50 percent to arts, culture, and heritage programs. Finance staff said the compromise would not force direct cuts but would constrain future budget choices. Staff also noted that the library district funds have been tapped for other priorities.",
         "related_timestamps": [
-          9843.0,
-          10206.0
+          4328.64,
+          5709.0
         ],
         "Tags": [
-          "affordable-housing",
-          "development",
-          "housing"
+          "taxes-fees",
+          "budget",
+          "elections"
         ]
       }
     },
     {
-      "Topic7": {
-        "Title": "Update on Homeless Services Evaluation and Safe Outdoor Spaces",
-        "Summary": "Staff reported that an external evaluation of the homeless services system will be conducted with Boulder County and HSBC, with an RFP issued in September and work beginning in January. Council directed staff to add an examination of safe outdoor spaces and micro communities for the City of Boulder to the RFP scope. Staff will return with an information item on the work plan trade-offs and timeline.",
+      "Topic8": {
+        "Title": "Public Hearing on Arts and Sales Tax Ballot Measures",
+        "Summary": "Speakers, including Arts leaders and community members, supported the 50/50 compromise to benefit arts and general services. One speaker urged a 100 percent arts allocation, and others expressed concern about taxes and the cost of living. Several speakers emphasized the economic and social value of the arts to Boulder. Staff indicated that the arts petition had consensus among Arts leaders for the compromise.",
         "related_timestamps": [
-          10217.0,
-          12850.0
+          5709.0,
+          7459.02
+        ],
+        "Tags": [
+          "arts-culture",
+          "public-comment",
+          "elections"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "Council Deliberation and Votes on Sales Tax Ordinances",
+        "Summary": "Council members debated whether to keep all three ballot options or pick only the compromise, weighing voter choice against long-term financial goals. Councilmember Benjamin moved and Councilmember Yates seconded to pass and amend Ordinance 8591, the 50/50 compromise, which passed seven to two. Councilmember Yates then moved to pass Ordinance 8589 as amended, which passed nine to zero. Ordinance 8588 was not voted on and will return on August 17.",
+        "related_timestamps": [
+          7462.92,
+          9352.74
+        ],
+        "Tags": [
+          "elections",
+          "arts-culture"
+        ]
+      }
+    },
+    {
+      "Topic10": {
+        "Title": "311 Mapleton Land Dedication Update",
+        "Summary": "Staff updated Council on the 311 Mapleton development, where the original inclusionary housing agreement lapsed and the developer paid cash in lieu. The new voluntary agreement has the developer donate the Fruehauf site and pay $1.7 million in cash, worth about $8 million total compared with the roughly $3.8 million legally required. Closing is expected the week of August 17, and the site will go to Boulder Housing Partners for affordable senior housing. Council praised staff for securing a better outcome and asked that future processes avoid similar delays.",
+        "related_timestamps": [
+          9483.479,
+          10212.439
+        ],
+        "Tags": [
+          "affordable-housing",
+          "development"
+        ]
+      }
+    },
+    {
+      "Topic11": {
+        "Title": "Homelessness Services Evaluation and Safe Outdoor Camping Update",
+        "Summary": "Staff responded to a Council request on the external evaluation of homelessness services, which is being scoped jointly with Boulder County with an RFP expected in September and award in December. Staff also reported research on safe outdoor camping models from Madison, Louisville, and Portland. Council gave direction to modify the RFP to include a city-specific examination of gaps and safe outdoor space options. Council asked for a scheduling update and an information item on whether safe outdoor spaces could be added to the work plan before the September study session.",
+        "related_timestamps": [
+          10214.7,
+          12868.5
         ],
         "Tags": [
           "homelessness",
-          "budget",
-          "human-services"
+          "public-health"
         ]
       }
     }

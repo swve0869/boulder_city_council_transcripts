@@ -1,54 +1,110 @@
 {
-  "Title": "June 25, 2026 - Boulder City Council Special Meeting (Boulder Valley Comprehensive Plan major update deliberation, 2026 ballot measure polling and Fund Our Future engagement results)",
-  "Overview": "The Boulder City Council special meeting focused on deliberations for the Boulder Valley Comprehensive Plan major update, where Council unanimously approved the update with its straw-poll-based amendments, conditions, and recommended changes, including adding wildfire integration language to policy 89. Council also gave non-binding direction on 2026 ballot measures, agreeing to pursue a tax increase for city facilities and operations, advancing a $400 million recreation and safety bond (eight votes) and a vacancy excise tax (seven votes) for further consideration. The meeting closed with a presentation of Fund Our Future engagement results, in which wildfire response and prevention ranked as the top priority, and a long-term financial strategy due in November 2026.",
+  "Title": "June 25, 2026 - Boulder City Council Special Meeting",
+  "Overview": "Council deliberated on the major update to the Boulder Valley Comprehensive Plan, straw-polling conditions of approval and recommended amendments from the Planning Board, County Planning Commission, and Board of County Commissioners, then approved the plan with those changes by unanimous motions, though it still needs further rounds of approval by the other bodies. Council also gave staff direction to develop a $400 million recreation and public safety bond and a vacancy excise tax for the November 2026 ballot, and heard results from the Fund Our Future community engagement.",
   "Tags": [
-    "council-governance",
+    "housing",
+    "zoning",
     "budget",
     "taxes-fees",
-    "zoning",
-    "housing",
-    "wildfire"
+    "council-governance"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Consent agenda and roll call",
-        "Summary": "Council called the special meeting to order and took roll call. The consent agenda (items 2A through 2H) was moved, seconded, and approved, with Council Member Spear voting no on item H and Council Member Wallach abstaining.",
+        "Title": "Staff overview of the plan approval process",
+        "Summary": "Planning staff explained that the Boulder Valley Comprehensive Plan must be adopted in identical form by all four approving bodies, so this meeting was deliberation only with no public testimony. Staff outlined a series of motions and a likely second round of consideration in July and August. Staff noted the Planning Board and Board of County Commissioners conditions of approval are binding unless council agrees to them.",
         "related_timestamps": [
-          312.24,
-          484.6
+          513.039,
+          978.48
         ],
         "Tags": [
-          "council-governance"
+          "council-governance",
+          "zoning"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Boulder Valley Comprehensive Plan major update: process and staff overview",
-        "Summary": "Staff presented the continued public hearing (deliberations only, no public testimony) on the major update to the Boulder Valley Comprehensive Plan. The plan must be adopted in identical form by four bodies: City Council, Planning Board, County Planning Commission, and Board of County Commissioners. Staff outlined a four-motion structure and a second-round schedule with County and Planning Board dates in July and a possible August adoption.",
+        "Title": "Conditions of approval from Planning Board and County Commissioners",
+        "Summary": "Planning Board conditioned approval on changes to housing policy 82 and the municipal airport policy 79. The Board of County Commissioners proposed six conditions, including tribal consultation language, deleting four pages of planning history, and changing area two neighborhood one designations to rural. Staff recommended against most conditions but supported some language edits, and noted the county changes would need further review.",
         "related_timestamps": [
-          486.96,
-          769.0
+          978.48,
+          1363.64
         ],
         "Tags": [
+          "intergovernmental",
           "zoning",
-          "council-governance",
-          "intergovernmental"
+          "housing"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Conditions of approval from Planning Board and Board of County Commissioners",
-        "Summary": "Planning Board and the Board of County Commissioners proposed binding conditions covering housing diversity (policy 82), the municipal airport (policy 79), tribal consultation terminology (policies 102 and 103), the 50-year planning history section (pages 14 through 17), and land use designations in area two. Council straw polls kept the original housing diversity language, adopted the airport and tribal language changes that were presented, and kept the history section. Council also approved removing the area two neighborhood one designations except for Gunbarrel, which was changed to rural.",
+        "Title": "Recommended amendments from the four approval bodies",
+        "Summary": "Staff reviewed 14 recommended amendments, including adding residential uses to the industrial designation, changing street and parks language, and redesignating several East Boulder parcels to Innovation and Production Hub or industrial. Staff opposed most map changes as inconsistent with the East Boulder Subcommunity Plan and unreviewed by the community. Staff supported several smaller edits, including county renewable energy and rural working lands language.",
         "related_timestamps": [
-          814.36,
-          1162.52
+          1363.64,
+          2024.24
+        ],
+        "Tags": [
+          "zoning",
+          "development",
+          "climate"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Council clarifying questions and deliberation",
+        "Summary": "Council asked whether middle-income housing and attainable housing were adequately addressed, and whether affordability language could be used to limit housing near the airport. Staff explained that the policy emphasizes middle-income housing under policy 84 and that the airport lists are examples rather than mandates. Council members also questioned the removal of the planning history section and the climate and water priorities in the plan.",
+        "related_timestamps": [
+          2054.72,
+          3455.84
+        ],
+        "Tags": [
+          "affordable-housing",
+          "housing",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Straw poll on housing diversity and supply (policy 82)",
+        "Summary": "Council considered whether to keep the original policy 82 language or adopt Planning Board or County Commissioner edits that would emphasize more affordable housing and prioritize middle housing. Several members argued the county language was valuable because the county controls land that could be housed, but the mayor noted its rural proposal would discourage county housing. After successive straw polls, council kept the original language.",
+        "related_timestamps": [
+          4899.84,
+          5338.28
         ],
         "Tags": [
           "housing",
-          "affordable-housing",
+          "affordable-housing"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Straw poll on municipal airport language (policy 79)",
+        "Summary": "Council debated Planning Board revisions to the airport policy, which added noise management examples and ongoing county coordination. Matt Benjamin proposed a middle-ground version, but council members were split on whether the language was operational or aspirational. Following straw polls, council retained the original airport policy language.",
+        "related_timestamps": [
+          5362.08,
+          5876.4
+        ],
+        "Tags": [
+          "transportation",
+          "public-health"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Board of County Commissioners conditions straw polls",
+        "Summary": "Council accepted county conditions to add county references and remove American Indian from policy 102, and to remove the word city from policy 103 to limit it to city action. Council rejected the proposal to delete the 50-year planning history pages after discussion about accuracy and the potential to revise later. Council also agreed to add federally before recognized tribes in a related policy, and voted to change only the Gunbarrel area two neighborhood one designations to rural rather than all of area two.",
+        "related_timestamps": [
+          5881.0,
+          7187.68
+        ],
+        "Tags": [
           "intergovernmental",
           "historic-preservation",
           "zoning"
@@ -56,43 +112,40 @@
       }
     },
     {
-      "Topic4": {
-        "Title": "Recommended amendments from Planning Board, County Planning Commission and County Commissioners",
-        "Summary": "Council reviewed roughly 14 recommended amendments covering plan introduction language, industrial and residential mixing (rejected), 15-minute neighborhoods (rejected), future land use map changes near Valmont and Folsom and East Boulder (rejected), and renewable energy generation language (adopted). Council adopted several edits, including language on the future of housing (small houses on small lots and multi-unit buildings near transit), streets in future land use objectives, and parking and transit stops in park definitions. Council also adopted the County's language on utility services for health and safety issues.",
+      "Topic8": {
+        "Title": "Straw polls on recommended amendments",
+        "Summary": "Council straw polled staff and board recommended amendments one by one, asking first whether any member would advocate each change. Council approved Planning Board edits to the housing and transportation definitions, the parks and streets language, and the small houses on small lots language with multi-unit buildings near transit. Council rejected the 15-minute neighborhood monitoring language as operational and removed the proposed industrial residential map changes after straw polls.",
         "related_timestamps": [
-          1408.76,
-          1960.0
+          7203.36,
+          9226.84
         ],
         "Tags": [
           "zoning",
-          "housing",
-          "transportation",
-          "energy",
+          "housing"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "Wildfire life safety and renewable energy amendments",
+        "Summary": "Council Member Kaplan proposed adding language requiring a holistic wildfire risk approach, including emergency management and egress capacity, when evaluating density within mapped wildfire ignition zones. Staff suggested it could fit better as an example in the natural hazards section, and council adopted it as a recommendation. Council also approved adding renewable before energy in local energy generation policy 53 and accepted the county's emergency utility services language in policy 16.",
+        "related_timestamps": [
+          9400.0,
+          9750.0
+        ],
+        "Tags": [
+          "wildfire",
+          "emergency-management",
           "climate"
         ]
       }
     },
     {
-      "Topic5": {
-        "Title": "Council-proposed amendments: wildfire and development in ignition zones",
-        "Summary": "Council Member Kaplan proposed adding language to policy 89 requiring the city to consider an integrated approach to wildfire risk, including emergency management planning and egress capacity, when evaluating development that increases residential density in mapped wildfire ignition zones. Council supported adding the language as a recommended amendment, with staff noting it might fit better in the topic spread on natural hazard resilience.",
+      "Topic10": {
+        "Title": "Motions to approve the comprehensive plan",
+        "Summary": "Council adopted four motions to approve the major update, approving the plan with the Board of County Commissioners conditions, the recommended amendments, and council conditions, all as indicated by the straw polls. Each motion passed unanimously on roll call. The mayor noted the process is not complete because the other approval bodies must still act.",
         "related_timestamps": [
-          9920.0,
-          10030.0
-        ],
-        "Tags": [
-          "wildfire",
-          "emergency-management",
-          "zoning"
-        ]
-      }
-    },
-    {
-      "Topic6": {
-        "Title": "Motions to approve the Boulder Valley Comprehensive Plan major update",
-        "Summary": "Council approved four motions unanimously: approving the major update as documented in the June 25, 2026 staff memo, approving the County Commissioner conditions as indicated by straw poll, approving the recommended amendments as indicated by straw poll, and approving the update with council conditions as indicated by straw poll. Staff will document straw poll results in the minutes.",
-        "related_timestamps": [
-          10170.0,
+          10026.52,
           10343.72
         ],
         "Tags": [
@@ -102,51 +155,48 @@
       }
     },
     {
-      "Topic7": {
-        "Title": "2026 ballot measure polling results",
-        "Summary": "Pollster Adam Probolsky presented results of a likely-voter survey on infrastructure funding. Recreation centers were the top infrastructure priority, and fire stations and wildfire services scored strongly when framed as essential. A $400 million bond polled better than $200 million, and a vacancy tax on second and third homes had majority support. A permanent parks and recreation tax and general fund debt had mixed or plurality support. Staff asked council which measures to advance.",
+      "Topic11": {
+        "Title": "Ballot measure direction for city facilities",
+        "Summary": "Staff presented polling results showing that a $400 million recreation and safety bond polled better than a $200 million option, though neither reached a majority on its own. Council agreed by a show of hands to pursue a tax ballot measure focused on city facilities and to advance the $400 million bond for future public hearings. Some members expressed concern about rising costs, the need for spending discipline, and the risk of failure at the ballot.",
         "related_timestamps": [
-          11008.4,
-          12000.0
+          13880.0,
+          14807.76
         ],
         "Tags": [
-          "budget",
           "taxes-fees",
           "elections",
-          "parks-recreation",
-          "wildfire"
+          "budget"
         ]
       }
     },
     {
-      "Topic8": {
-        "Title": "Council direction on 2026 ballot measures",
-        "Summary": "Council unanimously agreed to proceed with a tax increase ballot measure for city facilities and operations. Eight council members supported advancing the $400 million recreation and safety bond, and seven supported advancing the vacancy excise tax for further consideration. Council members noted that these are non-binding straw polls, and that ballot language and a public hearing will come later.",
+      "Topic12": {
+        "Title": "Vacancy excise tax ballot measure direction",
+        "Summary": "Pollster Adam Probolsky reported that a vacancy tax on second and third homes had strong majority support, with about 70 percent more likely to vote yes after learning the details. Council members said the tax should target non-occupied second homes rather than rentals that are actively marketed. Council voted seven in favor to move the vacancy excise tax ballot measure forward for further consideration.",
         "related_timestamps": [
-          12000.0,
-          14800.0
+          14700.0,
+          14807.76
         ],
         "Tags": [
-          "elections",
-          "budget",
           "taxes-fees",
-          "council-governance"
-        ]
-      }
-    },
-    {
-      "Topic9": {
-        "Title": "Fund Our Future engagement results and long-term financial strategy",
-        "Summary": "Micah Intermill of Gov Strategies and Budget Analyst Stacy Polleycove presented results from the Fund Our Future engagement, which reached 599 residents through eight community conversations and an online survey. Wildfire response and prevention was the strongest priority, with maintenance also prioritized. Renters favored affordable housing investments, while homeowners ranked them low, and the sample skewed toward homeowners. The long-term financial strategy and a comprehensive financial plan are due in November 2026.",
-        "related_timestamps": [
-          14830.0,
-          15600.0
-        ],
-        "Tags": [
-          "budget",
-          "wildfire",
           "housing",
+          "elections"
+        ]
+      }
+    },
+    {
+      "Topic13": {
+        "Title": "Fund Our Future community engagement results",
+        "Summary": "Consultant Micah Intermill and budget analyst Stacy Polleycove presented results from Fund Our Future, which reached 599 residents through community conversations and an online survey. Wildfire response and prevention emerged as the strongest priority for renters and homeowners, with operational maintenance also widely supported. Renters strongly prioritized affordable housing while homeowners ranked it near the bottom, and the results will inform the 2027 budget and the long-term financial plan due in November.",
+        "related_timestamps": [
+          14836.6,
+          16166.92
+        ],
+        "Tags": [
+          "budget",
           "taxes-fees",
+          "public-comment",
+          "wildfire",
           "affordable-housing"
         ]
       }

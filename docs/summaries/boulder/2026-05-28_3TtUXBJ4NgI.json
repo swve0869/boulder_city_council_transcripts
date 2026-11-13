@@ -1,103 +1,134 @@
 {
-  "Title": "May 28, 2026 Boulder City Council Special Meeting and Study Session",
-  "Overview": "The May 28, 2026 Boulder City Council special meeting and study session covered a consent item endorsing Councilmember Matt Benjamin's Colorado Municipal League Executive Board nomination, which passed 8 to 0 with Benjamin recused, and unanimous adoption of Ordinance 8749, granting possible eminent domain authority for the $12 million Arapahoe Avenue safety project. The council also voted to hold a public hearing on the future of airport land use and directed staff to return with two options and legal research, while a study session on a proposed Downtown Development Authority plan drew concerns about general fund impacts, parking governance, and equity for University Hill, though members generally supported moving forward. Staff now seeks direction on the plan's feedback, financing structure, and November 2026 ballot measures.",
+  "Title": "May 28, 2026 - City of Boulder City Council Special Meeting and Study Session",
+  "Overview": "Council unanimously endorsed Councilmember Matt Benjamin's nomination to the Colorado Municipal League Executive Board and unanimously approved Ordinance 8749 authorizing property acquisition, including eminent domain as a last resort, for the Arapahoe Avenue safety project. Council voted 5-3 to direct staff to research two airport land-use options and schedule a public hearing, then gave staff direction to draft DDA formation ballot measures for a November 2026 vote after discussing financial structure, parking transfers, and general fund impacts.",
   "Tags": [
     "council-governance",
-    "taxes-fees",
-    "development",
-    "economic-development",
-    "parking",
-    "affordable-housing",
-    "budget",
     "transportation",
-    "intergovernmental",
-    "public-comment"
+    "economic-development",
+    "budget",
+    "taxes-fees",
+    "legal"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Consent Agenda: Council Endorsement of Matt Benjamin's CML Executive Board Nomination",
-        "Summary": "Council voted to add item 2A to the consent agenda confirming endorsement of Councilmember Matt Benjamin's nomination to the Colorado Municipal League Executive Board. Benjamin explained CML's role lobbying state legislation and Boulder's two appointed seats. Benjamin recused himself, and the consent agenda passed 8 to 0.",
+        "Title": "Consent Agenda: CML Executive Board Nomination",
+        "Summary": "Council added item 2A to the consent agenda to confirm its endorsement of Councilmember Matt Benjamin's nomination to the Colorado Municipal League Executive Board. Benjamin explained that Boulder holds two CML appointments and that the executive board sets CML's policy positions on state legislation. The consent agenda passed 8-0 with Benjamin recused.",
         "related_timestamps": [
-          333.08,
-          412.16,
-          480.08,
-          499.84,
-          617.56
+          315.56,
+          631.04
         ],
         "Tags": [
-          "intergovernmental",
-          "council-governance",
-          "boards-appointments"
+          "boards-appointments",
+          "intergovernmental"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Public Hearing: Ordinance 8749 Eminent Domain for Arapahoe Avenue Safety Project",
-        "Summary": "Staff presented the Arapahoe Avenue safety improvement project, a $12 million effort with $9.6 million in federal funding and $2.4 million in city funds. Acquiring about 700 square feet from each of 14 properties may require eminent domain authority to keep the schedule and meet the 2030 federal spending deadline, though staff does not expect to use it. One resident spoke against the ordinance during public comment. Council unanimously adopted Ordinance 8749.",
+        "Title": "Ordinance 8749: Arapahoe Avenue Right-of-Way Acquisition",
+        "Summary": "Staff presented the East Arapahoe (CO 7) safety project, funded by a federal grant with $2.4 million in city match for a $12 million total, which requires temporary and permanent easements on 14 properties averaging about 700 square feet each. Staff said the eminent domain authority is needed to avoid schedule delays that could jeopardize the federal spending deadline in 2030, and that negotiation is expected to succeed. Council asked about property owner protections and budget placeholders, and one member of the public spoke in opposition. Council then unanimously approved Ordinance 8749.",
         "related_timestamps": [
-          634.12,
-          659.32,
-          736.96,
-          1391.88,
-          1703.8,
-          2024.28,
-          2090.72
+          631.04,
+          2093.08
         ],
         "Tags": [
           "transportation",
-          "bikes-pedestrians",
           "legal",
-          "public-comment"
+          "intergovernmental"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Matters: Council Direction on Continued Use of Airport Land",
-        "Summary": "Staff asked whether the question of continuing airport operations indefinitely should return as a consent item or a public hearing. Council members favored a public hearing for community input, and a majority voted for that path. Council also directed staff, by a vote of five, to bring back two options and legal research on long-term land encumbrance and FAA grant implications.",
+        "Title": "Airport Land Use: Public Hearing and Research Direction",
+        "Summary": "Staff presented scenario A, keeping the airport open indefinitely, and asked council whether to act by consent agenda or public hearing on a motion affirming continued airport use. Most council members favored a public hearing given community interest, and eight members raised hands for that option. Council then debated whether legal research on long-term land encumbrance and FAA grant implications should be done before a hearing, and five members voted to direct staff to bring back two options. Staff said the research would take time and that the budget process is a key pressure point.",
         "related_timestamps": [
-          2100.0,
-          2123.44,
-          2296.0,
-          2640.0,
-          3780.0,
-          3816.0
+          2102.88,
+          4344.28
         ],
         "Tags": [
           "council-governance",
           "legal",
-          "public-comment",
           "budget"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Study Session: Downtown Development Authority (DDA) Formation Analysis",
-        "Summary": "Staff presented the draft DDA plan of development, a 30-year reinvestment framework covering downtown, University Hill, and connecting corridors. Financing would rely on a 3.67 mill levy replacing existing GID levies, tax increment financing, and parking asset integration. Staff requested direction on feedback to the plan, the financial structure, and drafting ballot measures for November 2026. Council members raised concerns about general fund impacts, parking governance, equity for the Hill, and measuring outcomes, and generally supported moving forward.",
+        "Title": "DDA Formation: Plan of Development and Investment Priorities",
+        "Summary": "Staff introduced a proposed Downtown Development Authority to reinvest in downtown and University Hill, citing flat downtown sales tax since 2020 and aging GID parking assets. The draft plan of development sets a 30-year framework with five priority areas: strategic site redevelopment, commercial corridor health, mixed-use development, public space investment, and connectivity. Staff stressed that the plan is a legal framework rather than a binding project commitment and that council approves the plan and budgets.",
         "related_timestamps": [
-          4386.96,
-          4460.0,
-          5050.0,
-          5560.0,
-          5950.0,
-          6220.84,
-          8410.0,
-          8996.52,
-          9300.0,
-          9500.0
+          4380.0,
+          5050.0
         ],
         "Tags": [
           "economic-development",
+          "council-governance",
+          "taxes-fees"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "DDA Financial Structure: TIF, Mill Levy, and Parking Assets",
+        "Summary": "The proposed financing combines tax increment financing, a 3.674 mill levy replacing existing GID levies, and parking asset integration. Staff projected about $1.8 million per year from the mill levy and roughly $18 to $26 million in cumulative six-year revenue across sources. Property tax TIF would capture about half of new growth within the boundary, while sales tax TIF captures growth above a 12-month baseline. Staff acknowledged that the financial impact on the general fund and other taxing entities still needs more analysis.",
+        "related_timestamps": [
+          5290.0,
+          5950.0
+        ],
+        "Tags": [
           "taxes-fees",
           "budget",
-          "parking",
+          "parking"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "DDA Governance, Ballot Measures, and Timeline",
+        "Summary": "Council would appoint the DDA board, approve the annual budget and plan amendments, and set terms of an intergovernmental agreement covering revenue sharing and parking asset transfers. Staff proposed three November 2026 ballot questions covering DDA formation, the mill levy, and TIF authorization, with a draft IGA returning August 6. Qualified electors include property owners, residents, and business lessees within the boundary, with an estimated 2,500 eligible electors. The timeline includes board formation and plan adoption around spring 2027 if approved.",
+        "related_timestamps": [
+          5978.0,
+          6220.0
+        ],
+        "Tags": [
+          "elections",
           "council-governance",
-          "development",
+          "economic-development"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Council Questions and Feedback on DDA Proposal",
+        "Summary": "Council questioned how the DDA would affect general fund sales tax, school and library district property tax, parking rate authority, and measurement of economic outcomes. Members raised equity concerns that University Hill investment might be subordinated to downtown and asked for clearer accountability metrics and parking governance guardrails. Council members generally supported moving toward ballot measures while asking for more financial analysis before final decisions. Staff agreed to provide additional information on general fund impacts, parking asset sale proceeds, and draft IGA terms.",
+        "related_timestamps": [
+          6220.0,
+          9170.0
+        ],
+        "Tags": [
+          "economic-development",
+          "budget",
+          "taxes-fees",
           "equity",
+          "parking",
           "elections"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "DDA Direction Vote and Study Session Close",
+        "Summary": "Council provided direction on the draft plan, the financial structure, and staff drafting ballot measures for November 2026. Most members expressed support for moving forward, with some conditioning approval on more financial information. Staff confirmed they had enough direction to proceed and invited follow-up questions by email. The study session ended shortly after 8:30 p.m.",
+        "related_timestamps": [
+          9170.0,
+          9500.0
+        ],
+        "Tags": [
+          "council-governance",
+          "elections",
+          "economic-development"
         ]
       }
     }

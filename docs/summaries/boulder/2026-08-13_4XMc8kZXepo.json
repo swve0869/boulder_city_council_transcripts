@@ -1,90 +1,67 @@
 {
   "Title": "August 13 2026 City of Boulder City Council Special Meeting and Study Session",
-  "Overview": "The August 13, 2026 Boulder City Council special meeting and study session opened with a unanimous vote to enter executive session for confidential legal advice on potential new litigation, followed by the study session. Council discussed the process and concerns for the 2027-2030 citywide strategic plan, the Civic Area East bookend development RFP, and the 2026 state and county ballot measures. On ballot measures, council used straw polls to direct staff to draft resolutions opposing the fentanyl and immigration reporting measures and supporting the county child care measure, the graduated income tax, and the education funding measure.",
+  "Overview": "The council convened a special meeting and held an executive session to receive confidential legal advice on potential new litigation, approved unanimously. In the study session, staff previewed the 2027 through 2030 citywide strategic plan process and gathered council feedback, then presented goals for the Civic Area East Bookend development partnership RFP and asked for feedback before release. The council also gave staff non-binding direction to draft resolutions opposing several state ballot measures and supporting the county early childhood measure, the graduated income tax, and two others, with formal votes to follow at a later meeting.",
   "Tags": [
     "council-governance",
-    "budget",
     "development",
-    "intergovernmental",
+    "budget",
     "elections",
-    "public-health"
+    "intergovernmental",
+    "legal"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Special Meeting: Executive Session Motion and Recess",
-        "Summary": "Council convened the special meeting and held a roll call. Council voted unanimously to call an executive session under state statute and charter section 21A2 to receive confidential legal advice regarding potential new litigation. The motion was properly noticed, and the council recessed into executive session.",
+        "Title": "Special Meeting and Executive Session on Potential Litigation",
+        "Summary": "The council convened a special meeting and voted unanimously to enter executive session under Colorado law and the city charter to receive confidential legal advice on potential new litigation. Participants were listed for the record and no concerns about improper discussion were raised. The special meeting was then reconvened and closed at 6:01 p.m.",
         "related_timestamps": [
-          186.08,
-          461.759
-        ],
-        "Tags": []
-      }
-    },
-    {
-      "Topic2": {
-        "Title": "Executive Session Conclusion and Special Meeting Adjournment",
-        "Summary": "The executive session concluded at about 6 PM with participants identified for the record, and no violations of open meetings law were raised. The special meeting was reconvened and closed at 6:01 PM. The study session then began under Council Member Spear.",
-        "related_timestamps": [
-          3776.48,
-          3848.079
-        ],
-        "Tags": []
-      }
-    },
-    {
-      "Topic3": {
-        "Title": "Strategic Planning Check-In for 2027-2030 Citywide Strategic Plan",
-        "Summary": "Staff presented the process for developing the 2027 through 2030 citywide strategic plan, including a staff advisory team, a world of possibilities document with about 41 inputs drawn from over 170 proposals, and a prioritization tool. Council raised concerns about budget transparency, council ownership of the plan, the scoring methodology, and the need to add items such as Title 9 reform and budget process reform. Staff committed to community engagement in November, a November 14 workshop, and a final draft by January.",
-        "related_timestamps": [
-          3923.2,
-          5551.44,
-          6197.199,
-          8677.439
+          168.4,
+          3845.599
         ],
         "Tags": [
-          "council-governance",
-          "budget",
-          "boards-appointments"
+          "legal"
         ]
       }
     },
     {
-      "Topic4": {
-        "Title": "Civic Area East Bookend Development Partnership RFP",
-        "Summary": "Staff presented the civic area east bookend redevelopment, with an optional west bookend, seeking a private development partner to realize community goals for a year-round farmers market, arts and culture, and food uses connected to Boulder Creek Park. The RFP is planned for late summer 2026, with partner selection in early 2027 and concept planning through 2027. Council asked about selection committee membership, park safety and maintenance costs, phasing, the Arapahoe Pathway, and whether any funding has been secured. Council provided feedback that the goals should be stated more explicitly and that affordability and economic synergy should be considered.",
+      "Topic2": {
+        "Title": "Strategic Plan 2027 to 2030 Check-In",
+        "Summary": "Staff presented the process for developing the next four-year citywide strategic plan, including a world of possibilities document with about 41 inputs drawn from roughly 170 staff proposals. The presentation described a prioritization rubric, the relationship to the comprehensive plan and budget tiers, and a timeline with a community workshop on November 14 and a January pre-retreat study session. Council members raised concerns about council ownership of the process, access to budget versus actuals and prior plan outcomes, and the need for a clearer prioritization methodology. Members suggested adding items such as a Title 9 rewrite, a two-year budget process, and a category for services no longer core to the city's mission.",
         "related_timestamps": [
-          8707.52,
-          9950.0,
-          11048.0,
-          12177.84
+          3923.2,
+          8677.439
         ],
         "Tags": [
-          "development",
-          "economic-development",
-          "arts-culture",
-          "parks-recreation",
+          "council-governance",
           "budget"
         ]
       }
     },
     {
-      "Topic5": {
-        "Title": "2026 State and County Ballot Measures",
-        "Summary": "Staff summarized the Boulder County early childhood care and education mill levy and several state ballot initiatives, including measures on fentanyl penalties, immigration reporting, transportation funding, the graduated income tax, natural gas rights, and conservation sales tax revenue. Council used straw polls to direct staff to draft resolutions opposing the fentanyl and immigration reporting measures and supporting the county child care measure, the graduated income tax, and the education funding measure. Council did not reach consensus on the conservation sales tax measure, and the transportation and natural gas measures were also opposed.",
+      "Topic3": {
+        "Title": "Civic Area East Bookend Development Partnership RFP",
+        "Summary": "Staff presented the goals and process for a public-private development partnership on the city-owned East Bookend of the Civic Area, with an optional West Bookend, to deliver a year-round food destination with the Boulder County Farmers Market, arts and culture uses, and park connections. The RFI drew nine responses that broadly supported the partnership model, and the RFP is planned for late summer with a partner selected in early 2027. Council discussed selection committee membership, ground-floor commercial uses, developer experience, park safety and activation, ongoing park maintenance costs, phasing, and the Arboretum Path, which is currently outside the funded phase. Council members asked staff to make the community vision goals more explicit and to consider affordability, economic synergy with downtown, and total cost of ownership.",
         "related_timestamps": [
-          12177.84,
-          12260.0,
-          13620.319,
-          15053.52
+          8707.52,
+          12155.52
+        ],
+        "Tags": [
+          "development",
+          "parks-recreation"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "2026 State and County Ballot Measure Positions",
+        "Summary": "Staff explained that the city can take an official position on ballot measures only through a council-adopted resolution and asked whether council wanted drafts for any measures. The county early childhood care mill levy and several state measures were reviewed, including initiatives on fentanyl penalties, law enforcement reporting, sports participation, minors' surgeries, road funding, natural gas rights, and the graduated income tax. Council members gave straw-poll direction to draft non-binding resolutions opposing the fentanyl measure and the road funding measure, supporting the county child care measure, the graduated income tax, and Proposition NN, and supporting the sporting goods tax revenue for conservation measure only after further review. Formal votes on the resolutions are expected at a later regular meeting.",
+        "related_timestamps": [
+          12160.56,
+          15070.96
         ],
         "Tags": [
           "elections",
-          "taxes-fees",
-          "intergovernmental",
-          "public-health",
-          "transportation",
-          "human-services"
+          "intergovernmental"
         ]
       }
     }

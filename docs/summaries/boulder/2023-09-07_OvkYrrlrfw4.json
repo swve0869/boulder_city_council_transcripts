@@ -1,82 +1,57 @@
 {
-  "Title": "Boulder City Council Meeting - September 7, 2023 (Regular Meeting)",
-  "Overview": "The September 7, 2023 Boulder City Council regular meeting opened with announcements, a unanimous vote to move the library district agreement to a September 14 study session, and commemorative declarations, followed by public comment on topics ranging from airport closure to police accountability. The council then approved its consent agenda unanimously, including Resolution 1339 supporting LGBTQ+ access to goods and services, and unanimously accepted the Reimagining Policing Plan and disbanded its process subcommittee. The inclusionary housing program update was presented for feedback only, with no formal action and second reading targeted for November 2.",
+  "Title": "September 7, 2023 - Boulder City Council Regular Meeting",
+  "Overview": "The Boulder City Council opened with declarations (flood anniversary, National Voter Registration Day, Suicide Prevention Month) and open comment, then approved the consent agenda, including a resolution supporting LGBTQ+ access to public accommodations. The council heard extensive public testimony and accepted the Reimagine Policing Plan and disbanded its subcommittee unanimously. It also received a staff update on inclusionary housing changes, with direction to pursue cash-in-lieu restructuring, reduced on-site requirements, and a possible linkage fee study.",
   "Tags": [
     "police",
-    "public-comment",
-    "affordable-housing",
     "council-governance",
-    "budget",
-    "homelessness"
+    "housing",
+    "affordable-housing",
+    "public-comment",
+    "legal"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Opening Announcements and Agenda Amendment",
-        "Summary": "Council heard announcements about the What's Up Boulder community event and the Better Public Meetings Project scorecard. Council then unanimously voted to amend the agenda, moving item 6B on the Boulder Public Library District intergovernmental agreement to the September 14 study session.",
+        "Title": "Declarations and Announcements",
+        "Summary": "Council read declarations recognizing the 10th anniversary of the 2013 Front Range flood, National Voter Registration Day on September 19, and National Suicide Prevention Month. Rise Against Suicide's Jenna Carr and Lauren spoke in appreciation of the recognition. Staff also announced the What's Up Boulder event and the Better Public Meetings scorecard.",
         "related_timestamps": [
+          59.7,
           1295.039,
-          1418.799
-        ],
-        "Tags": [
-          "council-governance",
-          "intergovernmental"
-        ]
-      }
-    },
-    {
-      "Topic2": {
-        "Title": "Commemorative Declarations",
-        "Summary": "Council read declarations marking the 10th anniversary of the September 2013 Front Range flood, National Voter Registration Day, and National Suicide Prevention Month. Jenna Card of Rise Against Suicide spoke briefly in response to the suicide prevention declaration.",
-        "related_timestamps": [
-          1451.919,
-          1571.88,
-          1689.679
+          1854.159
         ],
         "Tags": [
           "emergency-management",
-          "arts-culture",
           "public-health"
         ]
       }
     },
     {
-      "Topic3": {
-        "Title": "Open Comment Period",
-        "Summary": "Community Engagement Manager Ryan Hansen reviewed civility and decorum rules for public participation. Eight speakers signed up, and residents addressed topics including a proposed closure of Boulder Municipal Airport, police accountability and a lawsuit, minimum wage and arts funding, Hill commercial area liquor regulations, bear-trash conflicts, South Boulder neighborhood conditions, and homeless camp proposals.",
+      "Topic2": {
+        "Title": "Open Comment Public Testimony",
+        "Summary": "Residents spoke on the proposed Boulder Airport closure, police oversight and officer conduct, the hill commercial area liquor regulations, and bear activity and trash in the University Hill area. Other speakers raised South Boulder maintenance concerns and homelessness camp proposals. Council members and staff responded and committed to follow-ups.",
         "related_timestamps": [
-          1924.399,
-          2031.96,
-          2060.359,
-          2194.319,
-          2329.319,
-          2466.64,
-          2625.599,
-          2771.52
+          1921.919,
+          2035.08,
+          2998.0
         ],
         "Tags": [
           "public-comment",
-          "transportation",
-          "police",
+          "parks-recreation",
           "homelessness",
-          "economic-development",
-          "public-health",
-          "labor"
+          "university"
         ]
       }
     },
     {
-      "Topic4": {
-        "Title": "Consent Agenda and Resolution 1339 on LGBTQ+ Public Accommodations",
-        "Summary": "Council reviewed a call-up item for a site review at 1345 28th Street for 303 student housing units and no member called it up. Council then approved the consent agenda items A through I unanimously, including Resolution 1339 supporting LGBTQ+ people's access to goods and services without discrimination following the 303 Creative v. Elenis decision.",
+      "Topic3": {
+        "Title": "Consent Agenda",
+        "Summary": "Council approved the consent agenda items 3a through 3i unanimously. Item 3h concerned a planning matter with a second reading scheduled for September 21 and possible third reading. Item 3i was Resolution 1339 supporting LGBTQ+ people's access to goods, services, and public accommodations without discrimination in light of the 303 Creative decision.",
         "related_timestamps": [
-          3223.359,
-          3388.0,
-          3581.319,
-          3634.079
+          3228.88,
+          3500.0,
+          3598.16
         ],
         "Tags": [
-          "development",
           "equity",
           "legal",
           "zoning"
@@ -84,42 +59,85 @@
       }
     },
     {
-      "Topic5": {
-        "Title": "Reimagining Policing Plan Acceptance",
-        "Summary": "Chief Maris Harold presented the Reimagining Policing Plan, a visionary blueprint developed over roughly two years with community engagement, National Policing Institute research, and a process subcommittee. Deputy Chief Redfern outlined problem-solving policing, staffing based on the rule of 60, and accountability metrics, while the City Manager noted that funding requests would return through the budget process. Council unanimously accepted the plan and disbanded the process subcommittee after extensive public comment, both supportive and critical.",
+      "Topic4": {
+        "Title": "Call-Up Check-In for 1345 28th Street",
+        "Summary": "Council considered calling up a site review for three student housing apartment buildings at 1345 28th Street. No member requested a call-up, so the item proceeded with planning board review.",
         "related_timestamps": [
-          4000.0,
+          3647.24,
+          3675.079,
+          3700.119
+        ],
+        "Tags": [
+          "development",
+          "university"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Reimagine Policing Plan Public Hearing",
+        "Summary": "Chief Maris Harold, Wendy Schwarz, and Robin Engel of the National Policing Institute presented the Reimagine Policing Plan, which emphasizes problem-solving policing, holistic governance, staffing aligned to the ICMA rule of 60, and accountability metrics. Staff noted that the funding requests would come through future budget cycles. Council and speakers largely supported the plan, though some residents raised concerns about downtown crime and staffing levels.",
+        "related_timestamps": [
           4393.56,
-          5677.6,
-          6417.0,
-          10708.0,
-          12494.0
+          5252.0,
+          5700.0,
+          6400.0,
+          6780.0
         ],
         "Tags": [
           "police",
           "budget",
-          "council-governance",
-          "public-comment",
-          "equity",
-          "homelessness"
+          "public-health"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Inclusionary Housing Program Update",
-        "Summary": "Staff and consultant Kaiser Martin Associates presented options to update the Inclusionary Housing program, including switching cash-in-lieu to a per-square-foot basis, reducing the on-site for-sale requirement from 25% to 15%, and exploring a nexus study for a linkage fee on demolitions and large additions. Council gave feedback that most members supported the cash-in-lieu and code cleanup changes but were split on the middle-income on-site trade-off, and asked staff to strengthen incentives for on-site units. No formal action was taken, and second reading is targeted for November 2.",
+        "Title": "Public Testimony on Reimagine Policing",
+        "Summary": "Speakers representing business groups, neighborhood associations, and residents voiced strong support for the plan, citing crime on Pearl Street and in the downtown area. Some speakers called for more police staffing and criticized council decisions and the police oversight panel. Others urged equity and community engagement in implementation.",
         "related_timestamps": [
-          16651.0,
-          17025.0,
-          17900.0,
-          18200.0
+          7082.159,
+          8000.0,
+          10100.0,
+          11183.0
+        ],
+        "Tags": [
+          "police",
+          "public-comment",
+          "crime"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Council Discussion and Vote on Reimagine Policing",
+        "Summary": "Council members praised the community engagement process and the work of the subcommittee. Several members stressed that the plan is a roadmap requiring ongoing implementation and accountability. Council then approved a motion to accept the plan and disband the subcommittee by roll call vote, unanimously.",
+        "related_timestamps": [
+          11600.0,
+          12236.0,
+          13996.0
+        ],
+        "Tags": [
+          "police",
+          "council-governance",
+          "boards-appointments"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Inclusionary Housing Program Update",
+        "Summary": "Staff presented proposed updates to the inclusionary housing program, including moving cash-in-lieu to a per-square-foot basis, reducing the on-site for-sale requirement from 25% to 15%, and exploring a Nexus study for a linkage fee on demolitions and large additions. Kaiser Marston's feasibility analysis found developers consistently choose cash-in-lieu over on-site units. Council members expressed concern about trading on-site middle-income units for more off-site rental units, but supported the code cleanups and continued analysis.",
+        "related_timestamps": [
+          14017.96,
+          14400.0,
+          16000.0,
+          18390.0
         ],
         "Tags": [
           "affordable-housing",
-          "zoning",
           "housing",
-          "development",
+          "zoning",
           "budget"
         ]
       }

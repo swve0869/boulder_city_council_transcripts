@@ -1,68 +1,63 @@
 {
-  "Title": "May 14, 2026 Boulder City Council Study Session: Financial Forecast and 2026 Ballot Measures",
-  "Overview": "The May 14, 2026 Boulder City Council study session focused on the city's financial outlook, including lowered sales and property tax forecasts, a $6.5 million 2027 general fund shortfall, the 2027 budget calendar, and facilities funding needs. Council directed staff to poll voters on a parks and public improvement mill levy expansion, a $200 million general obligation debt authorization with a mill levy, and a charter change to the debt limit, and it supported further analysis and polling on a residential vacancy excise tax. Council chose not to advance the boards and commissions charter amendment this year but asked staff to keep researching a wildfire mitigation amendment for open space.",
+  "Title": "May 14, 2026 - City of Boulder City Council Study Session",
+  "Overview": "Council received a financial forecast from CU's Business Research Division and city staff showing flattening sales and property tax revenue, a projected $6.5 million general fund shortfall for 2027, and 4% department reduction targets. Council then reviewed potential 2026 ballot measures and facility funding scenarios and gave staff direction to poll on a parks and public improvement mill levy expansion, up to $200 million in debt (with a split test at $400 million), a charter change to the debt limit, and a general fund debt authorization, while not pursuing a vacancy tax further at this time.",
   "Tags": [
     "budget",
     "taxes-fees",
     "elections",
-    "affordable-housing",
-    "council-governance",
-    "wildfire"
+    "economic-development",
+    "council-governance"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Economic Conditions and Financial Forecast Presentation",
-        "Summary": "CU Boulder's Business Research Division presented economic conditions affecting Boulder sales and use tax, noting modest GDP growth, stalled national employment, Colorado job losses, and rising inflation driven by energy prices. Staff explained that sales and use tax and property tax revenues are flattening and forecasts were lowered for 2026 and 2027. Council members asked about recession risk, federal policy impacts, and the Federal Reserve's stance. The forecast uses a medium economic scenario with statistical bounds.",
+        "Title": "Economic conditions and sales tax outlook",
+        "Summary": "CU's Business Research Division reviewed national and Colorado economic conditions, noting slow GDP growth, stalled job growth, and a sharp rise in energy prices and inflation. Retail spending remains nominally positive but declines after adjusting for inflation, and Boulder's sales tax growth trails the state average. Staff's forecast uses the Moody's national outlook and a medium scenario, projecting slow but steady sales and use tax growth.",
         "related_timestamps": [
           280.0,
           1612.08
         ],
         "Tags": [
-          "budget",
           "economic-development",
-          "taxes-fees",
-          "university"
+          "budget"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "2026 and 2027 Budget Shortfalls and Department Reductions",
-        "Summary": "Staff reported that 2025 required a hiring freeze and 5% operating savings to close an 8 to 10 million shortfall, and 2026 required a 7.8% general fund reduction. A $6.5 million general fund shortfall for 2027 prompts requested 4% reductions across departments. The care program was restructured into a cross-functional behavioral health team. Council asked for more transparency on how reductions affect services and the public.",
+        "Title": "Council questions on economy, recession risk, and water",
+        "Summary": "Council members asked how long energy price effects would last, whether conditions signal recession, and why Colorado is losing jobs. Questions also covered the Federal Reserve, tariffs, and property versus sales tax ratios. A council member noted that water supply was not a variable in the forecast model, and staff said alternative scenarios would address unanticipated shocks.",
         "related_timestamps": [
-          3196.0,
-          4045.44
+          1612.08,
+          2957.92
         ],
         "Tags": [
           "budget",
-          "police",
-          "human-services"
+          "water"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Sales and Property Tax Revenue Forecasts",
-        "Summary": "Staff presented sales and use tax actuals and forecasts showing retail sales tax flattening at around 1% annual growth and a forecasted decline in 2026. Property tax projections were revised down by about 7 million due to state legislation and lack of growth, with reassessment growth at only 0.2%. Council asked about the sales to property tax ratio and the impact of Sundance revenue, which will be cautiously incorporated in year one.",
+        "Title": "City financial forecast and 2027 budget outlook",
+        "Summary": "Staff reported that the 2026 budget closed a $7.5 million gap through hiring freezes, realignments, and a 7.8% general fund reduction. For 2027, a $6.5 million general fund shortfall led to a request for 4% department reductions. Sales and use tax and property tax revenues are revised down, with the property tax reassessment showing only 0.2% actual value growth.",
         "related_timestamps": [
-          3619.12,
-          3844.32
+          3106.88,
+          4126.56
         ],
         "Tags": [
-          "taxes-fees",
           "budget",
-          "economic-development"
+          "taxes-fees"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "2027 Budget Calendar and Process",
-        "Summary": "Staff outlined the 2027 budget timeline: department submissions in mid-June, executive budget team decisions in July, city manager's recommended budget on August 28, a study session on September 10, and first and second readings on October 1 and 15. Council discussed how to provide input and the desire for a two-year budget cycle. Council also asked for budget-versus-actual data at the project level.",
+        "Title": "Forecast Q&A, performance-based cuts, and Sundance revenue",
+        "Summary": "Council asked whether programs were cut based on performance measures and how staff would communicate reductions to the public. Members questioned why the medium forecast scenario was chosen and requested more programmatic budget-to-actual detail. Staff said Sundance revenue will be included in the sales tax model as it is received, with a cautious approach in year one.",
         "related_timestamps": [
-          4076.88,
-          4150.88
+          4126.56,
+          5408.8
         ],
         "Tags": [
           "budget",
@@ -72,93 +67,114 @@
     },
     {
       "Topic5": {
-        "Title": "Long-Term Financial Strategy and Ballot Measure Framework",
-        "Summary": "Staff described the long-term financial strategy, including a comprehensive financial plan due in late 2026, and explained that about 68% of city revenue is already committed to specific purposes. General fund expenses have grown faster than revenue. Staff noted that polling works best with three to four items and that ballot measures should be sequenced with other measures. Council discussed the need to communicate trade-offs clearly to the public.",
+        "Title": "Long-term financial strategy and ballot measure framing",
+        "Summary": "The city manager explained that about 68% of city revenue is committed to specific purposes, so the general fund is constrained. Expense growth has outpaced revenue growth, and a long-term comprehensive financial plan is planned for late 2026. Staff framed the ballot measure work as one component of that strategy.",
         "related_timestamps": [
-          4576.0,
-          5500.0
+          5442.08,
+          5568.239
         ],
         "Tags": [
           "budget",
-          "elections",
-          "council-governance"
+          "council-governance",
+          "elections"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Facilities Investment Needs and Funding Scenarios",
-        "Summary": "Staff reported that 15 priority city buildings, including recreation centers and the public safety building, need about 20 million over five to six years for critical maintenance and roughly 400 million in unfunded priority needs. Five funding scenarios were presented, mixing existing CCRS tax authority, a parks and public improvement mill levy, general obligation debt, and a charter change to the 3% debt limit. Staff recommended scenarios C and E, providing up to 200 million. Council discussed impacts on residents and businesses and the need for polling on specific projects and thresholds.",
+        "Title": "Staff ballot measure options and recommendations",
+        "Summary": "Staff presented four tax ballot options for further exploration: a parks and public improvement mill levy or use expansion, a residential vacancy excise tax, general fund debt authorization, and a public realm sales tax consolidation. Staff recommended polling the parks mill levy and deferring the general fund debt, public realm tax, and vacancy tax to later analysis. Polling is limited to three to four items, with results expected in late June.",
         "related_timestamps": [
-          5950.0,
-          7330.0
+          5568.239,
+          6489.04
         ],
         "Tags": [
-          "budget",
-          "taxes-fees",
-          "parks-recreation"
+          "elections",
+          "taxes-fees"
         ]
       }
     },
     {
       "Topic7": {
-        "Title": "Council Direction on Ballot Measure Polling",
-        "Summary": "Council gave direction to poll on the parks and public improvement mill levy expansion, a 200 million general obligation debt authorization with associated mill levy, and a charter change to the debt limit. Council members expressed mixed views on including the 400 million option, the general fund debt authorization, and the flexibility of language. Staff will bring polling results in late June and return with ballot ordinances in summer.",
+        "Title": "Facility funding scenarios for priority buildings",
+        "Summary": "Staff reported that 15 priority buildings need roughly $20 million over five to six years for major maintenance, with an estimated $500 million total priority need. Scenarios A through E combined existing CCRS authority with mill levy increases and general obligation bonds. Staff recommended scenarios C and E, which together provide up to $200 million, and a charter change to the 3% debt limit based on actual value.",
         "related_timestamps": [
-          8760.0,
-          9000.0
+          6489.04,
+          7380.88
         ],
         "Tags": [
-          "elections",
-          "taxes-fees",
+          "parks-recreation",
           "budget"
         ]
       }
     },
     {
       "Topic8": {
-        "Title": "Residential Vacancy Excise Tax Discussion",
-        "Summary": "Staff sought direction on whether to pursue a residential vacancy excise tax, a second homes tax applied to properties vacant at least 183 days. Council members discussed tiered structures based on square footage, higher maximum amounts, whether to use an ordinance rather than a ballot initiative for flexibility, and legal research on the approach. Council members supported further analysis and polling, with some expressing concerns about housing impacts.",
+        "Title": "Council direction on polling and ballot items",
+        "Summary": "Council members debated how many items to poll and whether to include the $400 million option, with several supporting a $200 million split test. Many supported polling general fund debt authorization because it could inform future planning, while others raised concerns about taxpayer fatigue. Council also discussed whether the mill levy expansion should include operations, public safety, and the airport.",
         "related_timestamps": [
-          9000.0,
-          10990.0
+          7387.84,
+          10296.24
         ],
         "Tags": [
-          "housing",
-          "taxes-fees",
-          "elections"
+          "elections",
+          "taxes-fees"
         ]
       }
     },
     {
       "Topic9": {
-        "Title": "Charter Amendments: Boards and Commissions and Open Space Wildfire Mitigation",
-        "Summary": "The charter committee recommended revisiting a boards and commissions amendment from 2024, which failed, and adding wildfire mitigation as an explicit purpose of open space under charter section 176. Council discussed removing removal provisions, adding flood mitigation, and the timing of these changes. Council decided not to move boards and commissions forward this year but directed staff to continue research on the wildfire open space amendment.",
+        "Title": "Vacancy excise tax direction",
+        "Summary": "Council members discussed a residential vacancy excise tax on homes vacant at least 183 days, with some proposing a tiered structure based on square footage and a higher maximum. Staff said the legal details would require further research, and council gave consensus to proceed with that analysis. Some members favored an ordinance over a ballot initiative for greater future flexibility, and others raised concerns about unintended consequences.",
         "related_timestamps": [
-          11100.0,
-          12340.0
+          10296.24,
+          11110.0
         ],
         "Tags": [
-          "council-governance",
-          "boards-appointments",
-          "wildfire",
-          "elections",
-          "open-space"
+          "housing",
+          "taxes-fees"
         ]
       }
     },
     {
       "Topic10": {
-        "Title": "Community Petitions and State and Regional Ballot Measures",
-        "Summary": "Staff noted one community-sponsored petition on commercial and residential vacancy taxes and provided information on potential state of Colorado ballot measures with tax impacts. Boulder County and Boulder Valley School District ballot measures are yet to be determined. A legislative update is planned for June. A council member requested a future meeting to take positions on several potential ballot measures.",
+        "Title": "Charter amendments on boards and wildfire mitigation",
+        "Summary": "The charter committee proposed revising charter section 130 on boards and commissions, which failed by 65 votes in 2024, and adding wildfire mitigation as an explicit open space purpose in section 176. Council members debated timing, removal provisions, and whether to add flood mitigation. Staff said wildfire work is already permitted, and council gave direction to continue drafting the wildfire language but not advance the boards and commissions change this year.",
         "related_timestamps": [
-          12340.0,
-          12480.0
+          11110.0,
+          12144.64
         ],
         "Tags": [
-          "intergovernmental",
+          "council-governance",
+          "wildfire",
+          "open-space"
+        ]
+      }
+    },
+    {
+      "Topic11": {
+        "Title": "Community petitions and state and regional ballot measures",
+        "Summary": "Staff noted one community-sponsored petition for a commercial and residential vacancy tax, included in the council packet. Boulder County, the city of Boulder, and Boulder Valley School District ballot measures remain to be determined. Staff also provided information on state ballot measures and said a legislative update would come in June.",
+        "related_timestamps": [
+          12350.08,
+          12450.56
+        ],
+        "Tags": [
           "elections",
-          "taxes-fees"
+          "intergovernmental"
+        ]
+      }
+    },
+    {
+      "Topic12": {
+        "Title": "Adjournment",
+        "Summary": "A council member requested a future agenda item to take positions on several ballot measures. The mayor then closed the study session at 9:23 p.m.",
+        "related_timestamps": [
+          12488.239,
+          12504.08
+        ],
+        "Tags": [
+          "elections"
         ]
       }
     }

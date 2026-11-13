@@ -1,83 +1,73 @@
 {
-  "Title": "February 12, 2026 City of Boulder City Council Special Meeting",
-  "Overview": "The Boulder City Council's February 12, 2026 special meeting centered on the Area 3 Planning Reserve, where council voted 7-2 to find six identified community needs, including housing, fire storage, and parkland, a high enough priority to warrant further consideration of a service area expansion plan and directed staff to bring back a guiding resolution. Council also unanimously approved the consent agenda after removing item 6A, and it declined to reconsider five community change requests that Boulder County commissioners had asked it to revisit. The remaining items were informational: a municipal court update on 2025 caseloads and legal changes to monitor, and a preview of 2026 council engagement options, where members favored chats and forums and asked staff to estimate capacity for each method.",
+  "Title": "February 12, 2026 - Boulder City Council Special Meeting",
+  "Overview": "The special meeting covered a public hearing on whether the Area 3 Planning Reserve warranted further consideration of a service area expansion plan, a city manager matter on reconsidering comprehensive plan community change requests, a municipal court update, and a council community engagement discussion. Council voted 7-2 to find sufficient community need to continue exploring expansion, and directed staff to draft a guardrails resolution for consent agenda adoption at a future meeting.",
   "Tags": [
-    "housing",
-    "zoning",
     "development",
+    "zoning",
+    "affordable-housing",
     "council-governance",
     "public-comment",
-    "transportation"
+    "crime"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Area 3 Planning Reserve Community Needs Assessment (Service Area Expansion Step Two)",
-        "Summary": "Staff presented the step two community needs assessment for the Area 3 Planning Reserve, identifying six needs including housing, fire storage, aging-in-place facilities, parkland, agriculture, and renewable energy. Council asked detailed questions about middle-income housing gaps, parkland standards, water, infrastructure costs, and staff capacity. Public speakers largely urged moving forward, while some opposed due to water, traffic, and habitat concerns. Council voted 7-2 to find the identified needs of sufficient priority to warrant further consideration of a service area expansion plan, and gave staff direction to bring back a guiding resolution on consent.",
+        "Title": "Area 3 Planning Reserve Service Area Expansion Need Determination",
+        "Summary": "Staff presented a step two community needs assessment for the Area 3 Planning Reserve covering housing, fire storage, aging-related facilities, regional parkland, food systems, and renewable energy. Council questioned housing gap figures, parkland standards, water and wildfire resource impacts, staff capacity, and phasing. Planning board had voted 4-3 against continuing, and public speakers were split. Council approved the finding of sufficient need 7-2, with Wallik and Adams opposed.",
         "related_timestamps": [
           307.759,
-          4100.0
+          4976.0
         ],
         "Tags": [
-          "housing",
           "development",
-          "affordable-housing"
+          "zoning",
+          "affordable-housing",
+          "wildfire"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Consent Agenda and Agenda Amendment",
-        "Summary": "Council unanimously amended the agenda to remove item 6A and then unanimously approved the consent agenda items 2A and 2B.",
+        "Title": "Comprehensive Plan Community Change Requests Reconsideration",
+        "Summary": "Staff reported that Boulder County commissioners supported reconsidering three land use requests and two policy requests that staff and the other bodies did not recommend advancing. Staff explained the policy edits already underway and why the requests were not recommended. Council raised no interest in reconsidering any of the requests, so no further action was taken.",
         "related_timestamps": [
-          408.08,
-          500.4
-        ],
-        "Tags": []
-      }
-    },
-    {
-      "Topic3": {
-        "Title": "Community Change Requests Reconsideration Following County Commissioners Action",
-        "Summary": "Staff reviewed five community change requests the Boulder County commissioners wanted reconsidered, including three land use requests near Gunbarrel and two comprehensive plan policies on area 2 annexation. Staff recommended against reconsideration, and council expressed no interest in reconsidering any of them.",
-        "related_timestamps": [
-          8468.0,
-          8995.0
+          8481.76,
+          9013.84
         ],
         "Tags": [
-          "development",
+          "council-governance",
           "intergovernmental",
           "zoning"
         ]
       }
     },
     {
-      "Topic4": {
-        "Title": "Municipal Court Update",
-        "Summary": "Presiding Judge Jeff Khan and Court Administrator Devon Kiss Kelly reviewed 2025 case filings, which included rising traffic and photo enforcement, a jump in criminal cases, and increased quality-of-life citations near CU. They highlighted the community court, mental health counseling, parking appeals, and a new data dashboard. They also flagged Colorado Supreme Court's Camp decision and pending public defender legislation as legal changes to monitor.",
+      "Topic3": {
+        "Title": "Municipal Court 2025 Update and 2026 Work Plan",
+        "Summary": "Judge Khan and Court Administrator Devon Kiss Kelly reviewed 2025 case filings, including rising traffic, photo enforcement, and criminal cases, and a rise in quality-of-life citations near CU. They described the community court, restorative programs, parking appeals, and the new public data dashboard. They also noted the Colorado Supreme Court's CAMP decision and pending public defender legislation. Council asked about traffic enforcement effectiveness, party-related enforcement, and the dashboard.",
         "related_timestamps": [
-          9013.0,
-          11000.0
+          9018.319,
+          11003.2
         ],
         "Tags": [
           "crime",
-          "legal",
           "transportation",
           "university"
         ]
       }
     },
     {
-      "Topic5": {
+      "Topic4": {
         "Title": "Council Community Engagement Options for 2026",
-        "Summary": "Staff presented a menu of council engagement methods including chats with council, council-initiated chats, office hours, community connectors updates, and community and council forums. Council members expressed support for chats and forums, nominated a downtown bicycle security walk, and asked staff to return with estimated capacity for each method. The council engagement committee will refine the plan.",
+        "Summary": "Staff presented a menu of council engagement formats, including chats with council, council-initiated chats, office hours, community connectors events, and community and council forums. Council expressed interest in continuing chats and forums, with a nominated bike parking walk-and-talk downtown. Members discussed rotating topics and limiting labor-intensive events. Staff will take the feedback to the council engagement committee and return to council.",
         "related_timestamps": [
-          11017.0,
-          12560.0
+          11007.52,
+          12562.0
         ],
         "Tags": [
           "council-governance",
-          "public-comment"
+          "public-comment",
+          "bikes-pedestrians"
         ]
       }
     }

@@ -27,6 +27,15 @@ await c.click("#timeline .block", 1); await sleep(2500);
 const seek = await c.ev(`({hash: location.hash, playing: document.querySelectorAll(".topic.playing").length, on: document.querySelectorAll("#timeline .block.on").length})`);
 check("timeline click seeks and marks the playing topic", /#t=\d+/.test(seek.hash) && seek.playing === 1 && seek.on === 1, seek);
 
+// Keyboard: J jumps to the next topic, K back.
+const before = await c.ev(`location.hash`);
+await c.send("Input.dispatchKeyEvent", { type: "keyDown", key: "j", code: "KeyJ", text: "j" }); await sleep(600);
+const afterJ = await c.ev(`location.hash`);
+await c.send("Input.dispatchKeyEvent", { type: "keyDown", key: "k", code: "KeyK", text: "k" }); await sleep(600);
+const afterK = await c.ev(`location.hash`);
+const sec = (h) => Number((/#t=(\d+)/.exec(h) || [0, -1])[1]);
+check("J moves to a later topic and K moves back", sec(afterJ) > sec(before) && sec(afterK) < sec(afterJ), { before, afterJ, afterK });
+
 if (page.excerpts) {
   await c.click(".excerpt-toggle", 1); await sleep(3500);
   const ex = await c.ev(`({paras: document.querySelectorAll(".topic")[1].querySelectorAll(".excerpt p").length, button: document.querySelectorAll(".excerpt-toggle")[1].textContent})`);

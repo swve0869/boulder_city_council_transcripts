@@ -1,44 +1,151 @@
 {
   "Title": "October 22, 2026 City Council Study Session",
-  "Overview": "The October 22, 2026 study session focused on two council priorities: bike security and wildfire resilience. Staff reported that bike theft fell 14% year-over-year and bike recovery rose 13%, with the team expecting to meet its 10% goals, and presented the Wildfire Ready 2030 framework along with roughly $1.85 million in proposed 2027 enhancements. No formal decisions were recorded; council members instead pressed staff on data gaps, e-bike theft, stronger wildfire hardening targets, a possible mandatory hardening ordinance, and evacuation planning.",
+  "Overview": "Council received a bike security and theft reduction update showing a 14% year-over-year drop in stolen bikes and a 13% recovery rate, with council raising staffing concerns and suggesting shop and e-bike measures. Council then reviewed the Wildfire Ready 2030 framework, including the WUI Risk Index, Home Hardening Implementation Hub, 14 performance measures, and roughly $1.85 million in proposed 2027 enhancements, and gave feedback to staff, who will return with a progress update in spring 2027. No formal votes were taken.",
   "Tags": [
-    "council-governance",
-    "police",
+    "crime",
     "bikes-pedestrians",
     "wildfire",
-    "homelessness",
     "budget",
-    "zoning"
+    "emergency-management",
+    "housing",
+    "council-governance"
   ],
   "Topics": [
     {
       "Topic1": {
         "Title": "Bike Security and Theft Reduction Update",
-        "Summary": "Staff from Transportation and Mobility and the Boulder Police Department presented completed work on the council priority to reduce bike theft and improve bike security. Bike theft fell 14% year-over-year in 2026 and recovery rose 13%, with the team expecting to meet its 10% goals. Actions included Bike Index registration events, locking education, bike rack upgrades, and targeted bait-bike operations. Council members asked about data gaps, staffing constraints, e-bike theft, and encouraging bike shops to register bikes at sale. Remaining tasks include a long-term bike parking resource and downtown station signage.",
+        "Summary": "Staff from Transportation and Mobility and the Boulder Police Department presented the completed council priority on bike theft, using a problem-oriented policing approach focused on registration via Bike Index, proper locking, bike parking improvements, and data-driven targeted operations. Staff reported a 14% year-over-year drop in thefts and a 13% recovery rate so far in 2026, on track to meet the 10% goals. Council members asked for full-year data, raised concerns about police understaffing and sustaining the work into 2027, and discussed e-bike targeting, shop registration defaults, and secure bike cages. Staff said the work will continue through ongoing education and communications.",
         "related_timestamps": [
           373.04,
-          1480.0
+          1429.36
         ],
         "Tags": [
+          "crime",
           "bikes-pedestrians",
-          "police",
-          "crime"
+          "police"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Enhancing Boulder's Wildfire Resilience",
-        "Summary": "Staff presented the Wildfire Ready 2030 framework, organized into four strategies and 25 programs with 10 tier-one priorities, supported by a Wildland Urban Interface Risk Index that ranks 12 western sections. They also introduced a Wildfire Ready Action Hub for residents, 14 performance measures, and roughly $10 million in current tier-one investment. Staff proposed about $1.85 million in 2027 enhancements from grants and an open space fund realignment. Council members pressed for more aggressive hardening targets, a mandatory hardening ordinance, contractor quality standards, evacuation and cell-coverage planning, and reconciling wildfire building standards.",
+        "Title": "Wildfire Ready 2030 Framework Overview",
+        "Summary": "Fire Chief Calderazzo and Open Space and Mountain Parks staff introduced the Wildfire Ready 2030 initiative, which consolidates 137 projects into four strategies, 25 programs, and 10 tier-one priorities with life safety as the North Star. Staff described a 14-measure tracking system with 2030 targets, including 55% detailed home assessments and 20% home hardening in priority sections. The framework sets a 4-year window aligned with the Community Wildfire Protection Plan update. Tier-one program investments total over $10 million for the current year.",
         "related_timestamps": [
-          1480.0,
-          9600.0
+          2903.52,
+          4187.08
         ],
         "Tags": [
           "wildfire",
-          "emergency-management",
-          "zoning",
+          "fire-ems",
           "budget",
+          "open-space"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Home Hardening Implementation Hub",
+        "Summary": "Staff presented the newly launched Wildfire Ready Action Hub, designed to help residents understand their property-level risk, find practical projects, and access financial resources without requiring a detailed home assessment. The hub is organized around resident goals rather than departments and includes a Headwaters Economics cost calculator. Council asked whether it links to GIS risk maps and whether the risk index could appear in property searches; staff said they would take those suggestions back.",
+        "related_timestamps": [
+          3658.12,
+          3803.0
+        ],
+        "Tags": [
+          "wildfire",
+          "homelessness",
+          "technology"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "WUI Risk Index and Geographic Prioritization",
+        "Summary": "Open Space staff presented the Wildland Urban Interface Risk Index, which divides the western WUI into 12 sections ranked as highest, very high, or high risk based on likelihood, intensity, exposure, and susceptibility factors. Staff explained that the index guides prioritization of fuels management, home assessments, grant awards, and evacuation planning, and will support measurable targets. Council members asked about fuel prescriptions for dead and down material and generally supported using the index to focus resources.",
+        "related_timestamps": [
+          3803.0,
+          4179.8
+        ],
+        "Tags": [
+          "wildfire",
+          "open-space",
+          "zoning"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Evacuation, Alerts, and Recovery Planning",
+        "Summary": "Council asked how residents would receive evacuation information if cell service or power fails, and how schools in the WUI would coordinate with parents and the district. Emergency management staff described multiple alert channels, including radio, television, sirens, and door-to-door outreach, and noted ongoing work with cell carriers and the school district. Council also asked about recovery and relocation planning after events like the Marshall Fire, and staff described the progression from emergency shelter to disaster assistance and longer-term housing.",
+        "related_timestamps": [
+          4905.12,
+          5225.92
+        ],
+        "Tags": [
+          "emergency-management",
+          "wildfire",
+          "housing"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Home Hardening Standards and Contractor Ecosystem",
+        "Summary": "Council members asked how the city could help residents move from assessments to completed hardening work, including contractor training, quality standards, and financing, drawing parallels to the Energy Smart concierge model. Staff said the city cannot endorse specific contractors but will expand training and coordinate neighborhood-scale work. Council also asked about reconciling the WOOEE building code with the IBHS standard used for existing-home assessments; staff said the two are not mutually exclusive and will crosswalk them, reporting back if policy changes are needed.",
+        "related_timestamps": [
+          5362.0,
+          6100.4
+        ],
+        "Tags": [
+          "wildfire",
+          "zoning",
+          "development",
+          "bikes-pedestrians"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Hardening Targets and Aspirations",
+        "Summary": "Council members debated whether the 20% home hardening and 55% detailed home assessment targets are ambitious enough, with several proposing a 100% assessment goal in the highest-risk zones and risk-tiered targets. Staff said targets were set based on current resources and participation but could be raised if capacity allows, and noted the 100% aspiration requires policy tools such as a mandatory hardening ordinance. Council members flagged the need for clarity on what a mandatory approach would require.",
+        "related_timestamps": [
+          6217.28,
+          6330.36,
+          8800.16
+        ],
+        "Tags": [
+          "wildfire",
+          "housing",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Rental Licenses, Policy Pathways, and Priorities",
+        "Summary": "Council discussed tying rental license requirements to wildfire hardening, noting the city already uses this approach for Smart Regs, and asked how such ideas move from advice to direction. Staff explained that items needing council direction should come forward as a formal request, while others can be researched first. Council debated how to prioritize among many suggestions, and staff said the executive team would consider which actions offer the highest impact with available resources.",
+        "related_timestamps": [
+          7930.0,
+          8616.24
+        ],
+        "Tags": [
+          "housing",
+          "council-governance",
+          "wildfire"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "2027 Priority Enhancements and Funding",
+        "Summary": "Assistant City Manager Pam Davis presented four 2027 enhancement areas: home hardening grants and contractor training, community emergency preparedness, wildland fuels management, and tactical evacuation including siren upgrades. Staff described roughly $1.4 million already in the approved 2027 budget and about $1.85 million more from pending grants ($1.25 million) and a $600,000 open space fund realignment. The team also noted a possible $10 million Community Wildfire Defense Grant for 2028. Council members generally supported the approach and suggested possible additions such as volunteer debris work, neighborhood coordination, and a realtor disclosure partnership, with the realignment to return in December or spring.",
+        "related_timestamps": [
+          4466.84,
+          4847.6
+        ],
+        "Tags": [
+          "wildfire",
+          "budget",
+          "intergovernmental",
           "open-space"
         ]
       }

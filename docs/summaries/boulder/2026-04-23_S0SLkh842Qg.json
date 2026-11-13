@@ -1,48 +1,117 @@
 {
-  "Title": "April 23, 2026 Boulder City Council Study Session",
-  "Overview": "The April 23, 2026 Boulder City Council study session focused on the future of the Boulder Municipal Airport and on power resilience amid rising public safety power shutoffs. On the airport, council debated the financial and legal implications of closure versus continued operation, and a straw poll favored keeping the airport running indefinitely, with staff directed to bring back a formal action to memorialize that direction. On power resilience, council voiced support for the phased community engagement approach and confirmed alignment with it after questioning accountability, timelines, and relocation considerations.",
+  "Title": "April 23, 2026 - City of Boulder City Council Study Session",
+  "Overview": "The study session covered two items: the future of Boulder Municipal Airport, including whether to operate it indefinitely (scenario one) or keep the closure option open by forgoing FAA grants (scenario two), and an update on power resilience and public safety power shutoffs with a proposed roadmap and engagement plan. On the airport, a straw poll showed five members favoring scenario one and four favoring scenario two, and council directed staff to bring back formal action at a future meeting. On power resilience, council expressed alignment with the proposed analysis, policy options, and engagement approach, with the community council forum planned for October.",
   "Tags": [
-    "development",
-    "transportation",
-    "water",
-    "energy",
+    "economic-development",
+    "budget",
+    "intergovernmental",
     "council-governance",
-    "budget"
+    "wildfire",
+    "energy",
+    "emergency-management"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Boulder Municipal Airport Future: Indefinite Operation vs. Closure Opportunity",
-        "Summary": "Staff presented an update on the airport's future, including the dismissed FAA lawsuit, the community conversation results, and financial projections showing scenario two would require about $600,000 per year in local subsidy. Council discussed grant assurances in perpetuity, noise and leaded fuel limits, and redevelopment potential of the land. Council members debated the financial and legal implications and a straw poll favored scenario one, continuing airport operations indefinitely. Staff was directed to bring back a formal action to memorialize the direction.",
+        "Title": "Boulder Municipal Airport Future Operations",
+        "Summary": "Staff presented updated financial projections showing scenario one (indefinite operation with FAA grants) would require no added local subsidy, while scenario two (forgoing grants until 2040) would require about $600,000 per year in other local funds. Staff noted the FAA considers the city already bound to operate the airport in perpetuity and that the city's lawsuit was dismissed on jurisdictional grounds. Council members debated the financial risk, fiduciary responsibility, perpetuity covenants, noise, lead fuel, and the appropriateness of deciding via study session. A straw poll favored scenario one 5 to 4, and council asked staff to return with formal action.",
         "related_timestamps": [
           295.28,
-          1001.0,
-          2110.0,
-          4300.0,
-          6040.0
+          2127.04
         ],
         "Tags": [
-          "council-governance",
-          "budget",
-          "development"
+          "flock",
+          "transportation",
+          "budget"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Power Resilience and Public Safety Power Shutoffs",
-        "Summary": "Staff presented on increasing public safety power shutoffs and outages driven by wildfire mitigation and aging infrastructure. The presentation covered Excel Energy's hardening work, reliability metrics, and risk zones, along with a phased community engagement plan including a summer workshop and a fall community council forum. Council expressed support for the approach and asked about accountability, timelines, relocation considerations, and cross-departmental trade-offs. Council confirmed alignment with the proposed approach.",
+        "Title": "Airport Community Conversation and Regulatory Authority",
+        "Summary": "Staff reviewed the 2023 airport community conversation, which heard mixed views with no clear consensus, and explained that aviation noise and leaded fuel are federally regulated, so the city cannot ban leaded fuel or directly regulate aircraft noise. Staff described noise mitigation steps and a plan to transition to unleaded fuel by 2030 pending FAA approval. Council discussed how these limits affect community health and noise concerns.",
         "related_timestamps": [
-          6578.0,
-          7998.0,
-          8660.0,
-          9100.0,
-          11500.0
+          674.56,
+          1244.4
+        ],
+        "Tags": [
+          "public-health",
+          "transportation"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Airport Financial Outlook and Land Reuse",
+        "Summary": "Staff updated 14-year financial projections and noted pavement reconstruction costs of roughly $16 million could arise under scenario two. Staff also presented a preliminary broker opinion of value of about $1 million per acre and remediation estimates of $10 to 30 million for potential future redevelopment. Council members questioned the figures and the potential for land sales or affordable housing use.",
+        "related_timestamps": [
+          1376.32,
+          1751.679
+        ],
+        "Tags": [
+          "budget",
+          "development",
+          "affordable-housing"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Airport Legal Status and Perpetuity Covenants",
+        "Summary": "Council discussed whether accepting new FAA grants would create perpetual covenants and whether council should weigh in on grant conditions, which staff said is largely operational. Staff said the city can request decommissioning at any time, though the FAA has indicated the city is already encumbered in perpetuity. Council members questioned whether a perpetual commitment would be appropriate without a broader policy.",
+        "related_timestamps": [
+          2445.2,
+          2758.319
+        ],
+        "Tags": [
+          "legal",
+          "intergovernmental",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Council Straw Poll and Process for Formal Action",
+        "Summary": "After public comment-style remarks from members, a straw poll showed five members favoring scenario one and four favoring scenario two. Council members objected to making a consequential decision at a study session and asked for formal action at a future regular meeting. Staff said council may act by motion or resolution and that the existing ordinance already provides for an airport, so formal reaffirmation is optional but possible.",
+        "related_timestamps": [
+          5024.88,
+          7622.0
+        ],
+        "Tags": [
+          "council-governance",
+          "elections",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Power Resilience and Public Safety Power Shutoffs",
+        "Summary": "Staff presented the growing frequency and duration of outages from Xcel Energy public safety power shutoffs, aging underground equipment, and weather damage. Staff described Xcel's wildfire mitigation strategies, including undergrounding about 5.5 miles of line north of Boulder and sectionalizing foothill lines. Council was asked to confirm the proposed analysis, roadmap, and engagement approach, and members gave thumbs-up support.",
+        "related_timestamps": [
+          7737.76,
+          8759.12
         ],
         "Tags": [
           "energy",
           "wildfire",
           "emergency-management"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Community Engagement and Power Resilience Roadmap",
+        "Summary": "Staff outlined a phased engagement plan with summer strategic outreach to frontline, business, and medical-needs communities and a fall community and council forum, with a roadmap due by year end. Council members discussed accountability for Xcel's commitments, metrics for tracking reliability, coordination with existing reporting requirements, and the need for financial information before the budget cycle. Council supported the approach and asked for cross-departmental tradeoff analysis.",
+        "related_timestamps": [
+          8759.12,
+          11912.399
+        ],
+        "Tags": [
+          "public-health",
+          "budget",
+          "public-comment"
         ]
       }
     }

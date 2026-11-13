@@ -1,77 +1,56 @@
 {
   "Title": "Boulder City Council Study Session - October 12, 2023",
-  "Overview": "The Boulder City Council study session opened with Council Member Tara Winer's remarks on the October 7 Hamas attacks in southern Israel and Boulder's ties to its sister city, Ramat Hanegev. The council generally supported continuing the Camp shiaka parking and shuttle program and studying direct transit access, while raising concerns about fairness to Boulder residents and higher parking costs. It also unanimously agreed to take a support position on Boulder County Ballot Measure 1A, a 0.5% open space sales tax extension, with staff asked to place the item on the next business meeting's consent agenda, and it gave staff feedback on East Boulder form-based code, with draft recommendations to follow in a few months.",
+  "Overview": "Council reviewed three items: a Camp (Chautauqua/Shanahan-area) trailhead access management program update, the implementation process for East Boulder subcommunity plan zoning and form-based code, and a discussion of supporting Boulder County ballot measure 1A for open space sales and use tax extension. Council generally supported continuing Camp with planned changes and a feasibility study of direct transit access, asked staff to be cautious about raising fees on residents, and directed staff to refine form-based code review and bring back zoning recommendations; Council unanimously supported measure 1A, with a consent item planned for the next business meeting.",
   "Tags": [
     "parking",
-    "parks-recreation",
     "transit",
+    "zoning",
+    "development",
     "open-space",
-    "housing",
-    "zoning"
+    "elections"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Opening remarks and Israel-related statement by Council Member Tara Winer",
-        "Summary": "Council Member Tara Winer, speaking in her individual capacity, expressed heartbreak over the October 7 Hamas attacks in southern Israel, including on Boulder's sister city Ramat Hanegev. She described Boulder's ties to the region through sister city and SIP (Sustainable Israeli Palestinian projects) work and called for peace in the Middle East. Council Member Aaron Brockett noted he had emailed the mayor of Ramat Hanegev expressing personal and city support.",
+        "Title": "Camp Trailhead Access Management Program Update",
+        "Summary": "Staff recommended continuing the Camp park-to-park shuttle and paid parking program during its traditional summer season with planned changes such as micromobility, B-cycle station, signage and routing updates. Staff also proposed possible modifications including performance-based pricing, a commuter permit program for employees, and using parking revenue for TDM benefits. Staff requested a feasibility study of direct transit or microtransit access beyond the current park-and-ride model. Council members generally supported continuing Camp and exploring the feasibility study, but expressed caution about raising parking costs for city residents and the equity of access.",
         "related_timestamps": [
           777.32,
-          1079.6
+          2769.0
         ],
         "Tags": [
-          "intergovernmental",
-          "public-comment"
+          "parking",
+          "transit",
+          "open-space"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Camp shiaka access management plan evaluation and recommendations",
-        "Summary": "Staff from Community Vitality, Transportation and Mobility, and Open Space and Mountain Parks presented an evaluation of the Camp shiaka parking and shuttle program, which has run since 2017 and whose ordinance sunsets at year end. Staff recommended continuing the Camp season with planned changes such as micromobility access, a permanent B-cycle station, signage updates, and routing changes, and possible modifications including performance-based pricing, a commuter permit program, and using parking revenue for transportation demand benefits. Staff also recommended a feasibility study for direct transit or microtransit access beyond the park-and-ride model. Council generally supported continuing the program and the feasibility study, with concern about fairness to Boulder residents who cannot easily access the park and about raising parking costs.",
+        "Title": "East Boulder Subcommunity Plan Zoning and Form-Based Code",
+        "Summary": "Staff presented the process update on implementing zoning recommendations from the East Boulder subcommunity plan, including a rezoning strategy and a review of the form-based code applied to Boulder Junction and Alpine-Balsam projects. Staff noted the code aims to deliver walkable neighborhoods but has drawn concerns about cost, design variety, and frequent discretionary call-ups. Council asked that feedback from the development community and planning board be incorporated, that discretionary review be limited, that rules be reassessed, and that roof variability and more iconic buildings be allowed. Staff will return with draft recommendations in a couple of months.",
         "related_timestamps": [
-          1131.24,
-          3105.88,
-          3114.359,
-          5084.92
+          2769.0,
+          6000.0
         ],
         "Tags": [
-          "parking",
-          "open-space",
-          "transit",
-          "bikes-pedestrians",
-          "transportation",
-          "budget"
+          "zoning",
+          "development",
+          "housing"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "East Boulder subcommunity plan zoning and form-based code implementation update",
-        "Summary": "Planner Kathleen King presented the next phase of implementing the East Boulder subcommunity plan, including a zoning study for areas of change and an evaluation of whether form-based code should apply. Staff reviewed feedback from the technical advisory committee, focus groups, and planning board on the existing form-based code in Boulder Junction and Alpine Balsam. Challenges raised included creative limits, commercial affordability, added cost from discretionary call-ups, and limited family-friendly outdoor space. Council members asked for less discretionary review, a more selective set of rules, more roof-form variety, and flexibility for iconic buildings. Staff will return in a few months with draft recommendations.",
+        "Title": "Support for Boulder County Ballot Measure 1A",
+        "Summary": "Council discussed supporting Boulder County ballot measure 1A, a 0.5% sales tax for open space purchase and maintenance. Councilmember Brockett raised the item and asked for council's temperature on a position of support. Council unanimously indicated support, and staff was directed to request that the item be placed on the consent agenda at the next business meeting.",
         "related_timestamps": [
-          5722.8,
-          8362.8
-        ],
-        "Tags": [
-          "zoning",
-          "development",
-          "council-governance",
-          "affordable-housing"
-        ]
-      }
-    },
-    {
-      "Topic4": {
-        "Title": "Council discussion on supporting Boulder County Ballot Measure 1A",
-        "Summary": "Council discussed whether to support Boulder County Ballot Measure 1A, a 0.5% sales tax extension for open space purchase and maintenance. Council Member Aaron Brockett noted that a separate letter of support for measure 1B had already been sent. Council members indicated unanimous support for taking a support position, and staff was asked to place the item on consent at the next business meeting.",
-        "related_timestamps": [
-          8366.16,
-          8502.0
+          8450.0,
+          8500.0
         ],
         "Tags": [
           "elections",
           "open-space",
-          "taxes-fees",
           "intergovernmental"
         ]
       }

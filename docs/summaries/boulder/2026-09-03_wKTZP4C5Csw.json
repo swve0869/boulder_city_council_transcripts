@@ -1,24 +1,21 @@
 {
-  "Title": "September 3, 2026 Boulder City Council Special Meeting and Regular Meeting",
-  "Overview": "The September 3, 2026 meeting covered public comment on the Frasier Meadows expansion, school closures, student rentals, and Spruce Pool funding, along with state housing laws and a set of routine items. Council approved the consent agenda, including the 2025-26 evaluations and salary adjustments for the city manager, city attorney, and municipal judge, with one dissent on that item, and approved the pedal cab licensing ordinance 7 to 0. Council also declined to call up the Frasier Meadows project because the motion failed for lack of a second, gave direction 5 to 3 to support the Boulder County commissioner expansion ballot measure, and directed informal outreach with restaurant owners and small businesses instead of forming a task force.",
+  "Title": "September 3, 2026 City of Boulder City Council Special Meeting and Regular Meeting",
+  "Overview": "The council convened a special meeting to enter executive session for confidential legal advice on authorized uses of city open space, then held its regular meeting with extensive public comment on the Frasier Meadows expansion and Panka Place vacation, BVSD school closures, and Spruce Pool funding. The council approved the consent agenda except item 4E, adopted pedal cab licensing ordinance 8757 unanimously, received updates on state housing laws, and directed staff to proceed with a small business and restaurant task force concept and a council position supporting the Boulder County five-commissioner ballot measure.",
   "Tags": [
-    "council-governance",
-    "public-comment",
     "development",
-    "transportation",
+    "housing",
+    "public-comment",
     "parks-recreation",
-    "homelessness"
+    "elections"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Special Meeting Executive Session",
-        "Summary": "Council convened a special meeting and voted unanimously to enter executive session to receive confidential legal advice regarding authorized uses of city open space. Council returned to public session after the executive session concluded at 5:17 p.m. with no concerns raised on the record.",
+        "Title": "Special meeting and executive session",
+        "Summary": "The council convened its special meeting and voted unanimously to enter executive session to receive confidential legal advice on authorized uses of city open space. After returning to public session, the council confirmed the participants and concluded the executive session with no reported improper action.",
         "related_timestamps": [
           228.48,
-          420.16,
-          3062.48,
-          3123.599
+          3117.119
         ],
         "Tags": [
           "legal",
@@ -28,143 +25,146 @@
     },
     {
       "Topic2": {
-        "Title": "Public Comment on Frasier Meadows Expansion and Panka Place Vacation",
-        "Summary": "Many residents spoke against the Frasier Meadows expansion, a 55-foot, 96-unit senior living project, and the proposed vacation of Panka Place. Concerns included height and setback exemptions, neighborhood transition, traffic, emergency access, flood and wildfire evacuation, and the loss of a public street. Several residents asked council to call up the planning board decision for a public hearing.",
+        "Title": "Frasier Meadows expansion and Panka Place vacation public comment",
+        "Summary": "Numerous residents spoke against the Frasier Meadows senior living expansion, citing a 55-foot height modification, inadequate transitions to single-family homes, traffic and construction concerns, and the lack of affordable units. Many urged the council to call up the project for a public hearing and to avoid giving Panka Place to the applicant, as it serves as an emergency and evacuation route. Supporters of senior housing also spoke, while residents raised questions about the loss of a public connection.",
         "related_timestamps": [
-          4104.08,
-          4236.719,
-          4372.4,
-          4502.239,
-          4634.56,
-          5190.239,
-          5297.44,
-          5953.199
+          4114.719,
+          6092.0
         ],
         "Tags": [
           "development",
           "zoning",
-          "public-comment",
-          "transportation",
-          "housing",
-          "wildfire"
+          "public-comment"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Public Comment on School Closures and Neighborhood Schools",
-        "Summary": "Residents, including a Flat Irons Elementary second grader, spoke against BVSD's proposed closure of neighborhood schools. Speakers argued the closures affect housing, traffic, climate, and walkable neighborhoods, and asked council to request a one-year delay of BVSD's vote.",
+        "Title": "BVSD neighborhood school closures",
+        "Summary": "Residents and a young student spoke against the proposed BVSD closure of neighborhood schools, including Flat Irons Elementary, arguing it conflicts with city planning goals for walkable neighborhoods and increases traffic and emissions. Speakers asked the council to request that BVSD delay its vote for one year. The council acknowledged the concerns without taking formal action.",
         "related_timestamps": [
-          3982.64,
-          5530.0,
-          5557.84,
-          5709.28
+          3970.0,
+          5427.0,
+          5579.52
         ],
         "Tags": [
-          "public-comment",
           "intergovernmental",
-          "transportation"
+          "public-comment"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Public Comment on Student Rentals, Party Houses, and Noise",
-        "Summary": "Residents described party houses and stealth dorm conversions in the Hill and Grant Place areas, citing noise, trash, and loss of affordable long-term rentals. Staff said code compliance tracks noise violations and reaches out to landlords as thresholds approach, and council members asked for follow-up data and possible out-of-the-box solutions.",
+        "Title": "Spruce Pool funding and closure concerns",
+        "Summary": "Swimmers and advocates spoke in favor of keeping Spruce Pool open, citing safety for older adults and people with disabilities, its role as an overflow pool, and its historic value. A speaker noted proposed cuts to Spruce and Scott pool funding for 2027 and no budgeted funding for 2028. Staff said funding is secured for one year and that Parks and Recreation will meet with supporters, and Council Member Brockett pledged to work on solutions.",
         "related_timestamps": [
-          4773.44,
-          5096.08,
-          6635.92,
-          7040.08,
-          7153.679
+          4640.0,
+          5955.0,
+          6330.0
         ],
         "Tags": [
-          "housing",
-          "crime",
-          "public-comment"
+          "parks-recreation",
+          "budget"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Public Comment on Spruce Pool Funding and Closure",
-        "Summary": "Swimmers and residents testified about the value of Spruce Pool for safety, rehabilitation, overflow aquatics, and history, and opposed proposed funding cuts for 2027 and no funding indicated for 2028. Parks and Recreation staff acknowledged the concern, said the pool is funded for one year, and committed to meeting with supporters.",
+        "Title": "Student rentals, party houses, and Grant Place densification",
+        "Summary": "Residents of Grant Place and University Hill described a 12-bedroom student duplex built under the affordable housing zoning rules, along with party house problems, noise, and trash. Speakers asked the city to address stealth dorm expansion and consider impact fees on landlord-owned properties. Staff said the duplex met zoning and building code requirements and that a nuisance ordinance and enforcement process exist, with follow-up promised.",
         "related_timestamps": [
-          3808.64,
-          4642.0,
-          6078.0,
-          6341.0,
-          6555.44,
-          6625.199
+          4769.44,
+          5579.52
         ],
         "Tags": [
-          "parks-recreation",
-          "budget",
-          "public-comment"
+          "university",
+          "housing",
+          "zoning",
+          "affordable-housing"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Council Recognition of Mark Wallik and Pollinator Appreciation Month",
-        "Summary": "Council Member Spear read a personal tribute and the joint declaration honoring former council member Mark Wallik's seven years of service. Council Member Shuhart read the declaration for Pollinator Appreciation Month and staff presented the new citywide bee biomonitoring initiative.",
+        "Title": "Other public comments on police, bears, and other issues",
+        "Summary": "A resident described difficulties getting police to act on evidence related to identity theft and stalking and proposed new state evidence intake laws. Another resident spoke about bears in downtown Boulder and the city trash ordinance, while others addressed international issues. Staff said the police department would follow up on the evidence case.",
         "related_timestamps": [
-          7550.0,
-          7980.0,
-          8006.639,
-          8094.8,
-          8526.56
+          4892.24,
+          5019.76,
+          6206.32
         ],
         "Tags": [
-          "council-governance",
-          "public-health",
+          "police",
+          "public-comment",
           "open-space"
         ]
       }
     },
     {
       "Topic7": {
-        "Title": "Consent Agenda and Employee Evaluations",
-        "Summary": "Council approved the consent agenda 8 to 0 with one nay on item 4E, the 2025-26 performance evaluations and salary adjustments for the city manager, city attorney, and municipal judge. Members praised the staff evaluations and raised concerns about the evaluation process and oversight.",
+        "Title": "Declaration honoring Mark Wallik",
+        "Summary": "Council members read a declaration honoring former council member Mark Wallik for his seven years of service on council. Wallik responded with remarks on his time on council and his family support. The council recognized his contributions to public safety, housing, open space, and governance.",
         "related_timestamps": [
-          8586.16,
-          8611.439,
-          8911.04,
-          9290.479
+          7475.36,
+          7972.96
         ],
         "Tags": [
           "council-governance",
-          "labor",
-          "budget"
+          "open-space"
         ]
       }
     },
     {
       "Topic8": {
-        "Title": "Call-Up Check-In: Frasier Meadows Site Review and Panka Place",
-        "Summary": "Council discussed the site review amendment for the Frasier and Mountain View United Methodist properties at 350 and 355 Panka Place, including the 55-foot, 96-unit building and private drive with public access easement. Staff addressed flood, energy, and affordable housing fee questions, and a motion to call up the project failed for lack of a second.",
+        "Title": "Pollinator Appreciation Month declaration",
+        "Summary": "City staff and partners presented a new citywide bee biomonitoring initiative that uses honeybee hives and native bee homes to gather data on plant diversity and environmental contaminants. Council Member Shuhart read the declaration proclaiming September 2026 Pollinator Appreciation Month. A council member asked about expanding the program to northern areas, and staff said it will expand next year.",
         "related_timestamps": [
-          9359.52,
-          9366.8,
-          9493.6,
-          9757.0,
-          9868.0
+          7996.32,
+          8526.56
         ],
         "Tags": [
-          "development",
-          "zoning",
-          "housing",
-          "affordable-housing"
+          "climate",
+          "open-space"
         ]
       }
     },
     {
       "Topic9": {
-        "Title": "Call-Up Check-In: Excel Energy Facility Expansion",
-        "Summary": "Council reviewed a concept plan to expand the Xcel Energy service and operations facility at 2655 North 63rd Street. Staff confirmed the project is not related to the Cosmo coal ash remediation work, and no member requested a call-up.",
+        "Title": "Consent agenda and city employee evaluations",
+        "Summary": "The council discussed the consent agenda, including the 2025-26 performance evaluations and salary adjustments for the city manager, city attorney, and municipal court judge, all of which received top ratings. One council member voted against item 4E, citing concerns about the evaluation process, the consultant used, and public input. The consent agenda was approved 8 to 0 with one nay on item 4E.",
         "related_timestamps": [
-          9887.359,
-          9945.359
+          8569.12,
+          8636.0,
+          9252.4
+        ],
+        "Tags": [
+          "council-governance",
+          "labor"
+        ]
+      }
+    },
+    {
+      "Topic10": {
+        "Title": "Frasier Meadows call-up check-in",
+        "Summary": "The council reviewed the site review amendment for the Frasier and Mountain View Methodist properties at 350 and 355 Panka Place, a 55-foot, 96-unit independent living building. Staff clarified public access easement conditions, flood review, inclusionary housing fees of about $9.4 million, and energy and solar requirements. A motion to call up the project failed for lack of a second.",
+        "related_timestamps": [
+          9365.36,
+          9860.0
+        ],
+        "Tags": [
+          "development",
+          "zoning",
+          "affordable-housing"
+        ]
+      }
+    },
+    {
+      "Topic11": {
+        "Title": "Xcel Energy facility concept plan check-in",
+        "Summary": "The council reviewed a concept plan to expand the Xcel Energy service and operations facility at 2655 North 63rd Street. Staff confirmed the project concerns existing operations and fleet maintenance, not the power plant or coal ash work. No council member requested a call-up.",
+        "related_timestamps": [
+          9864.32,
+          9945.0
         ],
         "Tags": [
           "energy",
@@ -173,55 +173,56 @@
       }
     },
     {
-      "Topic10": {
-        "Title": "Public Hearing: Pedal Cab Agency and Driver Licenses",
-        "Summary": "Council held a public hearing and second reading of Ordinance 8757 creating agency and driver licenses for pedal cabs, including insurance, background checks, traffic compliance, and a ban on selling products while operating. Council approved the ordinance 7 to 0 after staff explained the licensing framework modeled on Denver and Colorado Springs.",
+      "Topic12": {
+        "Title": "Pedal cab agency and driver licensing ordinance 8757",
+        "Summary": "Staff presented ordinance 8757 to create agency and driver licenses for pedal cabs, including insurance, background checks, fees to cover administrative costs, enforcement authority, and a ban on selling products while operating. Council asked about enforcement, minimum wage rules, sales tax, and how Denver handles licensing, and staff said there are no current local pedal cab agencies. The council adopted the ordinance unanimously 7 to 0 after a public hearing with no speakers.",
         "related_timestamps": [
-          10022.16,
-          10317.279,
-          10664.0,
-          11034.399,
-          11081.0
+          9967.12,
+          11084.96
         ],
         "Tags": [
-          "transportation",
           "bikes-pedestrians",
-          "parking",
-          "economic-development"
+          "transportation",
+          "economic-development",
+          "labor"
         ]
       }
     },
     {
-      "Topic11": {
-        "Title": "Matters: State Legislation on Prop 123, TOC Bill, and HOME Act",
-        "Summary": "Staff briefed council on three state laws: Proposition 123 fast-track review for affordable housing, the Transit Oriented Communities bill requiring housing opportunity goals near transit, and the HOME Act for qualifying properties on underutilized land. Council gave direction to pursue removing call-ups for form-based code reviews and affordable projects, and to explore reducing ground floor retail requirements.",
+      "Topic13": {
+        "Title": "State affordable housing fund (Proposition 123) update",
+        "Summary": "Staff explained that Proposition 123 funding requires a 90-day fast-track review for affordable housing projects by year end to keep Boulder eligible. The proposal removes planning board call-ups and automatic hearings for site reviews with height modifications for projects with at least 50 percent affordable units. Council supported staff's approach and the planning board unanimously recommended it, with an ordinance expected in October and November.",
         "related_timestamps": [
           11100.88,
-          11158.399,
-          11802.8,
-          12683.04,
-          12850.0,
-          13032.0,
-          14758.479
+          11802.8
         ],
         "Tags": [
-          "housing",
           "affordable-housing",
-          "zoning",
-          "intergovernmental",
-          "transportation"
+          "housing"
         ]
       }
     },
     {
-      "Topic12": {
-        "Title": "Restaurant and Small Business Task Force Proposal",
-        "Summary": "Council Members Tina and Matt proposed informal conversations among restaurant owners, workers, and business groups to build relationships and explore mutually beneficial solutions. Council unanimously gave direction to pursue the idea without creating an official task force or staff workload.",
+      "Topic14": {
+        "Title": "Transit-oriented communities bill and Home Act updates",
+        "Summary": "Staff described the state transit-oriented communities bill, which sets a housing opportunity goal of about 123,000 units for Boulder, and said current estimates show the city is close to meeting it with some code changes. Council supported removing call-ups for form-based code reviews and considering reduced ground-floor retail requirements. Staff also explained the Home Act's administrative review, height, and density standards for qualifying properties, with council giving a majority direction to pursue those changes.",
         "related_timestamps": [
-          14772.0,
-          14790.88,
-          15001.0,
-          15150.0
+          11802.8,
+          12830.16
+        ],
+        "Tags": [
+          "zoning",
+          "housing"
+        ]
+      }
+    },
+    {
+      "Topic15": {
+        "Title": "Small business and restaurant task force concept",
+        "Summary": "Council Members Matt and Ryan proposed forming a small informal working group of restaurant owners and worker representatives to build relationships and explore solutions for restaurants and workers. The group is not intended to be an official task force or to require staff time, and it may report recommendations before the 2027 council retreat. Council unanimously gave direction to proceed.",
+        "related_timestamps": [
+          14780.88,
+          15171.0
         ],
         "Tags": [
           "economic-development",
@@ -230,19 +231,16 @@
       }
     },
     {
-      "Topic13": {
-        "Title": "Council Position on Boulder County Ballot Measure to Expand Commissioners",
-        "Summary": "Council discussed whether to support the Boulder County ballot measure to change the board of county commissioners from three to five members. Members debated whether it is appropriate for the city to weigh in on another governing body's structure, with concerns about districting and representation. Council gave direction 5 to 3 to take a support position.",
+      "Topic16": {
+        "Title": "Boulder County five-commissioner ballot measure",
+        "Summary": "Council Member Shuhart proposed that the city take a support position on the Boulder County ballot measure to expand the county commission from three to five members. Council members debated respecting county governance, the district map and representation impacts, and the county's ongoing partnership with the city. A straw poll gave council direction to take a support position, with a 5 to 3 vote.",
         "related_timestamps": [
-          15184.0,
-          15234.8,
-          15340.0,
-          15649.439
+          15173.68,
+          15670.0
         ],
         "Tags": [
           "elections",
-          "intergovernmental",
-          "council-governance"
+          "intergovernmental"
         ]
       }
     }

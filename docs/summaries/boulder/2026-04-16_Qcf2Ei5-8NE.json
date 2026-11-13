@@ -1,80 +1,165 @@
 {
-  "Title": "April 16, 2026 Regular City Council Meeting",
-  "Overview": "The April 16, 2026 regular meeting opened with resident comments on topics including airport operations, recreation center funding, and surveillance technology, then moved through the consent agenda, which council approved unanimously. The main business was metropolitan districts: council unanimously adopted Ordinance 8748, which limits district formation to mostly commercial areas and sets debt and levy caps, but deferred the model service plan resolution so staff can add a compounding interest option. Council also reviewed state legislation and agreed to take an oppose-unless-amended position on House Bill 1308 on lot splitting.",
+  "Title": "April 16, 2026 - Regular City Council Meeting (Thursday evening session)",
+  "Overview": "Council heard extended public comment on the South Boulder Rec Center, the Boulder Airport, Flock and AI surveillance, tipped wage credits, bear trash rules, and the Fund Our Future survey. It approved the consent agenda unanimously, and adopted Ordinance 8748 unanimously on second reading to create a local framework for commercial metropolitan districts, with the companion model service plan resolution deferred to the next regular meeting for a compounding-interest change. Council also received a state legislative update and set its positions on several bills.",
   "Tags": [
-    "council-governance",
-    "public-comment",
-    "zoning",
-    "development",
     "parks-recreation",
     "economic-development",
-    "intergovernmental"
+    "development",
+    "intergovernmental",
+    "public-comment",
+    "labor"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Open Comment Period",
-        "Summary": "Residents spoke during open comment on a range of issues including the transportation maintenance fee exemption for religious buildings, zoning and landmarking reviews, the Boulder Municipal Airport, South Boulder Rec Center funding, bear trash ordinance evaluation, tipped minimum wage, and Flock AI surveillance. Speakers were limited to two or three minutes and staff and council responded briefly to several comments. Council members asked residents to direct criticism at policies rather than individuals or staff.",
+        "Title": "Open Public Comment Period",
+        "Summary": "Residents signed up to speak in person and online on a wide range of topics. Speakers addressed the transportation maintenance fee and religious facilities, the Boulder Airport, the South Boulder Rec Center, Flock and AI surveillance, tipped wage credits, bear trash carts, and retaliation concerns. Staff and council responded briefly, with council reminding speakers not to criticize individual staff members by name.",
         "related_timestamps": [
           341.28,
-          1000.0
+          3045.6
         ],
         "Tags": [
           "public-comment",
-          "council-governance",
-          "parks-recreation",
           "flock",
-          "surveillance",
-          "labor"
+          "surveillance"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Consent Agenda",
-        "Summary": "Council approved the consent agenda items 3A through 3I unanimously. Questions covered the Spring Valley Estates annexation water lines and resident cost sharing, and Ordinance 8745 on land use code changes, where staff kept the original three-story recommendation rather than the planning board's alteration. Council also discussed a brewery square footage issue to be researched.",
+        "Title": "South Boulder Rec Center and Fund Our Future Survey",
+        "Summary": "Many residents urged council to keep a pool, gym, and core amenities at the South Boulder Rec Center rather than funding a new facility. Speakers said the Fund Our Future questionnaire does not give a clear option to preserve South Boulder's core services and that indoor aquatic programming maps to East and North expansions. Staff said the survey is a prioritization exercise with a notes section and encouraged participation. Council members asked staff to clarify Scenario A (new building, no pool) versus Scenario B (pool and gym at current service levels).",
         "related_timestamps": [
-          3916.0,
-          4325.0
+          457.52,
+          2450.48,
+          2796.56,
+          2976.88
         ],
         "Tags": [
-          "development",
-          "zoning",
-          "council-governance"
+          "parks-recreation",
+          "budget"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Metropolitan Districts Ordinance 8748 and Model Service Plan",
-        "Summary": "Staff presented the regulatory framework for metropolitan districts, which limits formation to commercial districts with at least 90 percent non-residential use, sets a 50 mill debt cap and 65 mill aggregate cap, and imposes a 40-year debt discharge rule and a three-mill regional improvements levy. Council questioned the mill levy impacts, voter eligibility, and compounding interest. Council then adopted Ordinance 8748 unanimously, and the model service plan resolution was deferred so staff can add a compounding interest option.",
+        "Title": "Boulder Airport Future",
+        "Summary": "Speakers described the airport as a wildfire aviation base, medevac hub, science research site, and economic engine, and asked council to keep it open. Speakers also cited EAA youth flight programs, pilot training, and recent unleaded fuel availability. One business owner urged council to return to accepting FAA grants and avoid further delay. Council did not take action on the airport during this meeting.",
         "related_timestamps": [
-          4372.0,
-          8620.0
+          718.32,
+          1630.0,
+          2590.0,
+          2714.96
         ],
         "Tags": [
-          "development",
           "economic-development",
-          "budget",
-          "taxes-fees",
-          "council-governance"
+          "transportation",
+          "wildfire"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Legislative Update and State Advocacy",
-        "Summary": "Intergovernmental affairs staff reviewed the state legislative session, including House Bill 1202 on homelessness, Senate Bill 148 on on-bill energy repayment, AI policy, budget cuts, and the Home Act. Council discussed Senate Bill 150 on RTD reform and House Bill 1308 on lot splitting, and agreed to take an oppose-unless-amended position on 1308 that would move to monitor if three requested amendments are adopted. Council also received a note on a staff award.",
+        "Title": "Flock and AI Surveillance Concerns",
+        "Summary": "A speaker urged council to ban AI-enabled surveillance, arguing that Flock and similar live-view camera systems upload footage to outside servers and erode privacy. The speaker said switching Denver to a less harmful vendor was only a partial fix. No council action was taken on this item.",
         "related_timestamps": [
-          9750.0,
-          11645.0
+          1763.0,
+          1835.0
+        ],
+        "Tags": [
+          "surveillance",
+          "flock"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Tipped Wage Credit Proposal",
+        "Summary": "Several speakers opposed any increase to the tipped wage credit, arguing it would reduce workers' pay and consumer confidence. Council members said they were hearing from both restaurant owners and workers and wanted more data on affected groups. The conversation remained public comment and did not result in a vote.",
+        "related_timestamps": [
+          1943.28,
+          2212.08,
+          3100.0,
+          3135.36
+        ],
+        "Tags": [
+          "labor",
+          "economic-development"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Bear Protection Trash Ordinance Review",
+        "Summary": "The Boulder Bear Coalition presented a paper on the 2014 bear-resistant trash ordinance, which led to roughly 14,700 carts by 2016. The group asked the city to review the ordinance, which has not had a comprehensive review since about 2018, and to share lessons learned. Staff said they have received the proposal and are reviewing it, and that any new ordinance would require council direction.",
+        "related_timestamps": [
+          1275.92,
+          1376.0,
+          2983.36,
+          3045.6
+        ],
+        "Tags": [
+          "open-space"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Transportation Maintenance Fee Exemptions for Places of Worship",
+        "Summary": "A faith community leader asked council to exempt worshipping communities from the transportation maintenance fee, noting that BVSD and CU are exempt under state law. She also asked council to audit zoning that conflicts with the comprehensive plan and to reconsider landmark review for older religious buildings. Council asked staff about the timeline for exemptions, and staff said they would follow up.",
+        "related_timestamps": [
+          457.52,
+          583.2,
+          2823.2,
+          2865.28
+        ],
+        "Tags": [
+          "transportation",
+          "historic-preservation"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Consent Agenda",
+        "Summary": "Council approved consent agenda items 3A through 3I unanimously. Item G related to the Spring Valley Estates annexation, and staff confirmed that water lines have not yet been installed and residents would pay for that infrastructure. Council also discussed Ordinance 8745 on land use code cleanup, including three-story educational and cultural facilities, and a request to address brewery retail square footage limits.",
+        "related_timestamps": [
+          3925.0,
+          4325.68
+        ],
+        "Tags": [
+          "development",
+          "zoning"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "Metropolitan Districts Ordinance and Model Service Plan",
+        "Summary": "Staff presented Ordinance 8748 and Resolution 1378 to create a local review process for commercial metropolitan districts, including a 90% commercial threshold, a 50-mill debt cap, a 65-mill aggregate cap, and a 40-year debt limit. Public comment raised concerns about property tax burdens and displacement, and council questioned staff on compounding interest, mill levy caps, and the policy alternatives. Council straw-polled a change to allow compounding interest for developer debt if an external advisor certifies it, and Ordinance 8748 was then adopted unanimously while the resolution was deferred to the next regular meeting.",
+        "related_timestamps": [
+          4372.0,
+          9660.0
+        ],
+        "Tags": [
+          "development",
+          "economic-development",
+          "taxes-fees"
+        ]
+      }
+    },
+    {
+      "Topic10": {
+        "Title": "Legislative Update from the State",
+        "Summary": "Heather Staer reviewed the 2026 General Assembly session, which ends May 13, and a roughly $1.2 billion budget deficit driving cuts. Priority bills included HB 1202 on regional homelessness response, SB 148 on-bill repayment for energy upgrades, and an AI policy bill still awaiting introduction. Staff also reviewed HB 1308 on lot splitting, where council agreed to an oppose-unless-amended position, and SB 150 on RTD reform, where council asked for seven elected board members and a lower signature threshold. Council set its positions on the bills.",
+        "related_timestamps": [
+          9720.0,
+          11700.0
         ],
         "Tags": [
           "intergovernmental",
           "housing",
           "transit",
-          "energy",
-          "technology",
           "homelessness"
         ]
       }

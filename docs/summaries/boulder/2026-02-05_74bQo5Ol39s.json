@@ -1,42 +1,133 @@
 {
-  "Title": "February 5, 2026 Regular City Council Meeting",
-  "Overview": "The February 5, 2026 regular council meeting covered public concerns over the South Boulder Recreation Center, a Black History Month declaration, a rezoning of 5501 and 5505 Arapahoe Avenue to MU-4, the 2026 policy statement on regional, state, and federal issues, House Bill 26-1010 (the HOME Act), and council priorities and process improvements. Council unanimously approved the consent agenda and both rezoning ordinances, and it directed staff to pursue several amendments to House Bill 26-1010 after a straw poll. Staff said recreation center decisions would return to council in March and May, while the policy statement additions and retreat priorities were discussed without a formal vote recorded.",
+  "Title": "February 5, 2026 - City Council Regular Meeting",
+  "Overview": "At its February 5, 2026 regular meeting, council heard extensive public comment, mostly from South Boulder residents urging the city to keep core amenities at the South Boulder Recreation Center, and then unanimously approved the Black History Month declaration and the consent agenda. Council adopted two East Boulder rezoning ordinances for a mixed-use project at 55th and Arapahoe and, after a straw poll, chose to pursue amendments to HB26-1001 (the Home Act) rather than take a flat position. Council also discussed the 2026 policy statement and followed up on its retreat priorities.",
   "Tags": [
     "public-comment",
-    "public-health",
     "parks-recreation",
-    "intergovernmental",
-    "development",
-    "budget",
+    "housing",
     "zoning",
-    "homelessness",
-    "energy",
-    "affordable-housing"
+    "intergovernmental"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "South Boulder Recreation Center Future and Open Comment",
-        "Summary": "Numerous residents spoke during open comment urging the city to keep the core amenities of the South Boulder Recreation Center, including the lap pool, gym, and weight rooms, citing swim teams, seniors, youth, and accessibility. Speakers also raised concerns about funding priorities relative to office buildings and the East Boulder project. Staff responded that the city has not decided to close a facility, that a $2 million investment was approved in 2025, and that the long-term financial strategy and recreation discussions will return to council in March and May.",
+        "Title": "Opening, Announcements and Roll Call",
+        "Summary": "Mayor Brockett opened the meeting and announced that the 2026 boards and commissions recruitment has closed, with virtual interviews running through February 13 and appointments scheduled for the March 5 meeting. Council completed a roll call confirming a quorum. Council then unanimously approved swapping agenda items 2A and 3 so that open comment came first.",
         "related_timestamps": [
           303.919,
-          1175.919,
-          3554.4
+          372.08
         ],
         "Tags": [
-          "parks-recreation",
-          "public-comment",
-          "budget"
+          "boards-appointments"
         ]
       }
     },
     {
       "Topic2": {
+        "Title": "Open Comment on the South Boulder Recreation Center",
+        "Summary": "Many residents, including a nine-year-old, testified in person and online urging the city to keep the core amenities at the South Boulder Recreation Center, especially its lap pool and gym. Speakers cited a petition with about 3,000 signatures, use by the Fairview swim team and seniors, walkability, and emissions reduction. Several argued that the city has money for large office and East Boulder projects but not for South Boulder, and urged a ballot referral or a community vote.",
+        "related_timestamps": [
+          490.24,
+          2667.2
+        ],
+        "Tags": [
+          "parks-recreation",
+          "budget",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Open Comment on HB26-1001 Home Act",
+        "Summary": "Daniel Howard urged council to support HB26-1001 to address Colorado's housing shortage. He argued that the bill would let qualifying nonprofits, schools, churches and universities build on underused land through a faster standardized approval process. He noted that the bill still allows local inclusionary zoning, deed restrictions and height limits up to three stories or 45 feet.",
+        "related_timestamps": [
+          1051.919,
+          1175.919
+        ],
+        "Tags": [
+          "housing",
+          "intergovernmental"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Open Comment on Xcel Outages, Resilience Hubs and Coal Ash",
+        "Summary": "Leslie Glustrom urged the city to plan for resilience hubs and interconnected microgrids rather than waiting for Xcel Energy to fix outages, and asked staff to develop a plan starting with three centers. Chris Hoffman thanked council for its letter to Xcel and urged gold-standard remediation of the Valmont coal ash site to avoid toxic dust exposure in Boulder.",
+        "related_timestamps": [
+          1186.64,
+          1704.08
+        ],
+        "Tags": [
+          "energy",
+          "emergency-management",
+          "public-health"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Open Comment on Homeless Encampment Sweeps",
+        "Summary": "Evan Rabbitz criticized council for approving more than $14 million for encampment sweeps and questioned the cost per unsheltered person. He also objected to council's position on the governor's zoning proposal and on divestment. His remarks focused on the city's homelessness approach and broader political concerns.",
+        "related_timestamps": [
+          1321.44,
+          1454.0
+        ],
+        "Tags": [
+          "homelessness",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Open Comment on Towing Practices",
+        "Summary": "Connor Robson petitioned council to address city towing practices after his car was towed from a street where he had parked during routine maintenance with 72-hour notice. He said the city's exclusive towing contractor charged $638 for under an hour of labor and that more than 20 cars were towed the same day. He asked the city to renegotiate allowable fees, require owner contact at tow time, or operate its own towing service.",
+        "related_timestamps": [
+          1796.8,
+          1928.64
+        ],
+        "Tags": [
+          "parking",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Staff Responses on Recreation Centers and School Coordination",
+        "Summary": "Parks and Recreation Director Ally Rhodes clarified that the city has not decided to close any facility and that council approved a $2 million investment at South Boulder in the 2025 budget. Staff said the long-term financial strategy and Fund Our Future conversations will return to council in March and May ahead of the 2027 budget and possible 2026 ballot items. Staff also said Boulder Valley School District does not offer pools, relies on nearby recreation centers for swim teams, and that emergency reunification is a benefit of proximity rather than a requirement.",
+        "related_timestamps": [
+          2683.52,
+          3118.24
+        ],
+        "Tags": [
+          "parks-recreation",
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Council Responses to Open Comment",
+        "Summary": "Council members thanked the residents and youth who testified and noted that many city buildings are at the end of their lifespans with a roughly $400 million maintenance backlog. Council Member Adams asked staff about the status of county climate resilience hub grants and their alignment with the climate action plan update. Council Member Wallik clarified that he declined a petition because it did not allow for any design compromise, and the mayor said council shares the goal of an excellent South Boulder facility.",
+        "related_timestamps": [
+          3126.0,
+          3554.4
+        ],
+        "Tags": [
+          "council-governance",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic9": {
         "Title": "Black History Month Declaration",
-        "Summary": "Council member Adams presented a declaration recognizing February 2026 as Black History Month, highlighting Boulder's Black community history including early entrepreneurs, the Boulder Blues baseball team, and Second Baptist Church. Representatives from the Black Women's Alliance at CU Boulder and the Black Student Alliance spoke in response.",
+        "Summary": "Council Member Adams read a declaration recognizing February 2026 as Black History Month, citing the 1926 origins of the observance and the theme of a century of Black history commemorations. The declaration highlighted Boulder figures and institutions, including the Boulder Blues baseball team and Second Baptist Church. Representatives of the CU Boulder Black Women's Alliance and Black Student Alliance accepted the declaration and spoke about their work.",
         "related_timestamps": [
           3926.0,
-          4208.719,
           4241.679
         ],
         "Tags": [
@@ -47,108 +138,89 @@
       }
     },
     {
-      "Topic3": {
-        "Title": "Consent Agenda",
-        "Summary": "Council approved consent agenda items 4A through 4C unanimously, with no discussion raised on the items.",
+      "Topic10": {
+        "Title": "Consent Agenda and Call-Up Check-Ins",
+        "Summary": "Council unanimously approved consent agenda items 4A through 4C. During call-up check-ins, no member called up a landmark alteration certificate to demolish and rebuild an accessory building at 2408 (Mapleton Hill) or a request to construct a new primary building at 2439 Broadway, so both items stood approved.",
         "related_timestamps": [
-          4265.44,
-          4324.0
-        ],
-        "Tags": []
-      }
-    },
-    {
-      "Topic4": {
-        "Title": "Callup Check-ins for Landmark Certificates",
-        "Summary": "Staff presented two landmark alteration certificates in the Mapleton Hill Historic District, one to demolish and rebuild an accessory building at 2408 street and one to construct a new primary building at 2439 Broadway. No council members called either item up, so both proceeded without further review.",
-        "related_timestamps": [
-          4347.0,
-          4370.239,
-          4400.0
+          4248.8,
+          4330.08,
+          4370.239
         ],
         "Tags": [
-          "historic-preservation",
-          "zoning"
+          "historic-preservation"
         ]
       }
     },
     {
-      "Topic5": {
-        "Title": "Rezoning of 5501 and 5505 Arapahoe Avenue to MU-4",
-        "Summary": "Council held a second reading and public hearing on ordinances rezoning approximately 2.65 acres at 5501 and 5505 Arapahoe Avenue from BC-1 to MU-4, plus adjacent right-of-way. Staff noted the change aligns with the East Boulder subcommunity plan and mixed-use transit-oriented designation, and the associated form-based code review was previously approved. One speaker opposed increased density, and both ordinances were adopted unanimously.",
+      "Topic11": {
+        "Title": "East Boulder Rezoning Ordinances 8736 and 8737",
+        "Summary": "Council held the second reading and public hearing on two rezoning ordinances for about 2.65 acres at 5501 and 5505 Arapahoe Avenue and adjacent rights-of-way, changing the zoning from BC1 to MU4 to support a form-based code redevelopment in East Boulder. Staff found the rezoning consistent with the comprehensive plan's mixed-use transit-oriented designation and the East Boulder subcommunity plan, and no written public comments were received. One resident opposed the rezoning as a density subsidy, while council members noted the irony of needing rezonings that the Title 9 update could address and Mark Wallik questioned the architecture produced by the form-based code. Council unanimously adopted both ordinances.",
         "related_timestamps": [
-          4441.0,
-          4498.0,
-          5088.8,
+          4407.76,
           5614.8
         ],
         "Tags": [
           "zoning",
           "development",
-          "transit"
+          "housing"
         ]
       }
     },
     {
-      "Topic6": {
-        "Title": "2026 Policy Statement on Regional, State, and Federal Issues",
-        "Summary": "Staff presented recommended additions to the 2026 policy statement from the intergovernmental affairs committee, including human rights language, support for federally funded research jobs, food supply and local grower support, orphaned well cleanup, workforce housing, construction defects reform, coal ash mitigation, wildfire guidance, protections against surveillance, and data center water and energy conservation. Council members affirmed existing electrification positions and raised questions about how excessive resource use would be determined.",
+      "Topic12": {
+        "Title": "2026 Policy Statement Updates",
+        "Summary": "Heather Staer presented additions to the 2026 policy statement recommended by the Intergovernmental Affairs Committee, including human rights language, support for federally funded research jobs, food system and orphaned well cleanup, workforce housing, construction defects reform, coal ash mitigation, extreme fire day guidance, and limits on data center water and energy use. Council members asked whether local or state entities would determine excessive data center water use and asked that the item return to the IGA Committee. Council confirmed that several electrification and distributed generation positions are already covered in the existing policy statement.",
         "related_timestamps": [
-          5684.56,
-          5888.0,
-          6097.04
+          5628.159,
+          6150.0
         ],
         "Tags": [
           "intergovernmental",
-          "energy",
-          "water",
-          "surveillance",
-          "wildfire"
-        ]
-      }
-    },
-    {
-      "Topic7": {
-        "Title": "House Bill 26-1010 (HOME Act) Discussion",
-        "Summary": "Staff summarized state House Bill 26-1010, which would allow residential development on qualifying nonprofit, school, church, university, and transit-owned parcels of five acres or less through administrative approval in any zone. Staff outlined permitted local standards, prohibited restrictions on height and unit counts, and political context, noting the bill is a governor's priority. Council members raised concerns about loss of home rule, lack of affordability requirements, nonprofit definitions, and compatibility with the comprehensive plan. After a straw poll, council chose to pursue amendments, including tying projects to demonstrated needs, excluding unincorporated county land, tightening nonprofit eligibility, applying height standards consistent with the zone, limiting project size, and requiring comprehensive plan compatibility.",
-        "related_timestamps": [
-          6209.52,
-          6684.0,
-          7731.0,
-          8640.0,
-          9000.0,
-          9440.0,
-          9920.0
-        ],
-        "Tags": [
-          "housing",
-          "intergovernmental",
-          "affordable-housing",
-          "zoning",
           "council-governance"
         ]
       }
     },
     {
-      "Topic8": {
-        "Title": "Council Retreat Follow-up on Priorities and Process Improvements",
-        "Summary": "Staff presented scoping for council priorities including bicycle security and theft reduction, wildfire home hardening and assessment, a tip credit ordinance exploration, power resiliency with Xcel Energy, and sister city program updates. Process improvements discussed included board packet timing, CAC request tracking, historic designation presentations, and limiting late meetings. Council members asked that the Title 9 rewrite be recorded as a conditional priority and requested clarity on ebike regulations, climate and agriculture work, and public safety updates.",
+      "Topic13": {
+        "Title": "HB26-1001 Home Act Discussion and Straw Poll",
+        "Summary": "Staff summarized HB26-1001, which would require local governments to allow residential development on qualifying nonprofit, school, church, university and transit-agency properties of five acres or less through an administrative approval process, with limits on height and unit caps. Council questioned whether the bill preempts home rule, whether affordability is required, whether design or architecture can be regulated, and whether unincorporated county parcels are eligible. Council straw polled and chose to pursue amendments, with a majority supporting an amend position and a smaller group favoring oppose unless amended. The amendments requested include excluding unincorporated county land, limiting nonprofit eligibility, applying local height standards, requiring a demonstrated housing need, and requiring consistency with the comprehensive plan, though the comprehensive plan request was later withdrawn as a likely poison pill.",
         "related_timestamps": [
-          11566.64,
-          11975.12,
-          12080.0,
-          12340.0,
-          12880.0,
-          13120.0
+          6184.48,
+          11427.6
+        ],
+        "Tags": [
+          "housing",
+          "intergovernmental",
+          "zoning"
+        ]
+      }
+    },
+    {
+      "Topic14": {
+        "Title": "Council Retreat Priorities Follow-Up",
+        "Summary": "Matt Chasanoff presented staff's project charters for council's retreat priorities, including bicycle security and theft reduction, wildfire home hardening and mitigation analysis, exploring local tip credit authority beginning in 2027, power resiliency with Xcel Energy, and sister city program updates. Staff noted that Title 9 rewrite was added as a caveated item if time allows and that a bike parking capital project will not occur in 2026 due to limited resources. Council asked for prioritized, action-oriented wildfire recommendations rather than academic analysis, and asked staff to bring a tip credit ordinance by June 2026 with a check-in in April. Council also requested public safety and agricultural updates, and staff committed to follow up on e-bike regulation research.",
+        "related_timestamps": [
+          11474.0,
+          13434.0
         ],
         "Tags": [
           "council-governance",
-          "budget",
-          "transportation",
-          "bikes-pedestrians",
           "wildfire",
-          "energy",
-          "labor"
+          "bikes-pedestrians"
+        ]
+      }
+    },
+    {
+      "Topic15": {
+        "Title": "Closing Comments on Downtown Parking and ENCAR Property",
+        "Summary": "Council Member Tara Mates raised concern about high downtown parking costs and said she asked staff to research parking pricing trends after council approved a 50-cent increase in the budget. Council Member Adams asked for a frequently asked questions document on ownership of the ENCAR property, and staff said they are reviewing archives and may need executive session for legal advice. Mayor Brockett then closed the meeting at 9:11 p.m.",
+        "related_timestamps": [
+          13452.319,
+          13554.0
+        ],
+        "Tags": [
+          "parking",
+          "development"
         ]
       }
     }

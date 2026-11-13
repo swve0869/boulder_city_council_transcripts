@@ -1,246 +1,334 @@
 {
-  "Title": "June 18, 2026 Regular City Council Meeting",
-  "Overview": "The June 18, 2026 regular council meeting covered public comment on the Ponderosa Mobile Home Park, tipped worker wages, Gaza and investments, the Boulder Valley Comprehensive Plan, and the Fort Chambers design, along with council statements condemning racism and antisemitism. Council added a Colorado Music Festival item to the agenda, presented Juneteenth and Colorado Music Festival Day declarations, and approved consent items 4A through 4D. Council also adopted resolution 1381 on the annexation of about 43 acres in Spring Valley Estates, approved a water association agreement, and unanimously adopted ordinances 8751 and 8752 on special festival events and festival liquor licenses.",
+  "Title": "June 18, 2026 - Boulder City Council Regular Meeting",
+  "Overview": "The Council amended the agenda, heard extensive open comment on tipped worker wages, the Ponderosa mobile home park, Fort Chambers, Gaza, the Downtown Development Authority, and antisemitism, and approved the Juneteenth and Colorado Music Festival declarations and the consent agenda. It approved Resolution 1381 and an agreement with Spring Valley Mutual Water Association to annex Spring Valley Estates, then adopted Ordinance 8751 on special festival events and Ordinance 8752 on festival liquor permits with a $150 fee.",
   "Tags": [
-    "council-governance",
     "public-comment",
-    "affordable-housing",
     "development",
     "labor",
-    "historic-preservation",
-    "homelessness",
-    "budget",
-    "wildfire",
-    "intergovernmental",
-    "legal",
+    "equity",
     "economic-development"
   ],
   "Topics": [
     {
       "Topic1": {
         "Title": "Call to order, roll call, and agenda amendment",
-        "Summary": "Council convened the regular June 18, 2026 meeting with roll call showing a quorum. Council voted 8-0 to add item 3B, the Colorado Music Festival 50th anniversary declaration, to the agenda.",
+        "Summary": "The Mayor called the June 18, 2026 regular meeting to order and roll call confirmed a quorum. The Council voted 8-0 to add item 3B, a Colorado Music Festival 50th anniversary declaration, to the agenda.",
         "related_timestamps": [
-          347.12,
-          416.64
+          350.32,
+          409.52
         ],
         "Tags": []
       }
     },
     {
       "Topic2": {
-        "Title": "Open comment: Ponderosa Mobile Home Park and housing stability",
-        "Summary": "Ponderosa residents spoke against the Habitat for Humanity stabilization project, citing displacement concerns, a road change affecting homes, lighting and dark sky ordinance issues, and unmet promises about traffic calming. Residents asked for more time and a council liaison. Staff committed to following up with residents.",
+        "Title": "Public comment on tipped worker wages and tip credit",
+        "Summary": "Several labor organizers and workers spoke against increasing the tip credit or tip offset for restaurant workers. Speakers argued that a higher offset is a wage cut, that tipping is inequitable, and that restaurants already use service fees successfully. Staff later described outreach to about 100 restaurants and the Be Heard Boulder survey.",
         "related_timestamps": [
-          1236.0,
-          1514.4,
-          2046.0
+          869.48,
+          1764.96
         ],
         "Tags": [
-          "affordable-housing",
-          "housing",
+          "labor",
           "public-comment"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Open comment: minimum wage and tip credit offset",
-        "Summary": "Several speakers, including labor council representatives and tipped workers' advocates, opposed modifying the tip offset, arguing it amounts to a wage cut for tipped workers. Speakers also questioned whether the city's outreach reached restaurant workers. Staff described notification methods including press releases, visits to about 100 restaurants, and the Be Heard Boulder forum.",
+        "Title": "Public comment on Ponderosa Mobile Home Park",
+        "Summary": "Ponderosa residents spoke about the Habitat for Humanity and city redevelopment project and said the 2019 annexation promises to let residents stay in their homes are not being kept. They raised concerns about displacement, a road that would destroy homes, dark sky lighting, and traffic speed. Staff said they were unaware of the issues and committed to following up with residents.",
         "related_timestamps": [
-          869.48,
-          1002.96,
-          1514.4,
-          1648.52,
-          1783.2,
-          2576.56
+          1220.48,
+          2057.919
         ],
         "Tags": [
-          "labor",
-          "equity",
+          "affordable-housing",
           "public-comment"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Open comment: Gaza, war industries, and Israel investments",
-        "Summary": "Multiple speakers urged council to recognize genocide in Gaza, divest from Israel, and reduce investments and ties to war industries, while others spoke on anti-Semitism and the definition of anti-Zionism. Council members responded in later comments on anti-Semitism and hate incidents.",
+        "Title": "Public comment on Fort Chambers interpretive design",
+        "Summary": "A co-founder of Right Relationship Boulder objected to the Open Space and Mountain Parks interpretive design for Fort Chambers. She said the timeline starts with settlers, omits 13,000 years of Native presence, and removes a proposed reconstruction of the fort gates. Staff said it is meeting with Right Relationship and tribal partners.",
         "related_timestamps": [
-          347.12,
-          730.28,
-          1648.52,
-          2321.36
+          1096.76,
+          1212.32
         ],
         "Tags": [
-          "public-comment",
-          "intergovernmental",
+          "open-space",
           "equity"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Open comment: Boulder Valley Comprehensive Plan notice and DDA concerns",
-        "Summary": "Speakers raised concerns that the Boulder Valley Comprehensive Plan update notice did not properly reach property owners, and a resident questioned the downtown DDA's revenue diversion from the library, county, and school districts. Staff said the DDA returns to council August 6 and that letters have been sent to partner agencies.",
+        "Title": "Public comment on Gaza, Israel, and war investments",
+        "Summary": "Speakers urged the Council to pass a resolution recognizing genocide in Gaza, divest from Israel, and stop investments tied to war. Other speakers criticized local defense jobs and called for stronger action on the city investment portfolio. Some speakers used inflammatory language that drew objections from the chair.",
         "related_timestamps": [
-          2069.0,
-          2339.4,
-          2458.24,
-          2466.72
+          713.0,
+          847.36,
+          1646.688
         ],
         "Tags": [
-          "development",
-          "zoning",
-          "budget",
-          "taxes-fees"
-        ]
-      }
-    },
-    {
-      "Topic6": {
-        "Title": "Open comment: Fort Chambers interpretive design",
-        "Summary": "A speaker on behalf of Right Relationship Boulder raised concerns that the Fort Chambers interpretive design omits 13,000 years of Native presence and misrepresents Native influence. Staff said they are arranging a meeting with partners and will keep council informed.",
-        "related_timestamps": [
-          1087.88,
-          2466.72
-        ],
-        "Tags": [
-          "historic-preservation",
+          "equity",
           "public-comment"
         ]
       }
     },
     {
-      "Topic7": {
-        "Title": "Council questions to staff on public engagement, racial equity tool, and investments",
-        "Summary": "Council asked how tipped workers were notified and whether the racial equity tool was used in the Right Relationship Boulder matter. Council also asked about the Boulder Valley Comp Plan notice requirements and the status of an investment portfolio review. Staff said an internal review is underway and will be shared with council.",
+      "Topic6": {
+        "Title": "Public comment on the Downtown Development Authority",
+        "Summary": "A resident speaking personally raised concerns about the proposed Downtown Development Authority tax increment financing. He estimated it could divert tens of millions of dollars from the library district and county, and he questioned voting by property owners who may not live in Boulder.",
         "related_timestamps": [
-          2576.56,
-          2699.88,
-          2748.72,
-          2846.24
+          2064.12,
+          2191.44
         ],
         "Tags": [
-          "equity",
-          "budget",
-          "council-governance"
+          "economic-development",
+          "taxes-fees"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Public comment on Comprehensive Plan land use notification",
+        "Summary": "A Gunbarrel resident said the city did not properly notify property owners about Boulder Valley Comprehensive Plan land use changes. She said notice was given only through utility bill inserts and online bills, and she estimated that mailed notices would cost about $41,000. She asked that the record reflect the notice deficiency.",
+        "related_timestamps": [
+          2339.88,
+          2460.4
+        ],
+        "Tags": [
+          "zoning",
+          "public-comment"
         ]
       }
     },
     {
       "Topic8": {
-        "Title": "Council personal privilege statements on racism and antisemitism",
-        "Summary": "Councilmember Adams reported a racial slur directed at her in a cafe and called for public safety updates on protections for all residents. Councilmembers condemned racism and antisemitism, citing an ADL lawsuit against Boulder Valley School District and an antisemitic incident. Council discussed the need for policy, transparency, and accountability.",
+        "Title": "Staff responses and council questions on open comment issues",
+        "Summary": "Staff said the Fort Chambers project will involve further meetings and the DDA will return to Council on August 6. Staff explained how tip workers were notified through outreach, flyers, and surveys, and Council asked how the racial equity tool was used. Staff also clarified that Comprehensive Plan notice may be provided through utility bills without a physical letter.",
         "related_timestamps": [
-          2962.04,
-          3120.44,
-          3339.4
+          2466.08,
+          2810.44
         ],
         "Tags": [
-          "equity",
           "council-governance",
-          "public-health"
+          "equity"
         ]
       }
     },
     {
       "Topic9": {
-        "Title": "Juneteenth 2026 declaration",
-        "Summary": "Councilmember Kaplan presented the Juneteenth 2026 declaration to Dr. David Lewis Humphrey. The declaration recognizes June 19 as the end of chattel slavery in the US and encourages community participation in local Juneteenth events.",
+        "Title": "Investment portfolio complaints",
+        "Summary": "Councilmember Adams asked about the status of community complaints that the city investment portfolio includes oil and gas, tobacco, firearms, and private prison holdings. The city manager said he received a community communication, had not yet met with staff on it, and would share findings with Council. Staff also noted an internal review is underway.",
         "related_timestamps": [
-          4191.32
+          2818.64,
+          2937.0
         ],
         "Tags": [
-          "equity",
-          "arts-culture"
+          "budget"
         ]
       }
     },
     {
       "Topic10": {
-        "Title": "Colorado Music Festival 50th anniversary declaration",
-        "Summary": "Councilmember Marquis presented a declaration naming July 9, 2026 as Colorado Music Festival Day. The festival will present its 50th season at Chautauqua Auditorium and draws more than 20,000 attendees annually.",
+        "Title": "Personal privilege on racism and antisemitism",
+        "Summary": "A councilmember shared that she was subjected to a racial slur in public and that Black residents reported similar experiences. Council members condemned the harassment and discussed antisemitic harassment of a Jewish middle school student, a federal ADL complaint, and hate directed at Jewish residents in council chambers. Councilmembers called for public safety updates and more action on hate.",
         "related_timestamps": [
-          4200.08,
-          4392.24
+          2951.4,
+          3407.68
         ],
         "Tags": [
-          "arts-culture",
-          "economic-development"
+          "equity",
+          "public-comment"
         ]
       }
     },
     {
       "Topic11": {
-        "Title": "Consent agenda",
-        "Summary": "Council approved consent agenda items 4A through 4D unanimously on a motion and second with roll call vote.",
+        "Title": "Recess and return to business",
+        "Summary": "The Mayor called a recess at 6:22 p.m. to end open comment and resumed the business portion of the meeting later in the evening. The recess was procedural.",
         "related_timestamps": [
-          4403.28,
-          4476.68
+          3427.36,
+          3923.32
         ],
         "Tags": []
       }
     },
     {
       "Topic12": {
-        "Title": "Call-up check-ins",
-        "Summary": "Council reviewed two call-up items: concept plan review for redevelopment of the Unity Church property at 2855 Folsom with 21 detached dwellings, and a landmark alteration certificate to demolish an accessory building at 1039 Mapleton Avenue. No council member called either item up.",
+        "Title": "Juneteenth declaration",
+        "Summary": "Councilmember Kaplan presented a declaration recognizing June 19, 2026 as Juneteenth in Boulder. The declaration describes the holiday's history, notes the city's flag raising since 2021 and holiday recognition since 2022, and pledges to oppose oppression. Dr. David Lewis Humphrey was present to receive the declaration.",
         "related_timestamps": [
-          4479.96,
-          4550.32
+          3927.52,
+          4200.08
         ],
         "Tags": [
-          "development",
-          "historic-preservation",
-          "zoning"
+          "equity"
         ]
       }
     },
     {
       "Topic13": {
-        "Title": "Spring Valley Estates annexation and resolution 1381",
-        "Summary": "Council held a public hearing on the annexation of about 43 acres in Spring Valley Estates with RE initial zoning, approved by election. Staff explained the phased process, required water and road infrastructure, and a local improvement district. Council adopted resolution 1381 unanimously and approved an agreement with the Spring Valley Mutual Water Association. Council discussed DOLA grant timing, the 90-day election blackout, and cost allocation concerns raised by residents.",
+        "Title": "Colorado Music Festival 50th anniversary declaration",
+        "Summary": "Councilmember Marquis presented a declaration proclaiming July 9, 2026 as Colorado Music Festival Day in Boulder. The festival will hold its 50th season at Chautauqua Auditorium from July 9 through August 9 with more than 20,000 attendees. The festival representative thanked the Council and invited members to opening night.",
         "related_timestamps": [
-          4617.0,
-          4672.44,
-          5548.4,
-          6742.24,
-          8167.0,
-          8296.36
+          4200.08,
+          4400.08
         ],
         "Tags": [
-          "development",
-          "water",
-          "wildfire",
-          "affordable-housing"
+          "arts-culture"
         ]
       }
     },
     {
       "Topic14": {
-        "Title": "Ordinance 8751 on special festival events",
-        "Summary": "Council held a public hearing and adopted ordinance 8751 unanimously. It creates a permit process and standards for special festival events such as Sundance, updates mobile food vehicle rules, and adds sign code provisions for temporary event signage. Staff said the ordinance would take effect in 30 days and be monitored.",
+        "Title": "Consent agenda approval",
+        "Summary": "The Council approved consent agenda items 4A through 4D by a unanimous roll call vote. No questions or comments were raised on the consent items.",
         "related_timestamps": [
-          8444.24,
-          8560.0,
-          9294.32,
-          10018.32
+          4400.08,
+          4476.68
+        ],
+        "Tags": []
+      }
+    },
+    {
+      "Topic15": {
+        "Title": "Call-up check-ins: Unity Church redevelopment and Mapleton demolition",
+        "Summary": "The Council reviewed a concept plan to redevelop the Unity Church property at 2855 Folsom with 21 detached dwellings. A landmark alteration certificate to demolish an accessory building at 1039 Mapleton Avenue in the Mapleton Hill Historic District was also reviewed. No council member called either item up for further discussion.",
+        "related_timestamps": [
+          4479.96,
+          4560.84
+        ],
+        "Tags": [
+          "development",
+          "historic-preservation"
+        ]
+      }
+    },
+    {
+      "Topic16": {
+        "Title": "Spring Valley Estates annexation staff presentation",
+        "Summary": "Staff presented the proposed annexation of about 43 acres and 36 lots in Spring Valley Estates with initial zoning of Residential Estate. The annexation is by election, and Spring Valley Mutual Water Association would transition its water service to the city. Staff described terms including required public improvements, a local improvement district, plant investment fees, and a DOLA grant tied to a November 14 deadline.",
+        "related_timestamps": [
+          4591.16,
+          5520.12
+        ],
+        "Tags": [
+          "development",
+          "water"
+        ]
+      }
+    },
+    {
+      "Topic17": {
+        "Title": "Council questions on water rights, irrigation, and legal process",
+        "Summary": "Council asked why the city is not acquiring the water association's water rights, and the Utilities Deputy Director said the quantity is low and not needed. Questions also covered agricultural water leases, irrigation use, and whether annexation terms restrict landscaping. Staff said annexation is legislative, that retroactive wildfire hardening requirements are legally risky, and that future costs would not fall on residents beyond the agreed terms.",
+        "related_timestamps": [
+          5548.4,
+          5950.0
+        ],
+        "Tags": [
+          "water",
+          "development",
+          "wildfire"
+        ]
+      }
+    },
+    {
+      "Topic18": {
+        "Title": "Applicant presentation and wildfire risk",
+        "Summary": "The attorney for Spring Valley Mutual Water Association presented the project, saying about 80 percent of residents supported moving forward. She emphasized wildfire risk from surrounding open space and the need for fire hydrants and adequate water pressure. The board member asked the city to waive the 90-day election blackout so the DOLA grant is not lost.",
+        "related_timestamps": [
+          5958.0,
+          6740.16
+        ],
+        "Tags": [
+          "development",
+          "wildfire",
+          "open-space"
+        ]
+      }
+    },
+    {
+      "Topic19": {
+        "Title": "Public hearing on Spring Valley annexation",
+        "Summary": "Speakers at the Spring Valley public hearing addressed the annexation resolution, though one speaker was ruled off topic and his time ended. Another resident urged the Council to base the cost allocation on buildable land rather than gross acreage and asked for market valuation of the pump house parcel. A former water board member criticized the proportional cost formula and asked for a cost per homeowner before voting.",
+        "related_timestamps": [
+          6741.28,
+          7385.0
+        ],
+        "Tags": [
+          "development",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic20": {
+        "Title": "Council discussion on election timing and cost allocation",
+        "Summary": "The City Attorney explained that the municipal election code blackout of 90 days would require an ordinance or a state code approach that staff believes is unlikely to meet the grant timeline. Staff said the Planning Director expects only about four weeks gained from a special ordinance. Staff also explained that the cost allocation split 50 percent by lot area and 50 percent by house square footage and was recommended by the city consultant.",
+        "related_timestamps": [
+          7389.2,
+          8008.0
+        ],
+        "Tags": [
+          "elections",
+          "development"
+        ]
+      }
+    },
+    {
+      "Topic21": {
+        "Title": "Votes adopting Resolution 1381 and water agreement",
+        "Summary": "Councilmember Rob moved to adopt Resolution 1381 with findings and directing that an annexation election be called, and the Council approved it unanimously. The Council then unanimously authorized the city manager to execute the agreement with Spring Valley Mutual Water Association regarding annexation and transition of municipal services. The Mayor noted the decision will move the annexation toward an election.",
+        "related_timestamps": [
+          8021.24,
+          8369.0
+        ],
+        "Tags": [
+          "development",
+          "water"
+        ]
+      }
+    },
+    {
+      "Topic22": {
+        "Title": "Ordinance 8751 presentation on special festival events",
+        "Summary": "Staff presented Ordinance 8751 to create a permitting process and standards for special festival events, such as the 2027 Sundance Film Festival. The ordinance adds definitions for events over 15,000 people, mobile food vehicle standards, and a comprehensive sign plan for temporary signs. Staff said the planning board unanimously recommended approval and that the ordinance would take effect 30 days after adoption.",
+        "related_timestamps": [
+          8378.96,
+          9294.32
         ],
         "Tags": [
           "economic-development",
-          "arts-culture",
           "zoning"
         ]
       }
     },
     {
-      "Topic15": {
-        "Title": "Ordinance 8752 on festival liquor licenses",
-        "Summary": "Council held a public hearing and adopted ordinance 8752 unanimously. It allows festival liquor licenses and permits authorized by state law and sets a $150 local application fee for administrative review. Council discussed fee-setting and cost recovery.",
+      "Topic23": {
+        "Title": "Ordinance 8751 public comment and adoption",
+        "Summary": "Council asked about undefined congestion standards, sign quality, minimum wage enforcement for vendors, and lessons learned from past events. A speaker opposed Sundance and the signs. The Council unanimously adopted Ordinance 8751 after a motion and second.",
         "related_timestamps": [
-          10057.44,
-          10352.0,
+          9294.32,
+          10017.0
+        ],
+        "Tags": [
+          "economic-development",
+          "public-comment",
+          "labor"
+        ]
+      }
+    },
+    {
+      "Topic24": {
+        "Title": "Ordinance 8752 festival liquor licenses and fees",
+        "Summary": "Staff presented Ordinance 8752 to allow festival liquor licenses and permits and to set a $150 local fee to recover administrative review costs. Council debated whether the fee should be tied to revenue or cost recovery and whether fees should be audited. The Council unanimously adopted Ordinance 8752 after a motion and second.",
+        "related_timestamps": [
+          10031.68,
           10757.88
         ],
         "Tags": [
@@ -250,17 +338,28 @@
       }
     },
     {
-      "Topic16": {
+      "Topic25": {
         "Title": "Council employee evaluation timeline",
-        "Summary": "Councilmember Spear shared the timeline for the council employee evaluation process. The survey launches July 7 and closes July 28, with summaries due in August and a consent agenda item on September 3.",
+        "Summary": "Councilmember Spear shared the timeline for the 2026 council employee evaluation process. The survey launches July 7, closes July 28, and summaries are expected to be shared by late August. Merit increases would be retroactive to July 1.",
         "related_timestamps": [
-          10784.12,
+          10772.92,
           10915.08
         ],
         "Tags": [
           "council-governance",
           "labor"
         ]
+      }
+    },
+    {
+      "Topic26": {
+        "Title": "Adjournment",
+        "Summary": "The Mayor closed the meeting at 8:27 p.m. The adjournment was procedural.",
+        "related_timestamps": [
+          10926.04,
+          10930.2
+        ],
+        "Tags": []
       }
     }
   ]

@@ -213,6 +213,9 @@
     }
 
     $("q").addEventListener("input", () => { state.q = $("q").value.trim(); if (state.q) ensureSearchText(); update(); });
+    document.addEventListener("keydown", (e) => { // "/" focuses search, as on many sites
+      if (e.key === "/" && !e.metaKey && !e.ctrlKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) { e.preventDefault(); $("q").focus(); }
+    });
     if (state.q) ensureSearchText();
     $("sort").addEventListener("change", () => { state.sort = $("sort").value; update(); });
     $("match").addEventListener("change", () => { state.match = $("match").value; update(); });
@@ -336,12 +339,32 @@
       return [meta, list];
     }
 
+    // Thin stacked bar: this meeting's estimated time by tag group (fixed group order and colors).
+    function mixBar(m) {
+      const byGroup = new Map(tags.groups.map((g) => [g.id, 0]));
+      let total = 0;
+      for (const [id, secs] of Object.entries(m.tag_seconds || {})) {
+        const g = tags.group(id);
+        if (byGroup.has(g)) { byGroup.set(g, byGroup.get(g) + secs); total += secs; }
+      }
+      if (!total) return null;
+      const parts = tags.groups.filter((g) => byGroup.get(g.id) > 0)
+        .map((g) => ({ g, share: byGroup.get(g.id) / total, secs: byGroup.get(g.id) }));
+      const bar = el("div", { class: "mixbar", role: "img",
+        "aria-label": "Time by subject area: " + parts.map((p) => `${p.g.label} ${Math.round(100 * p.share)}%`).join(", ") });
+      for (const p of parts) {
+        bar.append(el("span", { class: `g-${p.g.id}`, style: `flex-grow:${p.share}`,
+          title: `${p.g.label}: about ${fmtDuration(p.secs)} (${Math.round(100 * p.share)}%)` }));
+      }
+      return bar;
+    }
+
     function meetingItem(m) {
       const d = parseDate(m.date);
       const label = d ? d.toLocaleDateString("en-US", { month: "short", day: "numeric", ...(state.sort === "relevance" || state.sort === "topics" ? { year: "numeric" } : {}) }) : "Undated";
       const href = `meeting.html?city=${encodeURIComponent(m.city)}&id=${encodeURIComponent(m.id)}`;
       const li = el("li", {}, el("span", { class: "date" }, label), el("a", { href }, m.title || m.id),
-        m.overview ? el("p", { class: "overview" }, m.overview) : null, ...rowMeta(m, href));
+        m.overview ? el("p", { class: "overview" }, m.overview) : null, ...rowMeta(m, href), mixBar(m));
       const top = meetingTags(m).slice(0, 6);
       if (top.length) {
         li.append(el("div", { class: "tags" }, ...top.map((id) => tagChip(tags, id, {
@@ -774,6 +797,24 @@
     }
     const tick = drawTimeline(spans.map((s, i) => ({ ...s, title: topics[i].title, tags: topics[i].tags })), tags, sections);
     setInterval(() => tick(currentTime()), 1000);
+    // Keyboard: J / K jump to the next / previous topic (ignored while typing or with modifier keys).
+    const starts = spans.map((s2, i) => ({ i, start: s2.start })).filter((x) => x.start !== null).sort((a, b) => a.start - b.start);
+    let lastJump = null; // where the keys last sent the video, used until the player reports a time
+    document.addEventListener("keydown", (e) => {
+      if (e.metaKey || e.ctrlKey || e.altKey || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+      const key = e.key.toLowerCase();
+      if ((key !== "j" && key !== "k") || !starts.length) return;
+      const now = currentTime() ?? lastJump ?? -1;
+      const next = key === "j" ? starts.find((x) => x.start > now + 1) : [...starts].reverse().find((x) => x.start < now - 3);
+      if (!next) return;
+      e.preventDefault();
+      lastJump = next.start;
+      seek(next.start);
+      tick(next.start);
+      sections[next.i].section.scrollIntoView({ block: "center" });
+    });
+    if (starts.length > 1) $("timeline").after(el("p", { class: "tag-note keys" }, "Tip: press J and K to jump to the next or previous topic."));
+
     const startAt = /#t=(\d+)/.exec(location.hash);
     if (startAt) {
       tick(Number(startAt[1]));

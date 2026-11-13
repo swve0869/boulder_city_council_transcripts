@@ -1,130 +1,222 @@
 {
-  "Title": "Boulder City Council Regular Meeting - Thursday October 5, 2023",
-  "Overview": "The October 5, 2023 Boulder City Council meeting opened with public comment on reservoir fees, pollinator gardens, street safety, policing, and homelessness, followed by proclamations and several agenda items. Council annexed and zoned 3033 Third Street RL-1, adopted Ordinances 8595 through 8598 for the 2024 budget with amended transportation and general fund appropriations, and passed consent agenda items 3A through 3G, with the mayor pro tem opposing 3G. By majority vote, council also directed staff to develop a pilot safe outdoor space for about 25 people and to return with cost and location details, while staff recommended expanding prairie dog removal after a three-year program review.",
+  "Title": "Boulder City Council Meeting - Thursday October 5, 2023 (Regular Meeting)",
+  "Overview": "The council opened with a Indigenous Peoples' Day declaration and National Domestic Violence Month proclamation, then heard extensive open comment on rowing reservoir fees, pollinator gardens, bike path lighting, traffic safety, policing, housing, and budget concerns. It approved the consent agenda including a prairie dog management update and a police oversight ordinance review, annexed a 2.27-acre property at 30333 Street as RL1, and adopted first readings of the 2024 budget with added funding for pavement management, underpass lighting, and community connectors. Council also directed staff to scope a 25-person safe outdoor space pilot.",
   "Tags": [
     "budget",
     "public-comment",
+    "housing",
     "homelessness",
     "transportation",
     "parks-recreation",
+    "zoning",
     "council-governance"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Call to order, agenda amendment, and proclamations",
-        "Summary": "Mayor Brockett called the meeting to order and roll call was taken. Council unanimously amended the agenda to add a National Domestic Violence Month declaration and a notice of intent for safe outdoor spaces. Council adopted an Indigenous Peoples' Day declaration for October 9, 2023 and the National Domestic Violence Month declaration.",
+        "Title": "Indigenous Peoples' Day Declaration",
+        "Summary": "Council Member Wier presented a declaration recognizing October 9, 2023 as Indigenous Peoples' Day. It acknowledges the history of violence against Indigenous peoples in Boulder, including the Sand Creek Massacre, and references the city's 2016 resolution and ongoing work with tribal nations.",
         "related_timestamps": [
-          245.56,
-          347.24,
-          728.92
+          379.0,
+          712.92
         ],
         "Tags": [
-          "council-governance"
+          "equity",
+          "intergovernmental"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Open comment on reservoir fees and rowing access",
-        "Summary": "Several rowing club members and parents, including University of Colorado and Colorado Junior Crew representatives, asked council to reduce after-hours reservoir fees, restore earlier opening hours, and keep non-motorized sports affordable. Staff responded that water quality, staffing, and cost recovery drive the fee structure and that adult users must pay full costs.",
+        "Title": "National Domestic Violence Month Declaration",
+        "Summary": "Mayor Brockett presented a declaration designating October as National Domestic Violence Month. The statement highlights prevalence statistics and local resources, including the Safehouse Progressive Alliance for Nonviolence and the National Domestic Violence Hotline. The council urged community participation in observances.",
         "related_timestamps": [
-          1085.04,
-          1100.0,
-          1210.36,
-          1321.48,
-          1585.88,
-          2287.0
+          731.92,
+          882.68
         ],
         "Tags": [
-          "parks-recreation",
-          "budget",
-          "public-comment",
-          "university"
+          "equity",
+          "public-health"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Open comment on pollinator gardens, lighting, and street safety",
-        "Summary": "Residents spoke about native pollinator gardens in transportation projects, lighting on the Boulder Creek path between 30th and Foothills Parkway, a four-way stop request at 23rd and Bluff Street, and bike lane conditions on Foothills Parkway. Staff committed to following up on lighting and transportation concerns.",
+        "Title": "Open Comment on Rowing Reservoir Fees and Hours",
+        "Summary": "Multiple rowing club representatives from CU, Boulder Community Rowing, and Colorado Junior Crew described sharp increases in reservoir after-hours fees and asked for earlier opening hours. Parks and Recreation staff responded that adult user groups must cover direct costs, that water quality is a priority, and that fees would be set under a new policy with no increase above 10 percent.",
         "related_timestamps": [
-          1463.0,
-          1587.76,
-          1693.84,
-          2010.0,
-          2019.0
+          1102.32,
+          1318.679,
+          1453.6,
+          2302.96,
+          2415.56,
+          3167.28,
+          4174.96
         ],
         "Tags": [
-          "transportation",
-          "bikes-pedestrians",
-          "open-space",
-          "public-comment"
+          "parks-recreation",
+          "water",
+          "public-comment",
+          "budget"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Open comment on policing, historic preservation, and homelessness",
-        "Summary": "Residents raised concerns about a deputy chief's past conduct in Aurora, the Civic Center historic district application, sale of city buildings, and a proposed drug treatment facility. Other speakers urged support for unhoused residents, including tiny homes and shelter alternatives, and criticized the city's encampment enforcement approach.",
+        "Title": "Open Comment on Pollinator Gardens, Bike Path Lighting, and Traffic Safety",
+        "Summary": "Residents asked the city to incorporate pollinator gardens into transportation project design, improve nighttime lighting on the Boulder Creek path between 30th Street and Foothills Parkway, and convert the 23rd and Bluff Street intersection to a four-way stop. A resident also reported poor road conditions on Foothills Parkway for cyclists.",
         "related_timestamps": [
-          1819.92,
-          2166.0,
-          2401.0,
-          2555.0,
-          2287.0
+          1482.08,
+          1593.039,
+          1687.039,
+          2000.0
         ],
         "Tags": [
-          "police",
-          "historic-preservation",
-          "homelessness",
+          "bikes-pedestrians",
+          "transportation",
+          "open-space",
           "public-comment"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Staff response to open comment and consent agenda",
-        "Summary": "Staff responded to comments on transportation, the stolen-property complaint, the Aurora-related police matter, and reservoir fees. Council passed consent agenda items 3A through 3G unanimously, with the mayor pro tem voting no on item 3G. Items included a Boulder Creek pollinator item, a police oversight ordinance, and council employee evaluation process.",
+        "Title": "Open Comment on Policing and Community Concerns",
+        "Summary": "A resident criticized the police department for redacting a use-of-force case from public records and alleged the NAACP was pressured over complaints about a deputy chief. Staff stated the city stands behind Deputy Chief Redfern, whose testimony is part of a trial of Aurora officers, and said the city does not believe any wrongdoing occurred.",
         "related_timestamps": [
-          3173.48,
-          3592.0,
-          4174.96,
-          4198.6,
-          4234.0
+          1802.76,
+          4035.0
         ],
         "Tags": [
-          "council-governance",
           "police",
-          "public-comment"
+          "equity",
+          "legal"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Prairie dog management on irrigated agricultural lands",
-        "Summary": "Open Space staff reported on a three-year review of the prairie dog management program on irrigated agricultural lands. Staff found the program is working, with over 457 acres of prairie dogs removed and 72 acres restored. Staff proposed expanding removal and limited burrow disturbance systemwide to irrigable transition and removal areas.",
+        "Title": "Open Comment on Housing, Homelessness, and Environmental Concerns",
+        "Summary": "Speakers raised concerns about the city's camping ban and enforcement against homeless residents, the proposed day shelter, and the impact of rising rents. Others called for the city to honor Elder Oak's environmental advocacy, and a speaker spoke against a proposed drug-treatment facility while urging the council to decline state funding.",
         "related_timestamps": [
-          4256.0,
-          4370.0,
-          4590.0,
-          4689.0
+          2020.0,
+          2158.599,
+          2282.359,
+          2424.0
         ],
         "Tags": [
-          "open-space",
-          "water"
+          "homelessness",
+          "housing",
+          "public-health",
+          "public-comment"
         ]
       }
     },
     {
       "Topic7": {
-        "Title": "Annexation of property at 3033 Third Street with RL-1 zoning",
-        "Summary": "Council held a public hearing and adopted Resolution 1333 and Ordinance 8582 annexing approximately 0.27 acres at 3033 Third Street with an initial zoning of RL-1. The annexation includes an area 3 preservation term and inclusionary housing requirements. Planning Board recommended approval.",
+        "Title": "Historic Preservation and Civic Area Phase Two Concerns",
+        "Summary": "Patrick Oror of Historic Boulder raised concerns that the Civic Area historic district application was not mentioned in reports on Civic Area Phase Two and that the finance department proposed selling several central Boulder buildings that may be historic. Staff said these issues are known and agreed to provide information on the buildings in question.",
         "related_timestamps": [
-          5524.44,
-          5600.48,
-          5804.0,
-          5916.8
+          2424.0,
+          3260.2
+        ],
+        "Tags": [
+          "historic-preservation",
+          "development",
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Open Comment on Landmarks Process and Theft Incident",
+        "Summary": "Lynn Seagull criticized the Landmarks Design Review Committee's fast-track approval of a large addition and said her bag and $360 were stolen from the municipal building lobby. Staff said investigators are working with her and the city wants to make her whole.",
+        "related_timestamps": [
+          2713.0,
+          3260.2
+        ],
+        "Tags": [
+          "historic-preservation",
+          "crime",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "Open Comment on Road Safety for State Highway 93",
+        "Summary": "Matthew Hannah asked the council to advocate for changing the merge direction on southbound State Highway 93 so that lanes merge from left to right. He argued the change would encourage drivers to keep right and reduce unsafe merging on the curved uphill segment.",
+        "related_timestamps": [
+          2896.0,
+          3013.76
+        ],
+        "Tags": [
+          "transportation",
+          "intergovernmental",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic10": {
+        "Title": "Open Comment on Rowing Access and Reservoir Opening Hours",
+        "Summary": "Bridget Hogan, a parent of a rower, described how the Colorado Junior Crew program would be jeopardized if after-hours reservoir fees doubled. She asked the council and reservoir staff to partner with the volunteer program to provide sustainable access.",
+        "related_timestamps": [
+          3018.24,
+          3167.28
+        ],
+        "Tags": [
+          "parks-recreation",
+          "public-comment",
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic11": {
+        "Title": "Staff Response to Open Comment and Reservoir Fee Discussion",
+        "Summary": "Staff said the city would investigate the bike path lighting and reservoir fee concerns, noted that the Transportation director was listening to transportation comments, and confirmed that a staff investigation into the stolen bag is underway. Parks and Recreation director Ali Rhodes explained the cost-recovery rationale for adult rowing user groups, stated that no fee doubling is planned, and said fee schedules would be included in an information item.",
+        "related_timestamps": [
+          3171.48,
+          3260.2,
+          3287.0,
+          3599.2
+        ],
+        "Tags": [
+          "parks-recreation",
+          "budget",
+          "transportation",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic12": {
+        "Title": "Consent Agenda Items 3A-3G",
+        "Summary": "The consent agenda included an open space prairie dog management update with Council approval for changes to lethal control and burrow disturbance limits, the police oversight ordinance update, a letter to county commissioners, and an employee evaluation process for the city manager and city attorney. Council passed the consent agenda unanimously, with Mayor Pro Tem Wallik voting no on item G.",
+        "related_timestamps": [
+          4174.96,
+          4560.48,
+          5012.52,
+          5099.239,
+          5406.159
+        ],
+        "Tags": [
+          "council-governance",
+          "boards-appointments",
+          "public-comment",
+          "open-space"
+        ]
+      }
+    },
+    {
+      "Topic13": {
+        "Title": "Annexation of 30333 Street Property",
+        "Summary": "Council held a public hearing and adopted Resolution 1333 setting findings of fact and conclusions for annexing a 2.27-acre property at 30333 Street with an initial zoning of RL1. Council also passed Ordinance 8582 approving the annexation. The annexation agreement includes preservation of Area 3 under a 1981 scenic easement and an inclusionary housing payment requirement.",
+        "related_timestamps": [
+          5497.3,
+          5908.56,
+          5963.96
         ],
         "Tags": [
           "development",
@@ -134,58 +226,85 @@
       }
     },
     {
-      "Topic8": {
-        "Title": "2024 budget public hearing and council proposed changes",
-        "Summary": "Staff presented the recommended 2024 budget of about $14.8 million across all funds and a general fund of $16.1 million. Council discussed proposed changes including community connectors funding, ambassador program funding through CID, pavement management, underpass lighting, and reallocation of Safe and Managed Public Spaces funds. Council adopted Ordinances 8595, 8596, 8597, and 8598 with amended transportation and general fund appropriations.",
+      "Topic14": {
+        "Title": "2024 Budget Public Hearing and First Readings",
+        "Summary": "Staff presented the $148 million all-funds 2024 recommended budget, including a $16.1 million general fund and a $141.4 million Capital Improvement Program. Council approved first readings of Ordinances 8595, 8596, 8597, and 8598 with amendments adding $500,000 for pavement management, $30,000 for underpass lighting, $10,000 for Community Connectors, and reallocating travel funding. Ordinance 8598 on non-residential fees was introduced without changes.",
         "related_timestamps": [
-          6018.0,
-          6279.0,
-          6772.0,
-          8580.0,
-          9580.0,
-          15061.0,
-          15823.0,
-          16193.0
+          6052.36,
+          7044.32,
+          9346.0,
+          16000.0
         ],
         "Tags": [
           "budget",
           "taxes-fees",
-          "transportation",
-          "homelessness"
+          "public-comment"
         ]
       }
     },
     {
-      "Topic9": {
-        "Title": "Public hearing testimony on budget priorities",
-        "Summary": "Speakers urged council to fund affordable homeownership protections, mental health support for young adults with autism, nonprofit family homelessness prevention (Keep Families Housed), culturally appropriate mental health care, and community connector compensation. Other speakers raised rent and HOA cost concerns and asked for transit and bike safety investments.",
+      "Topic15": {
+        "Title": "Council Proposed Budget Changes",
+        "Summary": "Council discussed proposed changes including increased funding for the Central Area General Improvement District ambassador program funded through the kid fund, $10,000 for Community Connectors, pavement management and underpass lighting increases, reallocation of Safe and Managed Public Spaces funding, and deferral of FAA projects. Council did not support redirecting most Safe and Managed Public Spaces funding but directed staff to study additional funding for housing supports.",
         "related_timestamps": [
-          8198.0,
-          8393.0,
-          8663.0,
-          8927.0,
-          9134.0,
-          9740.0,
-          10016.0
+          7384.0,
+          8800.0,
+          9500.0,
+          13000.0,
+          14000.0,
+          15000.0
         ],
         "Tags": [
-          "affordable-housing",
-          "human-services",
-          "public-health",
-          "public-comment",
-          "homelessness"
+          "budget",
+          "homelessness",
+          "transportation",
+          "economic-development",
+          "human-services"
         ]
       }
     },
     {
-      "Topic10": {
-        "Title": "Safe outdoor space pilot notice of intent",
-        "Summary": "Council gave direction, by a majority, for staff to develop a pilot safe outdoor space for approximately 25 people, with basic infrastructure and services, and a possible safe outdoor parking component. Staff will return with cost, location, and implementation details. The notice of intent was approved by majority vote after discussion of funding sources and metrics.",
+      "Topic16": {
+        "Title": "Pavement Management and Road Maintenance",
+        "Summary": "Transportation staff reported that pavement conditions have deteriorated due to climate-driven freeze-thaw cycles and a wet summer. Council voted to add $500,000 in one-time funding for pavement management, with staff noting that Staffing and contractor availability limit reactive pothole repairs. Council members expressed interest in a longer-term funding strategy for road maintenance next year.",
         "related_timestamps": [
-          16366.0,
-          16640.0,
-          16999.0,
-          17330.0
+          10000.0,
+          11000.0,
+          12000.0,
+          13000.0
+        ],
+        "Tags": [
+          "transportation",
+          "budget",
+          "climate"
+        ]
+      }
+    },
+    {
+      "Topic17": {
+        "Title": "Underpass Lighting Improvements",
+        "Summary": "Staff explained that 12 underpasses are lit 24/7 at an annual cost of about $27,000 and that extending lighting to all underpasses would cost roughly $30,000 more per year. Options discussed included painting underpasses to ease visual transitions and increasing inspections. Council approved an additional $30,000 for underpass lighting from the transportation fund.",
+        "related_timestamps": [
+          11600.0,
+          12200.0,
+          12800.0
+        ],
+        "Tags": [
+          "transportation",
+          "bikes-pedestrians",
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic18": {
+        "Title": "Safe Outdoor Space Pilot Direction",
+        "Summary": "Council voted to direct staff to develop a pilot for a sanctioned encampment of approximately 25 people at the bronze level of service, funded from savings in the day shelter operations budget. Staff will return with cost estimates, location options, and an implementation plan, and will consider safe outdoor parking as well. Council voted to approve the notice of motion, with a majority in favor.",
+        "related_timestamps": [
+          16200.0,
+          16800.0,
+          17200.0,
+          17500.0
         ],
         "Tags": [
           "homelessness",
@@ -195,16 +314,17 @@
       }
     },
     {
-      "Topic11": {
-        "Title": "Council updates and future agenda items",
-        "Summary": "Council member Matt Benjamin announced he will chair the Colorado Municipal League policy committee from October through March. Council member Rachel Friend requested a future conversation on bike safety, including e-bike conflicts on paths. Council adjourned at 10:51 p.m.",
+      "Topic19": {
+        "Title": "Council Member Updates and Closing Remarks",
+        "Summary": "Council Member Matt Benjamin announced he has been asked to chair the Colorado Municipal League Policy Committee from October through March. Council Member Rachel Friend requested a future conversation on bike safety and e-bike conflicts. The meeting adjourned at 10:51 p.m.",
         "related_timestamps": [
-          17602.0,
-          17610.0,
-          17688.0
+          17600.0,
+          17650.0,
+          17693.0
         ],
         "Tags": [
           "council-governance",
+          "transportation",
           "intergovernmental",
           "bikes-pedestrians"
         ]

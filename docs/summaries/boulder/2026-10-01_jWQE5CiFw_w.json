@@ -1,144 +1,137 @@
 {
-  "Title": "October 1, 2026 City of Boulder City Council Meeting (Regular Meeting with Public Hearing on 2027 Budget)",
-  "Overview": "The October 1, 2026 Boulder City Council meeting centered on a public hearing on the 2027 recommended budget of about $552.6 million, which included wildfire funding, three new police lieutenants, and a proposed Spruce Pool operations reduction. Council adopted the 2027 budget ordinance 7-1 with Adams opposed, along with the mill levy, appropriation, and fee and tax ordinances, while proposals to hold or realign wildfire funds and to shift police funding toward behavioral health did not advance. The council also heard open comment on federal, housing, and development concerns, approved consent agenda items 3A through 3H unanimously, and unanimously directed staff to prepare a resolution supporting the Front Range passenger rail sales tax measure.",
+  "Title": "October 1, 2026 - City of Boulder City Council Regular Meeting with 2027 Budget Public Hearing",
+  "Overview": "Council heard extensive open comment on CU South, parks, the Boulderthon, cell towers and other issues, then approved the consent agenda and let the Nuropa campus site review proceed without a call-up. After a public hearing on the 2027 recommended budget, council passed budget ordinances 8777 through 8780 on first reading, but a straw poll left wildfire funding changes to be decided at an October 22 study session. Council also straw-polled unanimous support for staff to prepare a resolution backing the Front Range passenger rail sales tax measure.",
   "Tags": [
     "budget",
     "wildfire",
-    "council-governance",
     "public-comment",
+    "development",
     "parks-recreation",
-    "development"
+    "transit"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Amend agenda and open comment",
-        "Summary": "Council voted to add item 8A on the front range passenger rail sales tax measure to the agenda. Elisha reviewed the public participation guidelines and rules of decorum for open comment. Nineteen people signed up to speak with two-minute limits.",
+        "Title": "Open Public Comment",
+        "Summary": "Nineteen residents signed up to speak on topics including a proposed tenants union, the Boulderthon road closures, small cell tower construction, CU South closure and flood risk, Gunbarrel parks, Spruce Pool, and Israel and Palestine. Several speakers criticized council and staff, and some comments drew a rebuke from council members as antisemitic. Staff responded afterward, promising follow-up on tenant resources, the Belmont site, small cell rules, event impacts and investment policy. Utilities Director Joe Taduchi then described the CU South fence and closure schedule.",
         "related_timestamps": [
-          325.759,
-          465.52
+          382.0,
+          3224.0
         ],
         "Tags": [
           "public-comment",
-          "council-governance"
+          "equity"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Open comment on federal, housing, tenant, and development concerns",
-        "Summary": "Residents spoke on a range of issues including a request for council to respond to federal actions, tenant union formation, Boulderthon road closures, unpermitted small cell towers near Boulder Meadows, Belmont property hazards, and CU South and Gunbarrel parks and safety. Speakers also raised concerns about Spruce Pool, a proposed botanic garden at Hogan Pancost, and the East Boulder Rec Center. Staff and council responded to several comments.",
+        "Title": "Agenda Amendment and Consent Agenda",
+        "Summary": "Council voted to add item 8A, the Front Range passenger rail sales tax discussion, to the agenda. Later, council approved consent agenda items 3A through 3H by unanimous roll call vote. These are procedural actions with no substantive policy debate.",
         "related_timestamps": [
-          563.519,
-          3018.5
-        ],
-        "Tags": [
-          "public-comment",
-          "housing",
-          "transportation",
-          "development",
-          "parks-recreation",
-          "historic-preservation"
-        ]
-      }
-    },
-    {
-      "Topic3": {
-        "Title": "Consent agenda",
-        "Summary": "Council approved consent agenda items 3A through 3H unanimously after a motion and second with no questions raised.",
-        "related_timestamps": [
-          3934.24,
+          3924.64,
           4001.839
         ],
         "Tags": []
       }
     },
     {
-      "Topic4": {
-        "Title": "Call-up check-in for Nuropa campus site review",
-        "Summary": "Council reviewed a site review application to redevelop the Nuropa campus with about 135 residential units and a height modification to four stories and 55 feet. Council Member Winer raised shadow and setback concerns, and the applicant responded that setbacks exceed 40 feet and solar analysis met city standards. No member called the item up.",
+      "Topic3": {
+        "Title": "Nuropa Campus Site Review Call-Up Check-In",
+        "Summary": "Staff presented a site review application to redevelop the Nuropa campus on Arapahoe Avenue with about 135 residential units and a height modification to 55 feet. Council Member Winer raised shadow and setback concerns on Marine Street, and the applicant said the building sits about 40 to 50 feet from neighboring properties and that solar shadow standards were met. Council members said they would not call the item up, noting the preserved champion trees and historic Lincoln Hall.",
         "related_timestamps": [
-          4007.76,
+          4001.839,
           4248.88
         ],
         "Tags": [
-          "zoning",
           "development",
-          "housing"
+          "zoning"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "CU South Project Closure and Cost",
+        "Summary": "Utilities Director Joe Taduchi explained the public notice given for the CU South closure and the fencing plan, with a portion of the western edge remaining accessible. Council Member Nicole asked about litigation-related delays, and staff said the project estimate rose from about 61 million dollars in bids to 76 million after the financing plan changed to cash funding. Staff said utility rates would still stay on the planned path, though the claimed nine dollar monthly increase was not accurate.",
+        "related_timestamps": [
+          2838.4,
+          3224.0
+        ],
+        "Tags": [
+          "water",
+          "development",
+          "university"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Public hearing on 2027 recommended budget and ordinances",
-        "Summary": "Staff presented the 2027 recommended budget totaling about 552.6 million, with a 2.35 percent operating budget increase and a 135.4 million capital budget. Highlights included wildfire funding of about 10.9 million, three new police lieutenants, affordable housing investments, and a proposed Spruce Pool operations reduction. Council discussed wildfire funding timing ahead of the October 22 study session and the relationship to open space funds.",
+        "Title": "2027 Budget Presentation and Council Questions",
+        "Summary": "Budget Officer Charlotte Husky presented the 2027 recommended budget of 552.6 million dollars, with an operating budget of 417.2 million dollars and a capital budget of 135.4 million dollars. Key highlights included about 10.9 million dollars for wildfire, three new police lieutenants, affordable housing investments, and a one-time funding bridge for Spruce Pool operations. Council asked about Sundance Festival costs, the Office of Customer Experience, agricultural plan updates, and whether the 6.3 million dollar general fund gap was fully closed, and staff confirmed the budget was balanced.",
         "related_timestamps": [
-          4263.44,
-          6000
+          4321.12,
+          6034.8
         ],
         "Tags": [
           "budget",
-          "wildfire",
           "taxes-fees",
-          "affordable-housing",
-          "parks-recreation",
-          "open-space"
+          "wildfire",
+          "affordable-housing"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "Council proposals to hold or realign wildfire funding",
-        "Summary": "Council Member Benjamin proposed holding about 2.5 million for wildfire mitigation, while Council Member Kaplan proposed holding 600,000. Staff noted the funding source would need to be identified and that realignment could occur through the adjustment-to-base process. Straw polls did not reach a majority, so the budget proceeded without these changes and council planned to revisit wildfire funding after the October 22 study session.",
+        "Title": "Public Hearing and Adoption of 2027 Budget Ordinances",
+        "Summary": "Ten people signed up for the budget public hearing, with speakers focused on Spruce Pool, the East Boulder Rec Center, a proposed botanic garden at Hogan Pancost, the Boulder Chamber's views on economic vitality, and the Parks and Recreation Advisory Board's objections to proposed cuts. After the hearing, council members discussed trade-offs and the timing of wildfire decisions, and several members said the budget process needs to move earlier. Council adopted Ordinance 8777 on the budget with a 7 to 1 vote, and Ordinances 8778 and 8779 passed unanimously, while Ordinance 8780 changing fees and taxes passed 7 to 1.",
         "related_timestamps": [
-          6880,
-          9760
+          6034.8,
+          13328.0
         ],
         "Tags": [
-          "wildfire",
           "budget",
-          "council-governance",
-          "public-comment"
+          "taxes-fees",
+          "public-comment",
+          "wildfire"
         ]
       }
     },
     {
       "Topic7": {
-        "Title": "Council proposal to reallocate police funds to behavioral health response",
-        "Summary": "Council Member Tisha proposed redirecting part of police funding toward partnerships for mental health and behavioral response to non-emergency calls. Housing and Human Services staff explained that the care program was restructured because of low call volumes and would relaunch with clinicians and case managers. Council Member Tisha withdrew the amendment after the explanation.",
+        "Title": "Wildfire Resilience Funding Debate",
+        "Summary": "Council discussed whether to set aside money now for wildfire mitigation, ahead of the October 22 study session where staff will present prioritized program areas and metrics. Council Member Benjamin proposed holding about 2.5 to 4 million dollars, and Council Member Kaplan proposed holding 600,000 dollars for mitigation crews and equipment. Staff said the realignment could come from open space capital projects, reserves or other funds, while community members have strongly opposed using open space funds for other purposes. Straw polls did not reach a majority for either option or for an alternative approach, so the status quo was retained and the decision was deferred until after October 22.",
         "related_timestamps": [
-          10010,
-          10900
+          6177.679,
+          12066.56
         ],
         "Tags": [
-          "police",
-          "public-health",
-          "homelessness"
+          "wildfire",
+          "budget",
+          "open-space"
         ]
       }
     },
     {
       "Topic8": {
-        "Title": "Adoption of 2027 budget ordinances",
-        "Summary": "Council voted on four ordinances: adopting the 2027 budget (7-1 with Adams opposed), setting property mill levies for 2026 (unanimous), appropriating funds for 2027 (unanimous), and amending fees and taxes in the Boulder Revised Code (7-1 with Adams opposed). Several members made closing remarks about budget process, staff work, and the need for a longer-term budget cycle.",
+        "Title": "Spruce Pool and Parks Funding",
+        "Summary": "Parks and Recreation Director Ally Rhodess said the Parks and Recreation Advisory Board did not recommend the budget because of recreation service cuts. The 2027 budget funds Spruce Pool operations with one-time dollars through 2027, and staff said it would return to council on the pool's operations in 2028. Several residents, including senior advocates, urged council to keep the pool open and find new revenue. Council members said they expected to find ongoing funding for Spruce Pool in future budgets.",
         "related_timestamps": [
-          11000,
-          13329.6
+          8053.84,
+          9629.439
         ],
         "Tags": [
-          "budget",
-          "taxes-fees",
-          "council-governance"
+          "parks-recreation",
+          "budget"
         ]
       }
     },
     {
       "Topic9": {
-        "Title": "Straw poll supporting Front Range passenger rail sales tax measure",
-        "Summary": "Council Member Winer asked council whether to take a position of support on the Front Range passenger rail sales tax measure. The straw poll was unanimous, directing staff to prepare a resolution of support for a future business meeting.",
+        "Title": "Front Range Passenger Rail Sales Tax Measure",
+        "Summary": "Council took up item 8A, a discussion of whether to support the Front Range passenger rail sales tax measure that would fund the Front Range train from Fort Collins through Boulder to Denver and Pueblo. The sponsoring council member asked for a straw poll on whether the city should take a formal position of support. Council voted unanimously in the straw poll, directing staff to prepare a resolution of support for a future business meeting.",
         "related_timestamps": [
-          13336,
-          13399.439
+          13337.92,
+          13396.64
         ],
         "Tags": [
           "transit",

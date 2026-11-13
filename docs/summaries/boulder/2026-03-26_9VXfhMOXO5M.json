@@ -1,102 +1,97 @@
 {
-  "Title": "March 26, 2026 City of Boulder City Council Study Session with Planning Board (Joint Session: BVSD Enrollment Update and Draft Boulder Valley Comprehensive Plan Review)",
-  "Overview": "The March 26, 2026 joint study session of the Boulder City Council and Planning Board covered a Boulder Valley School District update on enrollment decline and a review of the draft Boulder Valley Comprehensive Plan, including its simplified land use map, reduced policy count, and housing capacity projections. No formal votes were taken; members generally praised the draft's direction and suggested revisions, but they split on expanding neighborhood 2 designations and asked staff to analyze that option. Public comments on the draft are due April 6, with a four-body meeting on April 13, a recommended plan release on May 18, and a joint public hearing on June 4.",
+  "Title": "March 26, 2026 - Boulder City Council Study Session (joint with Planning Board)",
+  "Overview": "Boulder Valley School District presented declining enrollment, with about 3,600 fewer students since 2017 and a projected further drop of about 1,700, and outlined community engagement sessions in April with possible school consolidation decisions in fall 2026. Council then met with the Planning Board to review the draft Boulder Valley Comprehensive Plan, with consensus on strong support for housing diversity, 15-minute neighborhoods, and the simplified land use framework, while a straw poll on expanding neighborhood-two designations along transit corridors did not reach consensus. No formal votes were taken; refinements return at the April 13 four-body meeting, with public comments due April 6 and adoption hearings planned for June.",
   "Tags": [
-    "council-governance",
-    "budget",
-    "development",
     "zoning",
     "housing",
-    "equity"
+    "intergovernmental",
+    "council-governance",
+    "budget"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Boulder Valley School District Declining Enrollment Update",
-        "Summary": "BVSD leaders presented on sustained enrollment decline of over 3,600 students since 2017, with a projected further loss of about 1,700 students. They explained that underused buildings divert funds from classrooms and that small schools lose specials, counselors, and collaboration time. The district outlined a community engagement timeline running through fall 2026 with a final plan in October. Council asked about long-term timing, the city's role in any surplus building reuse, and how the community can participate.",
+        "Title": "BVSD Declining Enrollment Update",
+        "Summary": "Boulder Valley School District leaders presented enrollment data showing a sustained decline of more than 3,600 students since 2017, with about 525 lost this year alone and a projected further drop of about 1,700 students. Elementary schools are most affected, with roughly 4,800 open seats district-wide and many Boulder schools falling below two classes per grade level. The district outlined community engagement sessions in April, staff option development over the summer, and a final plan for board action in October, with potential consolidations or closures and a stated goal of reinvesting savings in classrooms. Council members asked about long-term projections, the city role in reusing surplus buildings, and how the city can get involved early in neighborhood-level changes.",
         "related_timestamps": [
           406.88,
-          1956.0
+          2465.52
         ],
         "Tags": [
           "intergovernmental",
-          "public-comment"
+          "budget"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Draft Boulder Valley Comprehensive Plan Overview",
-        "Summary": "Staff presented the draft comprehensive plan update, which reorganizes the document into six chapters and reduces policies from 210 to 102. The draft introduces a simplified future land use map with four classes and twelve designations, a new implementation chapter, and an equity-centered framework. Capacity modeling shows roughly a 35 percent increase in housing opportunities and more balanced housing types. Staff said public comment closes April 6 and a joint four-body meeting is set for April 13, with adoption hearings in June.",
+        "Title": "Comprehensive Plan Overview by Staff",
+        "Summary": "Staff presented the draft Boulder Valley Comprehensive Plan, reorganized into six chapters with a new implementation chapter and glossary, and reduced the policy list from 210 to 102. The update was shaped by 69 engagement opportunities, community assembly recommendations, and 23 community change requests moved into the draft. The draft simplifies the future land use map into four classes and 12 designations, shifting from parcel-by-parcel mapping to neighborhood-scale planning. Staff projected about a 35 percent increase in housing capacity, more balanced housing types, and about 11 percent more job capacity, while noting these are modeled estimates rather than forecasts.",
         "related_timestamps": [
-          2456.08,
-          4556.8
+          2468.32,
+          4558.24
         ],
         "Tags": [
           "zoning",
-          "housing",
-          "council-governance"
+          "housing"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Council and Planning Board Clarifying Questions on the Draft Plan",
-        "Summary": "Council and planning board members asked whether the plan should be more operational, how many new housing units would come from student populations, and how the land use map relates to existing zoning. Members also raised concerns about transportation language, the airport policy, and how implementation will be measured and funded. Staff explained that zoning rights remain in place until property owners request changes and that department and strategic plans will carry operational detail.",
+        "Title": "Council Clarifying Questions on the Draft Plan",
+        "Summary": "Council asked why some policies, such as those on the municipal airport and specific financing tools, are more operational than others, and staff said the goal is to keep the plan visionary with examples rather than fixed rules. Questions covered how the plan addresses wildfire fuels mitigation, whether zoning will conflict with new land use designations, and how the strategic plan and department plans will be approved, with the answer that council will vote on the citywide strategic plan. Members also asked about student versus non-student population growth, community hub capacity, the mismatch between transportation and land use, and how the plan connects to the 2023 community survey.",
         "related_timestamps": [
           4558.24,
-          5000.64
+          7627.04
         ],
         "Tags": [
           "zoning",
           "council-governance",
-          "transportation"
-        ]
-      }
-    },
-    {
-      "Topic4": {
-        "Title": "Consensus Feedback on Draft Plan Alignment and Strengths",
-        "Summary": "Council and planning board members generally agreed the draft reflects community feedback and praised the simplified land use designations, expanded housing types, and the 15-minute neighborhood concept. Members highlighted the equity-focused first policy, the community assembly's direct influence, and new policies on social infrastructure and the night economy. Several members noted that zoning changes will be needed to realize the new neighborhood designations.",
-        "related_timestamps": [
-          5002.0,
-          8000.0
-        ],
-        "Tags": [
-          "housing",
-          "zoning",
-          "equity"
-        ]
-      }
-    },
-    {
-      "Topic5": {
-        "Title": "Recommended Revisions to Draft Plan Language and Mapping",
-        "Summary": "Members proposed refinements including clearer transportation outcomes and safety language, a definition or alternative to neighborhood character, more neighborhood 2 designations along transit corridors and near downtown and the university, stronger wildfire and fuel management language, and clearer tribal and land-back acknowledgments. Some asked for a policy on built environment design and for limits on converting multiple units into single units. The group did not reach consensus on a straw poll to expand neighborhood 2 designations, with council split and planning board favoring analysis.",
-        "related_timestamps": [
-          8160.0,
-          12000.0
-        ],
-        "Tags": [
-          "zoning",
-          "transportation",
-          "historic-preservation",
-          "housing",
           "wildfire"
         ]
       }
     },
     {
-      "Topic6": {
-        "Title": "Next Steps and Milestones for Plan Adoption",
-        "Summary": "Staff asked that comments be sent to the project email by April 6, with a four-body meeting on April 13 to resolve major issues. The recommended plan is scheduled for release on May 18, followed by a joint public hearing on June 4. Staff confirmed the plan takes effect immediately upon final approval by all four bodies.",
+      "Topic4": {
+        "Title": "Consensus on Alignment and Strongly Supported Elements",
+        "Summary": "Members broadly agreed the draft reflects community feedback, praising the depth of engagement and the community assembly contributions. Strong support was expressed for the expanded housing types in neighborhood one and two areas, the 15-minute neighborhood concept, the integration of land use and transportation, and new policies on social infrastructure, natural infrastructure, and the night and visitor economy. Several members also praised the equity-focused first policy and the simplified land use designations, while one member stressed the need for stronger acknowledgment of tribal treaties and land back.",
         "related_timestamps": [
-          12300.0,
-          13800.0
+          7627.04,
+          8834.96
         ],
         "Tags": [
-          "council-governance",
-          "public-comment"
+          "housing",
+          "zoning"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Refinements, Neighborhood Character, and Transit Corridor Designations",
+        "Summary": "Members suggested refinements including clearer transportation and Vision Zero language, stronger wildfire and fuels mitigation in open space policies, better emergency communication language, clearer service level agreement processes for water, and a glossary definition for neighborhood character. Discussion of policy 24 on neighborhood character was contentious, with some arguing the term is exclusionary and others defending it as describing neighborhood personality. Planning Board members and council split on a straw poll to have staff study expanding neighborhood-two designations beyond transit corridors, with no consensus reached. Staff agreed to report back with proposed revisions and flagged items needing city-county discussion on April 13.",
+        "related_timestamps": [
+          9393.92,
+          13545.6
+        ],
+        "Tags": [
+          "zoning",
+          "transportation",
+          "wildfire",
+          "open-space"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Next Steps and Adoption Timeline",
+        "Summary": "Staff asked members to send written feedback to the project email by April 6, the close of the public comment period, and noted that all comments will be logged with rationale and shared with the recommended plan. A four-body meeting with the county commissioners and planning commission is set for April 13 to resolve lingering issues. The recommended plan will be released May 18, with a joint public hearing on June 4. Staff confirmed that the plan becomes effective upon final approval by all four bodies.",
+        "related_timestamps": [
+          13545.6,
+          13824.72
+        ],
+        "Tags": [
+          "council-governance"
         ]
       }
     }

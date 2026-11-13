@@ -1,105 +1,176 @@
 {
-  "Title": "September 24, 2026 City Council Study Session",
-  "Overview": "The September 24, 2026 study session covered police staffing, crime trends, and public safety integration, police oversight complaint data, municipal court cases involving unhoused defendants and young adults, and proposed updates to the sister cities program. It also touched on possible city uses of Boulder Valley School District properties, such as a police substation or training center. No formal votes were taken, but council generally supported a council committee to oversee sister city alliances, a possible cap on those alliances, and an escalating compliance process.",
+  "Title": "September 24, 2026 City of Boulder City Council Study Session",
+  "Overview": "Council received a public safety update covering policing, police oversight, and the municipal court, with staff reporting on officer staffing, crime trends, the new public safety information center, and court outcomes for unhoused and young adult cases. Council then reviewed a preliminary framework to update the sister cities resolution, and members supported a council committee to oversee sister city relationships with staff to bring a formal resolution back at a future meeting.",
   "Tags": [
     "police",
-    "surveillance",
-    "legal",
+    "crime",
     "council-governance",
-    "public-comment",
+    "homelessness",
     "intergovernmental"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Opening remarks on Boulder Valley School District resilient school plan and city property interest",
-        "Summary": "Council Member Benjamin noted BVSD passed a resilient school plan and asked city staff about discussions on possible city uses of district properties. City Manager Nuria Rivera-Vandermyde said the city is discussing with the district possible uses such as a police substation or training center, and will return to council with any proposals.",
+        "Title": "Police Staffing and Retention",
+        "Summary": "Chief Redford reported authorization for 190 sworn officers with 12 vacancies and about 30 positions not deployable as solo officers due to recruits, academy, or injury leave. Dispatcher and records staffing were also discussed, with recruiting underway. Officer departures since 2021 and the young workforce were highlighted, with exit interviews citing cost of living, out-of-state opportunities, and the aging police building. Council asked what would help retain officers, and the chief cited union contract progress and public support.",
         "related_timestamps": [
-          288.16,
-          425.12
+          645.279,
+          782.72,
+          1752.159,
+          1972.72
         ],
         "Tags": [
-          "intergovernmental",
-          "development"
+          "police",
+          "labor"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Public safety update: police staffing, public safety information center, and crime trends",
-        "Summary": "Police Chief Steve Redford reported the department is authorized for 190 sworn officers and is currently 12 short, with about 30 unavailable for solo deployment. Dispatcher and records staffing were also discussed. Redford highlighted the new Public Safety Information Center, rising proactive policing, declining property crime, and rising assaults, along with drug, financial crime, and officer assault examples.",
+        "Title": "Public Safety Information Center and Community Connect Cameras",
+        "Summary": "The chief introduced the new public safety information center, which consolidates technology and emergency monitoring and will be used for events and drone response. A council member asked how the voluntary Boulder Community Connect program lets residents share private camera feeds with police. The chief explained that feeds are viewed only when responding to calls, helping verify alarms and scale response. Privacy concerns were acknowledged, and the program was described as strictly opt-in.",
         "related_timestamps": [
-          547.36,
-          1749.6
+          782.72,
+          864.959,
+          1752.159,
+          1972.72
         ],
         "Tags": [
-          "police",
-          "budget",
-          "crime"
+          "surveillance",
+          "technology",
+          "police"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Council questions on police staffing, Flock-style camera integration, retention, e-bikes, and care team",
-        "Summary": "Council asked about the Boulder Community Connect program integrating private cameras into the public safety center, retention strategies including facilities and cost of living, drug enforcement limits, the CARE team changes, and e-moto or e-bike enforcement. Staff explained that camera sharing is voluntary and that many departing officers cite housing costs and facilities. Requests for disaggregated race data and care team outcomes were made.",
+        "Title": "Crime Trends and Proactive Policing",
+        "Summary": "Chief Redford reported decreases in property crime, including burglary, auto theft, and bike theft, and lower person crimes except assaults, which are rising. Proactive activity such as directed patrols, pedestrian contacts, and traffic stops is up compared with the three-year average while calls for service are down but more complex. Drug-related charges are up, especially downtown, and a bike theft study session is planned for October. Officers are also focusing on alcohol enforcement and underage drinking.",
         "related_timestamps": [
-          1767.44,
-          3300.32
+          864.959,
+          1070.0,
+          1124.64
         ],
         "Tags": [
+          "crime",
           "police",
-          "surveillance",
-          "housing",
-          "transportation",
-          "flock",
           "bikes-pedestrians"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Police oversight: complaint classification, demographics, panel activities, and five-year review",
-        "Summary": "Independent Police Monitor Sherri Dean presented 2025 complaint data, including 149 allegations and 18 sustained findings, along with demographic breakdowns and panel turnover. Panel co-chairs Lizzy Friend and Bill De La Cruz raised concerns that new intake gateways have reduced cases reaching the panel. A five-year review of the oversight system is underway, with a report expected in October.",
+        "Title": "Significant Incidents, Assaults, and Overdoses",
+        "Summary": "Staff described a rise in financial crimes targeting vulnerable residents, with the Postal Inspector and other partners involved. Examples of serious assaults were presented, including an attempted murder case on Pearl Street where a drone helped locate the suspect. Officer assaults, including a choking incident that left an officer on injury leave, were discussed with credit to the District Attorney. Fatal overdoses, around 20 to 30 per year, were addressed through a drug task force case charging a dealer who supplied the fatal dose.",
         "related_timestamps": [
-          3336.72,
-          4957.52
-        ],
-        "Tags": [
-          "police",
-          "council-governance",
-          "boards-appointments"
-        ]
-      }
-    },
-    {
-      "Topic5": {
-        "Title": "Municipal court data on unhoused defendants, community court, and young adult cases",
-        "Summary": "Presiding Judge Jeff Khan and Court Administrator Devon Kiss-Kelly reviewed municipal court data showing citations to unhoused defendants, the community court diversion program with hundreds of dismissals, and warrant and in-custody trends. They also covered young adult cases such as MIP, nuisance parties, noise, and fraudulent ID, with increasing large amplified party concerns on the Hill and coordination with CU.",
-        "related_timestamps": [
-          4971.04,
-          6400.0
+          1124.64,
+          1309.44,
+          1421.039,
+          1492.96
         ],
         "Tags": [
           "crime",
-          "homelessness",
-          "university",
           "public-health"
         ]
       }
     },
     {
-      "Topic6": {
-        "Title": "Sister cities program resolution update",
-        "Summary": "Assistant City Manager Pam Davis and City Clerk staff presented proposed updates to Resolution 631 to clarify application, review, annual reporting, and deactivation processes for sister city alliances. Staff recommended an online application, clear review timelines, deadlines for council consideration, standardized agreements, and a possible cap or formal deactivation process. Council generally supported a council committee to oversee the program, a possible cap, and an escalating compliance process.",
+      "Topic5": {
+        "Title": "Community Engagement, Feedback, and Town Halls",
+        "Summary": "The chief described liaison groups for many community segments, Spanish-speaking outreach, and events such as an ice cream truck engagement and National Night Out. Post-contact surveys sent to over 6,500 people showed 85 percent satisfaction with police service. Police chief town halls were held in South, East, and downtown Boulder, with a North Boulder town hall scheduled and one requested for the hill. A monthly newsletter and public crime dashboards were promoted.",
         "related_timestamps": [
-          7790.0,
-          10749.2
+          1492.96,
+          1595.6,
+          1659.6,
+          1709.76
+        ],
+        "Tags": [
+          "police",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Council Questions on Drug Use, Care Team, and Data Requests",
+        "Summary": "Council asked about public drug use involving children and what can be done, and the chief noted state law changes that moved public drug possession from arrest to summons and jail limits. The high utilizers program and municipal court escalation were described as tools. Questions about the CARE team were answered by staff, who said the non-police response program lost a fire-based position and now operates with fewer clinicians. A council member requested race-disaggregated stop data and CARE outcome data, which staff agreed to provide.",
+        "related_timestamps": [
+          2187.52,
+          2383.84,
+          2548.24,
+          2850.0
+        ],
+        "Tags": [
+          "police",
+          "homelessness",
+          "human-services"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "E-Motos and Youth Traffic Safety",
+        "Summary": "A council member raised injuries to young people riding e-motos without helmets on bike paths and roads. Staff explained that many so-called e-bikes are legally motorcycles requiring plates and licenses, and that parents often buy them unaware. Education efforts include bike rack tags, bike shop outreach, and traffic unit enforcement, along with officers on e-bikes. Staff clarified that officers typically issue citations or provide education, with courts deciding accountability, and documentation is logged in the system.",
+        "related_timestamps": [
+          2850.0,
+          2980.0
+        ],
+        "Tags": [
+          "transportation",
+          "bikes-pedestrians",
+          "police"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Police Oversight Update and Five-Year Review",
+        "Summary": "Independent Police Monitor Sherri Dean and panel co-chairs reported on 2025 complaint data, including 149 allegations and 18 sustained findings, along with demographic trends and panel recruitment for the coming season. The co-chairs raised concerns that recent process changes have limited panel review to very few cases and reduced community complaint flow to the panel. A five-year review of the oversight system is underway with a consultant, and a report is expected in October with likely code changes. Council asked for data on officers who left in 2025 and whether they had complaints.",
+        "related_timestamps": [
+          3334.0,
+          3972.0,
+          4405.679,
+          4680.4
+        ],
+        "Tags": [
+          "police",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "Municipal Court Presentation on Unhoused and Young Adult Cases",
+        "Summary": "Presiding Judge Jeff Khan explained that municipal court handles lower-level offenses, while felonies and more serious charges go to state court. He reviewed camping and obstructing government operations cases, community court dismissals, counseling sessions, and warrant and in-custody hearing trends. Young adult case data covered minor in possession, nuisance party, fireworks, and fraudulent ID charges, with outcomes like deferred prosecutions and restorative justice. Council members raised concerns about large amplified parties near CU and asked about enforcement consistency and comparisons with other case types.",
+        "related_timestamps": [
+          4970.96,
+          5600.4,
+          5745.76,
+          6044.96,
+          6280.0
+        ],
+        "Tags": [
+          "crime",
+          "homelessness",
+          "university"
+        ]
+      }
+    },
+    {
+      "Topic10": {
+        "Title": "Sister Cities Resolution and Process Update",
+        "Summary": "Assistant City Manager Pam Davis introduced a project to update Resolution 631 and clarify sister city application, review, reporting, and deactivation processes. The city clerk team reported on research from other cities, which found no dedicated staff or funding and identified needs for an online application, review timelines, and a deactivation process. Staff recommended five changes, and council supported a council committee of two members to oversee relationships, annual reporting, and possible cap or sunset criteria. Council gave non-binding direction, with staff to bring a revised resolution to a future meeting.",
+        "related_timestamps": [
+          7794.719,
+          8140.159,
+          8568.64,
+          9854.08,
+          10568.0,
+          10736.0
         ],
         "Tags": [
           "intergovernmental",
-          "council-governance",
-          "arts-culture"
+          "council-governance"
         ]
       }
     }

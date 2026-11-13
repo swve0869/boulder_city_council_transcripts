@@ -1,44 +1,149 @@
 {
   "Title": "April 9, 2026 City of Boulder City Council Study Session",
-  "Overview": "The April 9, 2026 Boulder City Council study session focused on two major long-term planning items: the Boulder Arts Blueprint, a 10-year arts and culture roadmap, and a facilities investment strategy covering roughly 75 aging city buildings. On the arts plan, council supported the direction but asked for measurable metrics, reporting, and attention to artist affordability, while staff's recommendations for the facilities plan were generally endorsed with requests for more financial data. Because this was a study session, no final votes were taken, and staff will return in May with investment scenarios for priority buildings alongside possible tax ballot measures.",
+  "Overview": "The study session covered two items: the Boulder Arts Blueprint, a 10-year arts and culture roadmap with seven goals, and the facilities investment strategy, including a $20 million minimum repair need across 15 priority buildings and recreation center scenarios. Council gave staff feedback rather than making decisions, and expressed general support for staff's recommendations to fund minimum infrastructure needs first with available funds and to develop investment scenarios for May. Council asked for clearer data, outcome-based metrics, and more information on funding levers and costs before choosing among options.",
   "Tags": [
-    "council-governance",
-    "budget",
     "arts-culture",
+    "budget",
     "parks-recreation",
-    "economic-development",
-    "public-comment"
+    "development",
+    "council-governance",
+    "economic-development"
   ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Boulder Arts Blueprint update",
-        "Summary": "Staff presented the Boulder Arts Blueprint, a 10-year citywide arts and culture roadmap aligned with the Boulder Valley Comprehensive Plan and CERG goals. It is organized around seven goals and funded largely through the Arts, Culture and Heritage Tax and the 1% for Art policy. Council asked about staffing capacity, grant funding increases to $2 million, neighborhood reach, the back-of-house services cohort, the 2A tax dependency, Sundance Festival opportunities, and the lack of baseline data and KPIs. Several members supported the direction but asked for measurable metrics, reporting, and attention to artist affordability and prioritization.",
+        "Title": "Boulder Arts Blueprint Overview and Council Questions",
+        "Summary": "Arts and culture staff presented the Boulder Arts Blueprint, a 10-year roadmap aligned with the Comprehensive Plan and built on roughly 2,000 community engagements. The plan has seven goals covering accessibility, workforce, public art, nonprofits, and experimentation, and is funded largely through the Arts, Culture, and Heritage Tax and the 1% for Art policy. Council members asked about staffing capacity, funding during sales tax downturns, Sundance Festival impacts, and the lack of baseline KPI data. Staff said grant funding rose to $2 million and that an arts fund would seek independent money.",
         "related_timestamps": [
-          307.28,
-          1169.48
+          410.0,
+          1222.0,
+          1564.0,
+          2045.0
         ],
         "Tags": [
           "arts-culture",
-          "economic-development",
-          "council-governance"
+          "budget",
+          "economic-development"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Facilities investment strategy and recreation center scenarios",
-        "Summary": "Staff presented the facilities investment strategy for roughly 75 city buildings, averaging about 50 years old, with 15 priority buildings including the South Boulder, North Boulder and East Boulder recreation centers. Minimum urgent repairs total about $20 million, while larger modernization projects total roughly $500 million, of which about $400 million is unfunded. Staff recommended prioritizing minimum infrastructure investment with current funds and developing investment scenarios for priority buildings, to return in May alongside possible tax ballot measures. Council questions covered sustainability versus cost, renovation versus new build, fire station consolidation, property disposal, and the unfunded liability definition. Council generally agreed with both recommendations while requesting more financial data and a clearer whole-picture view.",
+        "Title": "Council Feedback on the Arts Blueprint Implementation Approach",
+        "Summary": "Council members expressed support for the arts approach but raised concerns about the number of goals, unclear prioritization, and missing metrics, reporting frequency, and baselines. Several cited staff capacity limits and recent wildfires as reasons to focus on priorities. The Mayor praised the work and deferred prioritization to staff. Council member comments also called for supporting artists' affordability, intellectual property protection, and climate-linked venue improvements.",
         "related_timestamps": [
-          1234.0,
-          9440.0
+          2640.0,
+          2805.0,
+          3060.0,
+          3370.0
+        ],
+        "Tags": [
+          "arts-culture",
+          "council-governance",
+          "wildfire"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Facilities Investment Strategy Overview and Building Portfolio Condition",
+        "Summary": "Staff described the history of the city's 75-plus buildings, roughly 2 million square feet with an average age near 50 years, and the creation of the Facilities and Fleet department in 2020. The 2021 facilities plan found the portfolio declining faster than reinvestment, and consolidation to the Western City campus is expected to remove more than $20 million in unfunded liability. Staff grouped buildings into categories and identified 15 priority buildings with about $20 million in minimum repair needs and roughly $500 million in full modernization costs, of which $400 million is unfunded.",
+        "related_timestamps": [
+          3445.0,
+          3700.0,
+          4290.0,
+          4600.0
         ],
         "Tags": [
           "budget",
+          "development",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Recreation Center Scenarios and Staff Recommendations",
+        "Summary": "Parks and Recreation staff presented condition reports for the South Boulder, East Boulder, and North Boulder recreation centers, with East needing urgent repairs and a first phase planned for 2027 construction. Two scenarios were outlined for each center, with Scenario A sustaining service levels and Scenario B adding amenities, and the Parks and Recreation Advisory Board preferred Scenario B for all three centers. Staff recommended funding minimum infrastructure needs first with existing CCRS funds, about $2 million a year, and developing investment scenarios for May 14. Council discussed pool costs, electrification, and renovation versus new build.",
+        "related_timestamps": [
+          4890.0,
+          5170.0,
+          5510.0,
+          5790.0
+        ],
+        "Tags": [
           "parks-recreation",
+          "budget",
+          "climate"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Council Questions on Costs, Codes, Consolidation, and Property Disposal",
+        "Summary": "Council asked how to weigh sustainability goals against cost, whether code requirements drive costs, and whether fire stations or police facilities could consolidate. Staff said international building codes drive much of the cost, and a fire station analysis supported the Station 4 location near CU South. Questions also covered disposing of surplus property such as the land at the current public safety site, seeking CU financial partnership, and why the unfunded liability grew from $380 million to $400 million. Staff said the $400 million reflects new buildings meeting modern codes rather than repairs.",
+        "related_timestamps": [
+          6000.0,
+          6640.0,
+          7050.0,
+          7400.0
+        ],
+        "Tags": [
           "fire-ems",
-          "taxes-fees",
-          "elections"
+          "police",
+          "budget",
+          "legal"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Reserves, Civic Area Project, and Value Engineering",
+        "Summary": "Council asked whether reserves could fund urgent projects, and the budget officer said the reserve policy targets emergencies and natural disasters rather than capital projects. Council also asked whether the Civic Area project should be deferred, and staff explained it was advanced for park condition, economic vitality, and the East Bookend opportunity. Council members asked whether project costs could be value-engineered, and staff said current estimates use industry standards and that a 100,000-square-foot public safety building would exceed $100 million.",
+        "related_timestamps": [
+          8200.0,
+          8280.0,
+          7680.0
+        ],
+        "Tags": [
+          "budget",
+          "development",
+          "taxes-fees"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Council Straw Poll on Staff Recommendations",
+        "Summary": "Council discussed whether staff's first recommendation to fund minimum infrastructure needs with current funds should proceed. Several members asked for more data on debt service, disposal proceeds, and lease savings before deciding on the broader strategy. Council members ultimately said yes to funding minimum infrastructure needs, and Council members agreed to develop investment scenarios across priority buildings, with results to inform the ballot measure, the 2027 budget, and the six-year CIP.",
+        "related_timestamps": [
+          8460.0,
+          8720.0,
+          8995.0,
+          9030.0
+        ],
+        "Tags": [
+          "budget",
+          "elections",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Council Priorities and Closing Remarks",
+        "Summary": "Council members gave direction on priorities including a sequence for recreation center projects, transparent disposal and lease policies, and a facilities advisory structure modeled on school district committees. Members asked for scenarios that show equity, climate, and framework alignment as well as community-preference criteria, and urged early cost clarity for residents. Several members asked that rec center services not decline and that staff seek budget savings. The Mayor thanked staff and the community, and the study session closed with remarks from the city manager and Council.",
+        "related_timestamps": [
+          9230.0,
+          9630.0,
+          9840.0,
+          10250.0
+        ],
+        "Tags": [
+          "council-governance",
+          "parks-recreation",
+          "budget",
+          "public-comment"
         ]
       }
     }
