@@ -70,9 +70,11 @@ def parse_title_date(title):
     m = DATE_PATTERN.search(title)
     if not m:
         return None
+    month, day, year = m.groups()
+    month = "Sep" if month == "Sept" else month  # strptime knows "Sep" and "September" only
     for fmt in ("%B %d %Y", "%b %d %Y"):
         try:
-            return datetime.strptime(" ".join(m.groups()), fmt).date()
+            return datetime.strptime(f"{month} {day} {year}", fmt).date()
         except ValueError:
             pass
     return None

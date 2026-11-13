@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meeting Summary</title>
+<meta name="description" content="Summary of a city council meeting by topic, with tags and links to each moment in the video.">
+<meta property="og:title" content="Meeting Summary">
+<meta property="og:description" content="Summary of a city council meeting by topic, with tags and links to each moment in the video.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="City Council Meeting Summaries" href="feed.xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="meeting">
@@ -26,6 +32,11 @@ Check the video before quoting. Not an official city record.</p>
   <button id="load-transcript" class="load" type="button">Load full transcript</button>
   <div id="transcript" class="transcript" hidden></div>
 </section>
+<footer class="site">
+  <a href="feed.xml">Subscribe (Atom feed)</a> ·
+  <a href="https://github.com/swve0869/boulder_city_council_transcripts">Source on GitHub</a> ·
+  Summaries are AI-generated from video captions; verify against the video.
+</footer>
 </main>
 <script src="config.js"></script>
 <script src="app.js"></script>

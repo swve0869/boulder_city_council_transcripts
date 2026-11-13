@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Issue tracker</title>
+<meta name="description" content="Follow one issue across city council meetings: when it came up, for how long, and what was said.">
+<meta property="og:title" content="Issue tracker">
+<meta property="og:description" content="Follow one issue across city council meetings: when it came up, for how long, and what was said.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="City Council Meeting Summaries" href="feed.xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="issue">
@@ -35,6 +41,11 @@
     </select></label></div></div>
   <div id="discussions"></div>
 </section>
+<footer class="site">
+  <a href="feed.xml">Subscribe (Atom feed)</a> ·
+  <a href="https://github.com/swve0869/boulder_city_council_transcripts">Source on GitHub</a> ·
+  Summaries are AI-generated from video captions; verify against the video.
+</footer>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script src="config.js"></script>

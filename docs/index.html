@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>City Council Summaries</title>
+<meta name="description" content="AI-generated summaries of city council meetings, tagged by topic, with links to the exact moment in the video.">
+<meta property="og:title" content="City Council Summaries">
+<meta property="og:description" content="AI-generated summaries of city council meetings, tagged by topic, with links to the exact moment in the video.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="City Council Meeting Summaries" href="feed.xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="index">
@@ -37,6 +43,11 @@ Names, numbers and terms can be wrong; check the video before quoting. This is n
 
 <p id="status" class="status">Loading…</p>
 <div id="list"></div>
+<footer class="site">
+  <a href="feed.xml">Subscribe (Atom feed)</a> ·
+  <a href="https://github.com/swve0869/boulder_city_council_transcripts">Source on GitHub</a> ·
+  Summaries are AI-generated from video captions; verify against the video.
+</footer>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script src="config.js"></script>

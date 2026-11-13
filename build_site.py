@@ -2,7 +2,8 @@
 
 The site in docs/ is static HTML + JavaScript. The browser loads docs/summaries/index.json
 (written here) to list meetings, then fetches each summary's JSON as-is and renders it.
-docs/summaries/search.json (also written here) holds topic summary text for search.
+docs/summaries/search.json (also written here) holds topic summary text for search, and
+docs/feed.xml is an Atom feed of the newest meetings.
 docs/summaries/models.json (written by summarize.py) says which model wrote each summary.
 Only summaries are published; full transcripts stay on the host machine.
 
@@ -16,6 +17,8 @@ import json
 import re
 import subprocess
 import sys
+import tomllib
+from html import escape
 from pathlib import Path
 
 from council_transcripts import load_cities, slugify
@@ -137,7 +140,41 @@ def build_manifest(summaries_dir=SUMMARIES_DIR):
     (summaries_dir / "index.json").write_text(json.dumps(manifest, separators=(",", ":")) + "\n", encoding="utf-8")
     (summaries_dir / "search.json").write_text(json.dumps(search, separators=(",", ":"), ensure_ascii=False) + "\n",
                                                 encoding="utf-8")
+    build_feed(manifest, search, summaries_dir)
     return len(meetings)
+
+
+def build_feed(manifest, search, summaries_dir):
+    """Write docs/feed.xml: an Atom feed of the newest dated meetings, for feed readers."""
+    config_file = ROOT / "summarizer.toml"
+    site = tomllib.loads(config_file.read_text(encoding="utf-8")).get("site", {}) if config_file.exists() else {}
+    base = site.get("url", "").rstrip("/") + "/"
+    if base == "/":
+        return None  # no public URL configured: skip the feed
+    labels = {t["id"]: t["label"] for t in manifest["tags"]}
+    cities = {c["slug"]: c["name"] for c in manifest["cities"]}
+    dated = [m for m in manifest["meetings"] if m["date"]][: site.get("feed_entries", 40)]
+    updated = f"{max((m['date'] for m in dated), default='1970-01-01')}T00:00:00Z"
+    out = ['<?xml version="1.0" encoding="utf-8"?>', '<feed xmlns="http://www.w3.org/2005/Atom">',
+           f"<title>{escape(site.get('title', 'City Council Meeting Summaries'))}</title>",
+           f'<link href="{escape(base)}"/>', f'<link rel="self" href="{escape(base)}feed.xml"/>',
+           f"<id>{escape(base)}</id>", f"<updated>{updated}</updated>"]
+    for m in dated:
+        link = f"{base}meeting.html?city={m['city']}&id={m['id']}"
+        texts = search.get(f"{m['city']}/{m['id']}", [])
+        items = "".join(
+            f"<li><strong>{escape(t['title'])}</strong>" + (f": {escape(texts[i])}" if i < len(texts) and texts[i] else "") + "</li>"
+            for i, t in enumerate(m["topics"]))
+        tags = ", ".join(labels.get(t, t) for t in list(m["tag_seconds"])[:6])
+        html = (f"<p>Most discussed: {escape(tags)}</p>" if tags else "") + f"<ul>{items}</ul>"
+        out += ["<entry>", f"<title>{escape(cities.get(m['city'], m['city']))}: {escape(m['title'])}</title>",
+                f'<link href="{escape(link)}"/>', f"<id>{escape(link)}</id>", f"<updated>{m['date']}T00:00:00Z</updated>",
+                *(f'<category term="{escape(t)}" label="{escape(labels.get(t, t))}"/>' for t in m["tag_seconds"]),
+                f'<content type="html">{escape(html)}</content>', "</entry>"]
+    out.append("</feed>")
+    path = summaries_dir.parent / "feed.xml"
+    path.write_text("\n".join(out) + "\n", encoding="utf-8")
+    return path
 
 
 def git(*args):
@@ -146,7 +183,7 @@ def git(*args):
 
 def publish(message="Update meeting summaries"):
     """Commit docs/summaries and push. Returns True if something was pushed."""
-    git("add", "--", str(SUMMARIES_DIR.relative_to(ROOT)))
+    git("add", "--", str(SUMMARIES_DIR.relative_to(ROOT)), str((SUMMARIES_DIR.parent / "feed.xml").relative_to(ROOT)))
     if git("diff", "--cached", "--quiet").returncode == 0:
         return False
     for step in (("commit", "-m", message), ("pull", "--rebase", "--autostash"), ("push",)):

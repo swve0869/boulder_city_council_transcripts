@@ -171,3 +171,12 @@ label = "Llama 3.1 70B (local)"
 json_mode = true
 transcript_format = "lines"
 timeout_seconds = 3600
+
+
+# ---- Site -------------------------------------------------------------------------------
+# Used by build_site.py for the Atom feed (docs/feed.xml), which needs absolute links.
+
+[site]
+url = "https://swve0869.github.io/boulder_city_council_transcripts/"
+title = "City Council Meeting Summaries"
+feed_entries = 40           # newest meetings to include in the feed
