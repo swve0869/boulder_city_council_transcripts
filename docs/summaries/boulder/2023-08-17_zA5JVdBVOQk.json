@@ -1,0 +1,109 @@
+{
+  "Title": "Boulder City Council Regular Meeting - Thursday August 17 2023",
+  "Tags": [
+    "council-governance",
+    "housing",
+    "elections",
+    "budget",
+    "labor",
+    "public-comment"
+  ],
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Annual Comprehensive Financial Report and Audit Presentation",
+        "Summary": "Audit subcommittee member David Gross presented the 2022 Annual Comprehensive Financial Report and the auditor Clifton Larson Allen's clean opinion, the first time in 33 consecutive years with a GFOA certificate of achievement. The audit found no deficiencies or material weaknesses. The subcommittee unanimously recommended council approve and accept the report. Council members thanked the audit committee and financial staff.",
+        "related_timestamps": [
+          74.04,
+          519.12
+        ],
+        "Tags": [
+          "budget",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Open Comment on Minimum Wage and Community Concerns",
+        "Summary": "Residents spoke during open comment, with many urging council to raise the local minimum wage to at least 15.70 by January 2024 rather than waiting until 2025. Speakers from labor unions, immigrant advocacy groups and the Boulder Area Labor Council cited rising costs and worker hardship. Other speakers addressed airport noise from low-flying planes, the Lahaina and Marshall fire concerns, Indigenous voices in civic life, and support for Human Services funding. Staff noted the minimum wage work is being coordinated through a Consortium of cities.",
+        "related_timestamps": [
+          522.3,
+          2770.8
+        ],
+        "Tags": [
+          "labor",
+          "public-comment",
+          "affordable-housing"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Consent Agenda Items A through I",
+        "Summary": "Council approved consent agenda items 3A through 3I unanimously after a motion and second. Item 3H included a disclosure from a council member who had previously worked with the property owners, who felt able to remain impartial. Item 3J was pulled for separate discussion.",
+        "related_timestamps": [
+          3274.859,
+          3383.339
+        ],
+        "Tags": [
+          "council-governance",
+          "development"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Ballot Measures on the 0.15 Percent Sales and Use Tax",
+        "Summary": "Council considered three ordinances on the expiring 0.15 percent sales and use tax: 100 percent to arts, 100 percent to the general fund, and a 50-50 compromise split between arts and general fund purposes including Human Services. Staff said the general fund is severely constrained without renewal and the compromise does not require service cuts. Ordinance 8586 (safe zones for kids) and 8587 (charter changes) were adopted unanimously. Ordinance 8588 (100 percent to arts) failed 5-2-4, and ordinance 8591 (50-50 compromise) was approved 6-3 as an emergency measure so it could reach the November ballot.",
+        "related_timestamps": [
+          3386.52,
+          4134.0,
+          4349.0,
+          4849.92
+        ],
+        "Tags": [
+          "elections",
+          "budget",
+          "taxes-fees",
+          "arts-culture"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Call-Up Check-In Item 4A",
+        "Summary": "Council reviewed item 4A, a vacation of a 14-foot utility easement at 2950 Hawthorne Avenue, formerly 3320 28th Street, under ADR 2023-00109. No council member expressed interest in calling it up, so it proceeded.",
+        "related_timestamps": [
+          4869.12,
+          4899.6
+        ],
+        "Tags": [
+          "development",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Public Hearing and Adoption of Ordinance 8585 on Occupancy Limits",
+        "Summary": "Council held a public hearing on ordinance 8585, which raises the unrelated-person occupancy limit from three or four to five citywide and changes efficiency units to three occupants, with a provision freezing occupancy in non-conforming uses. Staff said the change is one part of a multi-pronged housing strategy and noted that about 13 percent of units have non-conforming occupancy. Dozens of speakers supported the change for affordability, chosen families, students and LGBTQ residents, while others raised concerns about neighborhood impacts, parking, noise, affordability guarantees and the 2021 bedrooms-for-people vote. An amendment to strike the non-conforming provisions failed 3-6. The ordinance was adopted 6-3 on a roll call vote.",
+        "related_timestamps": [
+          4903.699,
+          5016.12,
+          5461.54,
+          8492.7,
+          17647.56,
+          18849.78
+        ],
+        "Tags": [
+          "housing",
+          "zoning",
+          "public-comment",
+          "equity",
+          "council-governance"
+        ]
+      }
+    }
+  ]
+}

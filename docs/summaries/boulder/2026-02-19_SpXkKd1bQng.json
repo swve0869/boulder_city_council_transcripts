@@ -1,37 +1,100 @@
 {
-  "Title": "February 19, 2026 Regular City Council Meeting",
+  "Title": "February 19, 2026 Regular City Council Meeting (Boulder City Council)",
+  "Tags": [
+    "council-governance",
+    "parks-recreation",
+    "development",
+    "zoning",
+    "public-comment",
+    "affordable-housing"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Open Comment (Public Participation)",
-        "Summary": "Residents spoke during open comment, with many advocating to keep the pool and gym at the South Boulder Rec Center, including youth swimmers and petition signers. Other speakers raised concerns about the voice and sight dog tag program, ambulance provider practices, power resilience and microgrids, the lack of housing for families, and international issues including Gaza. Staff said they would follow up on the dog tag program, the ambulance concerns, and the energy resilience suggestions. Council noted that no decision has been made on the South Boulder Rec Center, that $2 million was budgeted in 2025, and that study sessions on the long-term financial strategy and rec centers are scheduled for March 12 and April 9.",
+        "Title": "Roll Call and Open Comment Procedures",
+        "Summary": "Council convened the regular meeting with roll call confirming a quorum. The clerk reviewed public participation guidelines and rules of decorum for open comment.",
         "related_timestamps": [
-          "343.28",
-          "3198.72"
+          297.52,
+          343.28
+        ],
+        "Tags": [
+          "council-governance"
         ]
-      },
+      }
+    },
+    {
       "Topic2": {
-        "Title": "Consent Agenda",
-        "Summary": "Council considered consent agenda items 3A and 3B, which were moved and seconded. Following a roll call vote, both items were approved unanimously.",
+        "Title": "Open Comment on South Boulder Rec Center Pool",
+        "Summary": "Many residents, students, and Fairview swim team members urged council to keep the South Boulder Rec Center pool and gym, citing proximity for families, seniors, and youth. Speakers questioned the 2025 engineering report and parks department priorities. Staff said no decisions have been made and that more discussions on rec centers are planned for spring study sessions.",
         "related_timestamps": [
-          "3919.039",
-          "3974.319"
+          343.28,
+          3200.0
+        ],
+        "Tags": [
+          "parks-recreation",
+          "public-comment",
+          "budget"
         ]
-      },
+      }
+    },
+    {
       "Topic3": {
-        "Title": "Public Hearing: Annexation and Land Use Change for the Hogan-Pancost Property",
-        "Summary": "Council held a public hearing on the petition to annex approximately 24.04 acres, including city-owned land at 5399 Kowani Drive and 5697 South Boulder Road and a portion of 55th Street right-of-way. Staff and the Parks and Recreation Department explained that the city purchased the property in 2019 for flood mitigation and parks purposes and that no development plans are part of this review. The Planning Board unanimously recommended approval, and the proposal includes Public zoning on most of the site and RL-2 zoning for the right-of-way. Council unanimously adopted Resolution 1370, Ordinance 8734, and the Boulder Valley Comprehensive Plan land use map change from low-density residential to Parks, Urban and Other for the western 19 acres.",
+        "Title": "Open Comment on Other Community Issues",
+        "Summary": "Speakers raised concerns including Middle East policy, dog off-leash trail safety and the Voice and Sight tag program, ambulance sedation allegations against a former provider, property taxes, and climate resilience and microgrids. Council members thanked speakers and staff committed to follow-up on several items.",
         "related_timestamps": [
-          "3979.839",
-          "5855.28"
+          3200.0,
+          3908.4
+        ],
+        "Tags": [
+          "public-comment",
+          "public-health",
+          "energy",
+          "police"
         ]
-      },
+      }
+    },
+    {
       "Topic4": {
-        "Title": "Public Hearing: Concept Plan Review for 4880 and 4898 Pearl Street (Boulder Storage Site)",
-        "Summary": "Council reviewed a concept plan for redeveloping the Boulder Storage site with four residential buildings containing 281 apartments and an 85,000-square-foot storage building, which requires a concept review but no formal action. Staff found the residential use likely inconsistent with the general industrial designation and the East Boulder Subcommunity Plan, and explained that the proposed phasing relies on a contiguity interpretation that could make other nearby industrial parcels eligible for housing. The applicant argued that the site is underused, that the project would generate significant tax revenue and a $13 million cash-in-lieu contribution, and that Goose Creek should count as open space for contiguity. Council members expressed concern about losing industrial land and setting a precedent, encouraged a revised concept that preserves industrial and live-work uses and better engages the multi-use path, and asked staff to clarify the contiguity rules.",
+        "Title": "Consent Agenda",
+        "Summary": "Council approved consent agenda items 3A and 3B by unanimous roll call vote.",
         "related_timestamps": [
-          "5886.8",
-          "11055.76"
+          3908.4,
+          3974.319
+        ],
+        "Tags": [
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Hogan-Pancost Property Annexation and Land Use Change",
+        "Summary": "Council held a public hearing on annexing about 24 acres at 5399 Kowani Drive and 5697 South Boulder Road, including part of 55th Street, with public zoning and RL-2 for right-of-way. Parks and Recreation proposed flood mitigation and parks use west of 55th, with open space east of 55th. Council adopted Resolution 1370, Ordinance 8734, and the Boulder Valley Comprehensive Plan land use map change unanimously. Public comment included a botanic garden proposal.",
+        "related_timestamps": [
+          4040.0,
+          6000.0
+        ],
+        "Tags": [
+          "development",
+          "zoning",
+          "parks-recreation",
+          "open-space"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Pearl Street Storage Site Concept Review",
+        "Summary": "Council gave feedback on a concept review for redeveloping the Boulder Storage site at 4880 and 4898 Pearl Street with about 281 apartments and a new storage building in a General Industrial zone. Key issues were consistency with the BVCP, the East Boulder subcommunity plan, and the six-percent contiguity rule for residential use. Council members generally wanted to preserve industrial character and asked the applicant to rethink the design and mix of uses. No formal action was taken.",
+        "related_timestamps": [
+          6000.0,
+          11068.0
+        ],
+        "Tags": [
+          "development",
+          "zoning",
+          "housing",
+          "economic-development"
         ]
       }
     }

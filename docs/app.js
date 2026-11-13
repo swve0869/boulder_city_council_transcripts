@@ -353,6 +353,76 @@
     highlightTranscript(t);
   }
 
+  function currentTime() {
+    try { return video.ready ? video.player.getCurrentTime() : null; } catch (_) { return null; }
+  }
+
+  // ---- Meeting page: topic timeline -----------------------------------------------------
+
+  // A strip under the video: one block per topic, placed by its start/end and colored by the
+  // group of its first tag. Overlapping topics (e.g. interleaved public comment) go on
+  // separate rows. Returns a function that moves the playhead and marks the playing topic.
+  function drawTimeline(spans, tags, sections) {
+    const box = $("timeline");
+    const timed = spans.map((t, i) => ({ ...t, i })).filter((t) => t.start !== null && t.end > t.start);
+    if (timed.length < 2) return () => {};
+    const total = Math.max(...timed.map((t) => t.end));
+    const rows = []; // greedy lane assignment
+    for (const t of [...timed].sort((a, b) => a.start - b.start)) {
+      let lane = rows.findIndex((end) => end <= t.start);
+      if (lane < 0) { lane = rows.length; rows.push(0); }
+      rows[lane] = t.end;
+      t.lane = lane;
+    }
+    const lanes = Math.min(rows.length, 3);
+    box.style.setProperty("--lanes", lanes);
+    const tip = $("tooltip");
+    for (const t of timed) {
+      const block = el("button", {
+        type: "button", class: `block g-${tags.group(t.tags[0] || "")}`,
+        style: `left:${(100 * t.start) / total}%;width:${Math.max(0.6, (100 * (t.end - t.start)) / total)}%;--lane:${Math.min(t.lane, lanes - 1)}`,
+        "aria-label": `${t.title}, starts at ${fmtTime(t.start)}`,
+      });
+      const show = (e) => {
+        tip.replaceChildren(t.title, el("br"), `${fmtTime(t.start)} – ${fmtTime(t.end)}` +
+          (t.tags.length ? ` · ${t.tags.map(tags.label).join(", ")}` : ""));
+        tip.style.display = "block";
+        const r = block.getBoundingClientRect();
+        tip.style.left = `${Math.max(8, Math.min((e.clientX || r.left) + 12, innerWidth - tip.offsetWidth - 8))}px`;
+        tip.style.top = `${Math.max(8, r.top - tip.offsetHeight - 8)}px`;
+      };
+      const hide = () => { tip.style.display = "none"; };
+      block.addEventListener("pointerenter", show);
+      block.addEventListener("pointermove", show);
+      block.addEventListener("pointerleave", hide);
+      block.addEventListener("focus", show);
+      block.addEventListener("blur", hide);
+      block.addEventListener("click", () => {
+        seek(t.start);
+        sections[t.i].section.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      t.block = block;
+      box.append(block);
+    }
+    const head = el("div", { class: "playhead", hidden: true });
+    box.append(head);
+    box.hidden = false;
+
+    let playing = -1;
+    return (time) => {
+      if (time === null) return;
+      head.hidden = false;
+      head.style.left = `${Math.min(100, (100 * time) / total)}%`;
+      // The playing topic: the latest-starting topic that contains the time.
+      let now = -1;
+      for (const t of timed) if (t.start <= time && time < t.end && (now < 0 || t.start >= spans[now].start)) now = t.i;
+      if (now === playing) return;
+      playing = now;
+      for (const t of timed) t.block.classList.toggle("on", t.i === now);
+      sections.forEach((s, i) => s.section.classList.toggle("playing", i === now));
+    };
+  }
+
   function stampLink(t) {
     const a = el("a", { class: "stamp", href: watchUrl(t), title: "Jump to this point in the video" }, fmtTime(t));
     a.addEventListener("click", (e) => {
@@ -459,7 +529,7 @@
     const container = $("topics");
     if (!topics.length) status("This summary has no topics.");
     const sections = topics.map((t) => {
-      const section = el("section", { class: "topic" }, el("h3", {}, t.title));
+      const section = el("section", { class: "topic", id: `topic-${container.children.length + 1}` }, el("h3", {}, t.title));
       if (t.tags.length) {
         section.append(el("div", { class: "tags" }, ...t.tags.map((g) => tagChip(tags, g, {
           href: `index.html?city=${encodeURIComponent(city)}&tags=${encodeURIComponent(g)}`,
@@ -498,6 +568,15 @@
       draw();
       $("meeting-tags").hidden = false;
     }
+
+    // Timeline under the video, with a playhead that follows playback.
+    const spans = entry && entry.topics && entry.topics.length === topics.length ? entry.topics
+      : topics.map((t) => ({ title: t.title, tags: t.tags, start: t.stamps.length ? t.stamps[0] : null,
+        end: t.stamps.length ? Math.max(t.stamps[t.stamps.length - 1], t.stamps[0] + 60) : null }));
+    const tick = drawTimeline(spans.map((s, i) => ({ ...s, title: topics[i].title, tags: topics[i].tags })), tags, sections);
+    setInterval(() => tick(currentTime()), 1000);
+    const startAt = /#t=(\d+)/.exec(location.hash);
+    if (startAt) tick(Number(startAt[1]));
 
     if (CONFIG.transcriptHost) {
       $("transcript-section").hidden = false;

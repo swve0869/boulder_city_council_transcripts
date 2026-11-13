@@ -1,0 +1,122 @@
+{
+  "Title": "Boulder City Council Meeting, September 28, 2023 (Study Session: Municipal Court update, Police Department update, and Homelessness programs update)",
+  "Tags": [
+    "crime",
+    "police",
+    "homelessness",
+    "public-health",
+    "council-governance",
+    "budget"
+  ],
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Municipal Court operations and philosophy",
+        "Summary": "Judge Khan presented the Municipal Court's problem-solving approach, administrative and staffing changes, and the state-mandated livestreaming of proceedings. He described the FastTrack process for student quality-of-life violations, which aims to see defendants within days and emphasizes restorative justice. Council members asked about the criteria for Community Court and the use of jail sentences, and staff agreed to follow up with more detail at a later date.",
+        "related_timestamps": [
+          662.88,
+          1098.919,
+          1431.0,
+          1673.0,
+          2002.12
+        ],
+        "Tags": [
+          "crime",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Jail capacity, bond rules, and the Community Court model",
+        "Summary": "Judge Khan explained the 48-hour rule, personal recognizance bonds, and Boulder County Jail booking standards that limit Municipal Court warrant enforcement. He described the charge-driven prosecution approach and the Community Court model that connects defendants with housing and services. Council discussed frustration with repeat offenders, jail overcrowding, and the need for treatment capacity.",
+        "related_timestamps": [
+          1671.88,
+          1817.4,
+          2146.48,
+          2375.0,
+          3300.0
+        ],
+        "Tags": [
+          "crime",
+          "intergovernmental",
+          "public-health"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Police department crime trends and problem locations",
+        "Summary": "Chief Harold presented five years of crime data showing rising violent crime driven by assaults and menacing, and rising property crime driven by theft, with motor vehicle theft down 48% since 2020. Drug and narcotics violations rose 79% year over year, with overdoses concentrated in downtown and University Hill. Deputy Chief Redfern reported progress at the library and Circle K problem locations.",
+        "related_timestamps": [
+          5005.08,
+          5037.08,
+          5274.639,
+          5399.0,
+          5610.0
+        ],
+        "Tags": [
+          "police",
+          "crime",
+          "public-health"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Significant incidents and department highlights",
+        "Summary": "Staff reviewed several recent serious incidents, including an officer-involved shooting, a child homicide, a stabbing outside the municipal building, a Central Park drug operation, and a violent roommate homicide. Staff also highlighted community engagement events, a Spanish-language dinner, the explosives-detection dog, and recognition for women in policing. Council asked about the impact of released defendants and the safety of the community.",
+        "related_timestamps": [
+          5517.36,
+          5783.0,
+          5950.0,
+          6020.0,
+          6216.0
+        ],
+        "Tags": [
+          "police",
+          "crime",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Homelessness programs and system coordination",
+        "Summary": "Housing and Human Services presented the summer point-in-time count, which showed stable unsheltered numbers, and described new programs including local vouchers, Building Home, the Rest Fit Center, Tribe recovery housing, the high utilizer initiative, and the Day Services Center. Staff reviewed funding braiding, shelter capacity and winter weather plans, and housing exit trends. Council asked about costs, outcomes, and the role of coordinated services.",
+        "related_timestamps": [
+          7941.0,
+          8160.0,
+          8500.0,
+          8900.0,
+          9500.0
+        ],
+        "Tags": [
+          "homelessness",
+          "affordable-housing",
+          "human-services",
+          "public-health",
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Alternative sheltering and safe outdoor spaces",
+        "Summary": "Staff explored safe outdoor spaces and alternative sheltering models such as pallet shelters, outlining the features that successful programs share and preliminary cost estimates. Council members expressed differing views on safe outdoor spaces versus additional indoor shelter beds and raised questions about funding sources and infrastructure needs. Council directed staff to return with a formal item, likely tied to budget discussions.",
+        "related_timestamps": [
+          10200.0,
+          10850.0,
+          12900.0,
+          14300.0,
+          14800.0
+        ],
+        "Tags": [
+          "homelessness",
+          "zoning",
+          "budget"
+        ]
+      }
+    }
+  ]
+}

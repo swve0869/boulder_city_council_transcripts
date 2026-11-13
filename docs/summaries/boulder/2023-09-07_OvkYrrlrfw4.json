@@ -1,0 +1,126 @@
+{
+  "Title": "Boulder City Council Meeting - September 7, 2023 (Regular Meeting)",
+  "Tags": [
+    "police",
+    "public-comment",
+    "affordable-housing",
+    "council-governance",
+    "budget",
+    "homelessness"
+  ],
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Opening Announcements and Agenda Amendment",
+        "Summary": "Council heard announcements about the What's Up Boulder community event and the Better Public Meetings Project scorecard. Council then unanimously voted to amend the agenda, moving item 6B on the Boulder Public Library District intergovernmental agreement to the September 14 study session.",
+        "related_timestamps": [
+          1295.039,
+          1418.799
+        ],
+        "Tags": [
+          "council-governance",
+          "intergovernmental"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Commemorative Declarations",
+        "Summary": "Council read declarations marking the 10th anniversary of the September 2013 Front Range flood, National Voter Registration Day, and National Suicide Prevention Month. Jenna Card of Rise Against Suicide spoke briefly in response to the suicide prevention declaration.",
+        "related_timestamps": [
+          1451.919,
+          1571.88,
+          1689.679
+        ],
+        "Tags": [
+          "emergency-management",
+          "arts-culture",
+          "public-health"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Open Comment Period",
+        "Summary": "Community Engagement Manager Ryan Hansen reviewed civility and decorum rules for public participation. Eight speakers signed up, and residents addressed topics including a proposed closure of Boulder Municipal Airport, police accountability and a lawsuit, minimum wage and arts funding, Hill commercial area liquor regulations, bear-trash conflicts, South Boulder neighborhood conditions, and homeless camp proposals.",
+        "related_timestamps": [
+          1924.399,
+          2031.96,
+          2060.359,
+          2194.319,
+          2329.319,
+          2466.64,
+          2625.599,
+          2771.52
+        ],
+        "Tags": [
+          "public-comment",
+          "transportation",
+          "police",
+          "homelessness",
+          "economic-development",
+          "public-health"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Consent Agenda and Resolution 1339 on LGBTQ+ Public Accommodations",
+        "Summary": "Council reviewed a call-up item for a site review at 1345 28th Street for 303 student housing units and no member called it up. Council then approved the consent agenda items A through I unanimously, including Resolution 1339 supporting LGBTQ+ people's access to goods and services without discrimination following the 303 Creative v. Elenis decision.",
+        "related_timestamps": [
+          3223.359,
+          3388.0,
+          3581.319,
+          3634.079
+        ],
+        "Tags": [
+          "development",
+          "equity",
+          "legal",
+          "zoning"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Reimagining Policing Plan Acceptance",
+        "Summary": "Chief Maris Harold presented the Reimagining Policing Plan, a visionary blueprint developed over roughly two years with community engagement, National Policing Institute research, and a process subcommittee. Deputy Chief Redfern outlined problem-solving policing, staffing based on the rule of 60, and accountability metrics, while the City Manager noted that funding requests would return through the budget process. Council unanimously accepted the plan and disbanded the process subcommittee after extensive public comment, both supportive and critical.",
+        "related_timestamps": [
+          4000.0,
+          4393.56,
+          5677.6,
+          6417.0,
+          10708.0,
+          12494.0
+        ],
+        "Tags": [
+          "police",
+          "budget",
+          "council-governance",
+          "public-comment",
+          "equity",
+          "homelessness"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Inclusionary Housing Program Update",
+        "Summary": "Staff and consultant Kaiser Martin Associates presented options to update the Inclusionary Housing program, including switching cash-in-lieu to a per-square-foot basis, reducing the on-site for-sale requirement from 25% to 15%, and exploring a nexus study for a linkage fee on demolitions and large additions. Council gave feedback that most members supported the cash-in-lieu and code cleanup changes but were split on the middle-income on-site trade-off, and asked staff to strengthen incentives for on-site units. No formal action was taken, and second reading is targeted for November 2.",
+        "related_timestamps": [
+          16651.0,
+          17025.0,
+          17900.0,
+          18200.0
+        ],
+        "Tags": [
+          "affordable-housing",
+          "zoning",
+          "housing",
+          "development",
+          "budget"
+        ]
+      }
+    }
+  ]
+}

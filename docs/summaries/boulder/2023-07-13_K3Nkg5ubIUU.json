@@ -1,0 +1,143 @@
+{
+  "Title": "Boulder City Council Special Meeting - July 13, 2023",
+  "Tags": [
+    "council-governance",
+    "public-comment",
+    "development",
+    "zoning",
+    "elections",
+    "budget",
+    "arts-culture",
+    "boards-appointments"
+  ],
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Parks and Recreation Month Declaration",
+        "Summary": "Council added and adopted a declaration recognizing July as Parks and Recreation Month in Boulder. Parks and Recreation staff described the department's health, climate, and access programs. Staff noted rising enrollment and financial aid use and highlighted projects including Violet Park and North Boulder Park upgrades.",
+        "related_timestamps": [
+          587.0,
+          917.5,
+          1158.9
+        ],
+        "Tags": [
+          "parks-recreation",
+          "human-services"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Consent Agenda",
+        "Summary": "Council approved the consent agenda, items 2A through 2C, unanimously.",
+        "related_timestamps": [
+          1158.9,
+          1203.8
+        ],
+        "Tags": []
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "New Vista High School Site Development Plan Review",
+        "Summary": "Council held a public hearing to review and comment on the school district's site development plan to replace New Vista High School with a new two-story building, sports field, and updated parking and access. Staff explained that state law requires this review without approval authority. The district presented design changes, including reduced parking, added bike parking, EV charging, and improved drop-off and safe access. Council asked about materials, waste, geothermal grants, and a multi-use path on the east side. Council members praised the responsiveness and encouraged continued access work.",
+        "related_timestamps": [
+          1212.6,
+          1244.82,
+          1438.0,
+          1540.0,
+          2960.0,
+          4345.0
+        ],
+        "Tags": [
+          "development",
+          "transportation",
+          "bikes-pedestrians",
+          "historic-preservation"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Public Comment on New Vista High School",
+        "Summary": "A New Vista parent and PTO president spoke in support of moving the project forward quickly. She said the current building has water leaks and safety problems. She also raised concerns about parking needs for open enrollment students and for CU football and Chautauqua shuttle events.",
+        "related_timestamps": [
+          4375.0,
+          4607.0
+        ],
+        "Tags": [
+          "public-comment",
+          "development"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "North Boulder Creative Campus Concept Review (4401 Broadway)",
+        "Summary": "Council reviewed a concept plan for a mixed-use project including a new Boulder Museum of Contemporary Art, about 67 housing units, retail, and live-work space. Staff explained that the museum use and the proposed density and parking reduction require code modifications, rezoning, and a North Boulder subcommunity plan update. The applicant described community engagement and affordability goals. Council members supported the museum use and the nobo plan update, asked about parking, land donation value, and liquor licensing, and asked for a referral to tab.",
+        "related_timestamps": [
+          4711.0,
+          6333.0,
+          8583.0,
+          10000.0,
+          12700.0
+        ],
+        "Tags": [
+          "development",
+          "zoning",
+          "affordable-housing",
+          "arts-culture",
+          "housing",
+          "parking"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Public Comment Period for Creative Campus Concept Review",
+        "Summary": "No members of the public signed up to speak on the North Boulder creative campus concept review.",
+        "related_timestamps": [
+          8583.0,
+          8650.0
+        ],
+        "Tags": [
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Proposed Unification of Sales Tax Ballot Measures",
+        "Summary": "Staff and pollster Adam Probolsky presented polling showing about 70 percent support for extending the 0.15 sales tax through 2044 and strong approval of city services. Council discussed a compromise to split the 0.15 tax 50/50 between the general fund and arts, versus competing ballot measures. Members debated dedicated funding, budget trade-offs, the library savings, racial equity, and whether the Arts initiative petitioners would agree. Council directed staff to prepare a 50/50 alternative and to conduct further outreach.",
+        "related_timestamps": [
+          9737.0,
+          11000.0,
+          12000.0,
+          16300.0,
+          17600.0
+        ],
+        "Tags": [
+          "budget",
+          "taxes-fees",
+          "elections",
+          "arts-culture",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "Boards and Commissions Midterm Recruitment Extension",
+        "Summary": "Staff reported that the midterm recruitment for boards and commissions had 12 applications for 12 vacancies, with some boards receiving none. Staff asked whether to extend recruitment now or wait until the 2024 annual recruitment. Most council members preferred waiting until 2024, and a consultant is expected to help with future recruitment.",
+        "related_timestamps": [
+          17350.0,
+          17770.0
+        ],
+        "Tags": [
+          "boards-appointments",
+          "council-governance"
+        ]
+      }
+    }
+  ]
+}

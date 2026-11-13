@@ -60,6 +60,20 @@ def topic_span(stamps, next_start):
     return round(start, 2), round(end, 2)
 
 
+def credit_tags(tags, seconds):
+    """How a topic's estimated duration is credited to its tags: {tag: seconds}.
+
+    Feeds tag_seconds, which drives the Trends charts and the "most time on selected
+    tags" sort. Tags arrive most specific first (the prompt asks for that order).
+    """
+    # Split the duration with weights 1, 1/2, 1/3, ... by tag order, normalized to sum to 1.
+    # A 60-minute topic tagged [zoning, housing, public-comment] credits about 33 / 16 / 11
+    # minutes, so per-tag times add up to real meeting time and the main subject leads.
+    weights = [1 / (i + 1) for i in range(len(tags))]
+    total = sum(weights)
+    return {tag: seconds * w / total for tag, w in zip(tags, weights)}
+
+
 def meeting_entry(summary):
     """Per-meeting data the site uses for tags, filtering and charts."""
     topics, tag_seconds = [], {}
@@ -69,8 +83,8 @@ def meeting_entry(summary):
         later = [s for s in starts[i + 1:] if s is not None and stamps and s > stamps[0]]
         start, end = topic_span(stamps, min(later) if later else None)
         topics.append({"title": title, "tags": tags, "start": start, "end": end})
-        for tag in tags:
-            tag_seconds[tag] = tag_seconds.get(tag, 0) + ((end - start) if start is not None else 0)
+        for tag, secs in credit_tags(tags, (end - start) if start is not None else 0).items():
+            tag_seconds[tag] = tag_seconds.get(tag, 0) + secs
     main = [g for g in summary.get("Tags") or [] if isinstance(g, str)]
     return {
         "tags": main,

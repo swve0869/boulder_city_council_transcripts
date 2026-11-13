@@ -1,0 +1,79 @@
+{
+  "Title": "Boulder City Council Study Session - October 12, 2023",
+  "Tags": [
+    "parking",
+    "parks-recreation",
+    "transit",
+    "open-space",
+    "housing",
+    "zoning"
+  ],
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Opening remarks and Israel-related statement by Council Member Tara Winer",
+        "Summary": "Council Member Tara Winer, speaking in her individual capacity, expressed heartbreak over the October 7 Hamas attacks in southern Israel, including on Boulder's sister city Ramat Hanegev. She described Boulder's ties to the region through sister city and SIP (Sustainable Israeli Palestinian projects) work and called for peace in the Middle East. Council Member Aaron Brockett noted he had emailed the mayor of Ramat Hanegev expressing personal and city support.",
+        "related_timestamps": [
+          777.32,
+          1079.6
+        ],
+        "Tags": [
+          "intergovernmental",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Camp shiaka access management plan evaluation and recommendations",
+        "Summary": "Staff from Community Vitality, Transportation and Mobility, and Open Space and Mountain Parks presented an evaluation of the Camp shiaka parking and shuttle program, which has run since 2017 and whose ordinance sunsets at year end. Staff recommended continuing the Camp season with planned changes such as micromobility access, a permanent B-cycle station, signage updates, and routing changes, and possible modifications including performance-based pricing, a commuter permit program, and using parking revenue for transportation demand benefits. Staff also recommended a feasibility study for direct transit or microtransit access beyond the park-and-ride model. Council generally supported continuing the program and the feasibility study, with concern about fairness to Boulder residents who cannot easily access the park and about raising parking costs.",
+        "related_timestamps": [
+          1131.24,
+          3105.88,
+          3114.359,
+          5084.92
+        ],
+        "Tags": [
+          "parking",
+          "open-space",
+          "transit",
+          "bikes-pedestrians",
+          "transportation",
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "East Boulder subcommunity plan zoning and form-based code implementation update",
+        "Summary": "Planner Kathleen King presented the next phase of implementing the East Boulder subcommunity plan, including a zoning study for areas of change and an evaluation of whether form-based code should apply. Staff reviewed feedback from the technical advisory committee, focus groups, and planning board on the existing form-based code in Boulder Junction and Alpine Balsam. Challenges raised included creative limits, commercial affordability, added cost from discretionary call-ups, and limited family-friendly outdoor space. Council members asked for less discretionary review, a more selective set of rules, more roof-form variety, and flexibility for iconic buildings. Staff will return in a few months with draft recommendations.",
+        "related_timestamps": [
+          5722.8,
+          8362.8
+        ],
+        "Tags": [
+          "zoning",
+          "development",
+          "council-governance",
+          "affordable-housing"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Council discussion on supporting Boulder County Ballot Measure 1A",
+        "Summary": "Council discussed whether to support Boulder County Ballot Measure 1A, a 0.5% sales tax extension for open space purchase and maintenance. Council Member Aaron Brockett noted that a separate letter of support for measure 1B had already been sent. Council members indicated unanimous support for taking a support position, and staff was asked to place the item on consent at the next business meeting.",
+        "related_timestamps": [
+          8366.16,
+          8502.0
+        ],
+        "Tags": [
+          "elections",
+          "open-space",
+          "taxes-fees",
+          "intergovernmental"
+        ]
+      }
+    }
+  ]
+}

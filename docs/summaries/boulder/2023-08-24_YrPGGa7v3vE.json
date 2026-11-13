@@ -1,0 +1,59 @@
+{
+  "Title": "Boulder City Council Study Session 8-24-23 (Community Broadband, Airport Community Conversation, Minimum Wage)",
+  "Tags": [
+    "council-governance",
+    "intergovernmental",
+    "budget",
+    "public-comment",
+    "technology",
+    "transportation"
+  ],
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Community Broadband Update and Path Forward",
+        "Summary": "Staff presented research on internet access, resident survey results, and three potential paths for community broadband: a municipal internet utility, a public-private partnership, or a backbone lease and right-of-way agreement with a private provider. Financial modeling estimated about $218 million in build costs and a required average annual general fund subsidy of about $14 million. Council discussed concerns about cost, competition, shallow trenching impacts, and lease terms, and was generally leaning toward the backbone lease option.",
+        "related_timestamps": [
+          413.34,
+          3000.0
+        ],
+        "Tags": [
+          "technology",
+          "budget",
+          "energy"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Airport Community Conversation Update",
+        "Summary": "Staff presented the Boulder Municipal Airport community engagement process, including open houses, questionnaires, and a community working group that developed four long-term scenarios and near-term action items. Staff noted FAA grant assurances constrain closure options. Council asked about noise, leaded fuel, airspace, and whether further engagement should wait until new Council members take office.",
+        "related_timestamps": [
+          3010.0,
+          6680.0
+        ],
+        "Tags": [
+          "transportation",
+          "arts-culture",
+          "zoning",
+          "intergovernmental"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Minimum Wage Regional Effort and Timeline",
+        "Summary": "Staff reviewed the regional minimum wage working group with Longmont, Louisville, Lafayette, and Erie, and Boulder County's decision to pursue a faster 2024 implementation. Staff explained the trade-offs of joining the county's timeline, including loss of collaboration and limited engagement. Council debated whether to move to a 2024 increase or hold to the 2025 timeline previously chosen, and ultimately gave a split direction to stay the course.",
+        "related_timestamps": [
+          6680.0,
+          18050.0
+        ],
+        "Tags": [
+          "labor",
+          "economic-development",
+          "intergovernmental"
+        ]
+      }
+    }
+  ]
+}

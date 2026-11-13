@@ -1,0 +1,123 @@
+{
+  "Title": "Boulder City Council Special Meeting and Study Session - June 20, 2023",
+  "Tags": [
+    "council-governance",
+    "police",
+    "flock",
+    "housing",
+    "homelessness",
+    "elections",
+    "climate",
+    "public-comment"
+  ],
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Honoring Judge Linda Cook's Years of Service",
+        "Summary": "Council adopted an amended agenda and recognized Judge Linda Cook for over two decades of service to the Boulder Municipal Court. The declaration highlighted her innovations in restorative justice, the CU Community Living class, homelessness outreach, and the community court model. Judge Cook thanked council and her colleagues. Council welcomed Judge Khan as her successor.",
+        "related_timestamps": [
+          405.66,
+          845.339
+        ],
+        "Tags": [
+          "crime",
+          "homelessness",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Consent Agenda and Police Oversight Panel Moratorium",
+        "Summary": "Council approved the consent agenda, including appointing Matt Benjamin and Rachel Friend as ad hoc liaisons to the Better Public Meetings project. Item 2B, an ordinance imposing an emergency moratorium on police oversight panel case intake, drew debate. Council members Wallach and Yates voted against it, citing concerns about precedent, the panel's refusal to request a moratorium, and the threat of code of conduct complaints. The consent agenda passed with those noted nays.",
+        "related_timestamps": [
+          853.2,
+          2760.0
+        ],
+        "Tags": [
+          "police",
+          "council-governance",
+          "boards-appointments"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Rezoning of 5405 Spine Road",
+        "Summary": "Council held a public hearing and second reading on Ordinance 8577 to rezone about 1.01 acres at 5405 Spine Road from Industrial General to Business Community. Staff found the rezoning consistent with the Boulder Valley Comprehensive Plan and the Gun Barrel Community Center plan. The Planning Board had recommended approval 6-0. One resident spoke in public comment, and the ordinance was adopted unanimously.",
+        "related_timestamps": [
+          2844.72,
+          3619.98
+        ],
+        "Tags": [
+          "zoning",
+          "development",
+          "public-comment"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Municipal Court Quarterly Update and Community Court",
+        "Summary": "Judge Cook gave her final quarterly update with Lead Navigator Nia Nguyen. They described the outreach, client engagement, pre-housing, housing, and retention phases of the navigation work. Presenters shared data on refusal rates, service needs, and a case where navigators helped a client through competency restoration and a housing crisis. Camping case outcomes were compared with 2019 data, showing more accountability through engagement.",
+        "related_timestamps": [
+          3745.68,
+          5482.44
+        ],
+        "Tags": [
+          "crime",
+          "homelessness",
+          "housing",
+          "public-health"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Boulder County Clerk Election Review and Ranked Choice Voting",
+        "Summary": "Boulder County Clerk Molly Fitzpatrick presented an overview of upcoming elections, including the 2023 coordinated election, the 2024 primaries, and the general election. She outlined the implementation of ranked choice voting for the city's mayor, covering ballot design, voting system upgrades, testing, adjudication, and voter education. Council asked about adjudication rates, reporting of multi-round results, and Spanish-language materials.",
+        "related_timestamps": [
+          5488.8,
+          6451.86
+        ],
+        "Tags": [
+          "elections",
+          "technology",
+          "intergovernmental"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Potential November Ballot Measures and Polling",
+        "Summary": "Staff reported that two citizen initiative petitions, Safe Zones for Kids and the arts, culture, and heritage sales tax extension, were certified sufficient. Staff described a poll to test extending the expiring 0.15 percent sales and use tax, with ballot language and sunset options. Behavioral health tax ideas were refined, with examples tied to the homeless services day center, high utilizer team, and Mental Health Partners. Council was scheduled to consider first reading on July 20.",
+        "related_timestamps": [
+          6451.86,
+          7930.19
+        ],
+        "Tags": [
+          "elections",
+          "taxes-fees",
+          "budget",
+          "public-health"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "2024 Boulder Energy Conservation Code Development",
+        "Summary": "Staff presented the 2024 energy code update, covering residential and commercial performance targets, the Zero Energy Ready Home alternative pathway, electrification for new construction and alterations, EV charging requirements, natural gas offsets, and embodied carbon reductions. Council gave feedback on engagement, affordability, and mass timber. A straw poll showed majority support for moving toward 100 percent electrification of new construction. Public adoption is targeted for Q4 2023.",
+        "related_timestamps": [
+          8858.0,
+          13609.62
+        ],
+        "Tags": [
+          "climate",
+          "energy",
+          "zoning",
+          "development"
+        ]
+      }
+    }
+  ]
+}

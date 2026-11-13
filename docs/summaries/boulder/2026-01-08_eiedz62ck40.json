@@ -1,84 +1,167 @@
 {
   "Title": "January 8, 2026 City of Boulder City Council Special Meeting",
+  "Tags": [
+    "council-governance",
+    "public-comment",
+    "flock",
+    "surveillance",
+    "emergency-management",
+    "affordable-housing",
+    "elections",
+    "budget"
+  ],
   "Topics": [
     {
       "Topic1": {
-        "Title": "Agenda Amendment and Open Comment",
-        "Summary": "Council unanimously amended the agenda to add a report on the city's response to the public safety power shutoff and windstorms, and removed an item on sending a letter to Xcel Energy, which will return January 22. Open comment included over a dozen speakers on topics such as surface parking, Flock Safety surveillance concerns, eco visits for CU students, Xcel Energy, proportional representation, Caterpillar divestment, and recreation center plans. City staff responded to questions on community resilience hubs, closed captioning, and data protection policy for Flock. The public comment period closed at 6:12 p.m. before the meeting recessed.",
+        "Title": "Agenda Amendment and Public Comment Period",
+        "Summary": "Council unanimously amended the agenda to add an item on the city's response to the power shutoff and windstorms and to remove a proposed letter to Xcel Energy, which will return January 22. Speakers during open comment raised issues including surface parking and a car-free redesign near Mesa Laboratory, Flock Safety camera risks and data misuse, CU student move-out and wildlife eco-visits, Xcel and divestment, proportional representation, Palestinian-related concerns, Boulder recreation center plans, and homelessness sweeps. Staff responded to questions about community resilience hubs and closed captioning, and Council discussed data protection policy.",
         "related_timestamps": [
-          "275.199",
-          "3866.88"
+          393.68,
+          3866.88
+        ],
+        "Tags": [
+          "public-comment",
+          "council-governance",
+          "flock",
+          "surveillance"
         ]
       }
     },
     {
       "Topic2": {
-        "Title": "Public Safety Power Shutoff and Windstorm Response Report",
-        "Summary": "Staff presented a summary of the city's response to the December public safety power shutoff and high wind event, noting that about 60% of the community lost power. Fire, police, utilities, parks, housing, and other departments reported extensive activations, including an emergency operations center, extended police shifts, and closure of the open space system. Staff will hold a virtual community town hall later this month and conduct an after-action review to improve future responses. Council members thanked staff for their work and encouraged questions to be directed to staff.",
+        "Title": "Power Shutoff and Windstorm Response Report",
+        "Summary": "Staff reported on the city's response to the December public safety power shutoff and high-wind event, noting that about 60 percent of the community lost power. Fire, police, utilities, parks, housing, and communications teams coordinated through the emergency operations center, with fire call volume more than doubling. Staff announced a virtual community town hall and an after-action review, and coordination with the Office of Disaster Management and the Public Utilities Commission on Xcel PSPS practices. Council thanked staff for their work.",
         "related_timestamps": [
-          "3871.52",
-          "4410.159"
+          3871.52,
+          4410.159
+        ],
+        "Tags": [
+          "emergency-management",
+          "fire-ems",
+          "energy",
+          "public-comment"
         ]
       }
     },
     {
       "Topic3": {
-        "Title": "Consent Agenda and Downtown Commercial District Resolution on Sundance Institute",
-        "Summary": "Council approved the consent agenda items 4A through 4C and 4E through 4K unanimously, with item 4D removed earlier. Council then convened as the Downtown Commercial District Board of Directors and unanimously approved Resolution 319 approving incentives and authorizing a lease with the Sundance Institute to host the Sundance Film Festival from 2027 through 2036. Revenue sharing on up to 1,000 parking spaces during the festival was discussed, along with calls for annual reporting and an equity analysis.",
+        "Title": "Consent Agenda",
+        "Summary": "Council approved the consent agenda items 4A through 4C and 4E through 4K unanimously, with item 4D removed. Item 4G approved a governing agreement with the Sundance Institute to host the Sundance Film Festival in Boulder from 2027 through 2036. Council members raised concerns about community benefit tracking, the lack of an equity analysis, and the need for annual reporting on the parking revenue share.",
         "related_timestamps": [
-          "4492.32",
-          "4873.679",
-          "5200.08"
+          4492.32,
+          4815.44
+        ],
+        "Tags": [
+          "arts-culture",
+          "economic-development",
+          "budget"
         ]
       }
     },
     {
       "Topic4": {
-        "Title": "Call-Up of 5501 and 5505 Arapahoe Avenue Form-Based Code Review",
-        "Summary": "Council considered calling up a form-based code review for a five-story mixed-use building with 300 dwelling units at 5501 and 5505 Arapahoe Avenue. Some members expressed concern about the building's aesthetics and the planning board's divided recommendation. Others argued the project followed the adopted code and that code changes, not a call-up, should address design concerns. The motion to call up the project failed on a 4-5 vote.",
+        "Title": "Downtown Commercial District Board Actions",
+        "Summary": "The council convened as the Downtown Commercial District Board of Directors and unanimously approved Resolution 319, which approves incentives for the Sundance Institute and authorizes the general manager to negotiate and execute a lease. Parking revenue sharing covers up to 1,000 spaces during the festival at a 50/50 split, and staff will compile annual incentive statistics.",
         "related_timestamps": [
-          "5268.0",
-          "5629.12"
+          5001.199,
+          5229.36
+        ],
+        "Tags": [
+          "economic-development",
+          "arts-culture",
+          "budget"
         ]
       }
     },
     {
       "Topic5": {
-        "Title": "Nwood Metropolitan District 2025 Budget Amendment",
-        "Summary": "Council, acting as the Nwood Metropolitan District Board of Directors, reviewed a supplemental appropriation of about $7,400 to cover dissolution-related expenses that exceeded the original 2025 budget. Staff noted an accounting error in the prior year that will result in a temporary negative fund balance. One public commenter raised concerns about costs during a budget crisis. Resolution 4 was adopted unanimously.",
+        "Title": "Call-Up of 5501 and 5505 Arapahoe Avenue Form-Based Code Review",
+        "Summary": "Council considered calling up a five-story mixed-use project with 300 dwelling units and retail space at 5501 and 5505 Arapahoe Avenue, reviewed under form-based code, after the Planning Board raised concerns about aesthetics and mass. Council members argued that the project followed the adopted code and that aesthetic concerns should be addressed through code changes rather than discretionary call-ups. The motion to call up the project failed on a 4-5 vote.",
         "related_timestamps": [
-          "5736.159",
-          "6295.84"
+          5240.96,
+          5636.0
+        ],
+        "Tags": [
+          "development",
+          "zoning",
+          "housing"
         ]
       }
     },
     {
       "Topic6": {
-        "Title": "915 Fifth Street Annexation and Zoning",
-        "Summary": "Council held the second reading and public hearing on the series annexation of 915 Fifth Street, a 1.294-acre property with initial residential estate zoning. The planning board had recommended limiting floor area to 4,000 square feet, but staff recommended against this, finding existing zoning standards sufficient. No public comment was received on the item. Council unanimously adopted Resolutions 1364 and 1365 and Ordinances 8728, 8729, and 8730, approving the annexation and inclusion in the Northern Colorado Water Conservancy District.",
+        "Title": "Nwood Metropolitan District 2025 Budget Amendment",
+        "Summary": "Council convened as the Nwood Metropolitan District Board and approved Resolution 4, a supplemental 2025 budget appropriation of about $7,400 to cover higher-than-expected dissolution and administrative expenses. Staff noted an accounting error from the prior year that produced a negative fund balance, with suppliers agreeing to delay payment. A public comment period was held, with one speaker raising budget concerns, and the resolution passed unanimously.",
         "related_timestamps": [
-          "6390.32",
-          "7512.4"
+          5800.48,
+          6365.0
+        ],
+        "Tags": [
+          "budget",
+          "taxes-fees",
+          "boards-appointments"
         ]
       }
     },
     {
       "Topic7": {
-        "Title": "Wildfire Hardening and Water-Wise Landscaping Ordinance",
-        "Summary": "Council held a continued second reading of Ordinance 8721, which updates landscaping, water conservation, and wildfire resilience standards and moves technical requirements into an administrative landscape manual. Staff revised the proposal to remove tree removal requirements, add limbing-up standards, and ease several restrictions in response to council feedback. Council members praised the flexibility and the staff work, and recommended that the city lead by example on city-owned properties. Ordinance 8721 was amended and approved, with third reading scheduled for February.",
+        "Title": "Annexation and Initial Zoning of 915 Fifth Street",
+        "Summary": "Council held the second reading and public hearing on a series annexation of 915 Fifth Street, about 1.294 acres, with initial Residential Estate zoning. Staff recommended approval without the Planning Board's proposed 4,000-square-foot floor area limit, noting existing zoning standards and topography already restrict development and that the applicant opposed the limit. Council unanimously adopted Resolutions 1364 and 1365 and Ordinances 8728, 8729, and 8730, which includes consent to inclusion in the Northern Colorado Water Conservancy District.",
         "related_timestamps": [
-          "7603.04",
-          "9566.96"
+          6388.0,
+          7520.0
+        ],
+        "Tags": [
+          "development",
+          "zoning",
+          "water",
+          "intergovernmental"
         ]
       }
     },
     {
       "Topic8": {
-        "Title": "2026 Council Committee Appointments",
-        "Summary": "Council discussed filling vacancies on boards, committees, and sister city liaison positions for 2026. Members volunteered for roles including the Boulder County Consortium of Cities, Mile High Flood District, Charter Committee, Financial Strategy Committee, Intergovernmental Affairs, and several sister city liaison roles. Staff will look into the homelessness working group appointment and whether the Resource Conservation Advisory Board appointment could become a staff appointment. Members were asked to submit additional recommendations by January 13.",
+        "Title": "Wildfire Hardening and Water-Wise Landscaping Ordinance 8721",
+        "Summary": "Council considered the continued second reading of Ordinance 8721, which updates landscaping, water conservation, and wildfire resilience rules, including moving technical standards into a city landscape manual and addressing state nonfunctional turf requirements. Staff revised the proposal to drop tree removal requirements, require limbing up trees in the wildland-urban interface, limit daytime watering restrictions to summer, and ease other rules, while keeping non-combustible zones near structures. Council praised the flexibility and community engagement and unanimously passed the ordinance with amendments for third reading.",
         "related_timestamps": [
-          "9618.0",
-          "10548.0"
+          7603.04,
+          9566.96
+        ],
+        "Tags": [
+          "climate",
+          "water",
+          "wildfire",
+          "zoning"
+        ]
+      }
+    },
+    {
+      "Topic9": {
+        "Title": "2026 Council Committee and Board Appointments",
+        "Summary": "Staff walked council through vacant seats on boards, committees, and sister city liaison roles, asking members to indicate interest. Members volunteered for the Boulder County Consortium of Cities, Mile High Flood District, Charter Committee, Financial Strategy Committee, and other roles, and several members swapped sister city assignments. Council discussed staggering terms on the Financial Strategy Committee and clarifying whether a homelessness working group appointment still needed to be filled.",
+        "related_timestamps": [
+          9621.0,
+          10557.76
+        ],
+        "Tags": [
+          "boards-appointments",
+          "council-governance",
+          "intergovernmental"
+        ]
+      }
+    },
+    {
+      "Topic10": {
+        "Title": "Closing Comments",
+        "Summary": "Council members thanked staff for responsive work on heating complaints and raised concerns about affordability of water for tree watering during winter, which staff said was addressed in a utilities blog post and resident correspondence. The meeting was adjourned at 8:24 p.m.",
+        "related_timestamps": [
+          10563.2,
+          10764.8
+        ],
+        "Tags": [
+          "water",
+          "public-health",
+          "council-governance"
         ]
       }
     }

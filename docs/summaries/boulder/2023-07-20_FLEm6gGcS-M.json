@@ -1,0 +1,66 @@
+{
+  "Title": "Boulder City Council Regular Meeting - July 20, 2023",
+  "Tags": [
+    "council-governance",
+    "public-comment",
+    "crime",
+    "homelessness",
+    "economic-development",
+    "public-health",
+    "budget",
+    "labor",
+    "transportation",
+    "fire-ems",
+    "water",
+    "parks-recreation",
+    "elections",
+    "taxes-fees"
+  ],
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Public Participation Guidelines and Open Comment",
+        "Summary": "Staff reviewed decorum rules and participation guidelines before open comment. Residents spoke on smoke-free air laws, opposing any move to allow smoking or cannabis use in restaurants and public spaces. Speakers also addressed the Boulder Chamber's cannabis policy framework, a minimum wage increase, airport noise and lead exposure, and a homelessness harm-reduction concern.",
+        "related_timestamps": [
+          177.2,
+          397.08
+        ],
+        "Tags": [
+          "public-comment",
+          "public-health",
+          "economic-development"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Cannabis Marijuana Hospitality Establishments Direction",
+        "Summary": "Staff presented the Cannabis Licensing Advisory Board recommendations on opting into state law allowing marijuana hospitality establishments. Staff asked whether to add the topic to a future work plan and what engagement level to use. Council discussed workload trade-offs, consultant costs, and whether a future council should decide. Most members preferred not to start engagement now.",
+        "related_timestamps": [
+          2396.0,
+          3070.0
+        ],
+        "Tags": [
+          "economic-development",
+          "public-health",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Boulder Creek Public Safety and Drowning Prevention",
+        "Summary": "Fire Chief and Parks and Recreation staff addressed recent Boulder Creek drownings and current rescue protocols. Staff described county flow thresholds of 700 cubic feet per second and planned measures including throw line stations, signage, and expanded swim lessons. Council discussed personal flotation devices, whether thresholds should be lower, and youth outreach.",
+        "related_timestamps": [
+          7522.56,
+          9288.6
+        ],
+        "Tags": [
+          "fire-ems",
+          "water",
+          "parks-recreation"
+        ]
+      }
+    }
+  ]
+}

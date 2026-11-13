@@ -130,3 +130,14 @@ table.data { border-collapse: collapse; font: 13px system-ui, sans-serif; margin
 table.data th, table.data td { border-bottom: 1px solid var(--rule); padding: .25rem .5rem; text-align: left; }
 table.data td.num, table.data th.num { text-align: right; font-variant-numeric: tabular-nums; }
 button.link { background: none; border: 0; color: var(--link); cursor: pointer; padding: 0; font: inherit; text-decoration: underline; }
+
+/* Meeting page: topic timeline under the video */
+.timeline { position: relative; height: calc(var(--lanes, 1) * 12px + 6px); margin-top: 6px; background: var(--surface-2); border-radius: 4px; }
+.timeline .block {
+  position: absolute; top: calc(3px + var(--lane, 0) * 12px); height: 10px; padding: 0; border: 0; border-radius: 3px;
+  background: var(--g, var(--muted)); cursor: pointer; box-shadow: 0 0 0 1px var(--bg); opacity: .8;
+}
+.timeline .block:hover, .timeline .block:focus-visible, .timeline .block.on { opacity: 1; outline: 2px solid var(--fg); outline-offset: 0; z-index: 1; }
+.timeline .playhead { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--fg); pointer-events: none; z-index: 2; }
+.topic { scroll-margin-top: 45vh; border-left: 3px solid transparent; padding-left: .6rem; margin-left: -.75rem; }
+.topic.playing { border-left-color: var(--link); }
