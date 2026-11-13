@@ -239,7 +239,7 @@
         }
         if (q) {
           // Every word must appear somewhere in the meeting: its title, topic titles or summaries.
-          const text = [m.title, ...(m.topics || []).map((t, i) => `${t.title} ${summaryOf(m, i)}`)].join(" ").toLowerCase();
+          const text = [m.title, m.overview || "", ...(m.topics || []).map((t, i) => `${t.title} ${summaryOf(m, i)}`)].join(" ").toLowerCase();
           if (!words().every((w) => text.includes(w))) return false;
         }
         return true;
@@ -322,7 +322,8 @@
       const d = parseDate(m.date);
       const label = d ? d.toLocaleDateString("en-US", { month: "short", day: "numeric", ...(state.sort === "relevance" || state.sort === "topics" ? { year: "numeric" } : {}) }) : "Undated";
       const href = `meeting.html?city=${encodeURIComponent(m.city)}&id=${encodeURIComponent(m.id)}`;
-      const li = el("li", {}, el("span", { class: "date" }, label), el("a", { href }, m.title || m.id), ...rowMeta(m, href));
+      const li = el("li", {}, el("span", { class: "date" }, label), el("a", { href }, m.title || m.id),
+        m.overview ? el("p", { class: "overview" }, m.overview) : null, ...rowMeta(m, href));
       const top = meetingTags(m).slice(0, 6);
       if (top.length) {
         li.append(el("div", { class: "tags" }, ...top.map((id) => tagChip(tags, id, {
@@ -485,7 +486,8 @@
       block.addEventListener("blur", hide);
       block.addEventListener("click", () => {
         seek(t.start);
-        sections[t.i].section.scrollIntoView({ behavior: "smooth", block: "center" });
+        const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        sections[t.i].section.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" });
       });
       t.block = block;
       box.append(block);
@@ -665,6 +667,11 @@
       metaParts.join(" · ") + " · ",
       el("a", { href: `https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}` }, "Watch on YouTube"),
     );
+
+    if (typeof summary.Overview === "string" && summary.Overview.trim()) {
+      $("overview").textContent = summary.Overview;
+      $("overview").hidden = false;
+    }
 
     const topics = topicsOf(summary);
     const container = $("topics");

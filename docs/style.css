@@ -174,3 +174,12 @@ ol.preview li { padding: .3rem 0 !important; border: 0 !important; }
 ol.preview p { margin: .15rem 0 0; color: var(--fg); }
 .awaiting { font: 14px/1.5 system-ui, sans-serif; background: var(--surface-2); border-radius: 8px; padding: .6rem .75rem; margin: 0 0 1rem; }
 .awaiting ul { margin: .3rem 0 0; padding-left: 1.2rem; }
+.overview { margin: .3rem 0 .2rem; font-size: 15.5px; line-height: 1.55; }
+main > .overview { font-size: 17px; margin: .6rem 0 1rem; }
+
+/* Accessibility */
+a.skip { position: absolute; left: -999px; top: 0; background: var(--fg); color: var(--bg); padding: .5rem .75rem; z-index: 20; font: 14px system-ui, sans-serif; }
+a.skip:focus { left: 8px; top: 8px; }
+:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+ul.meetings li > .overview { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--fg); }

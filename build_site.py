@@ -105,7 +105,7 @@ def build_manifest(summaries_dir=SUMMARIES_DIR):
     provenance_file = summaries_dir / "models.json"
     provenance = json.loads(provenance_file.read_text(encoding="utf-8")) if provenance_file.exists() else {}
     meetings, search = [], {}
-    for f in summaries_dir.glob("*/*.json"):
+    for f in sorted(summaries_dir.glob("*/*.json")):  # sorted: output must not depend on directory order
         m = STEM.match(f.stem)
         if not m:
             continue
@@ -122,6 +122,7 @@ def build_manifest(summaries_dir=SUMMARIES_DIR):
             "date": None if date == "undated" else date,
             "video_id": video_id,
             "title": title,
+            "overview": summary.get("Overview") or None,
             "model": provenance.get(f"{f.parent.name}/{f.stem}"),
             **meeting_entry(summary),
         })
@@ -166,7 +167,8 @@ def build_feed(manifest, search, summaries_dir):
             f"<li><strong>{escape(t['title'])}</strong>" + (f": {escape(texts[i])}" if i < len(texts) and texts[i] else "") + "</li>"
             for i, t in enumerate(m["topics"]))
         tags = ", ".join(labels.get(t, t) for t in list(m["tag_seconds"])[:6])
-        html = (f"<p>Most discussed: {escape(tags)}</p>" if tags else "") + f"<ul>{items}</ul>"
+        html = ((f"<p>{escape(m['overview'])}</p>" if m.get("overview") else "")
+                + (f"<p>Most discussed: {escape(tags)}</p>" if tags else "") + f"<ul>{items}</ul>")
         out += ["<entry>", f"<title>{escape(cities.get(m['city'], m['city']))}: {escape(m['title'])}</title>",
                 f'<link href="{escape(link)}"/>', f"<id>{escape(link)}</id>", f"<updated>{m['date']}T00:00:00Z</updated>",
                 *(f'<category term="{escape(t)}" label="{escape(labels.get(t, t))}"/>' for t in m["tag_seconds"]),

@@ -1,5 +1,6 @@
 {
   "Title": "<date / type of meeting>",
+  "Overview": "<2 to 3 sentences on what the meeting covered and what was decided>",
   "Tags": ["<tag>", "<tag>"],
   "Topics": [
     {

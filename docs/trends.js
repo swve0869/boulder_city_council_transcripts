@@ -186,7 +186,7 @@
         for (const mo of months) {
           const c = cell.get(`${id}|${mo}`);
           const v = c ? c[state.metric] : 0;
-          const node = el("div", { class: "cell", style: `background: var(--seq-${step(v)})`,
+          const node = el("div", { class: "cell", role: "img", style: `background: var(--seq-${step(v)})`,
             "aria-label": `${tags.label(id)}, ${monthLabel(mo)}: ${c ? METRICS[state.metric].fmt(v) : "none"}` });
           hover(node, () => [`${tags.label(id)} · ${monthLabel(mo)}`, c ? `${fmtDuration(c.hours)} · ${c.meetings} meetings · ${c.topics} topics` : "Not discussed"]);
           node.addEventListener("click", () => { location.href = goTo(id); });

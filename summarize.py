@@ -155,10 +155,11 @@ def build_schema(config):
     n = config.get("summarize", {}).get("max_topics", 30)
     return {
         "type": "object", "additionalProperties": False,
-        "required": ["Title", "Tags", "Topics"],
+        "required": ["Title", "Overview", "Tags", "Topics"],
         "$defs": {"topic": topic, "tagList": tag_list},
         "properties": {
             "Title": {"type": "string"},
+            "Overview": {"type": "string"},
             "Tags": {"$ref": "#/$defs/tagList"},
             "Topics": {"type": "array", "items": {"anyOf": [
                 {"type": "object", "additionalProperties": False, "required": [f"Topic{i}"],
@@ -354,8 +355,8 @@ def check_tags(tags, where, known, errors):
 def validate_summary(summary, segment_starts=None, max_sentences=5, exact_timestamps=False, known_tags=None):
     """Return (errors, warnings). Errors mean the structure doesn't match summary_prompt_JSON_format.json.
 
-    "Tags" (meeting level and per topic) are optional so older summaries still validate,
-    but when present they must come from known_tags.
+    "Overview" and "Tags" (meeting level and per topic) are optional so older summaries
+    still validate; when present, tags must come from known_tags.
     """
     errors, warnings = [], []
     known = set(known_tags or [])
@@ -363,7 +364,9 @@ def validate_summary(summary, segment_starts=None, max_sentences=5, exact_timest
         return ["top level is not a JSON object"], warnings
     if "Tags" in summary:
         check_tags(summary["Tags"], "Tags", known, errors)
-    extra = set(summary) - {"Title", "Topics", "Tags"}
+    if "Overview" in summary and (not isinstance(summary["Overview"], str) or not summary["Overview"].strip()):
+        errors.append('"Overview" must be a non-empty string')
+    extra = set(summary) - {"Title", "Overview", "Topics", "Tags"}
     if extra:
         errors.append(f"unexpected top-level keys: {sorted(extra)}")
     if not isinstance(summary.get("Title"), str) or not summary["Title"].strip():
@@ -418,6 +421,39 @@ def validate_summary(summary, segment_starts=None, max_sentences=5, exact_timest
     if not count:
         errors.append("no topics found")
     return errors, warnings
+
+
+# ---- Overviews for existing summaries -------------------------------------------------
+
+OVERVIEW_PROMPT = (
+    "Below are the topic summaries of one city council meeting. Write an overview of the meeting in 2 to 3 "
+    "sentences: what it mainly covered and what was decided. If nothing was decided, describe what was "
+    "discussed. Write about the meeting itself; never mention the summaries or this task. Plain text only, "
+    "no preamble, no markdown."
+)
+
+
+def add_overview(path, model, log=print):
+    """Add "Overview" to a saved summary from its topic summaries (a small, cheap request).
+
+    New summaries get an Overview in the main call; this backfills ones made before that.
+    Returns True if the file was updated.
+    """
+    summary = json.loads(Path(path).read_text(encoding="utf-8"))
+    if summary.get("Overview") or not isinstance(summary.get("Topics"), list):
+        return False
+    lines = [f"Meeting: {summary.get('Title', '')}"]
+    for entry in summary["Topics"]:
+        for topic in entry.values():
+            lines.append(f"- {topic.get('Title', '')}: {topic.get('Summary', '')}")
+    text = request_summary(model, "", OVERVIEW_PROMPT, "\n".join(lines)).strip()
+    if not text or len(text) > 1200:
+        raise SummaryError(f"unusable overview ({len(text)} chars)")
+    ordered = {"Title": summary.get("Title"), "Overview": text}
+    ordered.update({k: v for k, v in summary.items() if k not in ordered})
+    Path(path).write_text(json.dumps(ordered, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    log(f"overview {Path(path).parent.name}/{Path(path).stem}")
+    return True
 
 
 # ---- Summarizing ----------------------------------------------------------------------
@@ -517,6 +553,8 @@ def main():
     p.add_argument("--config", default=str(CONFIG_FILE), help="config file (default: summarizer.toml)")
     p.add_argument("--list-models", action="store_true", help="show configured models and exit")
     p.add_argument("--jobs", type=int, default=1, help="summarize N transcripts in parallel (default: 1)")
+    p.add_argument("--add-overviews", action="store_true",
+                   help="add an Overview to saved summaries that lack one (small API request each) and exit")
     p.add_argument("--apply-keywords", action="store_true",
                    help="re-apply tags.json keyword rules to existing summaries (no API calls) and exit")
     p.add_argument("--check", metavar="SUMMARY", nargs="+", help="only validate existing summary files and exit")
@@ -537,6 +575,24 @@ def main():
             mark = f"[{active.index(name) + 1}]" if name in active else "   "
             print(f"{mark} {name:12} {m['provider']:10} {m['model']:22} prompt={m['prompt']:9} {key}")
         return 0
+
+    if args.add_overviews:
+        model = model_settings(config, (args.model or config["summarize"]["models"])[0])
+        files = sorted(f for f in output_dir(config).glob("*/*.json"))
+
+        def run_overview(f):
+            try:
+                return add_overview(f, model, log=lambda m: print(m, file=sys.stderr))
+            except Exception as e:
+                print(f"ERROR  {f.name}: {e}", file=sys.stderr)
+                return None
+
+        with ThreadPoolExecutor(max_workers=max(1, args.jobs)) as pool:
+            results = list(pool.map(run_overview, files))
+        print(f"{sum(r is True for r in results)} overview(s) added, {sum(r is None for r in results)} failed", file=sys.stderr)
+        from build_site import build_manifest
+        build_manifest(output_dir(config))
+        return 1 if any(r is None for r in results) else 0
 
     if args.apply_keywords:
         known, keywords, changed = tag_ids(config), tag_keywords(config), 0

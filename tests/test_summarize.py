@@ -110,6 +110,13 @@ class Validate(unittest.TestCase):
         errors, _ = s.validate_summary(inexact, {10.0, 300.0}, exact_timestamps=True)
         self.assertTrue(errors)
 
+    def test_overview_is_optional_but_must_be_text(self):
+        summary = self.good()
+        summary["Overview"] = "Council passed the budget."
+        self.assertEqual(s.validate_summary(summary, known_tags=["budget"])[0], [])
+        summary["Overview"] = ""
+        self.assertTrue(any("Overview" in e for e in s.validate_summary(summary, known_tags=["budget"])[0]))
+
     def test_long_summary_warns(self):
         long = {"Title": "x", "Topics": [{"Topic1": topic(Summary="One. Two. Three. Four. Five. Six.")}]}
         errors, warnings = s.validate_summary(long)
@@ -138,6 +145,7 @@ class ConfigAndSchema(unittest.TestCase):
         schema = s.build_schema(self.config)
         ids = s.tag_ids(self.config)
         self.assertEqual(schema["$defs"]["tagList"]["items"]["enum"], ids)
+        self.assertEqual(schema["required"], ["Title", "Overview", "Tags", "Topics"])
         branches = schema["properties"]["Topics"]["items"]["anyOf"]
         self.assertEqual(len(branches), self.config["summarize"]["max_topics"])
         self.assertLessEqual(len(branches), 30, "40 topic branches exceed the API's grammar size limit")
