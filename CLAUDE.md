@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Watches city council YouTube channels (listed in `national_city_councils.json` as `{"City": "channel URL"}`), saves caption transcripts on a private host machine, summarizes them with LLMs configured in `summarizer.toml` (default Claude Sonnet 5.5), and publishes **only the summaries** to GitHub Pages (`docs/`, served from `main` /docs). README.md has full CLI usage and host setup.
+Watches city council YouTube channels (listed in `national_city_councils.json` as `{"City": "channel URL"}`), saves caption transcripts on a private host machine, summarizes them with LLMs configured in `summarizer.toml` (currently Claude Haiku 5.5), and publishes **only the summaries** to GitHub Pages (`docs/`, served from `main` /docs). README.md has full CLI usage and host setup.
 
 Python 3.11+ (`tomllib`). Dependencies: `pip install -r requirements.txt` (yt-dlp, anthropic, openai). There are no tests or linter. Scripts are standalone CLIs run from the repo root. API keys come from `.env` (gitignored), which `scripts/cron_watch.sh` loads. Each provider in `summarizer.toml` names its own env var.
 

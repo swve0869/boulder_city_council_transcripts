@@ -1,22 +1,22 @@
 # City Council Meeting Summaries
 
-Watches city council YouTube channels, saves each new meeting's English captions as a transcript, summarizes the transcript with an LLM (Claude Sonnet 5.5 by default; configurable in `summarizer.toml`), and publishes the summaries to a static site on GitHub Pages.
+Watches city council YouTube channels, saves each new meeting's English captions as a transcript, summarizes the transcript with an LLM (Claude Haiku 5.5 currently; configurable in `summarizer.toml`), and publishes the summaries to a static site on GitHub Pages.
 
 Cities don't publish written transcripts, so this uses the captions on the meeting videos: the city's uploaded captions when they exist, otherwise YouTube's auto-generated ones.
 
 ## How it fits together
 
 ```
-host machine (private network, dynamic DNS)                   GitHub Pages (docs/)
-──────────────────────────────────────────                    ────────────────────
-cron → scripts/cron_watch.sh
+Raspberry Pi (home network)                                   GitHub Pages (docs/)
+───────────────────────────                                   ────────────────────
+systemd timer → scripts/cron_watch.sh
         └ watch_council_videos.py --once --fetch --summarize --publish
             ├ new video on a channel in national_city_councils.json
             ├ transcript → transcripts/<city>/<date>_<id>.json   (stays here)
             ├ summarize.py → models from summarizer.toml → structure check
             └ docs/summaries/<city>/<date>_<id>.json ── git push ──→ summaries/…json
                                                                   index.html, meeting.html
-serve_transcripts.py (optional) ←── browser fetch (HTTPS, CORS) ── "Load full transcript"
+serve_transcripts.py ← Tailscale Funnel ←── browser fetch (HTTPS, CORS) ── "Load full transcript"
 ```
 
 - **GitHub Pages stores only summaries.** `transcripts/` is gitignored and never leaves the host.
@@ -34,43 +34,154 @@ serve_transcripts.py (optional) ←── browser fetch (HTTPS, CORS) ── "Lo
 | `build_site.py` | Writes `docs/summaries/index.json`; `--publish` commits and pushes summaries |
 | `serve_transcripts.py` | Read-only server for full transcripts on the host |
 | `combine_transcripts.py` | Joins a city's transcripts for a year or month into one text file |
-| `scripts/cron_watch.sh` | Cron wrapper: loads `.env`, prevents overlapping runs, runs one watch cycle |
+| `scripts/cron_watch.sh` | One watch cycle: loads `.env`, prevents overlapping runs (run by the systemd timer or cron) |
+| `scripts/setup_pi.sh` | Sets up a Raspberry Pi host (packages, venv, git identity, systemd units, log rotation) |
+| `deploy/` | systemd unit and logrotate templates installed by `setup_pi.sh` |
 | `docs/` | The GitHub Pages site (`config.js`, `app.js`, `index.html`, `meeting.html`, `summaries/`) |
 
-## Raspberry Pi setup (recommended host)
+## Raspberry Pi setup (the production host)
 
-Use Raspberry Pi OS Bookworm **64-bit** or newer (Python 3.11+). On the Pi:
+The Pi runs everything that isn't the website: the watcher (every 20 minutes), summarizing, publishing to GitHub, and the full-transcript server. [Tailscale Funnel](https://tailscale.com/kb/1223/funnel) puts that server on a public HTTPS address without router changes or port forwarding. Steps 1–9 are a one-time setup.
 
-```
-git clone git@github.com:<you>/boulder_city_council_transcripts.git && cd boulder_city_council_transcripts
-scripts/setup_pi.sh            # --dry-run to preview, --no-timer to skip the watcher timer
-```
+### 1. Prepare the Pi
 
-The script installs packages, creates `.venv`, and creates `.env` if it's missing. It then installs and starts two systemd units:
+- Flash **Raspberry Pi OS (64-bit), Bookworm or newer** with Raspberry Pi Imager. Its Python 3.11+ is required, and the 64-bit build installs the Python packages without compiling. In the Imager's settings, set a username, enable SSH and set up Wi-Fi (or use Ethernet).
+- Boot it, find its address (e.g. on your router's client list, or `ping raspberrypi.local`), and connect: `ssh <user>@<pi-address>`.
+- Change the default password (`passwd`). The Pi will hold your API keys.
 
-- **`council-transcripts.service`** runs `serve_transcripts.py` on `127.0.0.1:8765`. The allowed site origin is taken from the git remote.
-- **`council-watch.timer`** runs `scripts/cron_watch.sh` every 20 minutes. It catches up after the Pi was off, so you don't need a crontab entry.
+### 2. Give the Pi push access to GitHub (deploy key)
 
-It also adds log rotation for `watch_council_videos.log`, and warns if the Pi can't push to GitHub or has no `transcripts/` folder yet.
-
-Then:
-
-1. **Secrets and data:** put your keys in `.env`. Copy over `transcripts/` (and `seen_videos.json`, if you have one) from the old machine, e.g. `rsync -a old:boulder_city_council_transcripts/transcripts ./`.
-2. **Push access:** create a deploy key on the Pi (`ssh-keygen -t ed25519 -f ~/.ssh/council_deploy`). Add the `.pub` under the repo's Settings → Deploy keys with write access, and point `~/.ssh/config` at it for `github.com`.
-3. **HTTPS without the router:** install Tailscale (`curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up`), then run `sudo tailscale funnel --bg 8765`. Set `transcriptHost` in `docs/config.js` to the `https://….ts.net` address it prints, then commit and push.
-4. **One watcher only:** stop any cron job or watcher on other machines, so two hosts don't push the same summaries.
-
-Day to day:
+The Pi commits and pushes summaries, so it needs write access to this one repo:
 
 ```
-systemctl status council-transcripts council-watch.timer
-journalctl -u council-watch -n 50          # last watcher run
-sudo systemctl start council-watch         # run a cycle now
+ssh-keygen -t ed25519 -f ~/.ssh/council_deploy -N "" -C "council-transcripts-pi-deploy"
+cat >> ~/.ssh/config <<'CFG'
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/council_deploy
+  IdentitiesOnly yes
+CFG
+chmod 600 ~/.ssh/config
+cat ~/.ssh/council_deploy.pub
 ```
 
-YouTube rarely challenges home connections. If it does, export `cookies.txt` from a signed-in browser elsewhere, copy it to the Pi, and add `--cookies /path/cookies.txt` to `ExecStart` in `/etc/systemd/system/council-watch.service`. Then run `sudo systemctl daemon-reload`.
+On GitHub, go to the repo → **Settings → Deploy keys → Add deploy key**, paste the public key, and tick **Allow write access**. Check it with `ssh -T git@github.com`, which should greet the repo.
 
-## Host machine setup (manual / other Linux)
+### 3. Clone the repo
+
+```
+git clone git@github.com:<you>/boulder_city_council_transcripts.git
+cd boulder_city_council_transcripts
+```
+
+### 4. Copy secrets and transcripts from your old machine
+
+Full transcripts and keys aren't in git. Run this on the old machine, from the repo:
+
+```
+tar czf - transcripts .env | ssh <user>@<pi-address> 'cd ~/boulder_city_council_transcripts && tar xzf - && chmod 600 .env'
+```
+
+Starting fresh instead? Skip this step; setup creates `.env` from `.env.example`, and you add `ANTHROPIC_API_KEY=sk-ant-...` (plus any other provider keys from `summarizer.toml`) to it.
+
+### 5. Run the setup script
+
+```
+scripts/setup_pi.sh            # --dry-run to preview; --no-timer to skip the watcher timer
+```
+
+It is safe to re-run (e.g. after `git pull`). It:
+
+- installs system packages (`python3-venv`, `git`, `logrotate`, …) and checks the Python version
+- creates `.venv` and installs `requirements.txt`
+- creates `.env` from `.env.example` if it's missing
+- sets a **repo-local git identity** (`Council Pi <you@users.noreply.github.com>`) so publishing can commit
+- installs and starts **`council-transcripts.service`**: `serve_transcripts.py` on `127.0.0.1:8765`, which allows requests only from your `https://<you>.github.io` site and restarts on failure
+- installs and starts **`council-watch.timer`**: runs `scripts/cron_watch.sh` every 20 minutes and catches up after the Pi was off, so no crontab is needed
+- installs log rotation for `watch_council_videos.log`
+- warns if the Pi can't push to GitHub or has no `transcripts/` folder
+
+### 6. Expose the transcript server with Tailscale Funnel
+
+```
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up                      # open the printed link and sign in
+sudo tailscale funnel --bg 8765        # prints https://<pi-name>.<tailnet>.ts.net
+```
+
+Funnel needs HTTPS certificates and the `funnel` node attribute enabled for your tailnet. The first `tailscale funnel` command offers links to turn both on. Check it worked:
+
+```
+sudo tailscale funnel status                                          # "Funnel on" ... proxy http://127.0.0.1:8765
+sudo journalctl -u tailscaled -o cat | grep IngressEnabled | tail -1  # must say "changed to true"
+```
+
+Then, from any machine *off* your tailnet (e.g. a phone on cellular), open `https://<pi-name>.<tailnet>.ts.net/boulder/<some-stem>.json`; it should return the transcript JSON.
+
+### 7. Point the website at the Pi
+
+In `docs/config.js`, set `transcriptHost: "https://<pi-name>.<tailnet>.ts.net"`, then commit and push. Meeting pages then show **Load full transcript**.
+
+### 8. Seed the watcher (avoid skipping a meeting)
+
+The watcher's first run only *records* the videos already on each channel. A meeting that is listed but has no transcript yet, such as a live stream that hasn't started, would be marked seen and never fetched. To avoid that, record the existing videos without fetching, then queue any that are missing a transcript:
+
+```
+.venv/bin/python watch_council_videos.py --once     # records existing videos in seen_videos.json
+.venv/bin/python - <<'PY'
+import json
+from pathlib import Path
+state = json.load(open("seen_videos.json"))
+for city, s in state.items():
+    # stem is <date>_<videoid>; ids can contain "_", so split on the first one only
+    have = {f.stem.split("_", 1)[1] for f in Path("transcripts", city).glob("*.json")}
+    for vid, title in s["seen"].items():
+        if vid not in have and vid not in {p["id"] for p in s["pending"]}:
+            print("queueing", city, vid, title)
+            s["pending"].append({"id": vid, "title": title, "date": None})
+json.dump(state, open("seen_videos.json", "w"), indent=2)
+PY
+```
+
+Queued videos are fetched once captions exist, then summarized and published. Rename any `undated_` transcript this produces to `YYYY-MM-DD_<id>` if you want it dated.
+
+### 9. Backfill summaries for existing transcripts
+
+The watcher summarizes only *new* meetings. To summarize everything already in `transcripts/`, run this as a background job so it survives logging out:
+
+```
+sudo systemd-run --unit=council-backfill --uid=$USER --gid=$USER --working-directory=$PWD --setenv=HOME=$HOME --nice=10 \
+  /bin/bash -c 'set -a; . ./.env; set +a; .venv/bin/python summarize.py --city Boulder && .venv/bin/python build_site.py --publish'
+journalctl -u council-backfill -f       # follow progress (Ctrl+C stops following, not the job)
+```
+
+With Claude Haiku 5.5 this costs a few cents per meeting and takes about 10–20 seconds each. Add `--limit N` to `summarize.py` to go in batches.
+
+### Make sure only the Pi runs the watcher
+
+Stop any cron job, `watch_council_videos.py`, or `serve_transcripts.py` on other machines, so two hosts don't fetch and push the same meetings.
+
+### Day to day
+
+```
+systemctl status council-transcripts council-watch.timer     # both should be active
+systemctl list-timers council-watch.timer                    # next/last watcher run
+journalctl -u council-watch -n 50 -o cat                     # what the last runs did
+sudo systemctl start council-watch                           # run a cycle now
+sudo tailscale funnel status                                 # public transcript server
+cd ~/boulder_city_council_transcripts && git pull && scripts/setup_pi.sh   # update the Pi
+```
+
+### Pi troubleshooting
+
+- **The site says "The full transcript is unavailable right now":** check `sudo tailscale funnel status`. If the server isn't listed, or the `IngressEnabled` log line says `false`, rerun `sudo tailscale funnel --bg 8765`. A Funnel reset or reinstall clears the config.
+- **Publishing fails with "unable to auto-detect email address":** the repo has no git identity. Rerun `scripts/setup_pi.sh`, or run `git config user.name` / `git config user.email` in the repo.
+- **"Permission denied (publickey)" on push:** the deploy key is missing, lacks write access, or `~/.ssh/config` doesn't point to it (step 2).
+- **"Sign in to confirm you're not a bot":** rare on a home connection. Export `cookies.txt` from a signed-in browser elsewhere and copy it to the Pi. Add `--cookies /path/cookies.txt` to `ExecStart` in `/etc/systemd/system/council-watch.service`, then run `sudo systemctl daemon-reload`.
+- **A summary failed:** it's listed under `unsummarized` in `seen_videos.json` and retried on every run. `journalctl -u council-watch` shows why it failed (missing key, invalid output, …).
+
+## Other hosts (manual setup on any Linux machine)
 
 Requires Python 3.11+ and git with push access to this repo.
 
@@ -131,9 +242,9 @@ The config ships with Anthropic, OpenAI, DeepSeek, Gemini, OpenRouter and Ollama
 
 The model that wrote each summary is recorded in `docs/summaries/models.json` and credited on the meeting page.
 
-Claude models use prompt caching, so retries cost much less, and server-side refusal fallback (`fallbacks = "default"`).
+Claude models use prompt caching, so retries cost much less. Sonnet and Opus also use server-side refusal fallback (`fallbacks = "default"`). Haiku has none, so list a second model after it if you want refusals covered.
 
-Cost with Claude Sonnet 5.5: a long meeting transcript runs to roughly 100–200k input tokens, about $0.20–0.40 per meeting.
+Cost: a long meeting transcript runs to roughly 100–200k input tokens. That's a few cents per meeting with Claude Haiku 5.5 (the current model) and about $0.20–0.40 with Sonnet 5.5.
 
 ```
 python summarize.py --list-models                # configured models, fallback order, which keys are set
@@ -146,7 +257,7 @@ python build_site.py --publish                    # rebuild the index and push
 
 `summarize.py` rebuilds `docs/summaries/index.json` itself, but it doesn't push.
 
-## Full transcripts from the host (optional)
+## Full transcripts from the host (optional; the Pi uses Tailscale Funnel, above)
 
 ```
 python serve_transcripts.py --origin https://<user>.github.io     # listens on :8765
