@@ -34,5 +34,18 @@ for t in tests/browser/*.test.mjs; do
   out="$(node $NODE_FLAGS "$t" "$BASE" 2>&1)" || fail=1   # capture first: a pipe would hide the exit code
   printf '%s\n' "$out" | grep -v "ExperimentalWarning\|--trace-warnings"
 done
+# Local runs also test a two-city copy of the site (the real data has one city so far).
+if [[ "$BASE" == http://localhost:8920* ]]; then
+  FIX="$(mktemp -d)"; cp -r docs "$FIX/docs"; mkdir -p "$FIX/docs/summaries/fort-collins"
+  ls docs/summaries/boulder/2026-*.json | head -3 | xargs -I{} cp {} "$FIX/docs/summaries/fort-collins/"
+  python3 -c "import build_site, sys; build_site.build_manifest(sys.argv[1])" "$FIX/docs/summaries" 2>/dev/null
+  python3 -m http.server 8922 -d "$FIX/docs" >/dev/null 2>&1 & PIDS+=($!)
+  sleep 1
+  echo "== multicity  (fixture: http://localhost:8922)"
+  out="$(node $NODE_FLAGS tests/browser/multicity.fixture.mjs http://localhost:8922 2>&1)" || fail=1
+  printf '%s\n' "$out" | grep -v "ExperimentalWarning\|--trace-warnings"
+  rm -rf "$FIX"
+fi
+
 [ "$fail" = 0 ] && echo "ALL BROWSER TESTS PASSED" || echo "BROWSER TESTS FAILED"
 exit "$fail"

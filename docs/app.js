@@ -166,13 +166,19 @@
       select.addEventListener("change", () => {
         state.city = select.value;
         try { localStorage.setItem("city", select.value); } catch (_) { /* ignore */ }
+        fillYears();
         update();
       });
     }
     if (state.tags.length) $("tag-panel").open = true; // arriving from a tag link: show what's selected
-    const yearsHere = () => [...new Set(all.filter((m) => m.city === state.city && m.date).map((m) => m.date.slice(0, 4)))].sort().reverse();
-    for (const y of yearsHere()) $("year").append(el("option", { value: y }, y));
-    $("year").value = state.year;
+    // Year options follow the chosen city; a year that city doesn't have is dropped from the filter.
+    function fillYears() {
+      const years = [...new Set(all.filter((m) => m.city === state.city && m.date).map((m) => m.date.slice(0, 4)))].sort().reverse();
+      $("year").replaceChildren(el("option", { value: "" }, "All"), ...years.map((y) => el("option", { value: y }, y)));
+      if (!years.includes(state.year)) state.year = "";
+      $("year").value = state.year;
+    }
+    fillYears();
     $("kind").value = state.kind;
     $("year").addEventListener("change", () => { state.year = $("year").value; update(); });
     $("kind").addEventListener("change", () => { state.kind = $("kind").value; update(); });
