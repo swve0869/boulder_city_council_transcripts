@@ -84,6 +84,25 @@ class Manifest(unittest.TestCase):
         self.assertIn("Budget &lt;vote&gt;", entries[1].find("a:content", ns).text)
 
 
+class AssetVersions(unittest.TestCase):
+    def test_stamp_assets_versions_local_files_only_and_is_stable(self):
+        d = Path(tempfile.mkdtemp())
+        (d / "app.js").write_text("console.log(1)")
+        (d / "style.css").write_text("body{}")
+        (d / "page.html").write_text('<link rel="stylesheet" href="style.css"><script src="app.js?v=00000000"></script>'
+                                     '<script src="https://www.youtube.com/iframe_api"></script><a href="missing.js">x</a>')
+        self.assertEqual(b.stamp_assets(d), ["page.html"])
+        html = (d / "page.html").read_text()
+        self.assertRegex(html, r'href="style\.css\?v=[0-9a-f]{8}"')
+        self.assertRegex(html, r'src="app\.js\?v=[0-9a-f]{8}"')
+        self.assertNotIn("00000000", html)
+        self.assertIn('src="https://www.youtube.com/iframe_api"', html)   # external URLs untouched
+        self.assertIn('href="missing.js"', html)                          # unknown files untouched
+        self.assertEqual(b.stamp_assets(d), [], "a second run changes nothing")
+        (d / "app.js").write_text("console.log(2)")
+        self.assertEqual(b.stamp_assets(d), ["page.html"], "editing a script changes its version")
+
+
 class WatcherStatus(unittest.TestCase):
     def test_status_lists_pending_and_only_rewrites_on_change(self):
         import watch_council_videos as w

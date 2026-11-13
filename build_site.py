@@ -8,11 +8,12 @@ docs/summaries/models.json (written by summarize.py) says which model wrote each
 Only summaries are published; full transcripts stay on the host machine.
 
 Usage:
-    python build_site.py              # rewrite docs/summaries/index.json
+    python build_site.py              # rewrite index/search/feed and asset versions in docs/*.html
     python build_site.py --publish    # ...then git commit and push docs/summaries
 """
 
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -179,6 +180,33 @@ def build_feed(manifest, search, summaries_dir):
     return path
 
 
+ASSET_REF = re.compile(r'((?:src|href)=")([\w.-]+\.(?:js|css))(?:\?v=[0-9a-f]+)?(")')
+
+
+def stamp_assets(docs_dir=SUMMARIES_DIR.parent):
+    """Point each page at its scripts and stylesheet by content hash: app.js -> app.js?v=1a2b3c4d.
+
+    Browsers may cache files for a while after a deploy; a versioned URL means a page
+    never runs against a stale script. Returns the HTML files that changed.
+    """
+    docs_dir = Path(docs_dir)
+    changed = []
+    for page in sorted(docs_dir.glob("*.html")):
+        html = page.read_text(encoding="utf-8")
+
+        def stamp(m):
+            asset = docs_dir / m.group(2)
+            if not asset.exists():
+                return m.group(0)
+            return f"{m.group(1)}{m.group(2)}?v={hashlib.sha256(asset.read_bytes()).hexdigest()[:8]}{m.group(3)}"
+
+        new = ASSET_REF.sub(stamp, html)
+        if new != html:
+            page.write_text(new, encoding="utf-8")
+            changed.append(page.name)
+    return changed
+
+
 def git(*args):
     return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
 
@@ -202,6 +230,9 @@ def main():
 
     count = build_manifest()
     print(f"Wrote {SUMMARIES_DIR / 'index.json'} ({count} meeting(s))", file=sys.stderr)
+    stamped = stamp_assets()
+    if stamped:
+        print(f"Updated asset versions in {', '.join(stamped)} (commit these)", file=sys.stderr)
     if args.publish:
         print("pushed" if publish() else "nothing to publish", file=sys.stderr)
     return 0

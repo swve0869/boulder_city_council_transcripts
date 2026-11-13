@@ -18,9 +18,9 @@ jobs:
         run: python -m unittest discover -s tests -t .
       - name: Published summaries match the format
         run: python summarize.py --check docs/summaries/*/*.json
-      - name: Site manifest is up to date with the summaries
+      - name: Site files are up to date (run `python build_site.py` and commit if this fails)
         run: |
           python build_site.py
-          git diff --exit-code -- docs/summaries/index.json docs/summaries/search.json docs/feed.xml
+          git diff --exit-code -- docs/
       - name: Site scripts parse
         run: for f in docs/*.js; do node --check "$f"; done
