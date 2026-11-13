@@ -168,3 +168,9 @@ footer.site { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--r
 .bars.stack .track:hover .bar { filter: none; outline: 0; }
 .bars.stack .track:hover .bar.seg:hover { filter: brightness(1.1); outline: 2px solid var(--fg); }
 .bars .label.plain { cursor: default; color: var(--muted); }
+.row-meta { color: var(--muted); font: 13px/1.5 system-ui, sans-serif; margin-top: .15rem; }
+ol.preview { list-style: none; margin: .5rem 0 .25rem; padding: 0 0 0 .75rem; border-left: 2px solid var(--rule); font-size: 15px; }
+ol.preview li { padding: .3rem 0 !important; border: 0 !important; }
+ol.preview p { margin: .15rem 0 0; color: var(--fg); }
+.awaiting { font: 14px/1.5 system-ui, sans-serif; background: var(--surface-2); border-radius: 8px; padding: .6rem .75rem; margin: 0 0 1rem; }
+.awaiting ul { margin: .3rem 0 0; padding-left: 1.2rem; }

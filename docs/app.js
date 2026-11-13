@@ -207,6 +207,21 @@
     $("sort").addEventListener("change", () => { state.sort = $("sort").value; update(); });
     $("match").addEventListener("change", () => { state.match = $("match").value; update(); });
 
+    // Meetings the watcher has found but not summarized yet (optional file; ignore if absent).
+    getJSON("summaries/status.json", { cache: "no-cache" }).then((s) => {
+      const items = (s.awaiting || []).filter((a) => a.city === state.city);
+      if (!items.length) return;
+      const box = $("awaiting");
+      box.append(el("strong", {}, items.length === 1 ? "Coming soon: " : "Coming soon:"));
+      const row = (a) => {
+        const why = a.waiting_for === "captions" ? "waiting for YouTube captions" : "captions saved, summary pending";
+        return [el("a", { href: `https://www.youtube.com/watch?v=${encodeURIComponent(a.video_id)}` }, a.title), ` (${why})`];
+      };
+      if (items.length === 1) box.append(...row(items[0]));
+      else box.append(el("ul", {}, ...items.map((a) => el("li", {}, ...row(a)))));
+      box.hidden = false;
+    }).catch(() => {});
+
     function toggleTag(id) {
       const i = state.tags.indexOf(id);
       if (i >= 0) state.tags.splice(i, 1); else state.tags.push(id);
@@ -276,11 +291,38 @@
       p.replaceChildren(`Showing ${shown} of ${total} meetings ${bits.join(", ")}.`, clear);
     }
 
+    const expanded = new Set(); // meeting ids whose topic list is open
+
+    // "9 topics · about 3.2 h" plus a toggle that previews every topic with its summary.
+    function rowMeta(m, href) {
+      const topics = m.topics || [];
+      const secs = topics.reduce((s, t) => s + (t.start !== null ? t.end - t.start : 0), 0);
+      const open = expanded.has(m.id);
+      const toggle = el("button", { type: "button", class: "link", "aria-expanded": open ? "true" : "false" },
+        open ? "Hide topics" : "Show topics");
+      toggle.addEventListener("click", () => {
+        if (open) expanded.delete(m.id); else { expanded.add(m.id); ensureSearchText(); }
+        update();
+      });
+      const meta = el("div", { class: "row-meta" },
+        `${topics.length} topic${topics.length === 1 ? "" : "s"}${secs ? ` · about ${fmtDuration(secs)}` : ""} · `, toggle);
+      if (!open) return [meta];
+      const list = el("ol", { class: "preview" }, ...topics.map((t, i) => {
+        const item = el("li", {});
+        if (t.start !== null) item.append(el("a", { class: "stamp", href: `${href}#t=${Math.floor(t.start)}` }, fmtTime(t.start)), " ");
+        item.append(el("strong", {}, t.title));
+        const text = summaryOf(m, i);
+        if (text) item.append(el("p", {}, text));
+        return item;
+      }));
+      return [meta, list];
+    }
+
     function meetingItem(m) {
       const d = parseDate(m.date);
       const label = d ? d.toLocaleDateString("en-US", { month: "short", day: "numeric", ...(state.sort === "relevance" || state.sort === "topics" ? { year: "numeric" } : {}) }) : "Undated";
       const href = `meeting.html?city=${encodeURIComponent(m.city)}&id=${encodeURIComponent(m.id)}`;
-      const li = el("li", {}, el("span", { class: "date" }, label), el("a", { href }, m.title || m.id));
+      const li = el("li", {}, el("span", { class: "date" }, label), el("a", { href }, m.title || m.id), ...rowMeta(m, href));
       const top = meetingTags(m).slice(0, 6);
       if (top.length) {
         li.append(el("div", { class: "tags" }, ...top.map((id) => tagChip(tags, id, {

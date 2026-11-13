@@ -119,6 +119,38 @@ def summarize_new(name, new_paths, city, save, log):
     return done
 
 
+STATUS_FILE = Path(__file__).parent / "docs" / "summaries" / "status.json"
+
+
+def write_status(state, cities, path=STATUS_FILE):
+    """Publishable list of meetings that are known but not summarized yet. Returns True if it changed.
+
+    The site shows these as "awaiting captions" / "awaiting summary", so visitors can see a
+    new meeting is coming. Deliberately has no timestamp: the file only changes when the list does.
+    """
+    awaiting = []
+    for name, _ in cities:
+        city = state.get(slugify(name)) or {}
+        for v in city.get("pending", []):
+            awaiting.append({"city": slugify(name), "video_id": v["id"], "title": v["title"], "date": v.get("date"),
+                             "waiting_for": "captions"})
+        for transcript in city.get("unsummarized", []):
+            stem = Path(transcript).stem
+            date, _, video_id = stem.partition("_")
+            try:
+                title = json.loads(Path(transcript).read_text(encoding="utf-8")).get("title") or stem
+            except (OSError, json.JSONDecodeError):
+                title = stem
+            awaiting.append({"city": slugify(name), "video_id": video_id, "title": title,
+                             "date": None if date == "undated" else date, "waiting_for": "summary"})
+    text = json.dumps({"awaiting": awaiting}, indent=1) + "\n"
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return False
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+    return True
+
+
 def run_once(args, ydl_opts, cities, state_path, log_file):
     """One check of every city. Returns False if any city's check failed."""
     say = lambda m: log(m, log_file)
@@ -136,13 +168,17 @@ def run_once(args, ydl_opts, cities, state_path, log_file):
         if args.summarize and city and (new_paths or city.get("unsummarized")):
             summarized += summarize_new(name, new_paths, city, save, say)
 
-    if summarized:
+    status_changed = args.fetch and write_status(state, cities)
+    if summarized or status_changed:
         from build_site import build_manifest, publish
-        build_manifest()
+        if summarized:
+            build_manifest()
         if args.publish:
+            message = (f"Add {summarized} meeting summar{'y' if summarized == 1 else 'ies'}" if summarized
+                       else "Update meetings awaiting captions")
             try:
-                if publish(f"Add {summarized} meeting summar{'y' if summarized == 1 else 'ies'}"):
-                    say(f"published {summarized} new summar{'y' if summarized == 1 else 'ies'}")
+                if publish(message):
+                    say(f"published: {message.lower()}")
             except Exception as e:
                 say(f"ERROR  publish failed: {e}")
                 ok = False

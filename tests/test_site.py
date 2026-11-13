@@ -84,6 +84,21 @@ class Manifest(unittest.TestCase):
         self.assertIn("Budget &lt;vote&gt;", entries[1].find("a:content", ns).text)
 
 
+class WatcherStatus(unittest.TestCase):
+    def test_status_lists_pending_and_only_rewrites_on_change(self):
+        import watch_council_videos as w
+        path = Path(tempfile.mkdtemp()) / "status.json"
+        state = {"boulder": {"seen": {}, "unsummarized": ["transcripts/boulder/2026-10-22_a_b.json"],
+                             "pending": [{"id": "vid1", "title": "Nov 12 Special Meeting", "date": "2026-11-12"}]}}
+        cities = [("Boulder", "url"), ("Other City", "url")]
+        self.assertTrue(w.write_status(state, cities, path))
+        self.assertFalse(w.write_status(state, cities, path), "unchanged list must not rewrite (no needless commits)")
+        awaiting = json.loads(path.read_text())["awaiting"]
+        self.assertEqual([(a["video_id"], a["waiting_for"]) for a in awaiting], [("vid1", "captions"), ("a_b", "summary")])
+        state["boulder"]["pending"] = []
+        self.assertTrue(w.write_status(state, cities, path))
+
+
 class Transcripts(unittest.TestCase):
     def test_parse_title_date(self):
         self.assertEqual(parse_title_date("September 17, 2026 City of Boulder City Council Meeting"), date(2026, 9, 17))
