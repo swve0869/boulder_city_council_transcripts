@@ -37,4 +37,17 @@ await c.size(390, 2000);
 for (const p of ["trends.html", "issue.html?tag=police", "about.html"]) { await c.go(p); check(`${p}: no horizontal scroll at phone width`, !(await c.overflow())); }
 await c.size(1100, 1200, true); await c.go("trends.html");
 check("dark mode renders charts", await c.ev(`document.querySelectorAll("#rank .track").length`) > 0);
+
+// Theme switch: system (dark here) -> light -> dark, remembered across pages.
+const bg = () => c.ev(`getComputedStyle(document.body).backgroundColor`);
+const systemDark = await bg();
+await c.click("button.theme"); await sleep(100);
+const light = await bg();
+check("theme button overrides a dark system setting with light", systemDark !== light && (await c.ev(`document.documentElement.dataset.theme`)) === "light", { systemDark, light });
+await c.go("index.html");
+check("chosen theme persists on other pages", (await bg()) === light && /light/.test(await c.ev(`document.querySelector("button.theme").textContent`)));
+await c.click("button.theme"); await sleep(100);
+check("dark choice applies", (await bg()) === systemDark);
+await c.click("button.theme"); // back to system for later runs
+check("returns to system", (await c.ev(`document.documentElement.dataset.theme`)) === undefined);
 finish(c);
