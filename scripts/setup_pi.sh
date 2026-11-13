@@ -45,8 +45,9 @@ if [ "$ARCH" != aarch64 ] && [ "$ARCH" != x86_64 ]; then
   warn "architecture is $ARCH. A 64-bit OS is recommended; some Python packages may have to compile from source."
 fi
 
-run sudo apt-get update -qq
-run sudo apt-get install -y -qq python3 python3-venv python3-pip git rsync logrotate util-linux
+export DEBIAN_FRONTEND=noninteractive
+run sudo -E apt-get update -qq
+run sudo -E apt-get install -y -qq python3 python3-venv python3-pip git rsync logrotate util-linux
 
 if ! python3 -c 'import sys; sys.exit(sys.version_info < (3, 11))'; then
   echo "Python 3.11+ is required (found $(python3 --version)). Use Raspberry Pi OS Bookworm (64-bit) or newer." >&2
