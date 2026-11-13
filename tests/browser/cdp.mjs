@@ -22,6 +22,8 @@ export async function connect() {
   await new Promise((r) => (sock.onopen = r));
   const send = (method, params = {}) => new Promise((r) => { pending[++id] = r; sock.send(JSON.stringify({ id, method, params })); });
   await send("Runtime.enable");
+  await send("Network.enable");
+  await send("Network.setCacheDisabled", { cacheDisabled: true }); // always test the files as served now
   // Evaluate an expression in the page; page-side exceptions count as test errors.
   const ev = async (expr) => {
     const r = await send("Runtime.evaluate", { expression: expr, awaitPromise: true, returnByValue: true });

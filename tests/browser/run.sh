@@ -31,8 +31,8 @@ fi
 fail=0
 for t in tests/browser/*.test.mjs; do
   echo "== $(basename "$t" .test.mjs)  ($BASE)"
-  node $NODE_FLAGS "$t" "$BASE" 2>&1 | grep -v "ExperimentalWarning\|--trace-warnings" || true
-  [ "${PIPESTATUS[0]}" = 0 ] || fail=1
+  out="$(node $NODE_FLAGS "$t" "$BASE" 2>&1)" || fail=1   # capture first: a pipe would hide the exit code
+  printf '%s\n' "$out" | grep -v "ExperimentalWarning\|--trace-warnings"
 done
 [ "$fail" = 0 ] && echo "ALL BROWSER TESTS PASSED" || echo "BROWSER TESTS FAILED"
 exit "$fail"
