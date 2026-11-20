@@ -1,0 +1,145 @@
+{
+  "Title": "November 19, 2026 - Boulder City Council Special Meeting and Regular Meeting",
+  "Overview": "The council held a special executive session on Boulder Police Department property and legal advice, then a regular meeting with extensive open comment on Gaza, Flock license-plate readers, rental licensing caps, and parks. Council honored outgoing member Taisha Adams and Transgender Day of Remembrance, approved the consent agenda, unanimously approved the Glenn Huntington Bandshell landmark alteration certificate, unanimously adopted Ordinance 8781 creating an affordable housing expedited review process, and discussed the 2027 policy statement on regional, state, and federal issues with staff to return with revisions. A council request to scope rental-cap legal questions was deferred to the first December meeting.",
+  "Tags": [
+    "council-governance",
+    "affordable-housing",
+    "parks-recreation",
+    "public-comment",
+    "police",
+    "surveillance"
+  ],
+  "Topics": [
+    {
+      "Topic1": {
+        "Title": "Executive Session on Police Property and Legal Advice",
+        "Summary": "Council convened in executive session under Colorado Open Meetings Act provisions to consider the purchase, lease, or sale of property interests for Boulder Police Department needs and to receive confidential legal advice. The session concluded at 5:27 p.m. with participants named for the record.",
+        "related_timestamps": [
+          318.72,
+          3748.0
+        ],
+        "Tags": [
+          "police",
+          "legal"
+        ]
+      }
+    },
+    {
+      "Topic2": {
+        "Title": "Open Comment on Gaza, Flock, Housing, and Parks",
+        "Summary": "Fifteen speakers addressed council on topics including Caterpillar investments and Gaza, the housing advisory board update, Flock license-plate reader safeguards, Excel Energy coal use, a parks director's pickleball court complaint, and University Hill rental restrictions. Staff responded that the city can already audit ALPR uses and will hold community engagement, and Mayor Pro Tem and others praised parks director Ali Rhodes.",
+        "related_timestamps": [
+          4113.28,
+          5604.64,
+          5868.96
+        ],
+        "Tags": [
+          "public-comment",
+          "flock",
+          "surveillance",
+          "housing",
+          "parks-recreation"
+        ]
+      }
+    },
+    {
+      "Topic3": {
+        "Title": "Council Requests and Public Hearing on Rental Caps",
+        "Summary": "Council member Tara Winer moved to amend the agenda to add a request for city attorney advice on rental caps, and the amendment passed six to two. Council discussed whether data on rents and applications on the Hill could be gathered, and the request was deferred to the first week of December.",
+        "related_timestamps": [
+          7564.88,
+          19257.92
+        ],
+        "Tags": [
+          "housing",
+          "legal",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic4": {
+        "Title": "Declarations Honoring Taisha Adams and Transgender Day of Remembrance",
+        "Summary": "Council Member Rob Kaplan presented a declaration honoring Taisha Adams's service, which she accepted with remarks. Council Member Tina Marquis presented a declaration recognizing November 20, 2026 as Transgender Day of Remembrance, with a Rocky Mountain Equality representative in attendance.",
+        "related_timestamps": [
+          7636.0,
+          8006.4
+        ],
+        "Tags": [
+          "arts-culture",
+          "equity",
+          "council-governance"
+        ]
+      }
+    },
+    {
+      "Topic5": {
+        "Title": "Consent Agenda and Call-Up Items",
+        "Summary": "Council adjourned as the council and convened as the Central Area General Improvement District board to consider festival parking rates, and no one called that item up. Council approved the consent agenda items 4A through 4F unanimously. No call-ups were made for the landmark alteration certificate at 970 Aurora or the concept plan at 2885 East Aurora Avenue.",
+        "related_timestamps": [
+          8199.28,
+          8264.24,
+          8448.479
+        ],
+        "Tags": [
+          "parking",
+          "development",
+          "historic-preservation"
+        ]
+      }
+    },
+    {
+      "Topic6": {
+        "Title": "Glenn Huntington Bandshell Landmark Alteration Certificate",
+        "Summary": "Staff recommended approval of the Parks and Recreation Department's application to replace the historic amphitheater seating with terrace seating, add accessible paths and a porch, and extend the approval period to 2028. Several speakers, including the landmarks board chair and Historic Boulder, opposed removing the historic seats, while the parks advisory board supported the application. Council found the criteria met and unanimously approved the landmark alteration certificate.",
+        "related_timestamps": [
+          8469.76,
+          10340.8,
+          11872.319,
+          12806.64
+        ],
+        "Tags": [
+          "historic-preservation",
+          "parks-recreation",
+          "development",
+          "budget"
+        ]
+      }
+    },
+    {
+      "Topic7": {
+        "Title": "Ordinance 8781 Affordable Housing Expedited Review",
+        "Summary": "Staff presented an amendment to Title 9 creating a 90-day expedited review for housing projects where at least half of units are affordable, as required by state law tied to Prop 123 funding. The changes remove planning board call-ups and automatic hearings for qualifying projects, with staff reporting a 64 percent reduction in use review time from similar changes. Housing Authority and Flatirons Habitat supported the ordinance, and council unanimously adopted it.",
+        "related_timestamps": [
+          12825.52,
+          14358.479,
+          14866.96
+        ],
+        "Tags": [
+          "affordable-housing",
+          "zoning",
+          "housing"
+        ]
+      }
+    },
+    {
+      "Topic8": {
+        "Title": "2027 Policy Statement on Regional, State, and Federal Issues",
+        "Summary": "Intergovernmental affairs officer Heather Stuffer presented recommended 2027 priorities, including food security, child care, aging populations, coal ash monitoring, state funding, micromobility, and wildfire resilience. Council members proposed changes on power shutoffs, e-moto enforcement, institutional investors, urban agriculture, and repair and atonement language, with a straw poll adding the repair language and a referral of institutional investor questions to the committee. Staff will return the revised statement for approval at a later business meeting.",
+        "related_timestamps": [
+          15640.0,
+          16240.0,
+          17954.4
+        ],
+        "Tags": [
+          "intergovernmental",
+          "energy",
+          "human-services",
+          "council-governance",
+          "equity",
+          "wildfire"
+        ]
+      }
+    }
+  ]
+}
